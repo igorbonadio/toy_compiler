@@ -2,7 +2,7 @@ X1 = Alphabet(a, t, g, c)
 X2 = Alphabet(CODING, NONCODING)
 
 # This model generates (and reads) 2 sequences
-dna = IID(X1, X2):
+dna = IID([X1, X2]):
   distribution = Prob( # It is a joint distribution
     a; CODING    = 0.1
     t; CODING    = 0.3
