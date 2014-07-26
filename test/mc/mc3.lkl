@@ -1,0 +1,10 @@
+X1 = Alphabet(a, c, g, t)
+X2 = Alphabet(CODING, NONCODING)
+
+exon = MC(X1, X2):
+  transition = Prob(
+    a; CODING | a; NONCONDING = 0.5
+    c; CODING | a; NONCONDING = 0.1
+    g; CODING | a; NONCONDING = 0.1
+    t; CODING | a; NONCONDING = 0.3
+  )
