@@ -1,0 +1,5 @@
+X1 = Alphabet(a, c, g, t)
+X2 = Alphabet(CODING, NONCODING)
+
+exon = VLMC(X1, X2):
+  context_function = Prob(a; CODING | a g a g; CODING CODING CODING NONCODING = 0.5, a; NONCONDING | c c a; CODING CODING NONCODING = 0.1)

@@ -1,0 +1,7 @@
+X = Alphabet(a, c, g, t)
+
+exon = VLMC(X):
+  context_function = Prob(
+    a | a g a g = 0.5
+    a | c c a   = 0.1
+  )
