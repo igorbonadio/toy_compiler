@@ -1,0 +1,15 @@
+X1 = Alphabet(a, t, g, c)
+X2 = Alphabet(CODING, NONCODING)
+
+# This model generates (and reads) 2 sequences
+dna = IID(X1, X2):
+  distribution = Prob( # It is a joint distribution
+    a; CODING    = 0.1
+    t; CODING    = 0.3
+    g; CODING    = 0.4
+    c; CODING    = 0.2
+    a; NONCODING = 0.2
+    t; NONCODING = 0.2
+    g; NONCODING = 0.3
+    c; NONCODING = 0.3
+  )
