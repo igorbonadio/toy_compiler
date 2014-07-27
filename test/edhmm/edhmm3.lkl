@@ -1,0 +1,23 @@
+X1 = Alphabet(a, c, g, t)
+X2 = Alphabet(CODING, NONCODING)
+Y = Alphabet(Exon, Intron)
+
+gene_pedictor = EDHMM([X1, X2], Y):
+  initial_probabilities = Prob(
+    Exon   = 0.5
+    Intron = 0.5
+  )
+  transitions = Prob(
+    Exon   | Exon   = 0.3
+    Intron | Exon   = 0.7
+    Exon   | Intron = 0.1
+    Intron | Intron = 0.9
+  )
+  emission_models = Prob(
+    x; y | Exon   = exon_model([x, y])
+    x; y | Intron = intron_model([x, y])
+  )
+  duration_models = Prob(
+    x; y | Exon = duration_exon_model([x, y])
+    x; y | Intron = duration_intron_model([x, y])
+  )
