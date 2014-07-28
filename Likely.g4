@@ -4,11 +4,16 @@ r : expr* ;
 
 expr : literal
      | attr
+     | list
      | if_expr
      | while_expr
      | for_expr
      | expr bin_op expr
      | '(' expr ')'
+     ;
+
+list : '(' ')'
+     | '(' expr (',' expr)* ')'
      ;
 
 for_expr : 'for' '(' ID 'in' expr ')' expr
