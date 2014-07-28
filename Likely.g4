@@ -5,9 +5,14 @@ r : expr* ;
 expr : literal
      | attr
      | if_expr
+     | while_expr
      | expr bin_op expr
      | '(' expr ')'
      ;
+
+while_expr : 'while' '(' expr ')' expr
+           | 'while' '(' expr ')' '{' expr* '}'
+           ;
 
 if_expr : 'if' '(' expr ')' expr 'else' expr
         | 'if' '(' expr ')' '{' expr* '}' 'else' '{' expr* '}'
