@@ -57,5 +57,8 @@ INTEGER : ('-')?[0-9][0-9]* ;
 FLOAT   : ('-')?[0-9][0-9]*'.'[0-9][0-9]* ;
 STRING  : '"' (~["\\\r\n])* '"' ;
 
-COMMENT : '#' ~[\r\n]* -> skip ;
-WS      : [ \t\r\n]+ -> skip ;
+SKIP : (COMMENT | SPACES | NEWLINE) -> skip ;
+
+COMMENT : '#' ~[\r\n]* ;
+SPACES  : [ \t]+ ;
+NEWLINE : ('\r'? '\n' | '\r') SPACES? ;
