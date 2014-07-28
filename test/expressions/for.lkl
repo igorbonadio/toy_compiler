@@ -3,3 +3,9 @@ for (a in 1:10) a
 for (a in 1:10) {
   a
 }
+
+for (a in 1:10) {
+  a
+  b
+  c
+}

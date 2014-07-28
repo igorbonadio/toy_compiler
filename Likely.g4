@@ -6,9 +6,14 @@ expr : literal
      | attr
      | if_expr
      | while_expr
+     | for_expr
      | expr bin_op expr
      | '(' expr ')'
      ;
+
+for_expr : 'for' '(' ID 'in' expr ')' expr
+         | 'for' '(' ID 'in' expr ')' '{' expr* '}'
+         ;
 
 while_expr : 'while' '(' expr ')' expr
            | 'while' '(' expr ')' '{' expr* '}'
@@ -30,6 +35,7 @@ bin_op : '+'
        | '<='
        | '>'
        | '<'
+       | ':'
        ;
 
 literal : ID
