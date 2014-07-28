@@ -1,0 +1,6 @@
+# function call
+sum(1, 2)
+
+# function is an object
+sum.apply(1, 2) # same as sum(1, 2)
+sum.arity # return 2

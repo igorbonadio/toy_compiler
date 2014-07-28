@@ -1,0 +1,40 @@
+sum = function(a, b):
+  a + b
+
+safe_div = function(a, b):
+  if (b == 0) 1000000000000000000 else a/b
+
+safe_div2 = function(a, b):
+  if (b == 0) {
+    1000000000000000000
+  } else {
+    a/b
+  }
+
+safe_div3 = function(a, b):
+  if (b == 0) {
+    1000000000000000000
+  }
+  else {
+    a/b
+  }
+
+times = function(a, b):
+  x = 1
+  for (i in 0:b) x + a
+
+times2 = function(a, b):
+  x = 0
+  for (i in 0:b) {
+    x = x + a
+  }
+
+div = function(a, b):
+  x = a
+  while (x > 0) x = x - b
+
+div2 = function(a, b):
+  x = a
+  while (x > 0) {
+    x = x - b
+  }

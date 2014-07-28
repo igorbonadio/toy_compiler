@@ -1,0 +1,6 @@
+X = Alphabet(a, c, g, t)
+Y = Alphabet(Exon, Intron)
+
+predictor = SMCRF(X, Y):
+  max_distance = 10
+  features = (ff_transition(Exon, Exon) -> 0.1, ff_transition(Exon, Intron) -> 0.2, ff_transition(Intron, Exon) -> 0.3)
