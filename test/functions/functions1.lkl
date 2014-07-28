@@ -11,14 +11,6 @@ safe_div2 = function(a, b):
     a/b
   }
 
-safe_div3 = function(a, b):
-  if (b == 0) {
-    1000000000000000000
-  }
-  else {
-    a/b
-  }
-
 times = function(a, b):
   x = 1
   for (i in 0:b) x + a
