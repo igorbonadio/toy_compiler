@@ -1,6 +1,9 @@
 sum = function(a, b):
   a + b
 
+sum2 = function(a, b):
+  return a + b
+
 safe_div = function(a, b):
   if (b == 0) 1000000000000000000 else a/b
 
@@ -9,6 +12,13 @@ safe_div2 = function(a, b):
     1000000000000000000
   } else {
     a/b
+  }
+
+safe_div3 = function(a, b):
+  if (b == 0) {
+    return 1000000000000000000
+  } else {
+    return a/b
   }
 
 times = function(a, b):
