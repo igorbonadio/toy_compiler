@@ -1,6 +1,6 @@
 grammar Likely;
 
-r : expr* ;
+r : (expr NEWLINE)* expr? ;
 
 expr : literal
      | attr
@@ -53,12 +53,14 @@ number : INTEGER
        ;
 
 ID      : [a-zA-z_][a-zA-z0-9_]* ;
-INTEGER : ('-')?[0-9][0-9]* ;
-FLOAT   : ('-')?[0-9][0-9]*'.'[0-9][0-9]* ;
+INTEGER : ('-')? NUM ;
+FLOAT   : ('-')? NUM '.' NUM ;
 STRING  : '"' (~["\\\r\n])* '"' ;
 
-SKIP : (COMMENT | SPACES | NEWLINE) -> skip ;
-
-COMMENT : '#' ~[\r\n]* ;
-SPACES  : [ \t]+ ;
 NEWLINE : ('\r'? '\n' | '\r') SPACES? ;
+
+SKIP : (COMMENT | SPACES) -> skip ;
+
+fragment NUM : [0-9]+ ;
+fragment COMMENT : '#' ~[\r\n]* ;
+fragment SPACES  : [ \t]+ ;
