@@ -106,6 +106,23 @@ colors = (
 )
 ```
 
+### Pair & Hash
+
+Pairs are useful to define Hash-like data structures:
+
+```python
+ages = (igor -> 28, jessica -> 29)
+```
+
+or
+
+```python
+ages = (
+  igor -> 28
+  jessica -> 29
+)
+```
+
 ## Grammar
 
 ```
