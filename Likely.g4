@@ -42,12 +42,12 @@ tokens { INDENT, DEDENT }
   }
 }
 
-stmts : expr_stmts*
-      ;
-
-expr_stmts : NEWLINE
-           | expr NEWLINE?
+file_input : ( NEWLINE | stmt )*
            ;
+
+stmt : expr NEWLINE
+     | expr EOF
+     ;
 
 expr : literal
      | attr
@@ -85,8 +85,8 @@ if_expr : 'if' '(' expr ')' block 'else' block
         ;
 
 block : ':' expr
-      | ':' NEWLINE INDENT stmts DEDENT
-      | '{' stmts '}'
+      | ':' NEWLINE INDENT stmt+ DEDENT NEWLINE?
+      | '{' NEWLINE? stmt+ '}'
       ;
 
 attr : ID '=' expr
@@ -137,7 +137,9 @@ NEWLINE : ('\r'? '\n' | '\r') SPACES?
     String spaces = getText().replaceAll("[\r\n]+", "");
     int next = _input.LA(1);
 
-    if (opened > 0 || next == '\r' || next == '\n' || next == '#') {
+    if (opened > 0) {
+
+    } else if (next == '\r' || next == '\n' || next == '#') {
       skip();
     } else {
       emit(new CommonToken(NEWLINE, "\n"));
@@ -157,6 +159,7 @@ NEWLINE : ('\r'? '\n' | '\r') SPACES?
           emit(new CommonToken(LikelyParser.DEDENT, "DEDENT"));
           indents.pop();
         }
+        emit(new CommonToken(NEWLINE, "\n"));
       }
     }
   }
