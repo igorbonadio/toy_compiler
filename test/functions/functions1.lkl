@@ -1,3 +1,5 @@
+sum = function(): a+b
+
 sum = function():
   a + b
 

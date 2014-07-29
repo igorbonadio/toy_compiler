@@ -57,9 +57,28 @@ expr : literal
      | for_expr
      | expr bin_op expr
      | func_def
+     | func_call
      | return_expr
      | '(' expr ')'
      ;
+
+func_call : func '(' func_args? ')'
+          ;
+
+func : ID
+     | '(' returned_func ')'
+     ;
+
+returned_func : func
+              | if_expr
+              | while_expr
+              | for_expr
+              | func_def
+              | func_call
+              ;
+
+func_args : expr (',' expr)*
+          ;
 
 func_def : 'function' '(' func_params? ')' block
          ;
