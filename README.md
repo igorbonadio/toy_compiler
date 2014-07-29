@@ -1,7 +1,7 @@
 Likely Language
 ===============
 
-Likely is a language to specify probabilistic models.
+Likely is a language to specify probabilistic models. But not just that! In fact Likely is a full language that will help you to build sequence analysis tools.
 
 GRAMMAR
 =======
