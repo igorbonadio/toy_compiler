@@ -11,13 +11,29 @@ It is part of a bigger project, [Likely Framework](https://github.com/igorbonadi
 Likely's arithmetic expressions are very similar to languages like C, C++, Java, Python and Ruby. The only difference is that there isn't operator precedence. So, use parentheses!
 
 ```python
-  1 + 2       # => 3
-  2 - 1       # => 1
-  4 / 2       # => 2
-  2 * 3       # => 6
-  1 * 2 + 3   # => 5
-  1 + 2 * 3   # => 9
-  1 + (2 * 3) # => 7
+1 + 2       # => 3
+2 - 1       # => 1
+4 / 2       # => 2
+2 * 3       # => 6
+1 * 2 + 3   # => 5
+1 + 2 * 3   # => 9
+1 + (2 * 3) # => 7
+```
+
+### Boolean Expressions
+
+As arithmetic expressions, there isn't operator precedence in boolean expressions:
+
+```python
+1 > 2          # => false
+1 < 2          # => true
+2 >= 2         # => true
+2 <= 2         # => true
+true and true  # => true
+true and false # => false
+true or true   # => true
+true or false  # => true
+not true       # => false
 ```
 
 ## Grammar
@@ -27,11 +43,13 @@ Likely's arithmetic expressions are very similar to languages like C, C++, Java,
 
   stmt := expr NEWLINE
 
-  expr := literal | attr | list | pair | comp_expr | binop | func_call | constructor_call | prob | '(' expr ')'
+  expr := literal | attr | list | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | '(' expr ')'
 
-  literal := ID | number | STRING
+  literal := ID | number | STRING | boolean
 
   number := INTEGER | FLOAT
+
+  boolean := 'true' | 'false'
 
   attr := ID '=' expr
 
@@ -44,6 +62,8 @@ Likely's arithmetic expressions are very similar to languages like C, C++, Java,
   binop := expr op expr
 
   op := '+' | '-' | '*' | '/' | '==' | '>=' | '<=' | '>' | '<' | ':'
+
+  boolop := 'not'? expr ('and' | 'or') expr
 
   func_call := func list
 
