@@ -25,6 +25,8 @@ Likely's arithmetic expressions are very similar to languages like C, C++, Java,
 As arithmetic expressions, there isn't operator precedence in boolean expressions:
 
 ```python
+1 == 1         # => true
+1 != 2         # => true
 1 > 2          # => false
 1 < 2          # => true
 2 >= 2         # => true
