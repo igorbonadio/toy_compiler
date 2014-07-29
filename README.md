@@ -4,7 +4,7 @@ Likely is a language to specify probabilistic models. But not just that! In fact
 
 It is part of a bigger project, [Likely Framework](https://github.com/igorbonadio/likely), that provides the infrastructure to build and run probabilistic models.
 
-## Examples
+## Quick Start
 
 ### Arithmetic Expressions
 
