@@ -153,20 +153,20 @@ else:
 If you need to repeat some steps, use a FOR expression:
 
 ```python
-for (i in 1:10): x = x + 1
+for (i <- 1:10): x = x + 1
 ```
 
 And, like any other expression, this for returns a value
 
 ```python
 x = 0
-y = for (i in 1:10): x = x + 1 # => y == 10
+y = for (i <- 1:10): x = x + 1 # => y == 10
 ```
 
 There is also a thin® way to define FORs: _under construction_
 
 ```python
-for (i in 1:10):
+for (i <- 1:10):
   x = x + 1
 ```
 
