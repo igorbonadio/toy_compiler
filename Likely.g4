@@ -86,7 +86,7 @@ if_expr : 'if' '(' expr ')' block 'else' block
 
 block : ':' expr
       | ':' NEWLINE INDENT stmt+ DEDENT NEWLINE?
-      | '{' NEWLINE? stmt+ '}'
+      | '{' (NEWLINE* stmt)+ '}'
       ;
 
 attr : ID '=' expr
