@@ -170,6 +170,21 @@ for (i in 1:10):
   x = x + 1
 ```
 
+### WHILE expressions
+
+WHILE is like a for, but it can run infinitely...
+
+```python
+while (true): x = x + 1
+```
+
+As you can imagine, WHILE always returns a value. And yes, there is a thin® way to define WHILEs:
+
+```python
+while (true):
+  x = x + 1
+```
+
 ## Grammar
 
 ```
