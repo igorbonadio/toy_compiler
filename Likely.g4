@@ -1,6 +1,52 @@
 grammar Likely;
 
-r : (expr NEWLINE+)* expr? ;
+tokens { INDENT, DEDENT }
+
+@lexer::members {
+
+  private java.util.Queue<Token> tokens = new java.util.LinkedList<>();
+  private java.util.Stack<Integer> indents = new java.util.Stack<>();
+  private int opened = 0;
+
+  @Override
+  public void emit(Token t) {
+    super.setToken(t);
+    tokens.offer(t);
+  }
+
+  @Override
+  public Token nextToken() {
+    if (_input.LA(1) == EOF && !this.indents.isEmpty()) {
+      this.emit(new CommonToken(LikelyParser.NEWLINE, "\n"));
+      while (!indents.isEmpty()) {
+        this.emit(new CommonToken(LikelyParser.DEDENT, "DEDENT"));
+        indents.pop();
+      }
+    }
+    Token next = super.nextToken();
+    return tokens.isEmpty() ? next : tokens.poll();
+  }
+
+  static int getIndentationCount(String spaces) {
+    int count = 0;
+    for (char ch : spaces.toCharArray()) {
+      switch (ch) {
+        case '\t':
+          count += 8 - (count % 8);
+          break;
+        default:
+          count++;
+      }
+    }
+    return count;
+  }
+}
+
+stmts : NEWLINE* expr_stmts*
+      ;
+
+expr_stmts : expr NEWLINE*
+           ;
 
 expr : literal
      | attr
@@ -17,17 +63,19 @@ list : '(' ')'
      | '(' NEWLINE* (expr NEWLINE+)* expr? ')'
      ;
 
-for_expr : 'for' '(' ID 'in' expr ')' expr
-         | 'for' '(' ID 'in' expr ')' '{' expr* '}'
+for_expr : 'for' '(' ID 'in' expr ')' block
          ;
 
-while_expr : 'while' '(' expr ')' expr
-           | 'while' '(' expr ')' '{' expr* '}'
+while_expr : 'while' '(' expr ')' block
            ;
 
-if_expr : 'if' '(' expr ')' expr 'else' expr
-        | 'if' '(' expr ')' '{' expr* '}' 'else' '{' expr* '}'
+if_expr : 'if' '(' expr ')' block 'else' block
         ;
+
+block : ':' NEWLINE INDENT stmts DEDENT
+      | '{' stmts '}'
+      | expr
+      ;
 
 attr : ID '=' expr
      ;
@@ -58,7 +106,42 @@ INTEGER : ('-')? NUM ;
 FLOAT   : ('-')? NUM '.' NUM ;
 STRING  : '"' (~["\\\r\n])* '"' ;
 
-NEWLINE : ('\r'? '\n' | '\r') SPACES? ;
+OPEN_PAREN : '(' {opened++;};
+CLOSE_PAREN : ')' {opened--;};
+OPEN_BRACK : '[' {opened++;};
+CLOSE_BRACK : ']' {opened--;};
+OPEN_BRACE : '{' {opened++;};
+CLOSE_BRACE : '}' {opened--;};
+
+NEWLINE : ('\r'? '\n' | '\r') SPACES?
+  {
+    String spaces = getText().replaceAll("[\r\n]+", "");
+    int next = _input.LA(1);
+
+    if (opened > 0 || next == '\r' || next == '\n' || next == '#') {
+      skip();
+    } else {
+      emit(new CommonToken(NEWLINE, "\n"));
+
+      int indent = getIndentationCount(spaces);
+      int previous = indents.isEmpty() ? 0 : indents.peek();
+
+      if (indent == previous) {
+        // skip indents of the same size as the present indent-size
+        skip();
+      } else if (indent > previous) {
+        indents.push(indent);
+        emit(new CommonToken(LikelyParser.INDENT, "INDENT"));
+      }
+      else {
+        while(!indents.isEmpty() && indents.peek() > indent) {
+          emit(new CommonToken(LikelyParser.DEDENT, "DEDENT"));
+          indents.pop();
+        }
+      }
+    }
+  }
+  ;
 
 SKIP : (COMMENT | SPACES) -> skip ;
 

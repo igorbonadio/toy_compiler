@@ -8,3 +8,10 @@ while (a == b) {
   a = b
   c = d
 }
+
+while (a == b):
+  a
+
+while (a == b):
+  a
+  b
