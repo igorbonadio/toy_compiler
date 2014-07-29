@@ -1,4 +1,4 @@
-while (a == b) a = b
+while (a == b): a = b
 
 while (a == b) {
   a = b

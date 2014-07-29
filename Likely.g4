@@ -42,10 +42,11 @@ tokens { INDENT, DEDENT }
   }
 }
 
-stmts : NEWLINE* expr_stmts*
+stmts : expr_stmts*
       ;
 
-expr_stmts : expr NEWLINE*
+expr_stmts : NEWLINE
+           | expr NEWLINE?
            ;
 
 expr : literal
@@ -55,8 +56,19 @@ expr : literal
      | while_expr
      | for_expr
      | expr bin_op expr
+     | func_def
+     | return_expr
      | '(' expr ')'
      ;
+
+func_def : 'function' '(' func_params? ')' block
+         ;
+
+func_params : ID (',' ID)*
+            ;
+
+return_expr : 'return' expr
+            ;
 
 list : '(' ')'
      | '(' expr (',' expr)* ')'
@@ -72,9 +84,9 @@ while_expr : 'while' '(' expr ')' block
 if_expr : 'if' '(' expr ')' block 'else' block
         ;
 
-block : ':' NEWLINE INDENT stmts DEDENT
+block : ':' expr
+      | ':' NEWLINE INDENT stmts DEDENT
       | '{' stmts '}'
-      | expr
       ;
 
 attr : ID '=' expr
@@ -100,6 +112,13 @@ literal : ID
 number : INTEGER
        | FLOAT
        ;
+
+FOR      : 'for' ;
+IN       : 'in' ;
+WHILE    : 'while' ;
+IF       : 'if' ;
+FUNCTION : 'function' ;
+RETURN   : 'return' ;
 
 ID      : [a-zA-z_][a-zA-z0-9_]* ;
 INTEGER : ('-')? NUM ;
