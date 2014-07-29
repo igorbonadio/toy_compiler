@@ -1,6 +1,6 @@
 grammar Likely;
 
-r : (expr NEWLINE)* expr? ;
+r : (expr NEWLINE+)* expr? ;
 
 expr : literal
      | attr
@@ -14,6 +14,7 @@ expr : literal
 
 list : '(' ')'
      | '(' expr (',' expr)* ')'
+     | '(' NEWLINE* (expr NEWLINE+)* expr? ')'
      ;
 
 for_expr : 'for' '(' ID 'in' expr ')' expr
