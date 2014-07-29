@@ -123,6 +123,31 @@ ages = (
 )
 ```
 
+### IF expressions
+
+IF is useful to control the flux of your program.
+
+```python
+if (a == b): 1 else: 2
+```
+
+Like any other expression, IF always returns a value:
+
+```python
+a = 123
+b = 321
+x = if (a == b): 1 else: 2 # => x == 2
+```
+
+There is also a thin® way to define IFs: _under construction_
+
+```python
+if (a == b):
+  1
+else:
+  2
+```
+
 ## Grammar
 
 ```
