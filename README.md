@@ -230,7 +230,7 @@ sum = function(a, b): return a + b
 
   stmt := expr NEWLINE
 
-  expr := literal | attr | list | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | return_exp | '(' expr ')'
+  expr := literal | attr | list | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | return_expr | '(' expr ')'
 
   literal := ID | number | STRING | boolean
 
@@ -252,7 +252,7 @@ sum = function(a, b): return a + b
 
   boolop := 'not'? expr ('and' | 'or') expr
 
-  return_exp := 'return' expr
+  return_expr := 'return' expr
 
   func_call := func list
 
