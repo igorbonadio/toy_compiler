@@ -114,7 +114,7 @@ Pairs are useful to define Hash-like data structures:
 ages = (igor -> 28, jessica -> 29)
 ```
 
-or
+or _under construction_
 
 ```python
 ages = (
