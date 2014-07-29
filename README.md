@@ -11,7 +11,7 @@ GRAMMAR
 
   stmt := expr NEWLINE
 
-  expr := literal | attr | list | pair | comp_expr | binop | func_call | prob | '(' expr ')'
+  expr := literal | attr | list | pair | comp_expr | binop | func_call | constructor_call | prob | '(' expr ')'
 
   literal := ID | number | STRING
 
@@ -32,6 +32,8 @@ GRAMMAR
   func_call := func list
 
   func := ID | '(' expr ')'
+
+  constructor_call := func_call ':' list
 
   prob := prob_vars '=' number
 
