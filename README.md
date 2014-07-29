@@ -36,6 +36,21 @@ true or false  # => true
 not true       # => false
 ```
 
+### Variable, Symbols & Attributions
+
+You don't need to declare variables in Likely. All you need to do is attribute some value to them.
+
+```python
+x = 123
+```
+
+There is a special use of variables that are different of other common languages. If you don't attribute a value to a variable, its value is a symbol. Symbols are unique in the world, so if you compare _abc == abc_ it will always be true.
+
+```python
+abc == abc # => true, if you didn't attribute a value to abc
+abc == bcd # => false, if you didn't attribute a value to abc and bcd
+```
+
 ## Grammar
 
 ```
@@ -61,7 +76,7 @@ not true       # => false
 
   binop := expr op expr
 
-  op := '+' | '-' | '*' | '/' | '==' | '>=' | '<=' | '>' | '<' | ':'
+  op := '+' | '-' | '*' | '/' | '==' | '!=' | '>=' | '<=' | '>' | '<' | ':'
 
   boolop := 'not'? expr ('and' | 'or') expr
 
