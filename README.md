@@ -178,7 +178,7 @@ WHILE is like a for, but it can run infinitely...
 while (true): x = x + 1
 ```
 
-As you can imagine, WHILE always returns a value. And yes, there is a thin® way to define WHILEs:
+As you can imagine, WHILE always returns a value. And yes, there is a thin® way to define WHILEs: _under construction_
 
 ```python
 while (true):
@@ -206,7 +206,7 @@ sum.apply(1, 2) == sum(1, 2)  # => true
 sum.arity                     # => 2
 ```
 
-You can define functions using the thin® way:
+You can define functions using the thin® way: _under construction_
 
 ```python
 sum = function(a, b):
@@ -216,8 +216,7 @@ sum = function(a, b):
 If you want, you can use the RETURN statement:
 
 ```python
-sum = function(a, b):
-  return a + b
+sum = function(a, b): return a + b
 ```
 
 ### Constructors
@@ -231,7 +230,7 @@ sum = function(a, b):
 
   stmt := expr NEWLINE
 
-  expr := literal | attr | list | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | '(' expr ')'
+  expr := literal | attr | list | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | return_exp | '(' expr ')'
 
   literal := ID | number | STRING | boolean
 
@@ -252,6 +251,8 @@ sum = function(a, b):
   op := '+' | '-' | '*' | '/' | '==' | '!=' | '>=' | '<=' | '>' | '<' | ':'
 
   boolop := 'not'? expr ('and' | 'or') expr
+
+  return_exp := 'return' expr
 
   func_call := func list
 
