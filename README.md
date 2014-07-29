@@ -6,6 +6,39 @@ It is part of a bigger project, [Likely Framework](https://github.com/igorbonadi
 
 ## Quick Start
 
+### Literals
+
+Integer:
+
+```python
+1
+2
+3
+```
+
+Floats:
+
+```python
+1.1
+2.2
+3.3
+```
+
+Strings:
+
+```python
+"Hi"
+"Oi"
+"Hola"
+```
+
+Booleans:
+
+```python
+true
+false
+```
+
 ### Arithmetic Expressions
 
 Likely's arithmetic expressions are very similar to languages like C, C++, Java, Python and Ruby. The only difference is that there isn't operator precedence. So, use parentheses!
