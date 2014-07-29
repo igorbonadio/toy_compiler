@@ -53,6 +53,26 @@ abc == abc # => true, if you didn't attribute a value to abc
 abc == bcd # => false, if you didn't attribute a value to abc and bcd
 ```
 
+### Lists
+
+There are 2 ways to define lists. The fat® and thin® way.
+
+Let's start by the fat® way:
+
+```python
+colors = (red, blue, black)
+```
+
+And the thin® way:
+
+```python
+colors = (
+  red
+  blue
+  black
+)
+```
+
 ## Grammar
 
 ```
