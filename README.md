@@ -63,7 +63,7 @@ Let's start by the fat® way:
 colors = (red, blue, black)
 ```
 
-And the thin® way:
+And the thin® way: _under construction_
 
 ```python
 colors = (
