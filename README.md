@@ -1,12 +1,26 @@
-Likely Language
-===============
+# Likely Language
 
 Likely is a language to specify probabilistic models. But not just that! In fact Likely is a full language that will help you to build sequence analysis tools.
 
 It is part of a bigger project, [Likely Framework](https://github.com/igorbonadio/likely), that provides the infrastructure to build and run probabilistic models.
 
-GRAMMAR
-=======
+## Examples
+
+### Arithmetic Expressions
+
+Arithmetic expressions are very similar to languages like C, C++, Java, Python and Ruby. The only difference is that there isn't operator precedence. So, use parentheses!
+
+```python
+  1 + 2       # => 3
+  2 - 1       # => 1
+  4 / 2       # => 2
+  2 * 3       # => 6
+  1 * 2 + 3   # => 5
+  1 + 2 * 3   # => 9
+  1 + (2 * 3) # => 7
+```
+
+## Grammar
 
 ```
   program := ( NEWLINE | stmt )*
