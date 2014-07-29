@@ -35,7 +35,9 @@ GRAMMAR
 
   func := ID | '(' expr ')'
 
-  constructor_call := func_call ':' list
+  constructor_call := func_call ':' fat_expr
+
+  fat_expr := expr (';' expr)
 
   prob := prob_vars '=' number
 
@@ -47,13 +49,13 @@ GRAMMAR
 
   comp_expr := if_expr | for_expr | while_expr | func_def
 
-  if_expr := 'if' '(' expr ')' ':' expr 'else' ':' expr
+  if_expr := 'if' '(' expr ')' ':' fat_expr 'else' ':' fat_expr
 
-  for_expr := 'for' '(' ID '<-' expr ':' expr ')' ':' expr
+  for_expr := 'for' '(' ID '<-' expr ':' expr ')' ':' fat_expr
 
-  while_expr := 'while' '(' expr ')' ':' expr
+  while_expr := 'while' '(' expr ')' ':' fat_expr
 
-  func_def := 'function' '(' func_params? ')' ':' expr
+  func_def := 'function' '(' func_params? ')' ':' fat_expr
 
   func_params := ID (',' ID)*
 ```
