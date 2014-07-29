@@ -118,7 +118,7 @@ or
 
 ```python
 ages = (
-  igor -> 28
+  igor    -> 28
   jessica -> 29
 )
 ```
