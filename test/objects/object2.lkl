@@ -1,0 +1,3 @@
+point = object(x, y):
+  k = function():
+    1
