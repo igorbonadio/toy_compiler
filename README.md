@@ -11,7 +11,7 @@ GRAMMAR
 
   stmt := expr NEWLINE
 
-  expr := literal | attr | list | pair | comp\_expr | binop | func\_call | prob | '(' expr ')'
+  expr := literal | attr | list | pair | comp_expr | binop | func_call | prob | '(' expr ')'
 
   literal := ID | number | STRING
 
@@ -29,27 +29,27 @@ GRAMMAR
 
   op := '+' | '-' | '*' | '/' | '==' | '>=' | '<=' | '>' | '<' | ':'
 
-  func\_call := func list
+  func_call := func list
 
   func := ID | '(' expr ')'
 
-  prob := prob\_vars '=' number
+  prob := prob_vars '=' number
 
-  prob\_var := joint\_vars | cond\_vars
+  prob_var := joint_vars | cond_vars
 
-  joint\_vars := ID (';' ID)*
+  joint_vars := ID (';' ID)*
 
-  cond_vars := joint\_vars '|' joint\_vars
+  cond_vars := joint_vars '|' joint_vars
 
-  comp\_expr := if\_expr | for\_expr | while\_expr | func\_def
+  comp_expr := if_expr | for_expr | while_expr | func_def
 
-  if\_expr := 'if' '(' expr ')' ':' expr 'else' ':' expr
+  if_expr := 'if' '(' expr ')' ':' expr 'else' ':' expr
 
-  for\_expr := 'for' '(' ID '<-' expr ':' expr ')' ':' expr
+  for_expr := 'for' '(' ID '<-' expr ':' expr ')' ':' expr
 
-  while\_expr := 'while' '(' expr ')' ':' expr
+  while_expr := 'while' '(' expr ')' ':' expr
 
-  func\_def := 'function' '(' func\_params? ')' ':' expr
+  func_def := 'function' '(' func_params? ')' ':' expr
 
-  func\_params := ID (',' ID)*
+  func_params := ID (',' ID)*
 ```
