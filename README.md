@@ -8,7 +8,7 @@ It is part of a bigger project, [Likely Framework](https://github.com/igorbonadi
 
 ### Arithmetic Expressions
 
-Arithmetic expressions are very similar to languages like C, C++, Java, Python and Ruby. The only difference is that there isn't operator precedence. So, use parentheses!
+Likely's arithmetic expressions are very similar to languages like C, C++, Java, Python and Ruby. The only difference is that there isn't operator precedence. So, use parentheses!
 
 ```python
   1 + 2       # => 3
