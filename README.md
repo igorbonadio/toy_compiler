@@ -6,6 +6,7 @@ Likely is a language to specify probabilistic models.
 GRAMMAR
 =======
 
+```
   program := ( NEWLINE | stmt )*
 
   stmt := expr NEWLINE
@@ -51,3 +52,4 @@ GRAMMAR
   func\_def := 'function' '(' func\_params? ')' ':' expr
 
   func\_params := ID (',' ID)*
+```
