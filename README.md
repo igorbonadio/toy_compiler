@@ -185,6 +185,45 @@ while (true):
   x = x + 1
 ```
 
+### Functions
+
+Functions are one of the most important things in Likely. You can define a function:
+
+```python
+sum = function(a, b): a + b
+```
+
+And call it:
+
+```python
+sum(1, 2)
+```
+
+Functions are objects too. So you can send message to them:
+
+```python
+sum.apply(1, 2) == sum(1, 2)  # => true
+sum.arity                     # => 2
+```
+
+You can define functions using the thin® way:
+
+```python
+sum = function(a, b):
+  a + b
+```
+
+If you want, you can use the RETURN statement:
+
+```python
+sum = function(a, b):
+  return a + b
+```
+
+### Constructors
+
+### Probabilities
+
 ## Grammar
 
 ```
