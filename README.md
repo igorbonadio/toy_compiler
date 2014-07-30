@@ -267,7 +267,7 @@ rubi = dog("rrrruau"): { bark = function(): "lalala"; sleep = function(): "zzZZz
 rubi.bark()  # => "lalala"
 ruby.sleep() # => "zzZZzzZz"
 
-spike = doc("!!!"): sleep = function(): "..."
+spike = dog("!!!"): sleep = function(): "..."
 spike.bark()  # => "!!!"
 spike.sleep() # => "..."
 ```
@@ -289,6 +289,8 @@ Likely is a language to define probabilistic models. So it includes some syntax 
 
 ```python
 Prob(a = 0.2, b = 0.8) # ~> Prob(x = a) = 0.2 and Prob(x = b) = 0.8
+
+Prob(a; a = 0.2, b; a = 0.8) # ~> Prob(x = a; y = a) = 0.2 and Prob(x = b; y = a) = 0.8
 ```
 
 or
@@ -298,12 +300,19 @@ Prob(
   a = 0.2 # ~> Prob(x = a) = 0.2
   b = 0.8 # ~> Prob(x = b) = 0.8
 )
+
+Prob(
+  a; a = 0.2 # ~> Prob(x = a; y = a) = 0.2
+  b; a = 0.8 # ~> Prob(x = b; y = a) = 0.8
+)
 ```
 
 * Discrete Conditional Probability Distribution
 
 ```python
 Prob(a | a = 0.2, b | a = 0.8, a | b = 0.6, b | b = 0.4) # ~> Prob(x_i = a | x_{i-1} = a) = 0.2, Prob(x_i = b | x_{i-1} = a) = 0.8, Prob(x_i = a | x_{i-1} = b) = 0.4 and Prob(x_i = b | x_{i-1} = b) = 0.6
+
+Prob(a; a | a; b = 0.2, b; a | a; b = 0.8, a; a | b; b = 0.6, b; a | b; b = 0.4) # ~> Prob(x_i = a; y_i = a | x_{i-1} = a; y_{i-1} = b) = 0.2, Prob(x_i = b; y_i = a | x_{i-1} = a; y_{i-1} = b) = 0.8, Prob(x_i = a; y_i = a | x_{i-1} = b; y_{i-1} = b) = 0.4 and Prob(x_i = b; y_i = a | x_{i-1} = b; y_{i-1} = b) = 0.6
 ```
 
 or
@@ -314,6 +323,13 @@ Prob(
   b | a = 0.8 # ~> Prob(x_i = b | x_{i-1} = a) = 0.8
   a | b = 0.6 # ~> Prob(x_i = a | x_{i-1} = b) = 0.4
   b | b = 0.4 # ~> Prob(x_i = b | x_{i-1} = b) = 0.6
+)
+
+Prob(
+  a; a | a; b = 0.2 # ~> Prob(x_i = a; y_i = a | x_{i-1} = a; y_{i-1} = b) = 0.2
+  b; a | a; b = 0.8 # ~> Prob(x_i = b; y_i = a | x_{i-1} = a; y_{i-1} = b) = 0.8
+  a; a | b; b = 0.6 # ~> Prob(x_i = a; y_i = a | x_{i-1} = b; y_{i-1} = b) = 0.4
+  b; a | b; b = 0.4 # ~> Prob(x_i = b; y_i = a | x_{i-1} = b; y_{i-1} = b) = 0.6
 )
 ```
 
