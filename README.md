@@ -86,24 +86,24 @@ abc == abc # => true, if you didn't attribute a value to abc
 abc == bcd # => false, if you didn't attribute a value to abc and bcd
 ```
 
-### Lists
+### Sequences
 
-There are 2 ways to define lists. The fat® and thin® way.
+There are 2 ways to define sequences. The fat® and thin® way.
 
 Let's start by the fat® way:
 
 ```python
-colors = (red, blue, black)
+colors = [red, blue, black]
 ```
 
 And the thin® way: _under construction_
 
 ```python
-colors = (
+colors = [
   red
   blue
   black
-)
+]
 ```
 
 ### Pair & Hash
@@ -111,16 +111,16 @@ colors = (
 Pairs are useful to define Hash-like data structures:
 
 ```python
-ages = (igor -> 28, jessica -> 29)
+ages = [igor -> 28, jessica -> 29]
 ```
 
 or _under construction_
 
 ```python
-ages = (
+ages = [
   igor    -> 28
   jessica -> 29
-)
+]
 ```
 
 ### IF expressions
@@ -340,7 +340,7 @@ Prob(
 
   stmt := expr (NEWLINE | ';')
 
-  expr := literal | attr | list | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | return_expr | '(' expr ')'
+  expr := literal | attr | seq | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | return_expr | '(' expr ')'
 
   literal := ID | number | STRING | boolean
 
@@ -350,9 +350,9 @@ Prob(
 
   attr := ID '=' expr
 
-  list := '(' list_body? ')'
+  seq := '[' seq_body? ']'
 
-  list_body := expr (',' expr)*
+  seq_body := expr (',' expr)*
 
   pair := expr '->' expr
 
@@ -365,6 +365,10 @@ Prob(
   return_expr := 'return' expr
 
   func_call := func list
+
+  list := '(' list_body? ')'
+
+  list_body := expr (',' expr)*
 
   func := ID | '(' expr ')'
 
