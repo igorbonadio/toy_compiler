@@ -237,7 +237,7 @@ obj.msg = function(a, b): a + b
 
 ### Object Templates
 
-An object template defines a constructor function that can create new objects. For example:
+An object template defines a constructor function that can create new objects. For example: _under construction_
 
 ```python
 dog = object(sound):
@@ -266,7 +266,7 @@ rubi.bark()  # => "lalala"
 ruby.sleep() # => "zzZZzzZz"
 ```
 
-Or
+or
 
 ```python
 rubi = dog("rrrruau"):
@@ -276,6 +276,40 @@ rubi.bark()  # => "lalala"
 ```
 
 ### Probabilities
+
+Likely is a language to define probabilistic models. So it includes some syntax to help you write awesome code.
+
+* Discrete Joint Probability Distribution
+
+```python
+Prob(a = 0.2, b = 0.8) # ~> Prob(x = a) = 0.2 and Prob(x = b) = 0.8
+```
+
+or
+
+```python
+Prob(
+  a = 0.2 # ~> Prob(x = a) = 0.2
+  b = 0.8 # ~> Prob(x = b) = 0.8
+)
+```
+
+* Discrete Conditional Probability Distribution
+
+```python
+Prob(a | a = 0.2, b | a = 0.8, a | b = 0.6, b | b = 0.4) # ~> Prob(x_i = a | x_{i-1} = a) = 0.2, Prob(x_i = b | x_{i-1} = a) = 0.8, Prob(x_i = a | x_{i-1} = b) = 0.4 and Prob(x_i = b | x_{i-1} = b) = 0.6
+```
+
+or
+
+```python
+Prob(
+  a | a = 0.2 # ~> Prob(x_i = a | x_{i-1} = a) = 0.2
+  b | a = 0.8 # ~> Prob(x_i = b | x_{i-1} = a) = 0.8
+  a | b = 0.6 # ~> Prob(x_i = a | x_{i-1} = b) = 0.4
+  b | b = 0.4 # ~> Prob(x_i = b | x_{i-1} = b) = 0.6
+)
+```
 
 ## Grammar
 
