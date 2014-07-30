@@ -353,7 +353,9 @@ Prob(
 
   boolean := 'true' | 'false'
 
-  obj_msg := ID '.' ID
+  obj_msg := obj '.' ID
+
+  obj := literal | obj_msg | seq | func_call | prob | '(' expr ')'
 
   attr := (ID | obj_msg) '=' expr
 
@@ -373,11 +375,11 @@ Prob(
 
   func_call := func list
 
+  func := ID | obj_msg | '(' expr ')'
+
   list := '(' list_body? ')'
 
   list_body := expr (',' expr)*
-
-  func := ID | '(' expr ')'
 
   constructor_call := func_call ':' fat_expr
 
