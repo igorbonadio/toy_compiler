@@ -187,16 +187,18 @@ while (true):
 
 ### Functions
 
-Functions are one of the most important things in Likely. You can define a function:
+Functions are one of the most important things in Likely. You can define functions:
 
 ```python
 sum = function(a, b): a + b
+mul = function(a, b): { m = a*b; m; }
 ```
 
-And call it:
+And call them:
 
 ```python
-sum(1, 2)
+sum(1, 2) # => 3
+mul(1, 2) # => 2
 ```
 
 Functions are objects too. So you can send message to them:
@@ -261,7 +263,7 @@ rubi.bark()  # => "lalala"
 If you want to change or add a new message to an object, you can use the constructor's block syntax:
 
 ```python
-rubi = dog("rrrruau"): bark = function(): "lalala"; sleep = function(): "zzZZzzZz"
+rubi = dog("rrrruau"): { bark = function(): "lalala"; sleep = function(): "zzZZzzZz"; }
 rubi.bark()  # => "lalala"
 ruby.sleep() # => "zzZZzzZz"
 ```
@@ -316,7 +318,7 @@ Prob(
 ```
   program := ( NEWLINE | stmt )*
 
-  stmt := expr NEWLINE
+  stmt := expr (NEWLINE | ';')
 
   expr := literal | attr | list | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | return_expr | '(' expr ')'
 
@@ -348,7 +350,7 @@ Prob(
 
   constructor_call := func_call ':' fat_expr
 
-  fat_expr := expr (';' expr)
+  fat_expr := expr | '{' (expr ';') '}'
 
   prob := prob_vars '=' number
 
