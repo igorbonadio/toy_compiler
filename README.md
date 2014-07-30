@@ -375,7 +375,7 @@ Prob(
 
   func_call := func list
 
-  func := ID | obj_msg | '(' expr ')'
+  func := ID | obj_msg | func_call
 
   list := '(' list_body? ')'
 
