@@ -4,7 +4,7 @@ Likely is a language to specify probabilistic models. But not just that! In fact
 
 It is part of a bigger project, [Likely Framework](https://github.com/igorbonadio/likely), that provides the infrastructure to build and run probabilistic models.
 
-## Quick Start
+## Language Reference
 
 ### Literals
 
@@ -217,6 +217,22 @@ If you want, you can use the RETURN statement:
 
 ```python
 sum = function(a, b): return a + b
+```
+
+### Objects
+
+Everything in Likely is an object. Everything. _under construction_
+
+You can send mensages to an object:
+
+```python
+obj.msg(arg1, arg2)
+```
+
+And create custom messages:
+
+```python
+obj.msg = function(a, b): a + b
 ```
 
 ### Constructors
