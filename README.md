@@ -208,11 +208,16 @@ sum.apply(1, 2) == sum(1, 2)  # => true
 sum.arity                     # => 2
 ```
 
-You can define functions using the thin® way: _under construction_
+You can define and call functions using the thin® way: _under construction_
 
 ```python
 sum = function(a, b):
   a + b
+
+sum(
+  a
+  b
+)
 ```
 
 If you want, you can use the RETURN statement:
