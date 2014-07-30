@@ -235,7 +235,45 @@ And create custom messages:
 obj.msg = function(a, b): a + b
 ```
 
-### Constructors
+### Object Templates
+
+An object template defines a constructor function that can create new objects. For example:
+
+```python
+dog = object(sound):
+  bark = function(): "#{sound}!!!"
+```
+Constructors are like ordinary functions:
+
+```python
+rubi = dog("rrrruau")
+rubi.bark()  # => "rrrruau!!!"
+```
+
+As you saw in the last section, you can add or change object's messages:
+
+```python
+rubi = dog("rrrruau")
+rubi.bark = function(): "lalala"
+rubi.bark()  # => "lalala"
+```
+
+If you want to change or add a new message to an object, you can use the constructor's block syntax:
+
+```python
+rubi = dog("rrrruau"): bark = function(): "lalala"; sleep = function(): "zzZZzzZz"
+rubi.bark()  # => "lalala"
+ruby.sleep() # => "zzZZzzZz"
+```
+
+Or
+
+```python
+rubi = dog("rrrruau"):
+  bark = function(): "lalala"
+  sleep = function(): "zzZZzzZz"
+rubi.bark()  # => "lalala"
+```
 
 ### Probabilities
 
