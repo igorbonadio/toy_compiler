@@ -341,7 +341,7 @@ Prob(
 ## Grammar
 
 ```
-  program := ( NEWLINE | stmt )*
+  program := (NEWLINE | stmt)*
 
   stmt := expr (NEWLINE | ';')
 
