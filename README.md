@@ -266,6 +266,10 @@ If you want to change or add a new message to an object, you can use the constru
 rubi = dog("rrrruau"): { bark = function(): "lalala"; sleep = function(): "zzZZzzZz"; }
 rubi.bark()  # => "lalala"
 ruby.sleep() # => "zzZZzzZz"
+
+spike = doc("!!!"): sleep = function(): "..."
+spike.bark()  # => "!!!"
+spike.sleep() # => "..."
 ```
 
 or
