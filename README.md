@@ -345,7 +345,7 @@ Prob(
 
   stmt := expr (NEWLINE | ';')
 
-  expr := literal | attr | seq | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | return_expr | '(' expr ')'
+  expr := literal | obj_msg | attr | seq | pair | comp_expr | binop | boolop | func_call | constructor_call | prob | return_expr | '(' expr ')'
 
   literal := ID | number | STRING | boolean
 
@@ -353,7 +353,9 @@ Prob(
 
   boolean := 'true' | 'false'
 
-  attr := ID '=' expr
+  obj_msg := ID '.' ID
+
+  attr := (ID | obj_msg) '=' expr
 
   seq := '[' seq_body? ']'
 
