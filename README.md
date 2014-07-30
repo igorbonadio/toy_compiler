@@ -326,10 +326,10 @@ Prob(
 )
 
 Prob(
-  (a, a) | a; b = 0.2 # ~> Prob(x_i = a; y_i = a | x_{i-1} = a; y_{i-1} = b) = 0.2
-  (b, a) | a; b = 0.8 # ~> Prob(x_i = b; y_i = a | x_{i-1} = a; y_{i-1} = b) = 0.8
-  (a, a) | b; b = 0.6 # ~> Prob(x_i = a; y_i = a | x_{i-1} = b; y_{i-1} = b) = 0.4
-  (b, a) | b; b = 0.4 # ~> Prob(x_i = b; y_i = a | x_{i-1} = b; y_{i-1} = b) = 0.6
+  (a, a) | (a, b) = 0.2 # ~> Prob(x_i = a; y_i = a | x_{i-1} = a; y_{i-1} = b) = 0.2
+  (b, a) | (a, b) = 0.8 # ~> Prob(x_i = b; y_i = a | x_{i-1} = a; y_{i-1} = b) = 0.8
+  (a, a) | (b, b) = 0.6 # ~> Prob(x_i = a; y_i = a | x_{i-1} = b; y_{i-1} = b) = 0.4
+  (b, a) | (b, b) = 0.4 # ~> Prob(x_i = b; y_i = a | x_{i-1} = b; y_{i-1} = b) = 0.6
 )
 ```
 
