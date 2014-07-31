@@ -7,6 +7,7 @@ stmt : expr (NEWLINE | ';')
      ;
 
 expr : literal
+     | attr
      ;
 
 literal : ID
@@ -21,6 +22,9 @@ number : INTEGER
 
 bool : 'true'
      | 'false'
+     ;
+
+attr : ID '=' expr
      ;
 
 
