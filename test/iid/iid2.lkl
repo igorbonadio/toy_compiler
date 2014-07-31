@@ -1,4 +1,0 @@
-X = Alphabet(a, t, g, c) # X is the DNA's alphabet
-
-dna = IID(X):
-  distribution = Prob(a = 0.1, t = 0.3, g = 0.4, c = 0.2) # it is a list of probabilities

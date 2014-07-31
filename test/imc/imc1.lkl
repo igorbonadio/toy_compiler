@@ -1,7 +1,0 @@
-X = Alphabet(a, c, g, t)
-
-exon = IMC(X):
-  phases =
-    mc1
-    mc2
-    mc3

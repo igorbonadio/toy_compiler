@@ -1,9 +1,0 @@
-X = Alphabet(a, c, g, t)
-Y = Alphabet(Exon, Intron)
-
-predictor = LCCRF(X, Y):
-  features = ( # hash of type (function -> double)
-    ff_current_label(Exon)   -> 0.1 # ff_current_label(Exon) returns a function feature funtion of arity 4 (yc, yp, x, i)
-    ff_observation(a, 0)     -> 0.2 # same as above
-    ff_exon_c_1              -> 0.3 # ff_exon_c_1 is a function of arity 4
-  )

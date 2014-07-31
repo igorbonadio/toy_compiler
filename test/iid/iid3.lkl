@@ -1,9 +1,0 @@
-X = Alphabet(
-  a
-  t
-  g
-  c
-) # As you can see, a list can be represented by a set of lines with the same indentation
-
-dna = IID(X):
-  distribution = Prob(a = 0.1, t = 0.3, g = 0.4, c = 0.2) # it is a list of probabilities

@@ -1,5 +1,0 @@
-X = Alphabet(a, c, g, t)
-Y = Alphabet(Exon, Intron)
-
-predictor = LCCRF(X, Y):
-  features = (ff_current_label(Exon) -> 0.1, ff_observation(a, 0) -> 0.2, ff_exon_c_1 -> 0.3)
