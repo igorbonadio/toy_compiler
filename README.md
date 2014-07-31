@@ -387,7 +387,7 @@ Prob(
 
   prob := prob_vars '=' number
 
-  prob_var := joint_vars | cond_vars
+  prob_vars := joint_vars | cond_vars
 
   joint_vars := ID | list
 

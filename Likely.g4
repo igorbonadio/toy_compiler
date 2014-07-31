@@ -10,7 +10,12 @@ expr : literal
      | attr
      | seq
      | expr '->' expr
+     | expr op expr
      | '(' expr ')'
+     | func_call
+     | prob
+     | return_expr
+     | obj_msg
      ;
 
 literal : ID
@@ -27,7 +32,7 @@ bool : 'true'
      | 'false'
      ;
 
-attr : ID '=' expr
+attr : (ID | obj_msg) '=' expr
      ;
 
 seq : '[' seq_body? ']'
@@ -35,6 +40,59 @@ seq : '[' seq_body? ']'
 
 seq_body : expr (',' expr)*
          ;
+
+op : '+'
+   | '-'
+   | '*'
+   | '/'
+   | '=='
+   | '!='
+   | '>='
+   | '<='
+   | '>'
+   | '<'
+   | ':'
+   ;
+
+func_call : func list+
+          ;
+
+func : ID
+     | obj_msg
+     ;
+
+list : '(' list_body? ')'
+     ;
+
+list_body : expr (',' expr)*
+          ;
+
+prob : prob_vars '=' number
+     ;
+
+prob_vars : joint_vars
+          | cond_vars
+          ;
+
+joint_vars : ID
+           | list
+           ;
+
+cond_vars : joint_vars '|' joint_vars
+          ;
+
+return_expr : 'return' expr
+            ;
+
+obj_msg : obj ('.' ID list?)+
+        ;
+
+obj : literal
+    | seq
+    | prob
+    | '(' expr ')'
+    ;
+
 
 
 FOR      : 'for' ;
