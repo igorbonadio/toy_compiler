@@ -8,6 +8,8 @@ stmt : expr (NEWLINE | ';')
 
 expr : literal
      | attr
+     | seq
+     | '(' expr ')'
      ;
 
 literal : ID
@@ -27,6 +29,12 @@ bool : 'true'
 attr : ID '=' expr
      ;
 
+seq : '[' seq_body? ']'
+    ;
+
+seq_body : expr (',' expr)*
+         ;
+
 
 FOR      : 'for' ;
 IN       : '<-' ;
@@ -41,7 +49,7 @@ NOT      : 'not' ;
 AND      : 'and' ;
 OR       : 'or' ;
 
-ID      : [a-zA-z_][a-zA-z0-9_]* ;
+ID      : ID_START ID_CONTINUE* ;
 INTEGER : ('-')? NUM ;
 FLOAT   : ('-')? NUM '.' NUM ;
 STRING  : '"' (~["\\\r\n])* '"' ;
@@ -75,3 +83,5 @@ SKIP : (COMMENT | SPACES) -> skip ;
 fragment NUM : [0-9]+ ;
 fragment COMMENT : '#' ~[\r\n]* ;
 fragment SPACES  : [ \t]+ ;
+fragment ID_START : '_' | [A-Z] | [a-z] ;
+fragment ID_CONTINUE : ID_START | [0-9] ;
