@@ -1,0 +1,6 @@
+rubi = dog("rrrruau"): { bark = 1; sleep = 2; }
+rubi = dog("rrrruau"): { bark = 1; sleep = 2 }
+
+spike = dog("!!!"): sleep = 1
+
+x.b().b(): {x = 1;}

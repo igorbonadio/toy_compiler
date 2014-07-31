@@ -1,0 +1,3 @@
+sum = function(a, b): a + b
+mul = function(a, b): { m = a*b; m; }
+mul = function(a, b): { m = a*b; m }

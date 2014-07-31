@@ -383,7 +383,7 @@ Prob(
 
   constructor_call := func_call ':' fat_expr
 
-  fat_expr := expr | '{' (expr ';') '}'
+  fat_expr := expr | '{' (expr ';')* '}'
 
   prob := prob_vars '=' number
 

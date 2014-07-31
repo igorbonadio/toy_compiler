@@ -3,7 +3,7 @@ grammar Likely;
 file_input : ( NEWLINE | stmt )*
            ;
 
-stmt : expr (NEWLINE | ';')
+stmt : expr (NEWLINE | ';' | EOF)
      ;
 
 expr : literal
@@ -16,6 +16,8 @@ expr : literal
      | prob
      | return_expr
      | obj_msg
+     | constructor_call
+     | comp_expr
      ;
 
 literal : ID
@@ -93,6 +95,33 @@ obj : literal
     | '(' expr ')'
     ;
 
+constructor_call : func_call ':' fat_expr
+                 ;
+
+fat_expr : expr
+         | '{' (expr ';')* expr? '}'
+         ;
+
+comp_expr : if_expr
+          | for_expr
+          | while_expr
+          | func_def
+          ;
+
+if_expr : 'if' '(' expr ')' ':' fat_expr 'else' ':' fat_expr
+        ;
+
+for_expr : 'for' '(' ID '<-' expr ':' expr ')' ':' fat_expr
+         ;
+
+while_expr : 'while' '(' expr ')' ':' fat_expr
+           ;
+
+func_def : 'function' '(' func_params? ')' ':' fat_expr
+         ;
+
+func_params : ID (',' ID)*
+            ;
 
 
 FOR      : 'for' ;
