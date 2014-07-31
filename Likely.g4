@@ -9,6 +9,7 @@ stmt : expr (NEWLINE | ';')
 expr : literal
      | attr
      | seq
+     | expr '->' expr
      | '(' expr ')'
      ;
 
