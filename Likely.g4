@@ -13,7 +13,7 @@ expr : literal
      | expr op expr
      | '(' expr ')'
      | func_call
-     | prob
+     | dist
      | return_expr
      | obj_msg
      | constructor_call
@@ -71,6 +71,19 @@ list_body_fat : expr (',' expr)*
               ;
 
 list_body_thin : NEWLINE+ (expr NEWLINE+)*
+               ;
+
+dist : 'Prob' '(' dist_body? ')'
+     ;
+
+dist_body : dist_body_fat
+          | dist_body_thin
+          ;
+
+dist_body_fat : prob (',' prob)*
+              ;
+
+dist_body_thin : NEWLINE+ (prob NEWLINE+)*
                ;
 
 prob : prob_vars '=' number
@@ -140,6 +153,7 @@ ARROW    : '->' ;
 NOT      : 'not' ;
 AND      : 'and' ;
 OR       : 'or' ;
+PROB     : 'Prob' ;
 
 ID      : ID_START ID_CONTINUE* ;
 INTEGER : ('-')? NUM ;
