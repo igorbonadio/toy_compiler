@@ -96,7 +96,7 @@ Let's start by the fat® way:
 colors = [red, blue, black]
 ```
 
-And the thin® way: _under construction_
+And the thin® way:
 
 ```python
 colors = [
@@ -114,7 +114,7 @@ Pairs are useful to define Hash-like data structures:
 ages = [igor -> 28, jessica -> 29]
 ```
 
-or _under construction_
+or
 
 ```python
 ages = [
@@ -228,7 +228,7 @@ sum = function(a, b): return a + b
 
 ### Objects
 
-Everything in Likely is an object. Everything. _under construction_
+Everything in Likely is an object. Everything.
 
 You can send mensages to an object:
 
@@ -244,7 +244,7 @@ obj.msg = function(a, b): a + b
 
 ### Object Templates
 
-An object template defines a constructor function that can create new objects. For example: _under construction_
+An object template defines a constructor function that can create new objects. For example:
 
 ```python
 dog = object(sound):
@@ -277,7 +277,7 @@ spike.bark()  # => "!!!"
 spike.sleep() # => "..."
 ```
 
-or
+or _under construction_
 
 ```python
 rubi = dog("rrrruau"):

@@ -37,11 +37,8 @@ bool : 'true'
 attr : (ID | obj_msg) '=' expr
      ;
 
-seq : '[' seq_body? ']'
+seq : '[' list_body? ']'
     ;
-
-seq_body : expr (',' expr)*
-         ;
 
 op : '+'
    | '-'
@@ -66,8 +63,15 @@ func : ID
 list : '(' list_body? ')'
      ;
 
-list_body : expr (',' expr)*
+list_body : list_body_fat
+          | list_body_thin
           ;
+
+list_body_fat : expr (',' expr)*
+              ;
+
+list_body_thin : NEWLINE+ (expr NEWLINE+)*
+               ;
 
 prob : prob_vars '=' number
      ;
