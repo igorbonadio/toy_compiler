@@ -139,7 +139,7 @@ b = 321
 x = if (a == b): 1 else: 2 # => x == 2
 ```
 
-There is also a thin® way to define IFs: _under construction_
+There is also a thin® way to define IFs:
 
 ```python
 if (a == b):
@@ -163,7 +163,7 @@ x = 0
 y = for (i <- 1:10): x = x + 1 # => y == 10
 ```
 
-There is also a thin® way to define FORs: _under construction_
+There is also a thin® way to define FORs:
 
 ```python
 for (i <- 1:10):
@@ -178,7 +178,7 @@ WHILE is like a for, but it can run infinitely...
 while (true): x = x + 1
 ```
 
-As you can imagine, WHILE always returns a value. And yes, there is a thin® way to define WHILEs: _under construction_
+As you can imagine, WHILE always returns a value. And yes, there is a thin® way to define WHILEs:
 
 ```python
 while (true):
@@ -208,7 +208,7 @@ sum.apply(1, 2) == sum(1, 2)  # => true
 sum.arity                     # => 2
 ```
 
-You can define and call functions using the thin® way: _under construction_
+You can define and call functions using the thin® way:
 
 ```python
 sum = function(a, b):
@@ -277,7 +277,7 @@ spike.bark()  # => "!!!"
 spike.sleep() # => "..."
 ```
 
-or _under construction_
+or
 
 ```python
 rubi = dog("rrrruau"):
