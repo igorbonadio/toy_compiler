@@ -63,7 +63,7 @@ tokens { INDENT, DEDENT }
 file_input : ( NEWLINE | stmt )*
            ;
 
-stmt : expr (NEWLINE | ';' | EOF)
+stmt : expr (NEWLINE? | ';' | EOF)
      ;
 
 expr : literal
