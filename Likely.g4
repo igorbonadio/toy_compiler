@@ -172,8 +172,15 @@ obj : literal
     | '(' expr ')'
     ;
 
-constructor_call : func_call ':' fat_expr
+constructor_call : func_call ':' block
                  ;
+
+block : fat_expr
+      | thin_exp
+      ;
+
+thin_exp : NEWLINE+ INDENT (expr NEWLINE*)* DEDENT
+         ;
 
 fat_expr : expr
          | '{' (expr ';')* expr? '}'
@@ -185,16 +192,16 @@ comp_expr : if_expr
           | func_def
           ;
 
-if_expr : 'if' '(' expr ')' ':' fat_expr 'else' ':' fat_expr
+if_expr : 'if' '(' expr ')' ':' block 'else' ':' block
         ;
 
-for_expr : 'for' '(' ID '<-' expr ':' expr ')' ':' fat_expr
+for_expr : 'for' '(' ID '<-' expr ':' expr ')' ':' block
          ;
 
-while_expr : 'while' '(' expr ')' ':' fat_expr
+while_expr : 'while' '(' expr ')' ':' block
            ;
 
-func_def : 'function' '(' func_params? ')' ':' fat_expr
+func_def : 'function' '(' func_params? ')' ':' block
          ;
 
 func_params : ID (',' ID)*
