@@ -60,8 +60,14 @@ tokens { INDENT, DEDENT }
   }
 }
 
-file_input : ( NEWLINE | stmt )*
+file_input : NEWLINE* header ( NEWLINE | stmt )*
            ;
+
+header : impt*
+       ;
+
+impt : 'import' (ID | '.')? STRING (NEWLINE | ';')
+     ;
 
 stmt : expr (NEWLINE? | ';' | EOF)
      ;
@@ -208,6 +214,7 @@ func_params : ID (',' ID)*
             ;
 
 
+IMPORT   : 'import' ;
 FOR      : 'for' ;
 IN       : '<-' ;
 WHILE    : 'while' ;
@@ -234,6 +241,7 @@ CLOSE_BRACK : ']' ;
 OPEN_BRACE  : '{' ;
 CLOSE_BRACE : '}' ;
 
+DOT   : '.' ;
 ADD   :'+' ;
 SUB   : '-' ;
 MUL   : '*' ;
