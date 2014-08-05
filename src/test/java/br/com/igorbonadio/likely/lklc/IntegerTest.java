@@ -11,32 +11,81 @@ import br.com.igorbonadio.likely.lklast.LikelyAst.*;
 
 public class IntegerTest extends TestCase {
 
-    public IntegerTest(String testName) {
-        super(testName);
-    }
+  public IntegerTest(String testName) {
+    super(testName);
+  }
 
-    public static Test suite() {
-        return new TestSuite(IntegerTest.class);
-    }
+  public static Test suite() {
+    return new TestSuite(IntegerTest.class);
+  }
 
-    public void testSingleDigitInteger() {
-        LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("1"))));
-        ParseTree tree = parser.file_input();
+  public void testSingleDigitInteger() {
+    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("1"))));
+    ParseTree tree = parser.file_input();
 
-        ParseTreeWalker walker = new ParseTreeWalker();
-        ProtocolBufferListener listener = new ProtocolBufferListener();
-        walker.walk(listener, tree);
-        Program program = listener.getProtocolBuffer();
+    ParseTreeWalker walker = new ParseTreeWalker();
+    ProtocolBufferListener listener = new ProtocolBufferListener();
+    walker.walk(listener, tree);
+    Program program = listener.getProtocolBuffer();
 
-        Program expectedProgram = Program.newBuilder()
-            .addStatements(
-                Expression.newBuilder()
-                    .setTypeCode(Expression.ExpressionType.BUILTIN)
-                    .setBuiltin(
-                        Builtin.newBuilder()
-                            .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                            .setIntegerNumber(1))).build();
+    Program expectedProgram = Program.newBuilder()
+      .addStatements(
+        Expression.newBuilder()
+          .setTypeCode(Expression.ExpressionType.BUILTIN)
+          .setBuiltin(
+            Builtin.newBuilder()
+              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
+              .setIntegerNumber(1))).build();
 
-        assertTrue(expectedProgram.toString() == program.toString());
-    }
+    assertEquals(expectedProgram.toString(), program.toString());
+  }
+
+  public void testLongInteger() {
+    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("123"))));
+    ParseTree tree = parser.file_input();
+
+    ParseTreeWalker walker = new ParseTreeWalker();
+    ProtocolBufferListener listener = new ProtocolBufferListener();
+    walker.walk(listener, tree);
+    Program program = listener.getProtocolBuffer();
+
+    Program expectedProgram = Program.newBuilder()
+      .addStatements(
+        Expression.newBuilder()
+          .setTypeCode(Expression.ExpressionType.BUILTIN)
+          .setBuiltin(
+            Builtin.newBuilder()
+              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
+              .setIntegerNumber(123))).build();
+
+    assertEquals(expectedProgram.toString(), program.toString());
+  }
+
+  public void testTwoIntegers() {
+    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("1;2;"))));
+    ParseTree tree = parser.file_input();
+
+    ParseTreeWalker walker = new ParseTreeWalker();
+    ProtocolBufferListener listener = new ProtocolBufferListener();
+    walker.walk(listener, tree);
+    Program program = listener.getProtocolBuffer();
+
+    Program expectedProgram = Program.newBuilder()
+      .addStatements(
+        Expression.newBuilder()
+          .setTypeCode(Expression.ExpressionType.BUILTIN)
+          .setBuiltin(
+            Builtin.newBuilder()
+              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
+              .setIntegerNumber(1)))
+      .addStatements(
+        Expression.newBuilder()
+          .setTypeCode(Expression.ExpressionType.BUILTIN)
+          .setBuiltin(
+            Builtin.newBuilder()
+              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
+              .setIntegerNumber(2))).build();
+
+    assertEquals(expectedProgram.toString(), program.toString());
+  }
 }
