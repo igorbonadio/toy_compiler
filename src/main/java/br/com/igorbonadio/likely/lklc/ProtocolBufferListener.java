@@ -7,7 +7,7 @@ import br.com.igorbonadio.likely.lklast.LikelyAst.*;
 
 public class ProtocolBufferListener extends LikelyBaseListener {
   private Program.Builder program = Program.newBuilder();
-  private Builtin buildin;
+  private Builtin.Builder buildin;
 
   public void exitExpr(LikelyParser.ExprContext ctx) {
     Expression expr = Expression.newBuilder()
@@ -18,9 +18,14 @@ public class ProtocolBufferListener extends LikelyBaseListener {
   }
 
   public void exitNumber(LikelyParser.NumberContext ctx) {
-    buildin = Builtin.newBuilder()
-      .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-      .setIntegerNumber(Integer.valueOf(ctx.INTEGER().getText())).build();
+    buildin = Builtin.newBuilder();
+    if (ctx.INTEGER() != null) {
+      buildin.setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
+             .setIntegerNumber(Integer.valueOf(ctx.INTEGER().getText()));
+    } else if (ctx.FLOAT() != null) {
+      buildin.setTypeCode(Builtin.BuiltinType.REAL_NUMBER)
+             .setRealNumber(Double.valueOf(ctx.FLOAT().getText()));
+    }
   }
 
   public Program getProtocolBuffer() {
