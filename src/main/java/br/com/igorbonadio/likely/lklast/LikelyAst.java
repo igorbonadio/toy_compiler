@@ -1714,15 +1714,15 @@ public final class LikelyAst {
   public interface ExpressionOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required uint32 type_code = 1;
+    // required .Expression.ExpressionType type_code = 1;
     /**
-     * <code>required uint32 type_code = 1;</code>
+     * <code>required .Expression.ExpressionType type_code = 1;</code>
      */
     boolean hasTypeCode();
     /**
-     * <code>required uint32 type_code = 1;</code>
+     * <code>required .Expression.ExpressionType type_code = 1;</code>
      */
-    int getTypeCode();
+    br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType getTypeCode();
 
     // optional .Builtin builtin = 2;
     /**
@@ -1931,8 +1931,14 @@ public final class LikelyAst {
               break;
             }
             case 8: {
-              bitField0_ |= 0x00000001;
-              typeCode_ = input.readUInt32();
+              int rawValue = input.readEnum();
+              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType value = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                typeCode_ = value;
+              }
               break;
             }
             case 18: {
@@ -2109,20 +2115,183 @@ public final class LikelyAst {
       return PARSER;
     }
 
-    private int bitField0_;
-    // required uint32 type_code = 1;
-    public static final int TYPE_CODE_FIELD_NUMBER = 1;
-    private int typeCode_;
     /**
-     * <code>required uint32 type_code = 1;</code>
+     * Protobuf enum {@code Expression.ExpressionType}
+     */
+    public enum ExpressionType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BUILTIN = 0;</code>
+       */
+      BUILTIN(0, 0),
+      /**
+       * <code>ATTRIBUTION = 1;</code>
+       */
+      ATTRIBUTION(1, 1),
+      /**
+       * <code>BINARY_OPERATION = 2;</code>
+       */
+      BINARY_OPERATION(2, 2),
+      /**
+       * <code>FUNCTION_CALL = 3;</code>
+       */
+      FUNCTION_CALL(3, 3),
+      /**
+       * <code>RETURN_OPERATOR = 4;</code>
+       */
+      RETURN_OPERATOR(4, 4),
+      /**
+       * <code>OBJECT_MESSAGE = 5;</code>
+       */
+      OBJECT_MESSAGE(5, 5),
+      /**
+       * <code>IF_EXPRESSION = 6;</code>
+       */
+      IF_EXPRESSION(6, 6),
+      /**
+       * <code>FOR_EXPRESSION = 7;</code>
+       */
+      FOR_EXPRESSION(7, 7),
+      /**
+       * <code>WHILE_EXPRESSION = 8;</code>
+       */
+      WHILE_EXPRESSION(8, 8),
+      /**
+       * <code>FUNCTION_DEFINITION = 9;</code>
+       */
+      FUNCTION_DEFINITION(9, 9),
+      /**
+       * <code>ID = 10;</code>
+       */
+      ID(10, 10),
+      ;
+
+      /**
+       * <code>BUILTIN = 0;</code>
+       */
+      public static final int BUILTIN_VALUE = 0;
+      /**
+       * <code>ATTRIBUTION = 1;</code>
+       */
+      public static final int ATTRIBUTION_VALUE = 1;
+      /**
+       * <code>BINARY_OPERATION = 2;</code>
+       */
+      public static final int BINARY_OPERATION_VALUE = 2;
+      /**
+       * <code>FUNCTION_CALL = 3;</code>
+       */
+      public static final int FUNCTION_CALL_VALUE = 3;
+      /**
+       * <code>RETURN_OPERATOR = 4;</code>
+       */
+      public static final int RETURN_OPERATOR_VALUE = 4;
+      /**
+       * <code>OBJECT_MESSAGE = 5;</code>
+       */
+      public static final int OBJECT_MESSAGE_VALUE = 5;
+      /**
+       * <code>IF_EXPRESSION = 6;</code>
+       */
+      public static final int IF_EXPRESSION_VALUE = 6;
+      /**
+       * <code>FOR_EXPRESSION = 7;</code>
+       */
+      public static final int FOR_EXPRESSION_VALUE = 7;
+      /**
+       * <code>WHILE_EXPRESSION = 8;</code>
+       */
+      public static final int WHILE_EXPRESSION_VALUE = 8;
+      /**
+       * <code>FUNCTION_DEFINITION = 9;</code>
+       */
+      public static final int FUNCTION_DEFINITION_VALUE = 9;
+      /**
+       * <code>ID = 10;</code>
+       */
+      public static final int ID_VALUE = 10;
+
+
+      public final int getNumber() { return value; }
+
+      public static ExpressionType valueOf(int value) {
+        switch (value) {
+          case 0: return BUILTIN;
+          case 1: return ATTRIBUTION;
+          case 2: return BINARY_OPERATION;
+          case 3: return FUNCTION_CALL;
+          case 4: return RETURN_OPERATOR;
+          case 5: return OBJECT_MESSAGE;
+          case 6: return IF_EXPRESSION;
+          case 7: return FOR_EXPRESSION;
+          case 8: return WHILE_EXPRESSION;
+          case 9: return FUNCTION_DEFINITION;
+          case 10: return ID;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ExpressionType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<ExpressionType>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ExpressionType>() {
+              public ExpressionType findValueByNumber(int number) {
+                return ExpressionType.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ExpressionType[] VALUES = values();
+
+      public static ExpressionType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private ExpressionType(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:Expression.ExpressionType)
+    }
+
+    private int bitField0_;
+    // required .Expression.ExpressionType type_code = 1;
+    public static final int TYPE_CODE_FIELD_NUMBER = 1;
+    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType typeCode_;
+    /**
+     * <code>required .Expression.ExpressionType type_code = 1;</code>
      */
     public boolean hasTypeCode() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required uint32 type_code = 1;</code>
+     * <code>required .Expression.ExpressionType type_code = 1;</code>
      */
-    public int getTypeCode() {
+    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType getTypeCode() {
       return typeCode_;
     }
 
@@ -2390,7 +2559,7 @@ public final class LikelyAst {
     }
 
     private void initFields() {
-      typeCode_ = 0;
+      typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.BUILTIN;
       builtin_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDefaultInstance();
       attribution_ = br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.getDefaultInstance();
       binaryOperation_ = br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.getDefaultInstance();
@@ -2480,7 +2649,7 @@ public final class LikelyAst {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeUInt32(1, typeCode_);
+        output.writeEnum(1, typeCode_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeMessage(2, builtin_);
@@ -2526,7 +2695,7 @@ public final class LikelyAst {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, typeCode_);
+          .computeEnumSize(1, typeCode_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2698,7 +2867,7 @@ public final class LikelyAst {
 
       public Builder clear() {
         super.clear();
-        typeCode_ = 0;
+        typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.BUILTIN;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (builtinBuilder_ == null) {
           builtin_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDefaultInstance();
@@ -3023,35 +3192,38 @@ public final class LikelyAst {
       }
       private int bitField0_;
 
-      // required uint32 type_code = 1;
-      private int typeCode_ ;
+      // required .Expression.ExpressionType type_code = 1;
+      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.BUILTIN;
       /**
-       * <code>required uint32 type_code = 1;</code>
+       * <code>required .Expression.ExpressionType type_code = 1;</code>
        */
       public boolean hasTypeCode() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required uint32 type_code = 1;</code>
+       * <code>required .Expression.ExpressionType type_code = 1;</code>
        */
-      public int getTypeCode() {
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType getTypeCode() {
         return typeCode_;
       }
       /**
-       * <code>required uint32 type_code = 1;</code>
+       * <code>required .Expression.ExpressionType type_code = 1;</code>
        */
-      public Builder setTypeCode(int value) {
+      public Builder setTypeCode(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000001;
         typeCode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required uint32 type_code = 1;</code>
+       * <code>required .Expression.ExpressionType type_code = 1;</code>
        */
       public Builder clearTypeCode() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        typeCode_ = 0;
+        typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.BUILTIN;
         onChanged();
         return this;
       }
@@ -4314,15 +4486,15 @@ public final class LikelyAst {
   public interface BuiltinOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required uint32 type_code = 1;
+    // required .Builtin.BuiltinType type_code = 1;
     /**
-     * <code>required uint32 type_code = 1;</code>
+     * <code>required .Builtin.BuiltinType type_code = 1;</code>
      */
     boolean hasTypeCode();
     /**
-     * <code>required uint32 type_code = 1;</code>
+     * <code>required .Builtin.BuiltinType type_code = 1;</code>
      */
-    int getTypeCode();
+    br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType getTypeCode();
 
     // optional int64 integer_number = 2;
     /**
@@ -4463,8 +4635,14 @@ public final class LikelyAst {
               break;
             }
             case 8: {
-              bitField0_ |= 0x00000001;
-              typeCode_ = input.readUInt32();
+              int rawValue = input.readEnum();
+              br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType value = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                typeCode_ = value;
+              }
               break;
             }
             case 16: {
@@ -4565,20 +4743,147 @@ public final class LikelyAst {
       return PARSER;
     }
 
-    private int bitField0_;
-    // required uint32 type_code = 1;
-    public static final int TYPE_CODE_FIELD_NUMBER = 1;
-    private int typeCode_;
     /**
-     * <code>required uint32 type_code = 1;</code>
+     * Protobuf enum {@code Builtin.BuiltinType}
+     */
+    public enum BuiltinType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>INTEGER_NUMBER = 0;</code>
+       */
+      INTEGER_NUMBER(0, 0),
+      /**
+       * <code>REAL_NUMBER = 1;</code>
+       */
+      REAL_NUMBER(1, 1),
+      /**
+       * <code>STRING = 2;</code>
+       */
+      STRING(2, 2),
+      /**
+       * <code>BOOLEAN = 3;</code>
+       */
+      BOOLEAN(3, 3),
+      /**
+       * <code>SEQUENCE = 4;</code>
+       */
+      SEQUENCE(4, 4),
+      /**
+       * <code>HASH_MAP = 5;</code>
+       */
+      HASH_MAP(5, 5),
+      /**
+       * <code>PAIR = 6;</code>
+       */
+      PAIR(6, 6),
+      ;
+
+      /**
+       * <code>INTEGER_NUMBER = 0;</code>
+       */
+      public static final int INTEGER_NUMBER_VALUE = 0;
+      /**
+       * <code>REAL_NUMBER = 1;</code>
+       */
+      public static final int REAL_NUMBER_VALUE = 1;
+      /**
+       * <code>STRING = 2;</code>
+       */
+      public static final int STRING_VALUE = 2;
+      /**
+       * <code>BOOLEAN = 3;</code>
+       */
+      public static final int BOOLEAN_VALUE = 3;
+      /**
+       * <code>SEQUENCE = 4;</code>
+       */
+      public static final int SEQUENCE_VALUE = 4;
+      /**
+       * <code>HASH_MAP = 5;</code>
+       */
+      public static final int HASH_MAP_VALUE = 5;
+      /**
+       * <code>PAIR = 6;</code>
+       */
+      public static final int PAIR_VALUE = 6;
+
+
+      public final int getNumber() { return value; }
+
+      public static BuiltinType valueOf(int value) {
+        switch (value) {
+          case 0: return INTEGER_NUMBER;
+          case 1: return REAL_NUMBER;
+          case 2: return STRING;
+          case 3: return BOOLEAN;
+          case 4: return SEQUENCE;
+          case 5: return HASH_MAP;
+          case 6: return PAIR;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BuiltinType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<BuiltinType>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BuiltinType>() {
+              public BuiltinType findValueByNumber(int number) {
+                return BuiltinType.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final BuiltinType[] VALUES = values();
+
+      public static BuiltinType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private BuiltinType(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:Builtin.BuiltinType)
+    }
+
+    private int bitField0_;
+    // required .Builtin.BuiltinType type_code = 1;
+    public static final int TYPE_CODE_FIELD_NUMBER = 1;
+    private br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType typeCode_;
+    /**
+     * <code>required .Builtin.BuiltinType type_code = 1;</code>
      */
     public boolean hasTypeCode() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required uint32 type_code = 1;</code>
+     * <code>required .Builtin.BuiltinType type_code = 1;</code>
      */
-    public int getTypeCode() {
+    public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType getTypeCode() {
       return typeCode_;
     }
 
@@ -4740,7 +5045,7 @@ public final class LikelyAst {
     }
 
     private void initFields() {
-      typeCode_ = 0;
+      typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER_NUMBER;
       integerNumber_ = 0L;
       realNumber_ = 0D;
       str_ = "";
@@ -4784,7 +5089,7 @@ public final class LikelyAst {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeUInt32(1, typeCode_);
+        output.writeEnum(1, typeCode_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeInt64(2, integerNumber_);
@@ -4818,7 +5123,7 @@ public final class LikelyAst {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, typeCode_);
+          .computeEnumSize(1, typeCode_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -4967,7 +5272,7 @@ public final class LikelyAst {
 
       public Builder clear() {
         super.clear();
-        typeCode_ = 0;
+        typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER_NUMBER;
         bitField0_ = (bitField0_ & ~0x00000001);
         integerNumber_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -5158,35 +5463,38 @@ public final class LikelyAst {
       }
       private int bitField0_;
 
-      // required uint32 type_code = 1;
-      private int typeCode_ ;
+      // required .Builtin.BuiltinType type_code = 1;
+      private br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER_NUMBER;
       /**
-       * <code>required uint32 type_code = 1;</code>
+       * <code>required .Builtin.BuiltinType type_code = 1;</code>
        */
       public boolean hasTypeCode() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required uint32 type_code = 1;</code>
+       * <code>required .Builtin.BuiltinType type_code = 1;</code>
        */
-      public int getTypeCode() {
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType getTypeCode() {
         return typeCode_;
       }
       /**
-       * <code>required uint32 type_code = 1;</code>
+       * <code>required .Builtin.BuiltinType type_code = 1;</code>
        */
-      public Builder setTypeCode(int value) {
+      public Builder setTypeCode(br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000001;
         typeCode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required uint32 type_code = 1;</code>
+       * <code>required .Builtin.BuiltinType type_code = 1;</code>
        */
       public Builder clearTypeCode() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        typeCode_ = 0;
+        typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER_NUMBER;
         onChanged();
         return this;
       }
@@ -16129,46 +16437,55 @@ public final class LikelyAst {
       "d_packages\030\001 \003(\0132\016.ImportPackage\022\037\n\nstat" +
       "ements\030\002 \003(\0132\013.Expression\";\n\rImportPacka" +
       "ge\022\024\n\014package_name\030\001 \002(\t\022\024\n\014package_path" +
-      "\030\002 \002(\t\"\272\003\n\nExpression\022\021\n\ttype_code\030\001 \002(\r" +
-      "\022\031\n\007builtin\030\002 \001(\0132\010.Builtin\022!\n\013attributi" +
-      "on\030\003 \001(\0132\014.Attribution\022*\n\020binary_operati" +
-      "on\030\004 \001(\0132\020.BinaryOperation\022$\n\rfunction_c" +
-      "all\030\005 \001(\0132\r.FunctionCall\022)\n\017return_opera" +
-      "tor\030\006 \001(\0132\020.ReturnOperation\022&\n\016object_me",
-      "ssage\030\007 \001(\0132\016.ObjectMessage\022$\n\rif_expres" +
-      "sion\030\010 \001(\0132\r.IfExpression\022&\n\016for_express" +
-      "ion\030\t \001(\0132\016.ForExpression\022*\n\020while_expre" +
-      "ssion\030\n \001(\0132\020.WhileExpression\0220\n\023functio" +
-      "n_definition\030\013 \001(\0132\023.FunctionDefinition\022" +
-      "\n\n\002id\030\014 \001(\t\"\254\001\n\007Builtin\022\021\n\ttype_code\030\001 \002" +
-      "(\r\022\026\n\016integer_number\030\002 \001(\003\022\023\n\013real_numbe" +
-      "r\030\003 \001(\001\022\013\n\003str\030\004 \001(\t\022\t\n\001b\030\005 \001(\010\022\033\n\010seque" +
-      "nce\030\006 \001(\0132\t.Sequence\022\027\n\010hash_map\030\007 \001(\0132\005" +
-      ".Hash\022\023\n\004pair\030\010 \001(\0132\005.Pair\")\n\010Sequence\022\035",
-      "\n\010elements\030\001 \003(\0132\013.Expression\"<\n\004Hash\022\030\n" +
-      "\003key\030\001 \003(\0132\013.Expression\022\032\n\005value\030\002 \003(\0132\013" +
-      ".Expression\"<\n\004Pair\022\030\n\003key\030\001 \002(\0132\013.Expre" +
-      "ssion\022\032\n\005value\030\002 \002(\0132\013.Expression\"5\n\013Att" +
-      "ribution\022\n\n\002id\030\001 \002(\t\022\032\n\005value\030\002 \002(\0132\013.Ex" +
-      "pression\"E\n\017BinaryOperation\022\030\n\003lhs\030\001 \002(\013" +
-      "2\013.Expression\022\030\n\003rhs\030\002 \002(\0132\013.Expression\"" +
-      "M\n\014FunctionCall\022\035\n\010function\030\001 \002(\0132\013.Expr" +
-      "ession\022\036\n\targuments\030\002 \003(\0132\013.Expression\"-" +
-      "\n\017ReturnOperation\022\032\n\005value\030\001 \002(\0132\013.Expre",
-      "ssion\"=\n\rObjectMessage\022\033\n\006object\030\001 \002(\0132\013" +
-      ".Expression\022\017\n\007message\030\002 \002(\t\"{\n\014IfExpres" +
-      "sion\022\036\n\tcondition\030\001 \002(\0132\013.Expression\022$\n\017" +
-      "true_statements\030\002 \003(\0132\013.Expression\022%\n\020fa" +
-      "lse_statements\030\003 \003(\0132\013.Expression\"\206\001\n\rFo" +
-      "rExpression\022\020\n\010variable\030\001 \002(\t\022 \n\013lower_b" +
-      "ound\030\002 \002(\0132\013.Expression\022 \n\013upper_bound\030\003" +
-      " \002(\0132\013.Expression\022\037\n\nstatements\030\004 \003(\0132\013." +
-      "Expression\"R\n\017WhileExpression\022\036\n\tconditi" +
-      "on\030\001 \002(\0132\013.Expression\022\037\n\nstatements\030\002 \003(",
-      "\0132\013.Expression\"I\n\022FunctionDefinition\022\022\n\n" +
-      "parameters\030\001 \003(\t\022\037\n\nstatements\030\002 \003(\0132\013.E" +
-      "xpressionB\"\n br.com.igorbonadio.likely.l" +
-      "klast"
+      "\030\002 \002(\t\"\267\005\n\nExpression\022-\n\ttype_code\030\001 \002(\016" +
+      "2\032.Expression.ExpressionType\022\031\n\007builtin\030" +
+      "\002 \001(\0132\010.Builtin\022!\n\013attribution\030\003 \001(\0132\014.A" +
+      "ttribution\022*\n\020binary_operation\030\004 \001(\0132\020.B" +
+      "inaryOperation\022$\n\rfunction_call\030\005 \001(\0132\r." +
+      "FunctionCall\022)\n\017return_operator\030\006 \001(\0132\020.",
+      "ReturnOperation\022&\n\016object_message\030\007 \001(\0132" +
+      "\016.ObjectMessage\022$\n\rif_expression\030\010 \001(\0132\r" +
+      ".IfExpression\022&\n\016for_expression\030\t \001(\0132\016." +
+      "ForExpression\022*\n\020while_expression\030\n \001(\0132" +
+      "\020.WhileExpression\0220\n\023function_definition" +
+      "\030\013 \001(\0132\023.FunctionDefinition\022\n\n\002id\030\014 \001(\t\"" +
+      "\336\001\n\016ExpressionType\022\013\n\007BUILTIN\020\000\022\017\n\013ATTRI" +
+      "BUTION\020\001\022\024\n\020BINARY_OPERATION\020\002\022\021\n\rFUNCTI" +
+      "ON_CALL\020\003\022\023\n\017RETURN_OPERATOR\020\004\022\022\n\016OBJECT" +
+      "_MESSAGE\020\005\022\021\n\rIF_EXPRESSION\020\006\022\022\n\016FOR_EXP",
+      "RESSION\020\007\022\024\n\020WHILE_EXPRESSION\020\010\022\027\n\023FUNCT" +
+      "ION_DEFINITION\020\t\022\006\n\002ID\020\n\"\265\002\n\007Builtin\022\'\n\t" +
+      "type_code\030\001 \002(\0162\024.Builtin.BuiltinType\022\026\n" +
+      "\016integer_number\030\002 \001(\003\022\023\n\013real_number\030\003 \001" +
+      "(\001\022\013\n\003str\030\004 \001(\t\022\t\n\001b\030\005 \001(\010\022\033\n\010sequence\030\006" +
+      " \001(\0132\t.Sequence\022\027\n\010hash_map\030\007 \001(\0132\005.Hash" +
+      "\022\023\n\004pair\030\010 \001(\0132\005.Pair\"q\n\013BuiltinType\022\022\n\016" +
+      "INTEGER_NUMBER\020\000\022\017\n\013REAL_NUMBER\020\001\022\n\n\006STR" +
+      "ING\020\002\022\013\n\007BOOLEAN\020\003\022\014\n\010SEQUENCE\020\004\022\014\n\010HASH" +
+      "_MAP\020\005\022\010\n\004PAIR\020\006\")\n\010Sequence\022\035\n\010elements",
+      "\030\001 \003(\0132\013.Expression\"<\n\004Hash\022\030\n\003key\030\001 \003(\013" +
+      "2\013.Expression\022\032\n\005value\030\002 \003(\0132\013.Expressio" +
+      "n\"<\n\004Pair\022\030\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005v" +
+      "alue\030\002 \002(\0132\013.Expression\"5\n\013Attribution\022\n" +
+      "\n\002id\030\001 \002(\t\022\032\n\005value\030\002 \002(\0132\013.Expression\"E" +
+      "\n\017BinaryOperation\022\030\n\003lhs\030\001 \002(\0132\013.Express" +
+      "ion\022\030\n\003rhs\030\002 \002(\0132\013.Expression\"M\n\014Functio" +
+      "nCall\022\035\n\010function\030\001 \002(\0132\013.Expression\022\036\n\t" +
+      "arguments\030\002 \003(\0132\013.Expression\"-\n\017ReturnOp" +
+      "eration\022\032\n\005value\030\001 \002(\0132\013.Expression\"=\n\rO",
+      "bjectMessage\022\033\n\006object\030\001 \002(\0132\013.Expressio" +
+      "n\022\017\n\007message\030\002 \002(\t\"{\n\014IfExpression\022\036\n\tco" +
+      "ndition\030\001 \002(\0132\013.Expression\022$\n\017true_state" +
+      "ments\030\002 \003(\0132\013.Expression\022%\n\020false_statem" +
+      "ents\030\003 \003(\0132\013.Expression\"\206\001\n\rForExpressio" +
+      "n\022\020\n\010variable\030\001 \002(\t\022 \n\013lower_bound\030\002 \002(\013" +
+      "2\013.Expression\022 \n\013upper_bound\030\003 \002(\0132\013.Exp" +
+      "ression\022\037\n\nstatements\030\004 \003(\0132\013.Expression" +
+      "\"R\n\017WhileExpression\022\036\n\tcondition\030\001 \002(\0132\013" +
+      ".Expression\022\037\n\nstatements\030\002 \003(\0132\013.Expres",
+      "sion\"I\n\022FunctionDefinition\022\022\n\nparameters" +
+      "\030\001 \003(\t\022\037\n\nstatements\030\002 \003(\0132\013.ExpressionB" +
+      "\"\n br.com.igorbonadio.likely.lklast"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

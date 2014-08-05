@@ -39,6 +39,9 @@
             <goals>
               <goal>antlr4</goal>
             </goals>
+            <configuration>
+              <visitor>false</visitor>
+            </configuration>
           </execution>
         </executions>
       </plugin>
