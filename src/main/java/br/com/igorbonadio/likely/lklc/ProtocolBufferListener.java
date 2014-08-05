@@ -18,13 +18,23 @@ public class ProtocolBufferListener extends LikelyBaseListener {
   }
 
   public void exitNumber(LikelyParser.NumberContext ctx) {
-    buildin = Builtin.newBuilder();
     if (ctx.INTEGER() != null) {
+      buildin = Builtin.newBuilder();
       buildin.setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
              .setIntegerNumber(Integer.valueOf(ctx.INTEGER().getText()));
     } else if (ctx.FLOAT() != null) {
+      buildin = Builtin.newBuilder();
       buildin.setTypeCode(Builtin.BuiltinType.REAL_NUMBER)
              .setRealNumber(Double.valueOf(ctx.FLOAT().getText()));
+    }
+  }
+
+  public void exitLiteral(LikelyParser.LiteralContext ctx) {
+    if (ctx.STRING() != null) {
+      String str = ctx.STRING().getText();
+      buildin = Builtin.newBuilder();
+      buildin.setTypeCode(Builtin.BuiltinType.STRING)
+             .setStr(str.substring(1,str.length()-1));
     }
   }
 
