@@ -4531,15 +4531,15 @@ public final class LikelyAst {
     com.google.protobuf.ByteString
         getStringBytes();
 
-    // optional bool b = 5;
+    // optional bool boolean = 5;
     /**
-     * <code>optional bool b = 5;</code>
+     * <code>optional bool boolean = 5;</code>
      */
-    boolean hasB();
+    boolean hasBoolean();
     /**
-     * <code>optional bool b = 5;</code>
+     * <code>optional bool boolean = 5;</code>
      */
-    boolean getB();
+    boolean getBoolean();
 
     // repeated .Expression sequence = 6;
     /**
@@ -4684,7 +4684,7 @@ public final class LikelyAst {
             }
             case 40: {
               bitField0_ |= 0x00000010;
-              b_ = input.readBool();
+              boolean_ = input.readBool();
               break;
             }
             case 50: {
@@ -4980,20 +4980,20 @@ public final class LikelyAst {
       }
     }
 
-    // optional bool b = 5;
-    public static final int B_FIELD_NUMBER = 5;
-    private boolean b_;
+    // optional bool boolean = 5;
+    public static final int BOOLEAN_FIELD_NUMBER = 5;
+    private boolean boolean_;
     /**
-     * <code>optional bool b = 5;</code>
+     * <code>optional bool boolean = 5;</code>
      */
-    public boolean hasB() {
+    public boolean hasBoolean() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional bool b = 5;</code>
+     * <code>optional bool boolean = 5;</code>
      */
-    public boolean getB() {
-      return b_;
+    public boolean getBoolean() {
+      return boolean_;
     }
 
     // repeated .Expression sequence = 6;
@@ -5095,7 +5095,7 @@ public final class LikelyAst {
       integer_ = 0L;
       real_ = 0D;
       string_ = "";
-      b_ = false;
+      boolean_ = false;
       sequence_ = java.util.Collections.emptyList();
       hashMap_ = java.util.Collections.emptyList();
       pair_ = br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance();
@@ -5147,7 +5147,7 @@ public final class LikelyAst {
         output.writeBytes(4, getStringBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBool(5, b_);
+        output.writeBool(5, boolean_);
       }
       for (int i = 0; i < sequence_.size(); i++) {
         output.writeMessage(6, sequence_.get(i));
@@ -5185,7 +5185,7 @@ public final class LikelyAst {
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, b_);
+          .computeBoolSize(5, boolean_);
       }
       for (int i = 0; i < sequence_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -5326,7 +5326,7 @@ public final class LikelyAst {
         bitField0_ = (bitField0_ & ~0x00000004);
         string_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
-        b_ = false;
+        boolean_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
         if (sequenceBuilder_ == null) {
           sequence_ = java.util.Collections.emptyList();
@@ -5393,7 +5393,7 @@ public final class LikelyAst {
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.b_ = b_;
+        result.boolean_ = boolean_;
         if (sequenceBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020)) {
             sequence_ = java.util.Collections.unmodifiableList(sequence_);
@@ -5450,8 +5450,8 @@ public final class LikelyAst {
           string_ = other.string_;
           onChanged();
         }
-        if (other.hasB()) {
-          setB(other.getB());
+        if (other.hasBoolean()) {
+          setBoolean(other.getBoolean());
         }
         if (sequenceBuilder_ == null) {
           if (!other.sequence_.isEmpty()) {
@@ -5733,35 +5733,35 @@ public final class LikelyAst {
         return this;
       }
 
-      // optional bool b = 5;
-      private boolean b_ ;
+      // optional bool boolean = 5;
+      private boolean boolean_ ;
       /**
-       * <code>optional bool b = 5;</code>
+       * <code>optional bool boolean = 5;</code>
        */
-      public boolean hasB() {
+      public boolean hasBoolean() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional bool b = 5;</code>
+       * <code>optional bool boolean = 5;</code>
        */
-      public boolean getB() {
-        return b_;
+      public boolean getBoolean() {
+        return boolean_;
       }
       /**
-       * <code>optional bool b = 5;</code>
+       * <code>optional bool boolean = 5;</code>
        */
-      public Builder setB(boolean value) {
+      public Builder setBoolean(boolean value) {
         bitField0_ |= 0x00000010;
-        b_ = value;
+        boolean_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool b = 5;</code>
+       * <code>optional bool boolean = 5;</code>
        */
-      public Builder clearB() {
+      public Builder clearBoolean() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        b_ = false;
+        boolean_ = false;
         onChanged();
         return this;
       }
@@ -15038,35 +15038,35 @@ public final class LikelyAst {
       "ON_CALL\020\003\022\023\n\017RETURN_OPERATOR\020\004\022\022\n\016OBJECT" +
       "_MESSAGE\020\005\022\021\n\rIF_EXPRESSION\020\006\022\022\n\016FOR_EXP",
       "RESSION\020\007\022\024\n\020WHILE_EXPRESSION\020\010\022\027\n\023FUNCT" +
-      "ION_DEFINITION\020\t\022\006\n\002ID\020\n\"\236\002\n\007Builtin\022\'\n\t" +
+      "ION_DEFINITION\020\t\022\006\n\002ID\020\n\"\244\002\n\007Builtin\022\'\n\t" +
       "type_code\030\001 \002(\0162\024.Builtin.BuiltinType\022\017\n" +
       "\007integer\030\002 \001(\003\022\014\n\004real\030\003 \001(\001\022\016\n\006string\030\004" +
-      " \001(\t\022\t\n\001b\030\005 \001(\010\022\035\n\010sequence\030\006 \003(\0132\013.Expr" +
-      "ession\022\027\n\010hash_map\030\007 \003(\0132\005.Pair\022\023\n\004pair\030" +
-      "\010 \001(\0132\005.Pair\"c\n\013BuiltinType\022\013\n\007INTEGER\020\000" +
-      "\022\010\n\004REAL\020\001\022\n\n\006STRING\020\002\022\013\n\007BOOLEAN\020\003\022\014\n\010S" +
-      "EQUENCE\020\004\022\014\n\010HASH_MAP\020\005\022\010\n\004PAIR\020\006\"<\n\004Pai" +
-      "r\022\030\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005value\030\002 \002",
-      "(\0132\013.Expression\"5\n\013Attribution\022\n\n\002id\030\001 \002" +
-      "(\t\022\032\n\005value\030\002 \002(\0132\013.Expression\"E\n\017Binary" +
-      "Operation\022\030\n\003lhs\030\001 \002(\0132\013.Expression\022\030\n\003r" +
-      "hs\030\002 \002(\0132\013.Expression\"M\n\014FunctionCall\022\035\n" +
-      "\010function\030\001 \002(\0132\013.Expression\022\036\n\targument" +
-      "s\030\002 \003(\0132\013.Expression\"-\n\017ReturnOperation\022" +
-      "\032\n\005value\030\001 \002(\0132\013.Expression\"=\n\rObjectMes" +
-      "sage\022\033\n\006object\030\001 \002(\0132\013.Expression\022\017\n\007mes" +
-      "sage\030\002 \002(\t\"{\n\014IfExpression\022\036\n\tcondition\030" +
-      "\001 \002(\0132\013.Expression\022$\n\017true_statements\030\002 ",
-      "\003(\0132\013.Expression\022%\n\020false_statements\030\003 \003" +
-      "(\0132\013.Expression\"\206\001\n\rForExpression\022\020\n\010var" +
-      "iable\030\001 \002(\t\022 \n\013lower_bound\030\002 \002(\0132\013.Expre" +
-      "ssion\022 \n\013upper_bound\030\003 \002(\0132\013.Expression\022" +
-      "\037\n\nstatements\030\004 \003(\0132\013.Expression\"R\n\017Whil" +
-      "eExpression\022\036\n\tcondition\030\001 \002(\0132\013.Express" +
-      "ion\022\037\n\nstatements\030\002 \003(\0132\013.Expression\"I\n\022" +
-      "FunctionDefinition\022\022\n\nparameters\030\001 \003(\t\022\037" +
-      "\n\nstatements\030\002 \003(\0132\013.ExpressionB\"\n br.co" +
-      "m.igorbonadio.likely.lklast"
+      " \001(\t\022\017\n\007boolean\030\005 \001(\010\022\035\n\010sequence\030\006 \003(\0132" +
+      "\013.Expression\022\027\n\010hash_map\030\007 \003(\0132\005.Pair\022\023\n" +
+      "\004pair\030\010 \001(\0132\005.Pair\"c\n\013BuiltinType\022\013\n\007INT" +
+      "EGER\020\000\022\010\n\004REAL\020\001\022\n\n\006STRING\020\002\022\013\n\007BOOLEAN\020" +
+      "\003\022\014\n\010SEQUENCE\020\004\022\014\n\010HASH_MAP\020\005\022\010\n\004PAIR\020\006\"" +
+      "<\n\004Pair\022\030\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005val",
+      "ue\030\002 \002(\0132\013.Expression\"5\n\013Attribution\022\n\n\002" +
+      "id\030\001 \002(\t\022\032\n\005value\030\002 \002(\0132\013.Expression\"E\n\017" +
+      "BinaryOperation\022\030\n\003lhs\030\001 \002(\0132\013.Expressio" +
+      "n\022\030\n\003rhs\030\002 \002(\0132\013.Expression\"M\n\014FunctionC" +
+      "all\022\035\n\010function\030\001 \002(\0132\013.Expression\022\036\n\tar" +
+      "guments\030\002 \003(\0132\013.Expression\"-\n\017ReturnOper" +
+      "ation\022\032\n\005value\030\001 \002(\0132\013.Expression\"=\n\rObj" +
+      "ectMessage\022\033\n\006object\030\001 \002(\0132\013.Expression\022" +
+      "\017\n\007message\030\002 \002(\t\"{\n\014IfExpression\022\036\n\tcond" +
+      "ition\030\001 \002(\0132\013.Expression\022$\n\017true_stateme",
+      "nts\030\002 \003(\0132\013.Expression\022%\n\020false_statemen" +
+      "ts\030\003 \003(\0132\013.Expression\"\206\001\n\rForExpression\022" +
+      "\020\n\010variable\030\001 \002(\t\022 \n\013lower_bound\030\002 \002(\0132\013" +
+      ".Expression\022 \n\013upper_bound\030\003 \002(\0132\013.Expre" +
+      "ssion\022\037\n\nstatements\030\004 \003(\0132\013.Expression\"R" +
+      "\n\017WhileExpression\022\036\n\tcondition\030\001 \002(\0132\013.E" +
+      "xpression\022\037\n\nstatements\030\002 \003(\0132\013.Expressi" +
+      "on\"I\n\022FunctionDefinition\022\022\n\nparameters\030\001" +
+      " \003(\t\022\037\n\nstatements\030\002 \003(\0132\013.ExpressionB\"\n" +
+      " br.com.igorbonadio.likely.lklast"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -15096,7 +15096,7 @@ public final class LikelyAst {
           internal_static_Builtin_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_Builtin_descriptor,
-              new java.lang.String[] { "TypeCode", "Integer", "Real", "String", "B", "Sequence", "HashMap", "Pair", });
+              new java.lang.String[] { "TypeCode", "Integer", "Real", "String", "Boolean", "Sequence", "HashMap", "Pair", });
           internal_static_Pair_descriptor =
             getDescriptor().getMessageTypes().get(4);
           internal_static_Pair_fieldAccessorTable = new

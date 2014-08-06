@@ -35,7 +35,7 @@ public class BooleanTest extends TestCase {
           .setBuiltin(
             Builtin.newBuilder()
               .setTypeCode(Builtin.BuiltinType.BOOLEAN)
-              .setB(true))).build();
+              .setBoolean(true))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -56,7 +56,7 @@ public class BooleanTest extends TestCase {
           .setBuiltin(
             Builtin.newBuilder()
               .setTypeCode(Builtin.BuiltinType.BOOLEAN)
-              .setB(false))).build();
+              .setBoolean(false))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }

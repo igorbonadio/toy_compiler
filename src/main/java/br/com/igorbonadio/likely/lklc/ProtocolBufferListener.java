@@ -72,11 +72,11 @@ public class ProtocolBufferListener extends LikelyBaseListener {
     if (ctx.getText().equals("true")) {
       buildin = Builtin.newBuilder()
         .setTypeCode(Builtin.BuiltinType.BOOLEAN)
-        .setB(true);
+        .setBoolean(true);
     } else if (ctx.getText().equals("false")) {
       buildin = Builtin.newBuilder()
         .setTypeCode(Builtin.BuiltinType.BOOLEAN)
-        .setB(false);
+        .setBoolean(false);
     }
   }
 
