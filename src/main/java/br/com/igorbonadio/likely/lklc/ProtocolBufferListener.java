@@ -36,6 +36,22 @@ public class ProtocolBufferListener extends LikelyBaseListener {
         .setId(ctx.ID().getText());
       stackExpr.push(id);
     } else if (ctx.attr() != null) {
+    } else if (ctx.func_call() != null) {
+      java.util.Vector<Expression.Builder> e = new java.util.Vector<>();
+      int n = stackNumberOfExpr.pop();
+      for (int i = 0; i < n; i++) {
+        e.add(stackExpr.pop());
+      }
+      Expression.Builder f = stackExpr.pop();
+      FunctionCall.Builder fcall = FunctionCall.newBuilder()
+        .setFunction(f);
+      for (int i = 0; i < n; i++) {
+        fcall.addArguments(e.get(n-i-1));
+      }
+      Expression.Builder expr = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.FUNCTION_CALL)
+        .setFunctionCall(fcall);
+      stackExpr.push(expr);
     } else if (ctx.op() != null) {
       Expression.Builder expr2 = stackExpr.pop();
       Expression.Builder expr1 = stackExpr.pop();
@@ -75,6 +91,15 @@ public class ProtocolBufferListener extends LikelyBaseListener {
         .setTypeCode(Expression.ExpressionType.BUILTIN)
         .setBuiltin(buildin);
       stackExpr.push(expr);
+    }
+  }
+
+  public void exitFunc(LikelyParser.FuncContext ctx) {
+    if (ctx.ID() != null) {
+      Expression.Builder id = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.ID)
+        .setId(ctx.ID().getText());
+      stackExpr.push(id);
     }
   }
 
