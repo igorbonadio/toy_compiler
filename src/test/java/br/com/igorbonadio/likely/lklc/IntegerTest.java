@@ -34,8 +34,8 @@ public class IntegerTest extends TestCase {
           .setTypeCode(Expression.ExpressionType.BUILTIN)
           .setBuiltin(
             Builtin.newBuilder()
-              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-              .setIntegerNumber(1))).build();
+              .setTypeCode(Builtin.BuiltinType.INTEGER)
+              .setInteger(1))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -55,8 +55,8 @@ public class IntegerTest extends TestCase {
           .setTypeCode(Expression.ExpressionType.BUILTIN)
           .setBuiltin(
             Builtin.newBuilder()
-              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-              .setIntegerNumber(123))).build();
+              .setTypeCode(Builtin.BuiltinType.INTEGER)
+              .setInteger(123))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -76,15 +76,15 @@ public class IntegerTest extends TestCase {
           .setTypeCode(Expression.ExpressionType.BUILTIN)
           .setBuiltin(
             Builtin.newBuilder()
-              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-              .setIntegerNumber(1)))
+              .setTypeCode(Builtin.BuiltinType.INTEGER)
+              .setInteger(1)))
       .addStatements(
         Expression.newBuilder()
           .setTypeCode(Expression.ExpressionType.BUILTIN)
           .setBuiltin(
             Builtin.newBuilder()
-              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-              .setIntegerNumber(2))).build();
+              .setTypeCode(Builtin.BuiltinType.INTEGER)
+              .setInteger(2))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }

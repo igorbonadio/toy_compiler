@@ -50,8 +50,8 @@ public class ProtocolBufferListener extends LikelyBaseListener {
   public void exitNumber(LikelyParser.NumberContext ctx) {
     if (ctx.INTEGER() != null) {
       buildin = Builtin.newBuilder();
-      buildin.setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-             .setIntegerNumber(Integer.valueOf(ctx.INTEGER().getText()));
+      buildin.setTypeCode(Builtin.BuiltinType.INTEGER)
+             .setInteger(Integer.valueOf(ctx.INTEGER().getText()));
     } else if (ctx.FLOAT() != null) {
       buildin = Builtin.newBuilder();
       buildin.setTypeCode(Builtin.BuiltinType.REAL_NUMBER)

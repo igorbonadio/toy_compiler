@@ -40,8 +40,8 @@ public class SequenceTest extends TestCase {
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
                   .setBuiltin(
                     Builtin.newBuilder()
-                      .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                      .setIntegerNumber(1))))).build();
+                      .setTypeCode(Builtin.BuiltinType.INTEGER)
+                      .setInteger(1))))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -67,8 +67,8 @@ public class SequenceTest extends TestCase {
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
                   .setBuiltin(
                     Builtin.newBuilder()
-                      .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                      .setIntegerNumber(1))))).build();
+                      .setTypeCode(Builtin.BuiltinType.INTEGER)
+                      .setInteger(1))))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -94,22 +94,22 @@ public class SequenceTest extends TestCase {
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
                   .setBuiltin(
                     Builtin.newBuilder()
-                      .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                      .setIntegerNumber(1)))
+                      .setTypeCode(Builtin.BuiltinType.INTEGER)
+                      .setInteger(1)))
               .addSequence(
                 Expression.newBuilder()
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
                   .setBuiltin(
                     Builtin.newBuilder()
-                      .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                      .setIntegerNumber(2)))
+                      .setTypeCode(Builtin.BuiltinType.INTEGER)
+                      .setInteger(2)))
               .addSequence(
                 Expression.newBuilder()
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
                   .setBuiltin(
                     Builtin.newBuilder()
-                      .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                      .setIntegerNumber(3))))).build();
+                      .setTypeCode(Builtin.BuiltinType.INTEGER)
+                      .setInteger(3))))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -135,22 +135,22 @@ public class SequenceTest extends TestCase {
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
                   .setBuiltin(
                     Builtin.newBuilder()
-                      .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                      .setIntegerNumber(1)))
+                      .setTypeCode(Builtin.BuiltinType.INTEGER)
+                      .setInteger(1)))
               .addSequence(
                 Expression.newBuilder()
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
                   .setBuiltin(
                     Builtin.newBuilder()
-                      .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                      .setIntegerNumber(2)))
+                      .setTypeCode(Builtin.BuiltinType.INTEGER)
+                      .setInteger(2)))
               .addSequence(
                 Expression.newBuilder()
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
                   .setBuiltin(
                     Builtin.newBuilder()
-                      .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                      .setIntegerNumber(3))))).build();
+                      .setTypeCode(Builtin.BuiltinType.INTEGER)
+                      .setInteger(3))))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -182,22 +182,22 @@ public class SequenceTest extends TestCase {
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(1)))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(1)))
                       .addSequence(
                         Expression.newBuilder()
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(2)))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(2)))
                       .addSequence(
                         Expression.newBuilder()
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(3)))))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(3)))))
               .addSequence(
                 Expression.newBuilder()
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
@@ -209,22 +209,22 @@ public class SequenceTest extends TestCase {
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(4)))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(4)))
                       .addSequence(
                         Expression.newBuilder()
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(5)))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(5)))
                       .addSequence(
                         Expression.newBuilder()
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(6))))))).build();
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(6))))))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -256,22 +256,22 @@ public class SequenceTest extends TestCase {
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(1)))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(1)))
                       .addSequence(
                         Expression.newBuilder()
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(2)))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(2)))
                       .addSequence(
                         Expression.newBuilder()
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(3)))))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(3)))))
               .addSequence(
                 Expression.newBuilder()
                   .setTypeCode(Expression.ExpressionType.BUILTIN)
@@ -283,22 +283,22 @@ public class SequenceTest extends TestCase {
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(4)))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(4)))
                       .addSequence(
                         Expression.newBuilder()
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(5)))
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(5)))
                       .addSequence(
                         Expression.newBuilder()
                           .setTypeCode(Expression.ExpressionType.BUILTIN)
                           .setBuiltin(
                             Builtin.newBuilder()
-                              .setTypeCode(Builtin.BuiltinType.INTEGER_NUMBER)
-                              .setIntegerNumber(6))))))).build();
+                              .setTypeCode(Builtin.BuiltinType.INTEGER)
+                              .setInteger(6))))))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
