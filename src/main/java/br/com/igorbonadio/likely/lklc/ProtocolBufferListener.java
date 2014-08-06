@@ -9,12 +9,42 @@ public class ProtocolBufferListener extends LikelyBaseListener {
   private Program.Builder program = Program.newBuilder();
   private Builtin.Builder buildin;
 
-  public void exitExpr(LikelyParser.ExprContext ctx) {
-    Expression expr = Expression.newBuilder()
-      .setTypeCode(Expression.ExpressionType.BUILTIN)
-      .setBuiltin(buildin).build();
+  private java.util.Stack<Expression.Builder> stackExpr = new java.util.Stack<>();
+  private java.util.Stack<Integer> stackNumberOfExpr = new java.util.Stack<>();
 
-    program.addStatements(expr);
+  public void exitStmt(LikelyParser.StmtContext ctx) {
+    program.addStatements(stackExpr.pop());
+  }
+
+  public void exitExpr(LikelyParser.ExprContext ctx) {
+    Expression.Builder expr = Expression.newBuilder()
+      .setTypeCode(Expression.ExpressionType.BUILTIN)
+      .setBuiltin(buildin);
+    stackExpr.push(expr);
+  }
+
+  public void exitSeq(LikelyParser.SeqContext ctx) {
+    Builtin.Builder sequence = Builtin.newBuilder()
+      .setTypeCode(Builtin.BuiltinType.SEQUENCE);
+
+    java.util.Vector<Expression.Builder> e = new java.util.Vector<>();
+    int n = stackNumberOfExpr.pop();
+    for(int i = 0; i < n; i++) {
+      e.add(stackExpr.pop());
+    }
+    for(int i = 0; i < n; i++) {
+      sequence.addSequence(e.get(n-i-1));
+    }
+
+    buildin = sequence;
+  }
+
+  public void exitList_body_fat(LikelyParser.List_body_fatContext ctx) {
+    stackNumberOfExpr.push(ctx.expr().size());
+  }
+
+  public void exitList_body_thin(LikelyParser.List_body_thinContext ctx) {
+    stackNumberOfExpr.push(ctx.expr().size());
   }
 
   public void exitNumber(LikelyParser.NumberContext ctx) {
