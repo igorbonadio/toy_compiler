@@ -38,6 +38,18 @@ public class ProtocolBufferListener extends LikelyBaseListener {
     }
   }
 
+  public void exitBool(LikelyParser.BoolContext ctx) {
+    if (ctx.getText().equals("true")) {
+      buildin = Builtin.newBuilder()
+        .setTypeCode(Builtin.BuiltinType.BOOLEAN)
+        .setB(true);
+    } else if (ctx.getText().equals("false")) {
+      buildin = Builtin.newBuilder()
+        .setTypeCode(Builtin.BuiltinType.BOOLEAN)
+        .setB(false);
+    }
+  }
+
   public Program getProtocolBuffer() {
     return program.build();
   }
