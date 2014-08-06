@@ -4506,15 +4506,15 @@ public final class LikelyAst {
      */
     long getInteger();
 
-    // optional double real_number = 3;
+    // optional double real = 3;
     /**
-     * <code>optional double real_number = 3;</code>
+     * <code>optional double real = 3;</code>
      */
-    boolean hasRealNumber();
+    boolean hasReal();
     /**
-     * <code>optional double real_number = 3;</code>
+     * <code>optional double real = 3;</code>
      */
-    double getRealNumber();
+    double getReal();
 
     // optional string str = 4;
     /**
@@ -4674,7 +4674,7 @@ public final class LikelyAst {
             }
             case 25: {
               bitField0_ |= 0x00000004;
-              realNumber_ = input.readDouble();
+              real_ = input.readDouble();
               break;
             }
             case 34: {
@@ -4771,9 +4771,9 @@ public final class LikelyAst {
        */
       INTEGER(0, 0),
       /**
-       * <code>REAL_NUMBER = 1;</code>
+       * <code>REAL = 1;</code>
        */
-      REAL_NUMBER(1, 1),
+      REAL(1, 1),
       /**
        * <code>STRING = 2;</code>
        */
@@ -4801,9 +4801,9 @@ public final class LikelyAst {
        */
       public static final int INTEGER_VALUE = 0;
       /**
-       * <code>REAL_NUMBER = 1;</code>
+       * <code>REAL = 1;</code>
        */
-      public static final int REAL_NUMBER_VALUE = 1;
+      public static final int REAL_VALUE = 1;
       /**
        * <code>STRING = 2;</code>
        */
@@ -4831,7 +4831,7 @@ public final class LikelyAst {
       public static BuiltinType valueOf(int value) {
         switch (value) {
           case 0: return INTEGER;
-          case 1: return REAL_NUMBER;
+          case 1: return REAL;
           case 2: return STRING;
           case 3: return BOOLEAN;
           case 4: return SEQUENCE;
@@ -4921,20 +4921,20 @@ public final class LikelyAst {
       return integer_;
     }
 
-    // optional double real_number = 3;
-    public static final int REAL_NUMBER_FIELD_NUMBER = 3;
-    private double realNumber_;
+    // optional double real = 3;
+    public static final int REAL_FIELD_NUMBER = 3;
+    private double real_;
     /**
-     * <code>optional double real_number = 3;</code>
+     * <code>optional double real = 3;</code>
      */
-    public boolean hasRealNumber() {
+    public boolean hasReal() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional double real_number = 3;</code>
+     * <code>optional double real = 3;</code>
      */
-    public double getRealNumber() {
-      return realNumber_;
+    public double getReal() {
+      return real_;
     }
 
     // optional string str = 4;
@@ -5093,7 +5093,7 @@ public final class LikelyAst {
     private void initFields() {
       typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER;
       integer_ = 0L;
-      realNumber_ = 0D;
+      real_ = 0D;
       str_ = "";
       b_ = false;
       sequence_ = java.util.Collections.emptyList();
@@ -5141,7 +5141,7 @@ public final class LikelyAst {
         output.writeInt64(2, integer_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeDouble(3, realNumber_);
+        output.writeDouble(3, real_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(4, getStrBytes());
@@ -5177,7 +5177,7 @@ public final class LikelyAst {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, realNumber_);
+          .computeDoubleSize(3, real_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
@@ -5322,7 +5322,7 @@ public final class LikelyAst {
         bitField0_ = (bitField0_ & ~0x00000001);
         integer_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
-        realNumber_ = 0D;
+        real_ = 0D;
         bitField0_ = (bitField0_ & ~0x00000004);
         str_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -5385,7 +5385,7 @@ public final class LikelyAst {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.realNumber_ = realNumber_;
+        result.real_ = real_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
@@ -5442,8 +5442,8 @@ public final class LikelyAst {
         if (other.hasInteger()) {
           setInteger(other.getInteger());
         }
-        if (other.hasRealNumber()) {
-          setRealNumber(other.getRealNumber());
+        if (other.hasReal()) {
+          setReal(other.getReal());
         }
         if (other.hasStr()) {
           bitField0_ |= 0x00000008;
@@ -5626,35 +5626,35 @@ public final class LikelyAst {
         return this;
       }
 
-      // optional double real_number = 3;
-      private double realNumber_ ;
+      // optional double real = 3;
+      private double real_ ;
       /**
-       * <code>optional double real_number = 3;</code>
+       * <code>optional double real = 3;</code>
        */
-      public boolean hasRealNumber() {
+      public boolean hasReal() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional double real_number = 3;</code>
+       * <code>optional double real = 3;</code>
        */
-      public double getRealNumber() {
-        return realNumber_;
+      public double getReal() {
+        return real_;
       }
       /**
-       * <code>optional double real_number = 3;</code>
+       * <code>optional double real = 3;</code>
        */
-      public Builder setRealNumber(double value) {
+      public Builder setReal(double value) {
         bitField0_ |= 0x00000004;
-        realNumber_ = value;
+        real_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional double real_number = 3;</code>
+       * <code>optional double real = 3;</code>
        */
-      public Builder clearRealNumber() {
+      public Builder clearReal() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        realNumber_ = 0D;
+        real_ = 0D;
         onChanged();
         return this;
       }
@@ -15038,35 +15038,35 @@ public final class LikelyAst {
       "ON_CALL\020\003\022\023\n\017RETURN_OPERATOR\020\004\022\022\n\016OBJECT" +
       "_MESSAGE\020\005\022\021\n\rIF_EXPRESSION\020\006\022\022\n\016FOR_EXP",
       "RESSION\020\007\022\024\n\020WHILE_EXPRESSION\020\010\022\027\n\023FUNCT" +
-      "ION_DEFINITION\020\t\022\006\n\002ID\020\n\"\251\002\n\007Builtin\022\'\n\t" +
+      "ION_DEFINITION\020\t\022\006\n\002ID\020\n\"\233\002\n\007Builtin\022\'\n\t" +
       "type_code\030\001 \002(\0162\024.Builtin.BuiltinType\022\017\n" +
-      "\007integer\030\002 \001(\003\022\023\n\013real_number\030\003 \001(\001\022\013\n\003s" +
-      "tr\030\004 \001(\t\022\t\n\001b\030\005 \001(\010\022\035\n\010sequence\030\006 \003(\0132\013." +
-      "Expression\022\027\n\010hash_map\030\007 \003(\0132\005.Pair\022\023\n\004p" +
-      "air\030\010 \001(\0132\005.Pair\"j\n\013BuiltinType\022\013\n\007INTEG" +
-      "ER\020\000\022\017\n\013REAL_NUMBER\020\001\022\n\n\006STRING\020\002\022\013\n\007BOO" +
-      "LEAN\020\003\022\014\n\010SEQUENCE\020\004\022\014\n\010HASH_MAP\020\005\022\010\n\004PA" +
-      "IR\020\006\"<\n\004Pair\022\030\n\003key\030\001 \002(\0132\013.Expression\022\032",
-      "\n\005value\030\002 \002(\0132\013.Expression\"5\n\013Attributio" +
-      "n\022\n\n\002id\030\001 \002(\t\022\032\n\005value\030\002 \002(\0132\013.Expressio" +
-      "n\"E\n\017BinaryOperation\022\030\n\003lhs\030\001 \002(\0132\013.Expr" +
-      "ession\022\030\n\003rhs\030\002 \002(\0132\013.Expression\"M\n\014Func" +
-      "tionCall\022\035\n\010function\030\001 \002(\0132\013.Expression\022" +
-      "\036\n\targuments\030\002 \003(\0132\013.Expression\"-\n\017Retur" +
-      "nOperation\022\032\n\005value\030\001 \002(\0132\013.Expression\"=" +
-      "\n\rObjectMessage\022\033\n\006object\030\001 \002(\0132\013.Expres" +
-      "sion\022\017\n\007message\030\002 \002(\t\"{\n\014IfExpression\022\036\n" +
-      "\tcondition\030\001 \002(\0132\013.Expression\022$\n\017true_st",
-      "atements\030\002 \003(\0132\013.Expression\022%\n\020false_sta" +
-      "tements\030\003 \003(\0132\013.Expression\"\206\001\n\rForExpres" +
-      "sion\022\020\n\010variable\030\001 \002(\t\022 \n\013lower_bound\030\002 " +
-      "\002(\0132\013.Expression\022 \n\013upper_bound\030\003 \002(\0132\013." +
-      "Expression\022\037\n\nstatements\030\004 \003(\0132\013.Express" +
-      "ion\"R\n\017WhileExpression\022\036\n\tcondition\030\001 \002(" +
-      "\0132\013.Expression\022\037\n\nstatements\030\002 \003(\0132\013.Exp" +
-      "ression\"I\n\022FunctionDefinition\022\022\n\nparamet" +
-      "ers\030\001 \003(\t\022\037\n\nstatements\030\002 \003(\0132\013.Expressi" +
-      "onB\"\n br.com.igorbonadio.likely.lklast"
+      "\007integer\030\002 \001(\003\022\014\n\004real\030\003 \001(\001\022\013\n\003str\030\004 \001(" +
+      "\t\022\t\n\001b\030\005 \001(\010\022\035\n\010sequence\030\006 \003(\0132\013.Express" +
+      "ion\022\027\n\010hash_map\030\007 \003(\0132\005.Pair\022\023\n\004pair\030\010 \001" +
+      "(\0132\005.Pair\"c\n\013BuiltinType\022\013\n\007INTEGER\020\000\022\010\n" +
+      "\004REAL\020\001\022\n\n\006STRING\020\002\022\013\n\007BOOLEAN\020\003\022\014\n\010SEQU" +
+      "ENCE\020\004\022\014\n\010HASH_MAP\020\005\022\010\n\004PAIR\020\006\"<\n\004Pair\022\030" +
+      "\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005value\030\002 \002(\0132",
+      "\013.Expression\"5\n\013Attribution\022\n\n\002id\030\001 \002(\t\022" +
+      "\032\n\005value\030\002 \002(\0132\013.Expression\"E\n\017BinaryOpe" +
+      "ration\022\030\n\003lhs\030\001 \002(\0132\013.Expression\022\030\n\003rhs\030" +
+      "\002 \002(\0132\013.Expression\"M\n\014FunctionCall\022\035\n\010fu" +
+      "nction\030\001 \002(\0132\013.Expression\022\036\n\targuments\030\002" +
+      " \003(\0132\013.Expression\"-\n\017ReturnOperation\022\032\n\005" +
+      "value\030\001 \002(\0132\013.Expression\"=\n\rObjectMessag" +
+      "e\022\033\n\006object\030\001 \002(\0132\013.Expression\022\017\n\007messag" +
+      "e\030\002 \002(\t\"{\n\014IfExpression\022\036\n\tcondition\030\001 \002" +
+      "(\0132\013.Expression\022$\n\017true_statements\030\002 \003(\013",
+      "2\013.Expression\022%\n\020false_statements\030\003 \003(\0132" +
+      "\013.Expression\"\206\001\n\rForExpression\022\020\n\010variab" +
+      "le\030\001 \002(\t\022 \n\013lower_bound\030\002 \002(\0132\013.Expressi" +
+      "on\022 \n\013upper_bound\030\003 \002(\0132\013.Expression\022\037\n\n" +
+      "statements\030\004 \003(\0132\013.Expression\"R\n\017WhileEx" +
+      "pression\022\036\n\tcondition\030\001 \002(\0132\013.Expression" +
+      "\022\037\n\nstatements\030\002 \003(\0132\013.Expression\"I\n\022Fun" +
+      "ctionDefinition\022\022\n\nparameters\030\001 \003(\t\022\037\n\ns" +
+      "tatements\030\002 \003(\0132\013.ExpressionB\"\n br.com.i" +
+      "gorbonadio.likely.lklast"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -15096,7 +15096,7 @@ public final class LikelyAst {
           internal_static_Builtin_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_Builtin_descriptor,
-              new java.lang.String[] { "TypeCode", "Integer", "RealNumber", "Str", "B", "Sequence", "HashMap", "Pair", });
+              new java.lang.String[] { "TypeCode", "Integer", "Real", "Str", "B", "Sequence", "HashMap", "Pair", });
           internal_static_Pair_descriptor =
             getDescriptor().getMessageTypes().get(4);
           internal_static_Pair_fieldAccessorTable = new

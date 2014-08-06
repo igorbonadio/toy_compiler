@@ -34,8 +34,8 @@ public class FloatTest extends TestCase {
           .setTypeCode(Expression.ExpressionType.BUILTIN)
           .setBuiltin(
             Builtin.newBuilder()
-              .setTypeCode(Builtin.BuiltinType.REAL_NUMBER)
-              .setRealNumber(1.0))).build();
+              .setTypeCode(Builtin.BuiltinType.REAL)
+              .setReal(1.0))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -55,15 +55,15 @@ public class FloatTest extends TestCase {
           .setTypeCode(Expression.ExpressionType.BUILTIN)
           .setBuiltin(
             Builtin.newBuilder()
-              .setTypeCode(Builtin.BuiltinType.REAL_NUMBER)
-              .setRealNumber(1.0)))
+              .setTypeCode(Builtin.BuiltinType.REAL)
+              .setReal(1.0)))
       .addStatements(
         Expression.newBuilder()
           .setTypeCode(Expression.ExpressionType.BUILTIN)
           .setBuiltin(
             Builtin.newBuilder()
-              .setTypeCode(Builtin.BuiltinType.REAL_NUMBER)
-              .setRealNumber(2.3))).build();
+              .setTypeCode(Builtin.BuiltinType.REAL)
+              .setReal(2.3))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }

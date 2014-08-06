@@ -54,8 +54,8 @@ public class ProtocolBufferListener extends LikelyBaseListener {
              .setInteger(Integer.valueOf(ctx.INTEGER().getText()));
     } else if (ctx.FLOAT() != null) {
       buildin = Builtin.newBuilder();
-      buildin.setTypeCode(Builtin.BuiltinType.REAL_NUMBER)
-             .setRealNumber(Double.valueOf(ctx.FLOAT().getText()));
+      buildin.setTypeCode(Builtin.BuiltinType.REAL)
+             .setReal(Double.valueOf(ctx.FLOAT().getText()));
     }
   }
 
