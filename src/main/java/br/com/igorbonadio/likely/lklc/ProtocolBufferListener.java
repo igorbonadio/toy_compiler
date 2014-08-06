@@ -17,10 +17,25 @@ public class ProtocolBufferListener extends LikelyBaseListener {
   }
 
   public void exitExpr(LikelyParser.ExprContext ctx) {
-    Expression.Builder expr = Expression.newBuilder()
-      .setTypeCode(Expression.ExpressionType.BUILTIN)
-      .setBuiltin(buildin);
-    stackExpr.push(expr);
+    if (ctx.ARROW() != null) {
+      Expression.Builder value = stackExpr.pop();
+      Expression.Builder key = stackExpr.pop();
+      Expression.Builder expr = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.BUILTIN)
+        .setBuiltin(
+          Builtin.newBuilder()
+              .setTypeCode(Builtin.BuiltinType.PAIR)
+              .setPair(
+                Pair.newBuilder()
+                  .setKey(key)
+                  .setValue(value)));
+      stackExpr.push(expr);
+    } else {
+      Expression.Builder expr = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.BUILTIN)
+        .setBuiltin(buildin);
+      stackExpr.push(expr);
+    }
   }
 
   public void exitSeq(LikelyParser.SeqContext ctx) {

@@ -4566,42 +4566,17 @@ public final class LikelyAst {
     br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getSequenceOrBuilder(
         int index);
 
-    // repeated .Pair hash_map = 7;
+    // optional .Pair pair = 7;
     /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Pair> 
-        getHashMapList();
-    /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Pair getHashMap(int index);
-    /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    int getHashMapCount();
-    /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder> 
-        getHashMapOrBuilderList();
-    /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder getHashMapOrBuilder(
-        int index);
-
-    // optional .Pair pair = 8;
-    /**
-     * <code>optional .Pair pair = 8;</code>
+     * <code>optional .Pair pair = 7;</code>
      */
     boolean hasPair();
     /**
-     * <code>optional .Pair pair = 8;</code>
+     * <code>optional .Pair pair = 7;</code>
      */
     br.com.igorbonadio.likely.lklast.LikelyAst.Pair getPair();
     /**
-     * <code>optional .Pair pair = 8;</code>
+     * <code>optional .Pair pair = 7;</code>
      */
     br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder getPairOrBuilder();
   }
@@ -4696,14 +4671,6 @@ public final class LikelyAst {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-                hashMap_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Pair>();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              hashMap_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Pair.PARSER, extensionRegistry));
-              break;
-            }
-            case 66: {
               br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder subBuilder = null;
               if (((bitField0_ & 0x00000020) == 0x00000020)) {
                 subBuilder = pair_.toBuilder();
@@ -4726,9 +4693,6 @@ public final class LikelyAst {
       } finally {
         if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           sequence_ = java.util.Collections.unmodifiableList(sequence_);
-        }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-          hashMap_ = java.util.Collections.unmodifiableList(hashMap_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4787,13 +4751,9 @@ public final class LikelyAst {
        */
       SEQUENCE(4, 4),
       /**
-       * <code>HASH_MAP = 5;</code>
+       * <code>PAIR = 5;</code>
        */
-      HASH_MAP(5, 5),
-      /**
-       * <code>PAIR = 6;</code>
-       */
-      PAIR(6, 6),
+      PAIR(5, 5),
       ;
 
       /**
@@ -4817,13 +4777,9 @@ public final class LikelyAst {
        */
       public static final int SEQUENCE_VALUE = 4;
       /**
-       * <code>HASH_MAP = 5;</code>
+       * <code>PAIR = 5;</code>
        */
-      public static final int HASH_MAP_VALUE = 5;
-      /**
-       * <code>PAIR = 6;</code>
-       */
-      public static final int PAIR_VALUE = 6;
+      public static final int PAIR_VALUE = 5;
 
 
       public final int getNumber() { return value; }
@@ -4835,8 +4791,7 @@ public final class LikelyAst {
           case 2: return STRING;
           case 3: return BOOLEAN;
           case 4: return SEQUENCE;
-          case 5: return HASH_MAP;
-          case 6: return PAIR;
+          case 5: return PAIR;
           default: return null;
         }
       }
@@ -5032,59 +4987,23 @@ public final class LikelyAst {
       return sequence_.get(index);
     }
 
-    // repeated .Pair hash_map = 7;
-    public static final int HASH_MAP_FIELD_NUMBER = 7;
-    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Pair> hashMap_;
-    /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Pair> getHashMapList() {
-      return hashMap_;
-    }
-    /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder> 
-        getHashMapOrBuilderList() {
-      return hashMap_;
-    }
-    /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    public int getHashMapCount() {
-      return hashMap_.size();
-    }
-    /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Pair getHashMap(int index) {
-      return hashMap_.get(index);
-    }
-    /**
-     * <code>repeated .Pair hash_map = 7;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder getHashMapOrBuilder(
-        int index) {
-      return hashMap_.get(index);
-    }
-
-    // optional .Pair pair = 8;
-    public static final int PAIR_FIELD_NUMBER = 8;
+    // optional .Pair pair = 7;
+    public static final int PAIR_FIELD_NUMBER = 7;
     private br.com.igorbonadio.likely.lklast.LikelyAst.Pair pair_;
     /**
-     * <code>optional .Pair pair = 8;</code>
+     * <code>optional .Pair pair = 7;</code>
      */
     public boolean hasPair() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional .Pair pair = 8;</code>
+     * <code>optional .Pair pair = 7;</code>
      */
     public br.com.igorbonadio.likely.lklast.LikelyAst.Pair getPair() {
       return pair_;
     }
     /**
-     * <code>optional .Pair pair = 8;</code>
+     * <code>optional .Pair pair = 7;</code>
      */
     public br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder getPairOrBuilder() {
       return pair_;
@@ -5097,7 +5016,6 @@ public final class LikelyAst {
       string_ = "";
       boolean_ = false;
       sequence_ = java.util.Collections.emptyList();
-      hashMap_ = java.util.Collections.emptyList();
       pair_ = br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
@@ -5111,12 +5029,6 @@ public final class LikelyAst {
       }
       for (int i = 0; i < getSequenceCount(); i++) {
         if (!getSequence(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      for (int i = 0; i < getHashMapCount(); i++) {
-        if (!getHashMap(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -5152,11 +5064,8 @@ public final class LikelyAst {
       for (int i = 0; i < sequence_.size(); i++) {
         output.writeMessage(6, sequence_.get(i));
       }
-      for (int i = 0; i < hashMap_.size(); i++) {
-        output.writeMessage(7, hashMap_.get(i));
-      }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeMessage(8, pair_);
+        output.writeMessage(7, pair_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5191,13 +5100,9 @@ public final class LikelyAst {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, sequence_.get(i));
       }
-      for (int i = 0; i < hashMap_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, hashMap_.get(i));
-      }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, pair_);
+          .computeMessageSize(7, pair_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5308,7 +5213,6 @@ public final class LikelyAst {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getSequenceFieldBuilder();
-          getHashMapFieldBuilder();
           getPairFieldBuilder();
         }
       }
@@ -5334,18 +5238,12 @@ public final class LikelyAst {
         } else {
           sequenceBuilder_.clear();
         }
-        if (hashMapBuilder_ == null) {
-          hashMap_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
-        } else {
-          hashMapBuilder_.clear();
-        }
         if (pairBuilder_ == null) {
           pair_ = br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance();
         } else {
           pairBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -5403,16 +5301,7 @@ public final class LikelyAst {
         } else {
           result.sequence_ = sequenceBuilder_.build();
         }
-        if (hashMapBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
-            hashMap_ = java.util.Collections.unmodifiableList(hashMap_);
-            bitField0_ = (bitField0_ & ~0x00000040);
-          }
-          result.hashMap_ = hashMap_;
-        } else {
-          result.hashMap_ = hashMapBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000020;
         }
         if (pairBuilder_ == null) {
@@ -5479,32 +5368,6 @@ public final class LikelyAst {
             }
           }
         }
-        if (hashMapBuilder_ == null) {
-          if (!other.hashMap_.isEmpty()) {
-            if (hashMap_.isEmpty()) {
-              hashMap_ = other.hashMap_;
-              bitField0_ = (bitField0_ & ~0x00000040);
-            } else {
-              ensureHashMapIsMutable();
-              hashMap_.addAll(other.hashMap_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.hashMap_.isEmpty()) {
-            if (hashMapBuilder_.isEmpty()) {
-              hashMapBuilder_.dispose();
-              hashMapBuilder_ = null;
-              hashMap_ = other.hashMap_;
-              bitField0_ = (bitField0_ & ~0x00000040);
-              hashMapBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getHashMapFieldBuilder() : null;
-            } else {
-              hashMapBuilder_.addAllMessages(other.hashMap_);
-            }
-          }
-        }
         if (other.hasPair()) {
           mergePair(other.getPair());
         }
@@ -5519,12 +5382,6 @@ public final class LikelyAst {
         }
         for (int i = 0; i < getSequenceCount(); i++) {
           if (!getSequence(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        for (int i = 0; i < getHashMapCount(); i++) {
-          if (!getHashMap(i).isInitialized()) {
             
             return false;
           }
@@ -6006,258 +5863,18 @@ public final class LikelyAst {
         return sequenceBuilder_;
       }
 
-      // repeated .Pair hash_map = 7;
-      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Pair> hashMap_ =
-        java.util.Collections.emptyList();
-      private void ensureHashMapIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
-          hashMap_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Pair>(hashMap_);
-          bitField0_ |= 0x00000040;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Pair, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder> hashMapBuilder_;
-
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Pair> getHashMapList() {
-        if (hashMapBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(hashMap_);
-        } else {
-          return hashMapBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public int getHashMapCount() {
-        if (hashMapBuilder_ == null) {
-          return hashMap_.size();
-        } else {
-          return hashMapBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Pair getHashMap(int index) {
-        if (hashMapBuilder_ == null) {
-          return hashMap_.get(index);
-        } else {
-          return hashMapBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public Builder setHashMap(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Pair value) {
-        if (hashMapBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureHashMapIsMutable();
-          hashMap_.set(index, value);
-          onChanged();
-        } else {
-          hashMapBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public Builder setHashMap(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder builderForValue) {
-        if (hashMapBuilder_ == null) {
-          ensureHashMapIsMutable();
-          hashMap_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          hashMapBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public Builder addHashMap(br.com.igorbonadio.likely.lklast.LikelyAst.Pair value) {
-        if (hashMapBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureHashMapIsMutable();
-          hashMap_.add(value);
-          onChanged();
-        } else {
-          hashMapBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public Builder addHashMap(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Pair value) {
-        if (hashMapBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureHashMapIsMutable();
-          hashMap_.add(index, value);
-          onChanged();
-        } else {
-          hashMapBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public Builder addHashMap(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder builderForValue) {
-        if (hashMapBuilder_ == null) {
-          ensureHashMapIsMutable();
-          hashMap_.add(builderForValue.build());
-          onChanged();
-        } else {
-          hashMapBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public Builder addHashMap(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder builderForValue) {
-        if (hashMapBuilder_ == null) {
-          ensureHashMapIsMutable();
-          hashMap_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          hashMapBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public Builder addAllHashMap(
-          java.lang.Iterable<? extends br.com.igorbonadio.likely.lklast.LikelyAst.Pair> values) {
-        if (hashMapBuilder_ == null) {
-          ensureHashMapIsMutable();
-          super.addAll(values, hashMap_);
-          onChanged();
-        } else {
-          hashMapBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public Builder clearHashMap() {
-        if (hashMapBuilder_ == null) {
-          hashMap_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
-          onChanged();
-        } else {
-          hashMapBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public Builder removeHashMap(int index) {
-        if (hashMapBuilder_ == null) {
-          ensureHashMapIsMutable();
-          hashMap_.remove(index);
-          onChanged();
-        } else {
-          hashMapBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder getHashMapBuilder(
-          int index) {
-        return getHashMapFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder getHashMapOrBuilder(
-          int index) {
-        if (hashMapBuilder_ == null) {
-          return hashMap_.get(index);  } else {
-          return hashMapBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder> 
-           getHashMapOrBuilderList() {
-        if (hashMapBuilder_ != null) {
-          return hashMapBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(hashMap_);
-        }
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder addHashMapBuilder() {
-        return getHashMapFieldBuilder().addBuilder(
-            br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder addHashMapBuilder(
-          int index) {
-        return getHashMapFieldBuilder().addBuilder(
-            index, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Pair hash_map = 7;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder> 
-           getHashMapBuilderList() {
-        return getHashMapFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Pair, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder> 
-          getHashMapFieldBuilder() {
-        if (hashMapBuilder_ == null) {
-          hashMapBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Pair, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder>(
-                  hashMap_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
-                  getParentForChildren(),
-                  isClean());
-          hashMap_ = null;
-        }
-        return hashMapBuilder_;
-      }
-
-      // optional .Pair pair = 8;
+      // optional .Pair pair = 7;
       private br.com.igorbonadio.likely.lklast.LikelyAst.Pair pair_ = br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           br.com.igorbonadio.likely.lklast.LikelyAst.Pair, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder> pairBuilder_;
       /**
-       * <code>optional .Pair pair = 8;</code>
+       * <code>optional .Pair pair = 7;</code>
        */
       public boolean hasPair() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>optional .Pair pair = 8;</code>
+       * <code>optional .Pair pair = 7;</code>
        */
       public br.com.igorbonadio.likely.lklast.LikelyAst.Pair getPair() {
         if (pairBuilder_ == null) {
@@ -6267,7 +5884,7 @@ public final class LikelyAst {
         }
       }
       /**
-       * <code>optional .Pair pair = 8;</code>
+       * <code>optional .Pair pair = 7;</code>
        */
       public Builder setPair(br.com.igorbonadio.likely.lklast.LikelyAst.Pair value) {
         if (pairBuilder_ == null) {
@@ -6279,11 +5896,11 @@ public final class LikelyAst {
         } else {
           pairBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>optional .Pair pair = 8;</code>
+       * <code>optional .Pair pair = 7;</code>
        */
       public Builder setPair(
           br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder builderForValue) {
@@ -6293,15 +5910,15 @@ public final class LikelyAst {
         } else {
           pairBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>optional .Pair pair = 8;</code>
+       * <code>optional .Pair pair = 7;</code>
        */
       public Builder mergePair(br.com.igorbonadio.likely.lklast.LikelyAst.Pair value) {
         if (pairBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
               pair_ != br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance()) {
             pair_ =
               br.com.igorbonadio.likely.lklast.LikelyAst.Pair.newBuilder(pair_).mergeFrom(value).buildPartial();
@@ -6312,11 +5929,11 @@ public final class LikelyAst {
         } else {
           pairBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>optional .Pair pair = 8;</code>
+       * <code>optional .Pair pair = 7;</code>
        */
       public Builder clearPair() {
         if (pairBuilder_ == null) {
@@ -6325,19 +5942,19 @@ public final class LikelyAst {
         } else {
           pairBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
       /**
-       * <code>optional .Pair pair = 8;</code>
+       * <code>optional .Pair pair = 7;</code>
        */
       public br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder getPairBuilder() {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         onChanged();
         return getPairFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Pair pair = 8;</code>
+       * <code>optional .Pair pair = 7;</code>
        */
       public br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder getPairOrBuilder() {
         if (pairBuilder_ != null) {
@@ -6347,7 +5964,7 @@ public final class LikelyAst {
         }
       }
       /**
-       * <code>optional .Pair pair = 8;</code>
+       * <code>optional .Pair pair = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           br.com.igorbonadio.likely.lklast.LikelyAst.Pair, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder> 
@@ -15038,35 +14655,34 @@ public final class LikelyAst {
       "ON_CALL\020\003\022\023\n\017RETURN_OPERATOR\020\004\022\022\n\016OBJECT" +
       "_MESSAGE\020\005\022\021\n\rIF_EXPRESSION\020\006\022\022\n\016FOR_EXP",
       "RESSION\020\007\022\024\n\020WHILE_EXPRESSION\020\010\022\027\n\023FUNCT" +
-      "ION_DEFINITION\020\t\022\006\n\002ID\020\n\"\244\002\n\007Builtin\022\'\n\t" +
+      "ION_DEFINITION\020\t\022\006\n\002ID\020\n\"\375\001\n\007Builtin\022\'\n\t" +
       "type_code\030\001 \002(\0162\024.Builtin.BuiltinType\022\017\n" +
       "\007integer\030\002 \001(\003\022\014\n\004real\030\003 \001(\001\022\016\n\006string\030\004" +
       " \001(\t\022\017\n\007boolean\030\005 \001(\010\022\035\n\010sequence\030\006 \003(\0132" +
-      "\013.Expression\022\027\n\010hash_map\030\007 \003(\0132\005.Pair\022\023\n" +
-      "\004pair\030\010 \001(\0132\005.Pair\"c\n\013BuiltinType\022\013\n\007INT" +
-      "EGER\020\000\022\010\n\004REAL\020\001\022\n\n\006STRING\020\002\022\013\n\007BOOLEAN\020" +
-      "\003\022\014\n\010SEQUENCE\020\004\022\014\n\010HASH_MAP\020\005\022\010\n\004PAIR\020\006\"" +
-      "<\n\004Pair\022\030\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005val",
-      "ue\030\002 \002(\0132\013.Expression\"5\n\013Attribution\022\n\n\002" +
-      "id\030\001 \002(\t\022\032\n\005value\030\002 \002(\0132\013.Expression\"E\n\017" +
-      "BinaryOperation\022\030\n\003lhs\030\001 \002(\0132\013.Expressio" +
-      "n\022\030\n\003rhs\030\002 \002(\0132\013.Expression\"M\n\014FunctionC" +
-      "all\022\035\n\010function\030\001 \002(\0132\013.Expression\022\036\n\tar" +
-      "guments\030\002 \003(\0132\013.Expression\"-\n\017ReturnOper" +
-      "ation\022\032\n\005value\030\001 \002(\0132\013.Expression\"=\n\rObj" +
-      "ectMessage\022\033\n\006object\030\001 \002(\0132\013.Expression\022" +
-      "\017\n\007message\030\002 \002(\t\"{\n\014IfExpression\022\036\n\tcond" +
-      "ition\030\001 \002(\0132\013.Expression\022$\n\017true_stateme",
-      "nts\030\002 \003(\0132\013.Expression\022%\n\020false_statemen" +
-      "ts\030\003 \003(\0132\013.Expression\"\206\001\n\rForExpression\022" +
-      "\020\n\010variable\030\001 \002(\t\022 \n\013lower_bound\030\002 \002(\0132\013" +
-      ".Expression\022 \n\013upper_bound\030\003 \002(\0132\013.Expre" +
-      "ssion\022\037\n\nstatements\030\004 \003(\0132\013.Expression\"R" +
-      "\n\017WhileExpression\022\036\n\tcondition\030\001 \002(\0132\013.E" +
-      "xpression\022\037\n\nstatements\030\002 \003(\0132\013.Expressi" +
-      "on\"I\n\022FunctionDefinition\022\022\n\nparameters\030\001" +
-      " \003(\t\022\037\n\nstatements\030\002 \003(\0132\013.ExpressionB\"\n" +
-      " br.com.igorbonadio.likely.lklast"
+      "\013.Expression\022\023\n\004pair\030\007 \001(\0132\005.Pair\"U\n\013Bui" +
+      "ltinType\022\013\n\007INTEGER\020\000\022\010\n\004REAL\020\001\022\n\n\006STRIN" +
+      "G\020\002\022\013\n\007BOOLEAN\020\003\022\014\n\010SEQUENCE\020\004\022\010\n\004PAIR\020\005" +
+      "\"<\n\004Pair\022\030\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005va" +
+      "lue\030\002 \002(\0132\013.Expression\"5\n\013Attribution\022\n\n",
+      "\002id\030\001 \002(\t\022\032\n\005value\030\002 \002(\0132\013.Expression\"E\n" +
+      "\017BinaryOperation\022\030\n\003lhs\030\001 \002(\0132\013.Expressi" +
+      "on\022\030\n\003rhs\030\002 \002(\0132\013.Expression\"M\n\014Function" +
+      "Call\022\035\n\010function\030\001 \002(\0132\013.Expression\022\036\n\ta" +
+      "rguments\030\002 \003(\0132\013.Expression\"-\n\017ReturnOpe" +
+      "ration\022\032\n\005value\030\001 \002(\0132\013.Expression\"=\n\rOb" +
+      "jectMessage\022\033\n\006object\030\001 \002(\0132\013.Expression" +
+      "\022\017\n\007message\030\002 \002(\t\"{\n\014IfExpression\022\036\n\tcon" +
+      "dition\030\001 \002(\0132\013.Expression\022$\n\017true_statem" +
+      "ents\030\002 \003(\0132\013.Expression\022%\n\020false_stateme",
+      "nts\030\003 \003(\0132\013.Expression\"\206\001\n\rForExpression" +
+      "\022\020\n\010variable\030\001 \002(\t\022 \n\013lower_bound\030\002 \002(\0132" +
+      "\013.Expression\022 \n\013upper_bound\030\003 \002(\0132\013.Expr" +
+      "ession\022\037\n\nstatements\030\004 \003(\0132\013.Expression\"" +
+      "R\n\017WhileExpression\022\036\n\tcondition\030\001 \002(\0132\013." +
+      "Expression\022\037\n\nstatements\030\002 \003(\0132\013.Express" +
+      "ion\"I\n\022FunctionDefinition\022\022\n\nparameters\030" +
+      "\001 \003(\t\022\037\n\nstatements\030\002 \003(\0132\013.ExpressionB\"" +
+      "\n br.com.igorbonadio.likely.lklast"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -15096,7 +14712,7 @@ public final class LikelyAst {
           internal_static_Builtin_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_Builtin_descriptor,
-              new java.lang.String[] { "TypeCode", "Integer", "Real", "String", "Boolean", "Sequence", "HashMap", "Pair", });
+              new java.lang.String[] { "TypeCode", "Integer", "Real", "String", "Boolean", "Sequence", "Pair", });
           internal_static_Pair_descriptor =
             getDescriptor().getMessageTypes().get(4);
           internal_static_Pair_fieldAccessorTable = new

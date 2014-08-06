@@ -75,7 +75,7 @@ stmt : expr (NEWLINE? | ';' | EOF)
 expr : literal
      | attr
      | seq
-     | expr '->' expr
+     | expr ARROW expr
      | expr op expr
      | '(' expr ')'
      | func_call
