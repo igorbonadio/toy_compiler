@@ -6725,20 +6725,19 @@ public final class LikelyAst {
   public interface AttributionOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required string id = 1;
+    // required .Expression id = 1;
     /**
-     * <code>required string id = 1;</code>
+     * <code>required .Expression id = 1;</code>
      */
     boolean hasId();
     /**
-     * <code>required string id = 1;</code>
+     * <code>required .Expression id = 1;</code>
      */
-    java.lang.String getId();
+    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getId();
     /**
-     * <code>required string id = 1;</code>
+     * <code>required .Expression id = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getIdOrBuilder();
 
     // required .Expression value = 2;
     /**
@@ -6806,8 +6805,16 @@ public final class LikelyAst {
               break;
             }
             case 10: {
+              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = id_.toBuilder();
+              }
+              id_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(id_);
+                id_ = subBuilder.buildPartial();
+              }
               bitField0_ |= 0x00000001;
-              id_ = input.readBytes();
               break;
             }
             case 18: {
@@ -6863,47 +6870,26 @@ public final class LikelyAst {
     }
 
     private int bitField0_;
-    // required string id = 1;
+    // required .Expression id = 1;
     public static final int ID_FIELD_NUMBER = 1;
-    private java.lang.Object id_;
+    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression id_;
     /**
-     * <code>required string id = 1;</code>
+     * <code>required .Expression id = 1;</code>
      */
     public boolean hasId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required string id = 1;</code>
+     * <code>required .Expression id = 1;</code>
      */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          id_ = s;
-        }
-        return s;
-      }
+    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getId() {
+      return id_;
     }
     /**
-     * <code>required string id = 1;</code>
+     * <code>required .Expression id = 1;</code>
      */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getIdOrBuilder() {
+      return id_;
     }
 
     // required .Expression value = 2;
@@ -6929,7 +6915,7 @@ public final class LikelyAst {
     }
 
     private void initFields() {
-      id_ = "";
+      id_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
       value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
@@ -6945,6 +6931,10 @@ public final class LikelyAst {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getId().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       if (!getValue().isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
@@ -6957,7 +6947,7 @@ public final class LikelyAst {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getIdBytes());
+        output.writeMessage(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeMessage(2, value_);
@@ -6973,7 +6963,7 @@ public final class LikelyAst {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getIdBytes());
+          .computeMessageSize(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -7087,6 +7077,7 @@ public final class LikelyAst {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getIdFieldBuilder();
           getValueFieldBuilder();
         }
       }
@@ -7096,7 +7087,11 @@ public final class LikelyAst {
 
       public Builder clear() {
         super.clear();
-        id_ = "";
+        if (idBuilder_ == null) {
+          id_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
+        } else {
+          idBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (valueBuilder_ == null) {
           value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
@@ -7135,7 +7130,11 @@ public final class LikelyAst {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.id_ = id_;
+        if (idBuilder_ == null) {
+          result.id_ = id_;
+        } else {
+          result.id_ = idBuilder_.build();
+        }
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -7161,9 +7160,7 @@ public final class LikelyAst {
       public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.Attribution other) {
         if (other == br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.getDefaultInstance()) return this;
         if (other.hasId()) {
-          bitField0_ |= 0x00000001;
-          id_ = other.id_;
-          onChanged();
+          mergeId(other.getId());
         }
         if (other.hasValue()) {
           mergeValue(other.getValue());
@@ -7178,6 +7175,10 @@ public final class LikelyAst {
           return false;
         }
         if (!hasValue()) {
+          
+          return false;
+        }
+        if (!getId().isInitialized()) {
           
           return false;
         }
@@ -7207,78 +7208,121 @@ public final class LikelyAst {
       }
       private int bitField0_;
 
-      // required string id = 1;
-      private java.lang.Object id_ = "";
+      // required .Expression id = 1;
+      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression id_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> idBuilder_;
       /**
-       * <code>required string id = 1;</code>
+       * <code>required .Expression id = 1;</code>
        */
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string id = 1;</code>
+       * <code>required .Expression id = 1;</code>
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          id_ = s;
-          return s;
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getId() {
+        if (idBuilder_ == null) {
+          return id_;
         } else {
-          return (java.lang.String) ref;
+          return idBuilder_.getMessage();
         }
       }
       /**
-       * <code>required string id = 1;</code>
+       * <code>required .Expression id = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
+      public Builder setId(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          idBuilder_.setMessage(value);
         }
+        bitField0_ |= 0x00000001;
+        return this;
       }
       /**
-       * <code>required string id = 1;</code>
+       * <code>required .Expression id = 1;</code>
        */
       public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        id_ = value;
-        onChanged();
+          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+          onChanged();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>required string id = 1;</code>
+       * <code>required .Expression id = 1;</code>
+       */
+      public Builder mergeId(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              id_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
+            id_ =
+              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(id_).mergeFrom(value).buildPartial();
+          } else {
+            id_ = value;
+          }
+          onChanged();
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Expression id = 1;</code>
        */
       public Builder clearId() {
+        if (idBuilder_ == null) {
+          id_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
+          onChanged();
+        } else {
+          idBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = getDefaultInstance().getId();
-        onChanged();
         return this;
       }
       /**
-       * <code>required string id = 1;</code>
+       * <code>required .Expression id = 1;</code>
        */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        id_ = value;
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
         onChanged();
-        return this;
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Expression id = 1;</code>
+       */
+      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_;
+        }
+      }
+      /**
+       * <code>required .Expression id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
+                  id_,
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
       }
 
       // required .Expression value = 2;
@@ -14663,26 +14707,27 @@ public final class LikelyAst {
       "ltinType\022\013\n\007INTEGER\020\000\022\010\n\004REAL\020\001\022\n\n\006STRIN" +
       "G\020\002\022\013\n\007BOOLEAN\020\003\022\014\n\010SEQUENCE\020\004\022\010\n\004PAIR\020\005" +
       "\"<\n\004Pair\022\030\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005va" +
-      "lue\030\002 \002(\0132\013.Expression\"5\n\013Attribution\022\n\n",
-      "\002id\030\001 \002(\t\022\032\n\005value\030\002 \002(\0132\013.Expression\"E\n" +
-      "\017BinaryOperation\022\030\n\003lhs\030\001 \002(\0132\013.Expressi" +
-      "on\022\030\n\003rhs\030\002 \002(\0132\013.Expression\"M\n\014Function" +
-      "Call\022\035\n\010function\030\001 \002(\0132\013.Expression\022\036\n\ta" +
-      "rguments\030\002 \003(\0132\013.Expression\"-\n\017ReturnOpe" +
-      "ration\022\032\n\005value\030\001 \002(\0132\013.Expression\"=\n\rOb" +
-      "jectMessage\022\033\n\006object\030\001 \002(\0132\013.Expression" +
-      "\022\017\n\007message\030\002 \002(\t\"{\n\014IfExpression\022\036\n\tcon" +
-      "dition\030\001 \002(\0132\013.Expression\022$\n\017true_statem" +
-      "ents\030\002 \003(\0132\013.Expression\022%\n\020false_stateme",
-      "nts\030\003 \003(\0132\013.Expression\"\206\001\n\rForExpression" +
-      "\022\020\n\010variable\030\001 \002(\t\022 \n\013lower_bound\030\002 \002(\0132" +
-      "\013.Expression\022 \n\013upper_bound\030\003 \002(\0132\013.Expr" +
-      "ession\022\037\n\nstatements\030\004 \003(\0132\013.Expression\"" +
-      "R\n\017WhileExpression\022\036\n\tcondition\030\001 \002(\0132\013." +
-      "Expression\022\037\n\nstatements\030\002 \003(\0132\013.Express" +
-      "ion\"I\n\022FunctionDefinition\022\022\n\nparameters\030" +
-      "\001 \003(\t\022\037\n\nstatements\030\002 \003(\0132\013.ExpressionB\"" +
-      "\n br.com.igorbonadio.likely.lklast"
+      "lue\030\002 \002(\0132\013.Expression\"B\n\013Attribution\022\027\n",
+      "\002id\030\001 \002(\0132\013.Expression\022\032\n\005value\030\002 \002(\0132\013." +
+      "Expression\"E\n\017BinaryOperation\022\030\n\003lhs\030\001 \002" +
+      "(\0132\013.Expression\022\030\n\003rhs\030\002 \002(\0132\013.Expressio" +
+      "n\"M\n\014FunctionCall\022\035\n\010function\030\001 \002(\0132\013.Ex" +
+      "pression\022\036\n\targuments\030\002 \003(\0132\013.Expression" +
+      "\"-\n\017ReturnOperation\022\032\n\005value\030\001 \002(\0132\013.Exp" +
+      "ression\"=\n\rObjectMessage\022\033\n\006object\030\001 \002(\013" +
+      "2\013.Expression\022\017\n\007message\030\002 \002(\t\"{\n\014IfExpr" +
+      "ession\022\036\n\tcondition\030\001 \002(\0132\013.Expression\022$" +
+      "\n\017true_statements\030\002 \003(\0132\013.Expression\022%\n\020",
+      "false_statements\030\003 \003(\0132\013.Expression\"\206\001\n\r" +
+      "ForExpression\022\020\n\010variable\030\001 \002(\t\022 \n\013lower" +
+      "_bound\030\002 \002(\0132\013.Expression\022 \n\013upper_bound" +
+      "\030\003 \002(\0132\013.Expression\022\037\n\nstatements\030\004 \003(\0132" +
+      "\013.Expression\"R\n\017WhileExpression\022\036\n\tcondi" +
+      "tion\030\001 \002(\0132\013.Expression\022\037\n\nstatements\030\002 " +
+      "\003(\0132\013.Expression\"I\n\022FunctionDefinition\022\022" +
+      "\n\nparameters\030\001 \003(\t\022\037\n\nstatements\030\002 \003(\0132\013" +
+      ".ExpressionB\"\n br.com.igorbonadio.likely" +
+      ".lklast"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

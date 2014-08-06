@@ -72,7 +72,8 @@ impt : 'import' (ID | '.')? STRING (NEWLINE | ';')
 stmt : expr (NEWLINE? | ';' | EOF)
      ;
 
-expr : literal
+expr : ID
+     | literal
      | attr
      | seq
      | expr ARROW expr
@@ -86,8 +87,7 @@ expr : literal
      | comp_expr
      ;
 
-literal : ID
-        | number
+literal : number
         | STRING
         | bool
         ;

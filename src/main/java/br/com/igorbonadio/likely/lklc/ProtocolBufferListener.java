@@ -30,12 +30,35 @@ public class ProtocolBufferListener extends LikelyBaseListener {
                   .setKey(key)
                   .setValue(value)));
       stackExpr.push(expr);
+    } else if (ctx.ID() != null) {
+      Expression.Builder id = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.ID)
+        .setId(ctx.ID().getText());
+      stackExpr.push(id);
+    } else if (ctx.attr() != null) {
     } else {
       Expression.Builder expr = Expression.newBuilder()
         .setTypeCode(Expression.ExpressionType.BUILTIN)
         .setBuiltin(buildin);
       stackExpr.push(expr);
     }
+  }
+
+  public void exitAttr(LikelyParser.AttrContext ctx) {
+    Expression.Builder id = Expression.newBuilder();
+    if (ctx.ID() != null) {
+      id.setTypeCode(Expression.ExpressionType.ID)
+        .setId(ctx.ID().getText());
+    }
+    Expression.Builder expr = stackExpr.pop();
+    Expression.Builder attr = Expression.newBuilder()
+      .setTypeCode(Expression.ExpressionType.ATTRIBUTION)
+      .setAttribution(
+        Attribution.newBuilder()
+          .setId(id)
+          .setValue(expr));
+    System.out.println(attr.build());
+    stackExpr.push(attr);
   }
 
   public void exitSeq(LikelyParser.SeqContext ctx) {
