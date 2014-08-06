@@ -36,6 +36,40 @@ public class ProtocolBufferListener extends LikelyBaseListener {
         .setId(ctx.ID().getText());
       stackExpr.push(id);
     } else if (ctx.attr() != null) {
+    } else if (ctx.op() != null) {
+      Expression.Builder expr2 = stackExpr.pop();
+      Expression.Builder expr1 = stackExpr.pop();
+      int op = 0;
+      if (ctx.op().getText().equals("+"))
+        op = 0;
+      else if (ctx.op().getText().equals("-"))
+        op = 1;
+      else if (ctx.op().getText().equals("*"))
+        op = 2;
+      else if (ctx.op().getText().equals("/"))
+        op = 3;
+      else if (ctx.op().getText().equals("=="))
+        op = 4;
+      else if (ctx.op().getText().equals("!="))
+        op = 5;
+      else if (ctx.op().getText().equals(">="))
+        op = 6;
+      else if (ctx.op().getText().equals("<="))
+        op = 7;
+      else if (ctx.op().getText().equals(">"))
+        op = 8;
+      else if (ctx.op().getText().equals("<"))
+        op = 9;
+      else if (ctx.op().getText().equals(":"))
+        op = 10;
+      Expression.Builder binop = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.BINARY_OPERATION)
+        .setBinaryOperation(
+          BinaryOperation.newBuilder()
+            .setOperation(op)
+            .setLhs(expr1)
+            .setRhs(expr2));
+      stackExpr.push(binop);
     } else {
       Expression.Builder expr = Expression.newBuilder()
         .setTypeCode(Expression.ExpressionType.BUILTIN)
@@ -57,7 +91,6 @@ public class ProtocolBufferListener extends LikelyBaseListener {
         Attribution.newBuilder()
           .setId(id)
           .setValue(expr));
-    System.out.println(attr.build());
     stackExpr.push(attr);
   }
 
