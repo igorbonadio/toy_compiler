@@ -64,7 +64,7 @@ public class ProtocolBufferListener extends LikelyBaseListener {
       String str = ctx.STRING().getText();
       buildin = Builtin.newBuilder();
       buildin.setTypeCode(Builtin.BuiltinType.STRING)
-             .setStr(str.substring(1,str.length()-1));
+             .setString(str.substring(1,str.length()-1));
     }
   }
 

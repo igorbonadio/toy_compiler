@@ -35,7 +35,7 @@ public class StringTest extends TestCase {
           .setBuiltin(
             Builtin.newBuilder()
               .setTypeCode(Builtin.BuiltinType.STRING)
-              .setStr("hello"))).build();
+              .setString("hello"))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }
@@ -56,7 +56,7 @@ public class StringTest extends TestCase {
           .setBuiltin(
             Builtin.newBuilder()
               .setTypeCode(Builtin.BuiltinType.STRING)
-              .setStr(""))).build();
+              .setString(""))).build();
 
     assertEquals(expectedProgram.toString(), program.toString());
   }

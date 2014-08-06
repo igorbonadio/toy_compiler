@@ -4516,20 +4516,20 @@ public final class LikelyAst {
      */
     double getReal();
 
-    // optional string str = 4;
+    // optional string string = 4;
     /**
-     * <code>optional string str = 4;</code>
+     * <code>optional string string = 4;</code>
      */
-    boolean hasStr();
+    boolean hasString();
     /**
-     * <code>optional string str = 4;</code>
+     * <code>optional string string = 4;</code>
      */
-    java.lang.String getStr();
+    java.lang.String getString();
     /**
-     * <code>optional string str = 4;</code>
+     * <code>optional string string = 4;</code>
      */
     com.google.protobuf.ByteString
-        getStrBytes();
+        getStringBytes();
 
     // optional bool b = 5;
     /**
@@ -4679,7 +4679,7 @@ public final class LikelyAst {
             }
             case 34: {
               bitField0_ |= 0x00000008;
-              str_ = input.readBytes();
+              string_ = input.readBytes();
               break;
             }
             case 40: {
@@ -4937,20 +4937,20 @@ public final class LikelyAst {
       return real_;
     }
 
-    // optional string str = 4;
-    public static final int STR_FIELD_NUMBER = 4;
-    private java.lang.Object str_;
+    // optional string string = 4;
+    public static final int STRING_FIELD_NUMBER = 4;
+    private java.lang.Object string_;
     /**
-     * <code>optional string str = 4;</code>
+     * <code>optional string string = 4;</code>
      */
-    public boolean hasStr() {
+    public boolean hasString() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional string str = 4;</code>
+     * <code>optional string string = 4;</code>
      */
-    public java.lang.String getStr() {
-      java.lang.Object ref = str_;
+    public java.lang.String getString() {
+      java.lang.Object ref = string_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -4958,22 +4958,22 @@ public final class LikelyAst {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          str_ = s;
+          string_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string str = 4;</code>
+     * <code>optional string string = 4;</code>
      */
     public com.google.protobuf.ByteString
-        getStrBytes() {
-      java.lang.Object ref = str_;
+        getStringBytes() {
+      java.lang.Object ref = string_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        str_ = b;
+        string_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5094,7 +5094,7 @@ public final class LikelyAst {
       typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER;
       integer_ = 0L;
       real_ = 0D;
-      str_ = "";
+      string_ = "";
       b_ = false;
       sequence_ = java.util.Collections.emptyList();
       hashMap_ = java.util.Collections.emptyList();
@@ -5144,7 +5144,7 @@ public final class LikelyAst {
         output.writeDouble(3, real_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(4, getStrBytes());
+        output.writeBytes(4, getStringBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeBool(5, b_);
@@ -5181,7 +5181,7 @@ public final class LikelyAst {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getStrBytes());
+          .computeBytesSize(4, getStringBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
@@ -5324,7 +5324,7 @@ public final class LikelyAst {
         bitField0_ = (bitField0_ & ~0x00000002);
         real_ = 0D;
         bitField0_ = (bitField0_ & ~0x00000004);
-        str_ = "";
+        string_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
         b_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -5389,7 +5389,7 @@ public final class LikelyAst {
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.str_ = str_;
+        result.string_ = string_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
@@ -5445,9 +5445,9 @@ public final class LikelyAst {
         if (other.hasReal()) {
           setReal(other.getReal());
         }
-        if (other.hasStr()) {
+        if (other.hasString()) {
           bitField0_ |= 0x00000008;
-          str_ = other.str_;
+          string_ = other.string_;
           onChanged();
         }
         if (other.hasB()) {
@@ -5659,76 +5659,76 @@ public final class LikelyAst {
         return this;
       }
 
-      // optional string str = 4;
-      private java.lang.Object str_ = "";
+      // optional string string = 4;
+      private java.lang.Object string_ = "";
       /**
-       * <code>optional string str = 4;</code>
+       * <code>optional string string = 4;</code>
        */
-      public boolean hasStr() {
+      public boolean hasString() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional string str = 4;</code>
+       * <code>optional string string = 4;</code>
        */
-      public java.lang.String getStr() {
-        java.lang.Object ref = str_;
+      public java.lang.String getString() {
+        java.lang.Object ref = string_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          str_ = s;
+          string_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string str = 4;</code>
+       * <code>optional string string = 4;</code>
        */
       public com.google.protobuf.ByteString
-          getStrBytes() {
-        java.lang.Object ref = str_;
+          getStringBytes() {
+        java.lang.Object ref = string_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          str_ = b;
+          string_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string str = 4;</code>
+       * <code>optional string string = 4;</code>
        */
-      public Builder setStr(
+      public Builder setString(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        str_ = value;
+        string_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string str = 4;</code>
+       * <code>optional string string = 4;</code>
        */
-      public Builder clearStr() {
+      public Builder clearString() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        str_ = getDefaultInstance().getStr();
+        string_ = getDefaultInstance().getString();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string str = 4;</code>
+       * <code>optional string string = 4;</code>
        */
-      public Builder setStrBytes(
+      public Builder setStringBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        str_ = value;
+        string_ = value;
         onChanged();
         return this;
       }
@@ -15038,35 +15038,35 @@ public final class LikelyAst {
       "ON_CALL\020\003\022\023\n\017RETURN_OPERATOR\020\004\022\022\n\016OBJECT" +
       "_MESSAGE\020\005\022\021\n\rIF_EXPRESSION\020\006\022\022\n\016FOR_EXP",
       "RESSION\020\007\022\024\n\020WHILE_EXPRESSION\020\010\022\027\n\023FUNCT" +
-      "ION_DEFINITION\020\t\022\006\n\002ID\020\n\"\233\002\n\007Builtin\022\'\n\t" +
+      "ION_DEFINITION\020\t\022\006\n\002ID\020\n\"\236\002\n\007Builtin\022\'\n\t" +
       "type_code\030\001 \002(\0162\024.Builtin.BuiltinType\022\017\n" +
-      "\007integer\030\002 \001(\003\022\014\n\004real\030\003 \001(\001\022\013\n\003str\030\004 \001(" +
-      "\t\022\t\n\001b\030\005 \001(\010\022\035\n\010sequence\030\006 \003(\0132\013.Express" +
-      "ion\022\027\n\010hash_map\030\007 \003(\0132\005.Pair\022\023\n\004pair\030\010 \001" +
-      "(\0132\005.Pair\"c\n\013BuiltinType\022\013\n\007INTEGER\020\000\022\010\n" +
-      "\004REAL\020\001\022\n\n\006STRING\020\002\022\013\n\007BOOLEAN\020\003\022\014\n\010SEQU" +
-      "ENCE\020\004\022\014\n\010HASH_MAP\020\005\022\010\n\004PAIR\020\006\"<\n\004Pair\022\030" +
-      "\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005value\030\002 \002(\0132",
-      "\013.Expression\"5\n\013Attribution\022\n\n\002id\030\001 \002(\t\022" +
-      "\032\n\005value\030\002 \002(\0132\013.Expression\"E\n\017BinaryOpe" +
-      "ration\022\030\n\003lhs\030\001 \002(\0132\013.Expression\022\030\n\003rhs\030" +
-      "\002 \002(\0132\013.Expression\"M\n\014FunctionCall\022\035\n\010fu" +
-      "nction\030\001 \002(\0132\013.Expression\022\036\n\targuments\030\002" +
-      " \003(\0132\013.Expression\"-\n\017ReturnOperation\022\032\n\005" +
-      "value\030\001 \002(\0132\013.Expression\"=\n\rObjectMessag" +
-      "e\022\033\n\006object\030\001 \002(\0132\013.Expression\022\017\n\007messag" +
-      "e\030\002 \002(\t\"{\n\014IfExpression\022\036\n\tcondition\030\001 \002" +
-      "(\0132\013.Expression\022$\n\017true_statements\030\002 \003(\013",
-      "2\013.Expression\022%\n\020false_statements\030\003 \003(\0132" +
-      "\013.Expression\"\206\001\n\rForExpression\022\020\n\010variab" +
-      "le\030\001 \002(\t\022 \n\013lower_bound\030\002 \002(\0132\013.Expressi" +
-      "on\022 \n\013upper_bound\030\003 \002(\0132\013.Expression\022\037\n\n" +
-      "statements\030\004 \003(\0132\013.Expression\"R\n\017WhileEx" +
-      "pression\022\036\n\tcondition\030\001 \002(\0132\013.Expression" +
-      "\022\037\n\nstatements\030\002 \003(\0132\013.Expression\"I\n\022Fun" +
-      "ctionDefinition\022\022\n\nparameters\030\001 \003(\t\022\037\n\ns" +
-      "tatements\030\002 \003(\0132\013.ExpressionB\"\n br.com.i" +
-      "gorbonadio.likely.lklast"
+      "\007integer\030\002 \001(\003\022\014\n\004real\030\003 \001(\001\022\016\n\006string\030\004" +
+      " \001(\t\022\t\n\001b\030\005 \001(\010\022\035\n\010sequence\030\006 \003(\0132\013.Expr" +
+      "ession\022\027\n\010hash_map\030\007 \003(\0132\005.Pair\022\023\n\004pair\030" +
+      "\010 \001(\0132\005.Pair\"c\n\013BuiltinType\022\013\n\007INTEGER\020\000" +
+      "\022\010\n\004REAL\020\001\022\n\n\006STRING\020\002\022\013\n\007BOOLEAN\020\003\022\014\n\010S" +
+      "EQUENCE\020\004\022\014\n\010HASH_MAP\020\005\022\010\n\004PAIR\020\006\"<\n\004Pai" +
+      "r\022\030\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005value\030\002 \002",
+      "(\0132\013.Expression\"5\n\013Attribution\022\n\n\002id\030\001 \002" +
+      "(\t\022\032\n\005value\030\002 \002(\0132\013.Expression\"E\n\017Binary" +
+      "Operation\022\030\n\003lhs\030\001 \002(\0132\013.Expression\022\030\n\003r" +
+      "hs\030\002 \002(\0132\013.Expression\"M\n\014FunctionCall\022\035\n" +
+      "\010function\030\001 \002(\0132\013.Expression\022\036\n\targument" +
+      "s\030\002 \003(\0132\013.Expression\"-\n\017ReturnOperation\022" +
+      "\032\n\005value\030\001 \002(\0132\013.Expression\"=\n\rObjectMes" +
+      "sage\022\033\n\006object\030\001 \002(\0132\013.Expression\022\017\n\007mes" +
+      "sage\030\002 \002(\t\"{\n\014IfExpression\022\036\n\tcondition\030" +
+      "\001 \002(\0132\013.Expression\022$\n\017true_statements\030\002 ",
+      "\003(\0132\013.Expression\022%\n\020false_statements\030\003 \003" +
+      "(\0132\013.Expression\"\206\001\n\rForExpression\022\020\n\010var" +
+      "iable\030\001 \002(\t\022 \n\013lower_bound\030\002 \002(\0132\013.Expre" +
+      "ssion\022 \n\013upper_bound\030\003 \002(\0132\013.Expression\022" +
+      "\037\n\nstatements\030\004 \003(\0132\013.Expression\"R\n\017Whil" +
+      "eExpression\022\036\n\tcondition\030\001 \002(\0132\013.Express" +
+      "ion\022\037\n\nstatements\030\002 \003(\0132\013.Expression\"I\n\022" +
+      "FunctionDefinition\022\022\n\nparameters\030\001 \003(\t\022\037" +
+      "\n\nstatements\030\002 \003(\0132\013.ExpressionB\"\n br.co" +
+      "m.igorbonadio.likely.lklast"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -15096,7 +15096,7 @@ public final class LikelyAst {
           internal_static_Builtin_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_Builtin_descriptor,
-              new java.lang.String[] { "TypeCode", "Integer", "Real", "Str", "B", "Sequence", "HashMap", "Pair", });
+              new java.lang.String[] { "TypeCode", "Integer", "Real", "String", "B", "Sequence", "HashMap", "Pair", });
           internal_static_Pair_descriptor =
             getDescriptor().getMessageTypes().get(4);
           internal_static_Pair_fieldAccessorTable = new
