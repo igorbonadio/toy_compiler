@@ -37,6 +37,7 @@ public class ProtocolBufferListener extends LikelyBaseListener {
       stackExpr.push(id);
     } else if (ctx.attr() != null) {
     } else if (ctx.return_expr() != null) {
+    } else if (ctx.obj_msg() != null) {
     } else if (ctx.func_call() != null) {
       java.util.Vector<Expression.Builder> e = new java.util.Vector<>();
       int n = stackNumberOfExpr.pop();
@@ -92,6 +93,65 @@ public class ProtocolBufferListener extends LikelyBaseListener {
         .setTypeCode(Expression.ExpressionType.BUILTIN)
         .setBuiltin(buildin);
       stackExpr.push(expr);
+    }
+  }
+
+  public void exitObj_msg(LikelyParser.Obj_msgContext ctx) {
+    java.util.Stack<Expression.Builder> _stackExpr = new java.util.Stack<>();
+    java.util.Stack<Integer> _stackNumberOfExpr = new java.util.Stack<>();
+
+    int nMsg = ctx.ID().size();
+    for (int i = 0; i < nMsg; i++) {
+      if (ctx.list(i) != null) {
+        int nargs = stackNumberOfExpr.pop();
+        _stackNumberOfExpr.push(nargs);
+        for (int j = 0; j < nargs; j++) {
+          _stackExpr.push(stackExpr.pop());
+        }
+      }
+    }
+
+
+    Expression.Builder obj = stackExpr.pop();
+    Expression.Builder expr = Expression.newBuilder();
+
+    for (int i = 0; i < nMsg; i++) {
+      expr = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.OBJECT_MESSAGE)
+        .setObjectMessage(
+          ObjectMessage.newBuilder()
+            .setObject(obj)
+            .setMessage(ctx.ID(i).getText()));
+      if (ctx.list(i) != null) {
+        java.util.Vector<Expression.Builder> e = new java.util.Vector<>();
+        FunctionCall.Builder fcall = FunctionCall.newBuilder()
+          .setFunction(expr);
+        int nargs = _stackNumberOfExpr.pop();
+        for (int j = 0; j < nargs; j++) {
+          fcall.addArguments(_stackExpr.pop());
+        }
+        expr = Expression.newBuilder()
+          .setTypeCode(Expression.ExpressionType.FUNCTION_CALL)
+          .setFunctionCall(fcall);
+      }
+      obj = expr;
+    }
+
+
+    stackExpr.push(expr);
+  }
+
+  public void exitObj(LikelyParser.ObjContext ctx) {
+    if (ctx.ID() != null) {
+      Expression.Builder obj = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.ID)
+        .setId(ctx.ID().getText());
+      stackExpr.push(obj);
+    } else {
+      Expression.Builder obj = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.BUILTIN)
+        .setBuiltin(buildin);
+      stackExpr.push(obj);
     }
   }
 

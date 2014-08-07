@@ -173,6 +173,7 @@ obj_msg : obj ('.' ID list?)+
         ;
 
 obj : literal
+    | ID
     | seq
     | prob
     | '(' expr ')'
