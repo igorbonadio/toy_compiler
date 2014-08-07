@@ -50,9 +50,28 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
           .setLhs(visit(ctx.expr(0)))
           .setRhs(visit(ctx.expr(1)));
     } else if (ctx.op() != null) {
-
+      expr = visit(ctx.op());
+      expr.setLhs(visit(ctx.expr(0)))
+          .setRhs(visit(ctx.expr(1)));
     } else if (ctx.OPEN_PAREN() != null) {
+      expr = visit(ctx.expr(0));
+    }
+    return expr;
+  }
 
+  public Expression.Builder visitOp(LikelyParser.OpContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    switch (ctx.getText()) {
+      case "+":   expr.setType(Expression.Type.ADDITION); break;
+      case "-":   expr.setType(Expression.Type.SUBTRACTION); break;
+      case "*":   expr.setType(Expression.Type.MULTIPLICATION); break;
+      case "/":   expr.setType(Expression.Type.DIVISION); break;
+      case "==":  expr.setType(Expression.Type.EQUAL_TO); break;
+      case "!=":  expr.setType(Expression.Type.NOT_EQUAL_TO); break;
+      case ">":   expr.setType(Expression.Type.GREATER_THAN); break;
+      case ">=":  expr.setType(Expression.Type.GREATER_THAN_OR_EQUAL_TO); break;
+      case "<":   expr.setType(Expression.Type.LESS_THAN); break;
+      case "<=":  expr.setType(Expression.Type.LESS_THAN_OR_EQUAL_TO); break;
     }
     return expr;
   }
