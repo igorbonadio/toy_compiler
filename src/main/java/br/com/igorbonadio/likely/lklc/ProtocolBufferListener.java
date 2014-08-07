@@ -36,6 +36,7 @@ public class ProtocolBufferListener extends LikelyBaseListener {
         .setId(ctx.ID().getText());
       stackExpr.push(id);
     } else if (ctx.attr() != null) {
+    } else if (ctx.return_expr() != null) {
     } else if (ctx.func_call() != null) {
       java.util.Vector<Expression.Builder> e = new java.util.Vector<>();
       int n = stackNumberOfExpr.pop();
@@ -92,6 +93,14 @@ public class ProtocolBufferListener extends LikelyBaseListener {
         .setBuiltin(buildin);
       stackExpr.push(expr);
     }
+  }
+
+  public void exitReturn_expr(LikelyParser.Return_exprContext ctx) {
+    Expression.Builder expr = stackExpr.pop();
+    Expression.Builder r = Expression.newBuilder()
+      .setTypeCode(Expression.ExpressionType.RETURN_OPERATOR)
+      .setReturnOperator(expr);
+    stackExpr.push(r);
   }
 
   public void exitFunc(LikelyParser.FuncContext ctx) {
