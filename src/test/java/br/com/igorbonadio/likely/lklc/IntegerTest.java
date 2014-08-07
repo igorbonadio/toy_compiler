@@ -19,7 +19,41 @@ public class IntegerTest extends TestCase {
     return new TestSuite(IntegerTest.class);
   }
 
-  public void testSingleDigitInteger() {
-    assertEquals(1, 1);
+  public void testInteger() {
+    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("1"))));
+    ParseTree tree = parser.file_input();
+
+    ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
+    visitor.visit(tree);
+    Program program = visitor.getProtocolBuffer();
+
+    Program expectedProgram = Program.newBuilder()
+      .addStatements(
+        Expression.newBuilder()
+          .setType(Expression.Type.INTEGER)
+          .setInteger(1)).build();
+
+    assertEquals(program.toString(), expectedProgram.toString());
+  }
+
+  public void test2Integers() {
+    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("1;2;"))));
+    ParseTree tree = parser.file_input();
+
+    ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
+    visitor.visit(tree);
+    Program program = visitor.getProtocolBuffer();
+
+    Program expectedProgram = Program.newBuilder()
+      .addStatements(
+        Expression.newBuilder()
+          .setType(Expression.Type.INTEGER)
+          .setInteger(1))
+      .addStatements(
+        Expression.newBuilder()
+          .setType(Expression.Type.INTEGER)
+          .setInteger(2)).build();
+
+    assertEquals(program.toString(), expectedProgram.toString());
   }
 }
