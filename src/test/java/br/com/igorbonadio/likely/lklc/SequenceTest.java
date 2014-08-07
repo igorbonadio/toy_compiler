@@ -63,6 +63,44 @@ public class SequenceTest extends TestCase {
     assertEquals(program.toString(), expectedProgram.toString());
   }
 
+  public void testFatSequencesOfSequences() {
+    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("[[1,2],[3,4]]"))));
+    ParseTree tree = parser.file_input();
+
+    ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
+    visitor.visit(tree);
+    Program program = visitor.getProtocolBuffer();
+
+    Program expectedProgram = Program.newBuilder()
+      .addStatements(
+        Expression.newBuilder()
+          .setType(Expression.Type.SEQUENCE)
+          .addExpressions(
+            Expression.newBuilder()
+              .setType(Expression.Type.SEQUENCE)
+              .addExpressions(
+                Expression.newBuilder()
+                  .setType(Expression.Type.INTEGER)
+                  .setInteger(1))
+              .addExpressions(
+                Expression.newBuilder()
+                  .setType(Expression.Type.INTEGER)
+                  .setInteger(2)))
+          .addExpressions(
+            Expression.newBuilder()
+              .setType(Expression.Type.SEQUENCE)
+              .addExpressions(
+                Expression.newBuilder()
+                  .setType(Expression.Type.INTEGER)
+                  .setInteger(3))
+              .addExpressions(
+                Expression.newBuilder()
+                  .setType(Expression.Type.INTEGER)
+                  .setInteger(4)))).build();
+
+    assertEquals(program.toString(), expectedProgram.toString());
+  }
+
   public void testThinSequenceWith1Element() {
     LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("[\n  1\n]"))));
     ParseTree tree = parser.file_input();
