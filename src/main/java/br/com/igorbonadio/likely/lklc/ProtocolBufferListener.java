@@ -39,21 +39,6 @@ public class ProtocolBufferListener extends LikelyBaseListener {
     } else if (ctx.return_expr() != null) {
     } else if (ctx.obj_msg() != null) {
     } else if (ctx.func_call() != null) {
-      java.util.Vector<Expression.Builder> e = new java.util.Vector<>();
-      int n = stackNumberOfExpr.pop();
-      for (int i = 0; i < n; i++) {
-        e.add(stackExpr.pop());
-      }
-      Expression.Builder f = stackExpr.pop();
-      FunctionCall.Builder fcall = FunctionCall.newBuilder()
-        .setFunction(f);
-      for (int i = 0; i < n; i++) {
-        fcall.addArguments(e.get(n-i-1));
-      }
-      Expression.Builder expr = Expression.newBuilder()
-        .setTypeCode(Expression.ExpressionType.FUNCTION_CALL)
-        .setFunctionCall(fcall);
-      stackExpr.push(expr);
     } else if (ctx.op() != null) {
       Expression.Builder expr2 = stackExpr.pop();
       Expression.Builder expr1 = stackExpr.pop();
@@ -161,6 +146,39 @@ public class ProtocolBufferListener extends LikelyBaseListener {
       .setTypeCode(Expression.ExpressionType.RETURN_OPERATOR)
       .setReturnOperator(expr);
     stackExpr.push(r);
+  }
+
+  public void exitFunc_call(LikelyParser.Func_callContext ctx) {
+    java.util.Stack<Expression.Builder> _stackExpr = new java.util.Stack<>();
+    java.util.Stack<Integer> _stackNumberOfExpr = new java.util.Stack<>();
+
+    int nList = ctx.list().size();
+    for (int i = 0; i < nList; i++) {
+      if (ctx.list(i) != null) {
+        int nargs = stackNumberOfExpr.pop();
+        _stackNumberOfExpr.push(nargs);
+        for (int j = 0; j < nargs; j++) {
+          _stackExpr.push(stackExpr.pop());
+        }
+      }
+    }
+
+    Expression.Builder f = stackExpr.pop();
+    Expression.Builder expr = Expression.newBuilder();
+
+    for (int i = 0; i < nList; i++) {
+      FunctionCall.Builder fcall = FunctionCall.newBuilder()
+        .setFunction(f);
+      int nargs = _stackNumberOfExpr.pop();
+      for (int j = 0; j < nargs; j++) {
+        fcall.addArguments(_stackExpr.pop());
+      }
+      expr = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.FUNCTION_CALL)
+        .setFunctionCall(fcall);
+      f = expr;
+    }
+    stackExpr.push(expr);
   }
 
   public void exitFunc(LikelyParser.FuncContext ctx) {
