@@ -192,11 +192,18 @@ public class ProtocolBufferListener extends LikelyBaseListener {
 
   public void exitAttr(LikelyParser.AttrContext ctx) {
     Expression.Builder id = Expression.newBuilder();
+    Expression.Builder expr = Expression.newBuilder();
+
     if (ctx.ID() != null) {
-      id.setTypeCode(Expression.ExpressionType.ID)
+      id = Expression.newBuilder()
+        .setTypeCode(Expression.ExpressionType.ID)
         .setId(ctx.ID().getText());
+      expr = stackExpr.pop();
+    } else if (ctx.obj_msg() != null) {
+      expr = stackExpr.pop();
+      id = stackExpr.pop();
     }
-    Expression.Builder expr = stackExpr.pop();
+
     Expression.Builder attr = Expression.newBuilder()
       .setTypeCode(Expression.ExpressionType.ATTRIBUTION)
       .setAttribution(
