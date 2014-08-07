@@ -1714,170 +1714,183 @@ public final class LikelyAst {
   public interface ExpressionOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .Expression.ExpressionType type_code = 1;
+    // required .Expression.Type type = 1;
     /**
-     * <code>required .Expression.ExpressionType type_code = 1;</code>
+     * <code>required .Expression.Type type = 1;</code>
      */
-    boolean hasTypeCode();
+    boolean hasType();
     /**
-     * <code>required .Expression.ExpressionType type_code = 1;</code>
+     * <code>required .Expression.Type type = 1;</code>
      */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType getTypeCode();
+    br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type getType();
 
-    // optional .Builtin builtin = 2;
+    // optional int64 integer = 2;
     /**
-     * <code>optional .Builtin builtin = 2;</code>
+     * <code>optional int64 integer = 2;</code>
      */
-    boolean hasBuiltin();
+    boolean hasInteger();
     /**
-     * <code>optional .Builtin builtin = 2;</code>
+     * <code>optional int64 integer = 2;</code>
      */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Builtin getBuiltin();
-    /**
-     * <code>optional .Builtin builtin = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.BuiltinOrBuilder getBuiltinOrBuilder();
+    long getInteger();
 
-    // optional .Attribution attribution = 3;
+    // optional double real = 3;
     /**
-     * <code>optional .Attribution attribution = 3;</code>
+     * <code>optional double real = 3;</code>
      */
-    boolean hasAttribution();
+    boolean hasReal();
     /**
-     * <code>optional .Attribution attribution = 3;</code>
+     * <code>optional double real = 3;</code>
      */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Attribution getAttribution();
-    /**
-     * <code>optional .Attribution attribution = 3;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.AttributionOrBuilder getAttributionOrBuilder();
+    double getReal();
 
-    // optional .BinaryOperation binary_operation = 4;
+    // optional string string = 4;
     /**
-     * <code>optional .BinaryOperation binary_operation = 4;</code>
+     * <code>optional string string = 4;</code>
      */
-    boolean hasBinaryOperation();
+    boolean hasString();
     /**
-     * <code>optional .BinaryOperation binary_operation = 4;</code>
+     * <code>optional string string = 4;</code>
      */
-    br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation getBinaryOperation();
+    java.lang.String getString();
     /**
-     * <code>optional .BinaryOperation binary_operation = 4;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperationOrBuilder getBinaryOperationOrBuilder();
-
-    // optional .FunctionCall function_call = 5;
-    /**
-     * <code>optional .FunctionCall function_call = 5;</code>
-     */
-    boolean hasFunctionCall();
-    /**
-     * <code>optional .FunctionCall function_call = 5;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall getFunctionCall();
-    /**
-     * <code>optional .FunctionCall function_call = 5;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCallOrBuilder getFunctionCallOrBuilder();
-
-    // optional .Expression return_operator = 6;
-    /**
-     * <code>optional .Expression return_operator = 6;</code>
-     */
-    boolean hasReturnOperator();
-    /**
-     * <code>optional .Expression return_operator = 6;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getReturnOperator();
-    /**
-     * <code>optional .Expression return_operator = 6;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getReturnOperatorOrBuilder();
-
-    // optional .ObjectMessage object_message = 7;
-    /**
-     * <code>optional .ObjectMessage object_message = 7;</code>
-     */
-    boolean hasObjectMessage();
-    /**
-     * <code>optional .ObjectMessage object_message = 7;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage getObjectMessage();
-    /**
-     * <code>optional .ObjectMessage object_message = 7;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessageOrBuilder getObjectMessageOrBuilder();
-
-    // optional .IfExpression if_expression = 8;
-    /**
-     * <code>optional .IfExpression if_expression = 8;</code>
-     */
-    boolean hasIfExpression();
-    /**
-     * <code>optional .IfExpression if_expression = 8;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression getIfExpression();
-    /**
-     * <code>optional .IfExpression if_expression = 8;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.IfExpressionOrBuilder getIfExpressionOrBuilder();
-
-    // optional .ForExpression for_expression = 9;
-    /**
-     * <code>optional .ForExpression for_expression = 9;</code>
-     */
-    boolean hasForExpression();
-    /**
-     * <code>optional .ForExpression for_expression = 9;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression getForExpression();
-    /**
-     * <code>optional .ForExpression for_expression = 9;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ForExpressionOrBuilder getForExpressionOrBuilder();
-
-    // optional .WhileExpression while_expression = 10;
-    /**
-     * <code>optional .WhileExpression while_expression = 10;</code>
-     */
-    boolean hasWhileExpression();
-    /**
-     * <code>optional .WhileExpression while_expression = 10;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression getWhileExpression();
-    /**
-     * <code>optional .WhileExpression while_expression = 10;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpressionOrBuilder getWhileExpressionOrBuilder();
-
-    // optional .FunctionDefinition function_definition = 11;
-    /**
-     * <code>optional .FunctionDefinition function_definition = 11;</code>
-     */
-    boolean hasFunctionDefinition();
-    /**
-     * <code>optional .FunctionDefinition function_definition = 11;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition getFunctionDefinition();
-    /**
-     * <code>optional .FunctionDefinition function_definition = 11;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinitionOrBuilder getFunctionDefinitionOrBuilder();
-
-    // optional string id = 12;
-    /**
-     * <code>optional string id = 12;</code>
-     */
-    boolean hasId();
-    /**
-     * <code>optional string id = 12;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>optional string id = 12;</code>
+     * <code>optional string string = 4;</code>
      */
     com.google.protobuf.ByteString
-        getIdBytes();
+        getStringBytes();
+
+    // optional bool booelan = 5;
+    /**
+     * <code>optional bool booelan = 5;</code>
+     */
+    boolean hasBooelan();
+    /**
+     * <code>optional bool booelan = 5;</code>
+     */
+    boolean getBooelan();
+
+    // repeated .Expression list_of_expressions = 6;
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
+        getListOfExpressionsList();
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getListOfExpressions(int index);
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    int getListOfExpressionsCount();
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
+        getListOfExpressionsOrBuilderList();
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getListOfExpressionsOrBuilder(
+        int index);
+
+    // optional .Expression lhs = 7;
+    /**
+     * <code>optional .Expression lhs = 7;</code>
+     */
+    boolean hasLhs();
+    /**
+     * <code>optional .Expression lhs = 7;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getLhs();
+    /**
+     * <code>optional .Expression lhs = 7;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getLhsOrBuilder();
+
+    // optional .Expression rhs = 8;
+    /**
+     * <code>optional .Expression rhs = 8;</code>
+     */
+    boolean hasRhs();
+    /**
+     * <code>optional .Expression rhs = 8;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getRhs();
+    /**
+     * <code>optional .Expression rhs = 8;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getRhsOrBuilder();
+
+    // repeated string list_of_string = 9;
+    /**
+     * <code>repeated string list_of_string = 9;</code>
+     */
+    java.util.List<java.lang.String>
+    getListOfStringList();
+    /**
+     * <code>repeated string list_of_string = 9;</code>
+     */
+    int getListOfStringCount();
+    /**
+     * <code>repeated string list_of_string = 9;</code>
+     */
+    java.lang.String getListOfString(int index);
+    /**
+     * <code>repeated string list_of_string = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getListOfStringBytes(int index);
+
+    // repeated .Expression block1 = 10;
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
+        getBlock1List();
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getBlock1(int index);
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    int getBlock1Count();
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
+        getBlock1OrBuilderList();
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getBlock1OrBuilder(
+        int index);
+
+    // repeated .Expression block2 = 11;
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
+        getBlock2List();
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getBlock2(int index);
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    int getBlock2Count();
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
+        getBlock2OrBuilderList();
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getBlock2OrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code Expression}
@@ -1932,148 +1945,91 @@ public final class LikelyAst {
             }
             case 8: {
               int rawValue = input.readEnum();
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType value = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.valueOf(rawValue);
+              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type value = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
               } else {
                 bitField0_ |= 0x00000001;
-                typeCode_ = value;
+                type_ = value;
               }
               break;
             }
-            case 18: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = builtin_.toBuilder();
-              }
-              builtin_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(builtin_);
-                builtin_ = subBuilder.buildPartial();
-              }
+            case 16: {
               bitField0_ |= 0x00000002;
+              integer_ = input.readInt64();
               break;
             }
-            case 26: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                subBuilder = attribution_.toBuilder();
-              }
-              attribution_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(attribution_);
-                attribution_ = subBuilder.buildPartial();
-              }
+            case 25: {
               bitField0_ |= 0x00000004;
+              real_ = input.readDouble();
               break;
             }
             case 34: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000008) == 0x00000008)) {
-                subBuilder = binaryOperation_.toBuilder();
-              }
-              binaryOperation_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(binaryOperation_);
-                binaryOperation_ = subBuilder.buildPartial();
-              }
               bitField0_ |= 0x00000008;
+              string_ = input.readBytes();
               break;
             }
-            case 42: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000010) == 0x00000010)) {
-                subBuilder = functionCall_.toBuilder();
-              }
-              functionCall_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(functionCall_);
-                functionCall_ = subBuilder.buildPartial();
-              }
+            case 40: {
               bitField0_ |= 0x00000010;
+              booelan_ = input.readBool();
               break;
             }
             case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                listOfExpressions_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              listOfExpressions_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
+              break;
+            }
+            case 58: {
               br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
               if (((bitField0_ & 0x00000020) == 0x00000020)) {
-                subBuilder = returnOperator_.toBuilder();
+                subBuilder = lhs_.toBuilder();
               }
-              returnOperator_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
+              lhs_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(returnOperator_);
-                returnOperator_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(lhs_);
+                lhs_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000020;
               break;
             }
-            case 58: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.Builder subBuilder = null;
+            case 66: {
+              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
               if (((bitField0_ & 0x00000040) == 0x00000040)) {
-                subBuilder = objectMessage_.toBuilder();
+                subBuilder = rhs_.toBuilder();
               }
-              objectMessage_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.PARSER, extensionRegistry);
+              rhs_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(objectMessage_);
-                objectMessage_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(rhs_);
+                rhs_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000040;
               break;
             }
-            case 66: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000080) == 0x00000080)) {
-                subBuilder = ifExpression_.toBuilder();
-              }
-              ifExpression_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(ifExpression_);
-                ifExpression_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000080;
-              break;
-            }
             case 74: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000100) == 0x00000100)) {
-                subBuilder = forExpression_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                listOfString_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000100;
               }
-              forExpression_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(forExpression_);
-                forExpression_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000100;
+              listOfString_.add(input.readBytes());
               break;
             }
             case 82: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000200) == 0x00000200)) {
-                subBuilder = whileExpression_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                block1_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
+                mutable_bitField0_ |= 0x00000200;
               }
-              whileExpression_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(whileExpression_);
-                whileExpression_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000200;
+              block1_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
               break;
             }
             case 90: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000400) == 0x00000400)) {
-                subBuilder = functionDefinition_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                block2_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
+                mutable_bitField0_ |= 0x00000400;
               }
-              functionDefinition_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(functionDefinition_);
-                functionDefinition_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000400;
-              break;
-            }
-            case 98: {
-              bitField0_ |= 0x00000800;
-              id_ = input.readBytes();
+              block2_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
               break;
             }
           }
@@ -2084,6 +2040,18 @@ public final class LikelyAst {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          listOfExpressions_ = java.util.Collections.unmodifiableList(listOfExpressions_);
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          listOfString_ = new com.google.protobuf.UnmodifiableLazyStringList(listOfString_);
+        }
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+          block1_ = java.util.Collections.unmodifiableList(block1_);
+        }
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+          block2_ = java.util.Collections.unmodifiableList(block2_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2116,130 +2084,524 @@ public final class LikelyAst {
     }
 
     /**
-     * Protobuf enum {@code Expression.ExpressionType}
+     * Protobuf enum {@code Expression.Type}
      */
-    public enum ExpressionType
+    public enum Type
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>BUILTIN = 0;</code>
+       * <code>ID = 0;</code>
+       *
+       * <pre>
+       * Expression{string}
+       * </pre>
        */
-      BUILTIN(0, 0),
+      ID(0, 0),
       /**
-       * <code>ATTRIBUTION = 1;</code>
+       * <code>INTEGER = 1;</code>
+       *
+       * <pre>
+       * Expression{integer}
+       * </pre>
        */
-      ATTRIBUTION(1, 1),
+      INTEGER(1, 1),
       /**
-       * <code>BINARY_OPERATION = 2;</code>
+       * <code>REAL = 2;</code>
+       *
+       * <pre>
+       * Expression{real}
+       * </pre>
        */
-      BINARY_OPERATION(2, 2),
+      REAL(2, 2),
       /**
-       * <code>FUNCTION_CALL = 3;</code>
+       * <code>STRING = 3;</code>
+       *
+       * <pre>
+       * Expression{string}
+       * </pre>
        */
-      FUNCTION_CALL(3, 3),
+      STRING(3, 3),
       /**
-       * <code>RETURN_OPERATOR = 4;</code>
+       * <code>BOOLEAN = 4;</code>
+       *
+       * <pre>
+       * Expression{boolean}
+       * </pre>
        */
-      RETURN_OPERATOR(4, 4),
+      BOOLEAN(4, 4),
       /**
-       * <code>OBJECT_MESSAGE = 5;</code>
+       * <code>SEQUENCE = 5;</code>
+       *
+       * <pre>
+       * Expression{list_of_expressions}
+       * </pre>
        */
-      OBJECT_MESSAGE(5, 5),
+      SEQUENCE(5, 5),
       /**
-       * <code>IF_EXPRESSION = 6;</code>
+       * <code>HASH = 6;</code>
+       *
+       * <pre>
+       * Expression{list_of_expressions}
+       * </pre>
        */
-      IF_EXPRESSION(6, 6),
+      HASH(6, 6),
       /**
-       * <code>FOR_EXPRESSION = 7;</code>
+       * <code>PAIR = 7;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
        */
-      FOR_EXPRESSION(7, 7),
+      PAIR(7, 7),
       /**
-       * <code>WHILE_EXPRESSION = 8;</code>
+       * <code>ATTRIBUTION = 8;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
        */
-      WHILE_EXPRESSION(8, 8),
+      ATTRIBUTION(8, 8),
       /**
-       * <code>FUNCTION_DEFINITION = 9;</code>
+       * <code>ADDITION = 9;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
        */
-      FUNCTION_DEFINITION(9, 9),
+      ADDITION(9, 9),
       /**
-       * <code>ID = 10;</code>
+       * <code>SUBTRACTION = 10;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
        */
-      ID(10, 10),
+      SUBTRACTION(10, 10),
+      /**
+       * <code>MULTIPLICATION = 11;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      MULTIPLICATION(11, 11),
+      /**
+       * <code>DIVISION = 12;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      DIVISION(12, 12),
+      /**
+       * <code>EQUAL_TO = 13;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      EQUAL_TO(13, 13),
+      /**
+       * <code>NOT_EQUAL_TO = 14;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      NOT_EQUAL_TO(14, 14),
+      /**
+       * <code>GREATER_THAN = 15;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      GREATER_THAN(15, 15),
+      /**
+       * <code>GREATER_THAN_OR_EQUAL_TO = 16;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      GREATER_THAN_OR_EQUAL_TO(16, 16),
+      /**
+       * <code>LESS_THAN = 17;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      LESS_THAN(17, 17),
+      /**
+       * <code>LESS_THAN_OR_EQUAL_TO = 18;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      LESS_THAN_OR_EQUAL_TO(18, 18),
+      /**
+       * <code>AND = 19;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      AND(19, 19),
+      /**
+       * <code>OR = 20;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      OR(20, 20),
+      /**
+       * <code>NOT = 21;</code>
+       *
+       * <pre>
+       * Expression{rhs}
+       * </pre>
+       */
+      NOT(21, 21),
+      /**
+       * <code>FUNCTION_DEFINITION = 22;</code>
+       *
+       * <pre>
+       * Expression{list_of_string, block1}
+       * </pre>
+       */
+      FUNCTION_DEFINITION(22, 22),
+      /**
+       * <code>FUNCTION_CALL = 23;</code>
+       *
+       * <pre>
+       * Expression{lhs, list_of_expressions}
+       * </pre>
+       */
+      FUNCTION_CALL(23, 23),
+      /**
+       * <code>RETURN = 24;</code>
+       *
+       * <pre>
+       * Expression{rhs}
+       * </pre>
+       */
+      RETURN(24, 24),
+      /**
+       * <code>OBJECT_MESSAGE = 25;</code>
+       *
+       * <pre>
+       * Expression{lhs, string}
+       * </pre>
+       */
+      OBJECT_MESSAGE(25, 25),
+      /**
+       * <code>IF = 26;</code>
+       *
+       * <pre>
+       * Expression{rhs, block1, block2}
+       * </pre>
+       */
+      IF(26, 26),
+      /**
+       * <code>FOR = 27;</code>
+       *
+       * <pre>
+       * Expression{string, lhs, rhs, block1}
+       * </pre>
+       */
+      FOR(27, 27),
+      /**
+       * <code>WHILE = 28;</code>
+       *
+       * <pre>
+       * Expression{rhs, block1}
+       * </pre>
+       */
+      WHILE(28, 28),
       ;
 
       /**
-       * <code>BUILTIN = 0;</code>
+       * <code>ID = 0;</code>
+       *
+       * <pre>
+       * Expression{string}
+       * </pre>
        */
-      public static final int BUILTIN_VALUE = 0;
+      public static final int ID_VALUE = 0;
       /**
-       * <code>ATTRIBUTION = 1;</code>
+       * <code>INTEGER = 1;</code>
+       *
+       * <pre>
+       * Expression{integer}
+       * </pre>
        */
-      public static final int ATTRIBUTION_VALUE = 1;
+      public static final int INTEGER_VALUE = 1;
       /**
-       * <code>BINARY_OPERATION = 2;</code>
+       * <code>REAL = 2;</code>
+       *
+       * <pre>
+       * Expression{real}
+       * </pre>
        */
-      public static final int BINARY_OPERATION_VALUE = 2;
+      public static final int REAL_VALUE = 2;
       /**
-       * <code>FUNCTION_CALL = 3;</code>
+       * <code>STRING = 3;</code>
+       *
+       * <pre>
+       * Expression{string}
+       * </pre>
        */
-      public static final int FUNCTION_CALL_VALUE = 3;
+      public static final int STRING_VALUE = 3;
       /**
-       * <code>RETURN_OPERATOR = 4;</code>
+       * <code>BOOLEAN = 4;</code>
+       *
+       * <pre>
+       * Expression{boolean}
+       * </pre>
        */
-      public static final int RETURN_OPERATOR_VALUE = 4;
+      public static final int BOOLEAN_VALUE = 4;
       /**
-       * <code>OBJECT_MESSAGE = 5;</code>
+       * <code>SEQUENCE = 5;</code>
+       *
+       * <pre>
+       * Expression{list_of_expressions}
+       * </pre>
        */
-      public static final int OBJECT_MESSAGE_VALUE = 5;
+      public static final int SEQUENCE_VALUE = 5;
       /**
-       * <code>IF_EXPRESSION = 6;</code>
+       * <code>HASH = 6;</code>
+       *
+       * <pre>
+       * Expression{list_of_expressions}
+       * </pre>
        */
-      public static final int IF_EXPRESSION_VALUE = 6;
+      public static final int HASH_VALUE = 6;
       /**
-       * <code>FOR_EXPRESSION = 7;</code>
+       * <code>PAIR = 7;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
        */
-      public static final int FOR_EXPRESSION_VALUE = 7;
+      public static final int PAIR_VALUE = 7;
       /**
-       * <code>WHILE_EXPRESSION = 8;</code>
+       * <code>ATTRIBUTION = 8;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
        */
-      public static final int WHILE_EXPRESSION_VALUE = 8;
+      public static final int ATTRIBUTION_VALUE = 8;
       /**
-       * <code>FUNCTION_DEFINITION = 9;</code>
+       * <code>ADDITION = 9;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
        */
-      public static final int FUNCTION_DEFINITION_VALUE = 9;
+      public static final int ADDITION_VALUE = 9;
       /**
-       * <code>ID = 10;</code>
+       * <code>SUBTRACTION = 10;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
        */
-      public static final int ID_VALUE = 10;
+      public static final int SUBTRACTION_VALUE = 10;
+      /**
+       * <code>MULTIPLICATION = 11;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int MULTIPLICATION_VALUE = 11;
+      /**
+       * <code>DIVISION = 12;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int DIVISION_VALUE = 12;
+      /**
+       * <code>EQUAL_TO = 13;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int EQUAL_TO_VALUE = 13;
+      /**
+       * <code>NOT_EQUAL_TO = 14;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int NOT_EQUAL_TO_VALUE = 14;
+      /**
+       * <code>GREATER_THAN = 15;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int GREATER_THAN_VALUE = 15;
+      /**
+       * <code>GREATER_THAN_OR_EQUAL_TO = 16;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int GREATER_THAN_OR_EQUAL_TO_VALUE = 16;
+      /**
+       * <code>LESS_THAN = 17;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int LESS_THAN_VALUE = 17;
+      /**
+       * <code>LESS_THAN_OR_EQUAL_TO = 18;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int LESS_THAN_OR_EQUAL_TO_VALUE = 18;
+      /**
+       * <code>AND = 19;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int AND_VALUE = 19;
+      /**
+       * <code>OR = 20;</code>
+       *
+       * <pre>
+       * Expression{lhs, rhs}
+       * </pre>
+       */
+      public static final int OR_VALUE = 20;
+      /**
+       * <code>NOT = 21;</code>
+       *
+       * <pre>
+       * Expression{rhs}
+       * </pre>
+       */
+      public static final int NOT_VALUE = 21;
+      /**
+       * <code>FUNCTION_DEFINITION = 22;</code>
+       *
+       * <pre>
+       * Expression{list_of_string, block1}
+       * </pre>
+       */
+      public static final int FUNCTION_DEFINITION_VALUE = 22;
+      /**
+       * <code>FUNCTION_CALL = 23;</code>
+       *
+       * <pre>
+       * Expression{lhs, list_of_expressions}
+       * </pre>
+       */
+      public static final int FUNCTION_CALL_VALUE = 23;
+      /**
+       * <code>RETURN = 24;</code>
+       *
+       * <pre>
+       * Expression{rhs}
+       * </pre>
+       */
+      public static final int RETURN_VALUE = 24;
+      /**
+       * <code>OBJECT_MESSAGE = 25;</code>
+       *
+       * <pre>
+       * Expression{lhs, string}
+       * </pre>
+       */
+      public static final int OBJECT_MESSAGE_VALUE = 25;
+      /**
+       * <code>IF = 26;</code>
+       *
+       * <pre>
+       * Expression{rhs, block1, block2}
+       * </pre>
+       */
+      public static final int IF_VALUE = 26;
+      /**
+       * <code>FOR = 27;</code>
+       *
+       * <pre>
+       * Expression{string, lhs, rhs, block1}
+       * </pre>
+       */
+      public static final int FOR_VALUE = 27;
+      /**
+       * <code>WHILE = 28;</code>
+       *
+       * <pre>
+       * Expression{rhs, block1}
+       * </pre>
+       */
+      public static final int WHILE_VALUE = 28;
 
 
       public final int getNumber() { return value; }
 
-      public static ExpressionType valueOf(int value) {
+      public static Type valueOf(int value) {
         switch (value) {
-          case 0: return BUILTIN;
-          case 1: return ATTRIBUTION;
-          case 2: return BINARY_OPERATION;
-          case 3: return FUNCTION_CALL;
-          case 4: return RETURN_OPERATOR;
-          case 5: return OBJECT_MESSAGE;
-          case 6: return IF_EXPRESSION;
-          case 7: return FOR_EXPRESSION;
-          case 8: return WHILE_EXPRESSION;
-          case 9: return FUNCTION_DEFINITION;
-          case 10: return ID;
+          case 0: return ID;
+          case 1: return INTEGER;
+          case 2: return REAL;
+          case 3: return STRING;
+          case 4: return BOOLEAN;
+          case 5: return SEQUENCE;
+          case 6: return HASH;
+          case 7: return PAIR;
+          case 8: return ATTRIBUTION;
+          case 9: return ADDITION;
+          case 10: return SUBTRACTION;
+          case 11: return MULTIPLICATION;
+          case 12: return DIVISION;
+          case 13: return EQUAL_TO;
+          case 14: return NOT_EQUAL_TO;
+          case 15: return GREATER_THAN;
+          case 16: return GREATER_THAN_OR_EQUAL_TO;
+          case 17: return LESS_THAN;
+          case 18: return LESS_THAN_OR_EQUAL_TO;
+          case 19: return AND;
+          case 20: return OR;
+          case 21: return NOT;
+          case 22: return FUNCTION_DEFINITION;
+          case 23: return FUNCTION_CALL;
+          case 24: return RETURN;
+          case 25: return OBJECT_MESSAGE;
+          case 26: return IF;
+          case 27: return FOR;
+          case 28: return WHILE;
           default: return null;
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<ExpressionType>
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
           internalGetValueMap() {
         return internalValueMap;
       }
-      private static com.google.protobuf.Internal.EnumLiteMap<ExpressionType>
+      private static com.google.protobuf.Internal.EnumLiteMap<Type>
           internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<ExpressionType>() {
-              public ExpressionType findValueByNumber(int number) {
-                return ExpressionType.valueOf(number);
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.valueOf(number);
               }
             };
 
@@ -2256,9 +2618,9 @@ public final class LikelyAst {
         return br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDescriptor().getEnumTypes().get(0);
       }
 
-      private static final ExpressionType[] VALUES = values();
+      private static final Type[] VALUES = values();
 
-      public static ExpressionType valueOf(
+      public static Type valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new java.lang.IllegalArgumentException(
@@ -2270,265 +2632,77 @@ public final class LikelyAst {
       private final int index;
       private final int value;
 
-      private ExpressionType(int index, int value) {
+      private Type(int index, int value) {
         this.index = index;
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:Expression.ExpressionType)
+      // @@protoc_insertion_point(enum_scope:Expression.Type)
     }
 
     private int bitField0_;
-    // required .Expression.ExpressionType type_code = 1;
-    public static final int TYPE_CODE_FIELD_NUMBER = 1;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType typeCode_;
+    // required .Expression.Type type = 1;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type type_;
     /**
-     * <code>required .Expression.ExpressionType type_code = 1;</code>
+     * <code>required .Expression.Type type = 1;</code>
      */
-    public boolean hasTypeCode() {
+    public boolean hasType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .Expression.ExpressionType type_code = 1;</code>
+     * <code>required .Expression.Type type = 1;</code>
      */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType getTypeCode() {
-      return typeCode_;
+    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type getType() {
+      return type_;
     }
 
-    // optional .Builtin builtin = 2;
-    public static final int BUILTIN_FIELD_NUMBER = 2;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Builtin builtin_;
+    // optional int64 integer = 2;
+    public static final int INTEGER_FIELD_NUMBER = 2;
+    private long integer_;
     /**
-     * <code>optional .Builtin builtin = 2;</code>
+     * <code>optional int64 integer = 2;</code>
      */
-    public boolean hasBuiltin() {
+    public boolean hasInteger() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .Builtin builtin = 2;</code>
+     * <code>optional int64 integer = 2;</code>
      */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin getBuiltin() {
-      return builtin_;
-    }
-    /**
-     * <code>optional .Builtin builtin = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.BuiltinOrBuilder getBuiltinOrBuilder() {
-      return builtin_;
+    public long getInteger() {
+      return integer_;
     }
 
-    // optional .Attribution attribution = 3;
-    public static final int ATTRIBUTION_FIELD_NUMBER = 3;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Attribution attribution_;
+    // optional double real = 3;
+    public static final int REAL_FIELD_NUMBER = 3;
+    private double real_;
     /**
-     * <code>optional .Attribution attribution = 3;</code>
+     * <code>optional double real = 3;</code>
      */
-    public boolean hasAttribution() {
+    public boolean hasReal() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .Attribution attribution = 3;</code>
+     * <code>optional double real = 3;</code>
      */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Attribution getAttribution() {
-      return attribution_;
-    }
-    /**
-     * <code>optional .Attribution attribution = 3;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.AttributionOrBuilder getAttributionOrBuilder() {
-      return attribution_;
+    public double getReal() {
+      return real_;
     }
 
-    // optional .BinaryOperation binary_operation = 4;
-    public static final int BINARY_OPERATION_FIELD_NUMBER = 4;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation binaryOperation_;
+    // optional string string = 4;
+    public static final int STRING_FIELD_NUMBER = 4;
+    private java.lang.Object string_;
     /**
-     * <code>optional .BinaryOperation binary_operation = 4;</code>
+     * <code>optional string string = 4;</code>
      */
-    public boolean hasBinaryOperation() {
+    public boolean hasString() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional .BinaryOperation binary_operation = 4;</code>
+     * <code>optional string string = 4;</code>
      */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation getBinaryOperation() {
-      return binaryOperation_;
-    }
-    /**
-     * <code>optional .BinaryOperation binary_operation = 4;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperationOrBuilder getBinaryOperationOrBuilder() {
-      return binaryOperation_;
-    }
-
-    // optional .FunctionCall function_call = 5;
-    public static final int FUNCTION_CALL_FIELD_NUMBER = 5;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall functionCall_;
-    /**
-     * <code>optional .FunctionCall function_call = 5;</code>
-     */
-    public boolean hasFunctionCall() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>optional .FunctionCall function_call = 5;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall getFunctionCall() {
-      return functionCall_;
-    }
-    /**
-     * <code>optional .FunctionCall function_call = 5;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCallOrBuilder getFunctionCallOrBuilder() {
-      return functionCall_;
-    }
-
-    // optional .Expression return_operator = 6;
-    public static final int RETURN_OPERATOR_FIELD_NUMBER = 6;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression returnOperator_;
-    /**
-     * <code>optional .Expression return_operator = 6;</code>
-     */
-    public boolean hasReturnOperator() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional .Expression return_operator = 6;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getReturnOperator() {
-      return returnOperator_;
-    }
-    /**
-     * <code>optional .Expression return_operator = 6;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getReturnOperatorOrBuilder() {
-      return returnOperator_;
-    }
-
-    // optional .ObjectMessage object_message = 7;
-    public static final int OBJECT_MESSAGE_FIELD_NUMBER = 7;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage objectMessage_;
-    /**
-     * <code>optional .ObjectMessage object_message = 7;</code>
-     */
-    public boolean hasObjectMessage() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    /**
-     * <code>optional .ObjectMessage object_message = 7;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage getObjectMessage() {
-      return objectMessage_;
-    }
-    /**
-     * <code>optional .ObjectMessage object_message = 7;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessageOrBuilder getObjectMessageOrBuilder() {
-      return objectMessage_;
-    }
-
-    // optional .IfExpression if_expression = 8;
-    public static final int IF_EXPRESSION_FIELD_NUMBER = 8;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression ifExpression_;
-    /**
-     * <code>optional .IfExpression if_expression = 8;</code>
-     */
-    public boolean hasIfExpression() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
-    }
-    /**
-     * <code>optional .IfExpression if_expression = 8;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression getIfExpression() {
-      return ifExpression_;
-    }
-    /**
-     * <code>optional .IfExpression if_expression = 8;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.IfExpressionOrBuilder getIfExpressionOrBuilder() {
-      return ifExpression_;
-    }
-
-    // optional .ForExpression for_expression = 9;
-    public static final int FOR_EXPRESSION_FIELD_NUMBER = 9;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression forExpression_;
-    /**
-     * <code>optional .ForExpression for_expression = 9;</code>
-     */
-    public boolean hasForExpression() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
-    }
-    /**
-     * <code>optional .ForExpression for_expression = 9;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression getForExpression() {
-      return forExpression_;
-    }
-    /**
-     * <code>optional .ForExpression for_expression = 9;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ForExpressionOrBuilder getForExpressionOrBuilder() {
-      return forExpression_;
-    }
-
-    // optional .WhileExpression while_expression = 10;
-    public static final int WHILE_EXPRESSION_FIELD_NUMBER = 10;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression whileExpression_;
-    /**
-     * <code>optional .WhileExpression while_expression = 10;</code>
-     */
-    public boolean hasWhileExpression() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
-    }
-    /**
-     * <code>optional .WhileExpression while_expression = 10;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression getWhileExpression() {
-      return whileExpression_;
-    }
-    /**
-     * <code>optional .WhileExpression while_expression = 10;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpressionOrBuilder getWhileExpressionOrBuilder() {
-      return whileExpression_;
-    }
-
-    // optional .FunctionDefinition function_definition = 11;
-    public static final int FUNCTION_DEFINITION_FIELD_NUMBER = 11;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition functionDefinition_;
-    /**
-     * <code>optional .FunctionDefinition function_definition = 11;</code>
-     */
-    public boolean hasFunctionDefinition() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
-    }
-    /**
-     * <code>optional .FunctionDefinition function_definition = 11;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition getFunctionDefinition() {
-      return functionDefinition_;
-    }
-    /**
-     * <code>optional .FunctionDefinition function_definition = 11;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinitionOrBuilder getFunctionDefinitionOrBuilder() {
-      return functionDefinition_;
-    }
-
-    // optional string id = 12;
-    public static final int ID_FIELD_NUMBER = 12;
-    private java.lang.Object id_;
-    /**
-     * <code>optional string id = 12;</code>
-     */
-    public boolean hasId() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
-    }
-    /**
-     * <code>optional string id = 12;</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
+    public java.lang.String getString() {
+      java.lang.Object ref = string_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -2536,107 +2710,274 @@ public final class LikelyAst {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          id_ = s;
+          string_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string id = 12;</code>
+     * <code>optional string string = 4;</code>
      */
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
+        getStringBytes() {
+      java.lang.Object ref = string_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        id_ = b;
+        string_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
+    // optional bool booelan = 5;
+    public static final int BOOELAN_FIELD_NUMBER = 5;
+    private boolean booelan_;
+    /**
+     * <code>optional bool booelan = 5;</code>
+     */
+    public boolean hasBooelan() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool booelan = 5;</code>
+     */
+    public boolean getBooelan() {
+      return booelan_;
+    }
+
+    // repeated .Expression list_of_expressions = 6;
+    public static final int LIST_OF_EXPRESSIONS_FIELD_NUMBER = 6;
+    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> listOfExpressions_;
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getListOfExpressionsList() {
+      return listOfExpressions_;
+    }
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
+        getListOfExpressionsOrBuilderList() {
+      return listOfExpressions_;
+    }
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    public int getListOfExpressionsCount() {
+      return listOfExpressions_.size();
+    }
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getListOfExpressions(int index) {
+      return listOfExpressions_.get(index);
+    }
+    /**
+     * <code>repeated .Expression list_of_expressions = 6;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getListOfExpressionsOrBuilder(
+        int index) {
+      return listOfExpressions_.get(index);
+    }
+
+    // optional .Expression lhs = 7;
+    public static final int LHS_FIELD_NUMBER = 7;
+    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression lhs_;
+    /**
+     * <code>optional .Expression lhs = 7;</code>
+     */
+    public boolean hasLhs() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .Expression lhs = 7;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getLhs() {
+      return lhs_;
+    }
+    /**
+     * <code>optional .Expression lhs = 7;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getLhsOrBuilder() {
+      return lhs_;
+    }
+
+    // optional .Expression rhs = 8;
+    public static final int RHS_FIELD_NUMBER = 8;
+    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression rhs_;
+    /**
+     * <code>optional .Expression rhs = 8;</code>
+     */
+    public boolean hasRhs() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .Expression rhs = 8;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getRhs() {
+      return rhs_;
+    }
+    /**
+     * <code>optional .Expression rhs = 8;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getRhsOrBuilder() {
+      return rhs_;
+    }
+
+    // repeated string list_of_string = 9;
+    public static final int LIST_OF_STRING_FIELD_NUMBER = 9;
+    private com.google.protobuf.LazyStringList listOfString_;
+    /**
+     * <code>repeated string list_of_string = 9;</code>
+     */
+    public java.util.List<java.lang.String>
+        getListOfStringList() {
+      return listOfString_;
+    }
+    /**
+     * <code>repeated string list_of_string = 9;</code>
+     */
+    public int getListOfStringCount() {
+      return listOfString_.size();
+    }
+    /**
+     * <code>repeated string list_of_string = 9;</code>
+     */
+    public java.lang.String getListOfString(int index) {
+      return listOfString_.get(index);
+    }
+    /**
+     * <code>repeated string list_of_string = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getListOfStringBytes(int index) {
+      return listOfString_.getByteString(index);
+    }
+
+    // repeated .Expression block1 = 10;
+    public static final int BLOCK1_FIELD_NUMBER = 10;
+    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> block1_;
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getBlock1List() {
+      return block1_;
+    }
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
+        getBlock1OrBuilderList() {
+      return block1_;
+    }
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    public int getBlock1Count() {
+      return block1_.size();
+    }
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getBlock1(int index) {
+      return block1_.get(index);
+    }
+    /**
+     * <code>repeated .Expression block1 = 10;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getBlock1OrBuilder(
+        int index) {
+      return block1_.get(index);
+    }
+
+    // repeated .Expression block2 = 11;
+    public static final int BLOCK2_FIELD_NUMBER = 11;
+    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> block2_;
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getBlock2List() {
+      return block2_;
+    }
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
+        getBlock2OrBuilderList() {
+      return block2_;
+    }
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    public int getBlock2Count() {
+      return block2_.size();
+    }
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getBlock2(int index) {
+      return block2_.get(index);
+    }
+    /**
+     * <code>repeated .Expression block2 = 11;</code>
+     */
+    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getBlock2OrBuilder(
+        int index) {
+      return block2_.get(index);
+    }
+
     private void initFields() {
-      typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.BUILTIN;
-      builtin_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDefaultInstance();
-      attribution_ = br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.getDefaultInstance();
-      binaryOperation_ = br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.getDefaultInstance();
-      functionCall_ = br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.getDefaultInstance();
-      returnOperator_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      objectMessage_ = br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.getDefaultInstance();
-      ifExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.getDefaultInstance();
-      forExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.getDefaultInstance();
-      whileExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.getDefaultInstance();
-      functionDefinition_ = br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.getDefaultInstance();
-      id_ = "";
+      type_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type.ID;
+      integer_ = 0L;
+      real_ = 0D;
+      string_ = "";
+      booelan_ = false;
+      listOfExpressions_ = java.util.Collections.emptyList();
+      lhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
+      rhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
+      listOfString_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      block1_ = java.util.Collections.emptyList();
+      block2_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
-      if (!hasTypeCode()) {
+      if (!hasType()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (hasBuiltin()) {
-        if (!getBuiltin().isInitialized()) {
+      for (int i = 0; i < getListOfExpressionsCount(); i++) {
+        if (!getListOfExpressions(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
       }
-      if (hasAttribution()) {
-        if (!getAttribution().isInitialized()) {
+      if (hasLhs()) {
+        if (!getLhs().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
       }
-      if (hasBinaryOperation()) {
-        if (!getBinaryOperation().isInitialized()) {
+      if (hasRhs()) {
+        if (!getRhs().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
       }
-      if (hasFunctionCall()) {
-        if (!getFunctionCall().isInitialized()) {
+      for (int i = 0; i < getBlock1Count(); i++) {
+        if (!getBlock1(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
       }
-      if (hasReturnOperator()) {
-        if (!getReturnOperator().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasObjectMessage()) {
-        if (!getObjectMessage().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasIfExpression()) {
-        if (!getIfExpression().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasForExpression()) {
-        if (!getForExpression().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasWhileExpression()) {
-        if (!getWhileExpression().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasFunctionDefinition()) {
-        if (!getFunctionDefinition().isInitialized()) {
+      for (int i = 0; i < getBlock2Count(); i++) {
+        if (!getBlock2(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -2649,40 +2990,37 @@ public final class LikelyAst {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, typeCode_.getNumber());
+        output.writeEnum(1, type_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, builtin_);
+        output.writeInt64(2, integer_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, attribution_);
+        output.writeDouble(3, real_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeMessage(4, binaryOperation_);
+        output.writeBytes(4, getStringBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeMessage(5, functionCall_);
+        output.writeBool(5, booelan_);
+      }
+      for (int i = 0; i < listOfExpressions_.size(); i++) {
+        output.writeMessage(6, listOfExpressions_.get(i));
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeMessage(6, returnOperator_);
+        output.writeMessage(7, lhs_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeMessage(7, objectMessage_);
+        output.writeMessage(8, rhs_);
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeMessage(8, ifExpression_);
+      for (int i = 0; i < listOfString_.size(); i++) {
+        output.writeBytes(9, listOfString_.getByteString(i));
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeMessage(9, forExpression_);
+      for (int i = 0; i < block1_.size(); i++) {
+        output.writeMessage(10, block1_.get(i));
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        output.writeMessage(10, whileExpression_);
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeMessage(11, functionDefinition_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        output.writeBytes(12, getIdBytes());
+      for (int i = 0; i < block2_.size(); i++) {
+        output.writeMessage(11, block2_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -2695,51 +3033,52 @@ public final class LikelyAst {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, typeCode_.getNumber());
+          .computeEnumSize(1, type_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, builtin_);
+          .computeInt64Size(2, integer_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, attribution_);
+          .computeDoubleSize(3, real_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, binaryOperation_);
+          .computeBytesSize(4, getStringBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, functionCall_);
+          .computeBoolSize(5, booelan_);
+      }
+      for (int i = 0; i < listOfExpressions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, listOfExpressions_.get(i));
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, returnOperator_);
+          .computeMessageSize(7, lhs_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, objectMessage_);
+          .computeMessageSize(8, rhs_);
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, ifExpression_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < listOfString_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(listOfString_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getListOfStringList().size();
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      for (int i = 0; i < block1_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, forExpression_);
+          .computeMessageSize(10, block1_.get(i));
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      for (int i = 0; i < block2_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, whileExpression_);
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, functionDefinition_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(12, getIdBytes());
+          .computeMessageSize(11, block2_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2849,16 +3188,11 @@ public final class LikelyAst {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getBuiltinFieldBuilder();
-          getAttributionFieldBuilder();
-          getBinaryOperationFieldBuilder();
-          getFunctionCallFieldBuilder();
-          getReturnOperatorFieldBuilder();
-          getObjectMessageFieldBuilder();
-          getIfExpressionFieldBuilder();
-          getForExpressionFieldBuilder();
-          getWhileExpressionFieldBuilder();
-          getFunctionDefinitionFieldBuilder();
+          getListOfExpressionsFieldBuilder();
+          getLhsFieldBuilder();
+          getRhsFieldBuilder();
+          getBlock1FieldBuilder();
+          getBlock2FieldBuilder();
         }
       }
       private static Builder create() {
@@ -2867,70 +3201,48 @@ public final class LikelyAst {
 
       public Builder clear() {
         super.clear();
-        typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.BUILTIN;
+        type_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type.ID;
         bitField0_ = (bitField0_ & ~0x00000001);
-        if (builtinBuilder_ == null) {
-          builtin_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDefaultInstance();
-        } else {
-          builtinBuilder_.clear();
-        }
+        integer_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (attributionBuilder_ == null) {
-          attribution_ = br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.getDefaultInstance();
-        } else {
-          attributionBuilder_.clear();
-        }
+        real_ = 0D;
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (binaryOperationBuilder_ == null) {
-          binaryOperation_ = br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.getDefaultInstance();
-        } else {
-          binaryOperationBuilder_.clear();
-        }
+        string_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
-        if (functionCallBuilder_ == null) {
-          functionCall_ = br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.getDefaultInstance();
-        } else {
-          functionCallBuilder_.clear();
-        }
+        booelan_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
-        if (returnOperatorBuilder_ == null) {
-          returnOperator_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
+        if (listOfExpressionsBuilder_ == null) {
+          listOfExpressions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
-          returnOperatorBuilder_.clear();
+          listOfExpressionsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
-        if (objectMessageBuilder_ == null) {
-          objectMessage_ = br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.getDefaultInstance();
+        if (lhsBuilder_ == null) {
+          lhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
         } else {
-          objectMessageBuilder_.clear();
+          lhsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000040);
-        if (ifExpressionBuilder_ == null) {
-          ifExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.getDefaultInstance();
+        if (rhsBuilder_ == null) {
+          rhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
         } else {
-          ifExpressionBuilder_.clear();
+          rhsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000080);
-        if (forExpressionBuilder_ == null) {
-          forExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.getDefaultInstance();
-        } else {
-          forExpressionBuilder_.clear();
-        }
+        listOfString_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000100);
-        if (whileExpressionBuilder_ == null) {
-          whileExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.getDefaultInstance();
+        if (block1Builder_ == null) {
+          block1_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
-          whileExpressionBuilder_.clear();
+          block1Builder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000200);
-        if (functionDefinitionBuilder_ == null) {
-          functionDefinition_ = br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.getDefaultInstance();
+        if (block2Builder_ == null) {
+          block2_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
-          functionDefinitionBuilder_.clear();
+          block2Builder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000400);
-        id_ = "";
-        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -2962,91 +3274,72 @@ public final class LikelyAst {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.typeCode_ = typeCode_;
+        result.type_ = type_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        if (builtinBuilder_ == null) {
-          result.builtin_ = builtin_;
-        } else {
-          result.builtin_ = builtinBuilder_.build();
-        }
+        result.integer_ = integer_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        if (attributionBuilder_ == null) {
-          result.attribution_ = attribution_;
-        } else {
-          result.attribution_ = attributionBuilder_.build();
-        }
+        result.real_ = real_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        if (binaryOperationBuilder_ == null) {
-          result.binaryOperation_ = binaryOperation_;
-        } else {
-          result.binaryOperation_ = binaryOperationBuilder_.build();
-        }
+        result.string_ = string_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        if (functionCallBuilder_ == null) {
-          result.functionCall_ = functionCall_;
+        result.booelan_ = booelan_;
+        if (listOfExpressionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+            listOfExpressions_ = java.util.Collections.unmodifiableList(listOfExpressions_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.listOfExpressions_ = listOfExpressions_;
         } else {
-          result.functionCall_ = functionCallBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        if (returnOperatorBuilder_ == null) {
-          result.returnOperator_ = returnOperator_;
-        } else {
-          result.returnOperator_ = returnOperatorBuilder_.build();
+          result.listOfExpressions_ = listOfExpressionsBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
+          to_bitField0_ |= 0x00000020;
         }
-        if (objectMessageBuilder_ == null) {
-          result.objectMessage_ = objectMessage_;
+        if (lhsBuilder_ == null) {
+          result.lhs_ = lhs_;
         } else {
-          result.objectMessage_ = objectMessageBuilder_.build();
+          result.lhs_ = lhsBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
-          to_bitField0_ |= 0x00000080;
+          to_bitField0_ |= 0x00000040;
         }
-        if (ifExpressionBuilder_ == null) {
-          result.ifExpression_ = ifExpression_;
+        if (rhsBuilder_ == null) {
+          result.rhs_ = rhs_;
         } else {
-          result.ifExpression_ = ifExpressionBuilder_.build();
+          result.rhs_ = rhsBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
-          to_bitField0_ |= 0x00000100;
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          listOfString_ = new com.google.protobuf.UnmodifiableLazyStringList(
+              listOfString_);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
-        if (forExpressionBuilder_ == null) {
-          result.forExpression_ = forExpression_;
+        result.listOfString_ = listOfString_;
+        if (block1Builder_ == null) {
+          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+            block1_ = java.util.Collections.unmodifiableList(block1_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.block1_ = block1_;
         } else {
-          result.forExpression_ = forExpressionBuilder_.build();
+          result.block1_ = block1Builder_.build();
         }
-        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
-          to_bitField0_ |= 0x00000200;
-        }
-        if (whileExpressionBuilder_ == null) {
-          result.whileExpression_ = whileExpression_;
+        if (block2Builder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+            block2_ = java.util.Collections.unmodifiableList(block2_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.block2_ = block2_;
         } else {
-          result.whileExpression_ = whileExpressionBuilder_.build();
+          result.block2_ = block2Builder_.build();
         }
-        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
-          to_bitField0_ |= 0x00000400;
-        }
-        if (functionDefinitionBuilder_ == null) {
-          result.functionDefinition_ = functionDefinition_;
-        } else {
-          result.functionDefinition_ = functionDefinitionBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
-          to_bitField0_ |= 0x00000800;
-        }
-        result.id_ = id_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3063,109 +3356,152 @@ public final class LikelyAst {
 
       public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.Expression other) {
         if (other == br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) return this;
-        if (other.hasTypeCode()) {
-          setTypeCode(other.getTypeCode());
+        if (other.hasType()) {
+          setType(other.getType());
         }
-        if (other.hasBuiltin()) {
-          mergeBuiltin(other.getBuiltin());
+        if (other.hasInteger()) {
+          setInteger(other.getInteger());
         }
-        if (other.hasAttribution()) {
-          mergeAttribution(other.getAttribution());
+        if (other.hasReal()) {
+          setReal(other.getReal());
         }
-        if (other.hasBinaryOperation()) {
-          mergeBinaryOperation(other.getBinaryOperation());
-        }
-        if (other.hasFunctionCall()) {
-          mergeFunctionCall(other.getFunctionCall());
-        }
-        if (other.hasReturnOperator()) {
-          mergeReturnOperator(other.getReturnOperator());
-        }
-        if (other.hasObjectMessage()) {
-          mergeObjectMessage(other.getObjectMessage());
-        }
-        if (other.hasIfExpression()) {
-          mergeIfExpression(other.getIfExpression());
-        }
-        if (other.hasForExpression()) {
-          mergeForExpression(other.getForExpression());
-        }
-        if (other.hasWhileExpression()) {
-          mergeWhileExpression(other.getWhileExpression());
-        }
-        if (other.hasFunctionDefinition()) {
-          mergeFunctionDefinition(other.getFunctionDefinition());
-        }
-        if (other.hasId()) {
-          bitField0_ |= 0x00000800;
-          id_ = other.id_;
+        if (other.hasString()) {
+          bitField0_ |= 0x00000008;
+          string_ = other.string_;
           onChanged();
+        }
+        if (other.hasBooelan()) {
+          setBooelan(other.getBooelan());
+        }
+        if (listOfExpressionsBuilder_ == null) {
+          if (!other.listOfExpressions_.isEmpty()) {
+            if (listOfExpressions_.isEmpty()) {
+              listOfExpressions_ = other.listOfExpressions_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureListOfExpressionsIsMutable();
+              listOfExpressions_.addAll(other.listOfExpressions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.listOfExpressions_.isEmpty()) {
+            if (listOfExpressionsBuilder_.isEmpty()) {
+              listOfExpressionsBuilder_.dispose();
+              listOfExpressionsBuilder_ = null;
+              listOfExpressions_ = other.listOfExpressions_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              listOfExpressionsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getListOfExpressionsFieldBuilder() : null;
+            } else {
+              listOfExpressionsBuilder_.addAllMessages(other.listOfExpressions_);
+            }
+          }
+        }
+        if (other.hasLhs()) {
+          mergeLhs(other.getLhs());
+        }
+        if (other.hasRhs()) {
+          mergeRhs(other.getRhs());
+        }
+        if (!other.listOfString_.isEmpty()) {
+          if (listOfString_.isEmpty()) {
+            listOfString_ = other.listOfString_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureListOfStringIsMutable();
+            listOfString_.addAll(other.listOfString_);
+          }
+          onChanged();
+        }
+        if (block1Builder_ == null) {
+          if (!other.block1_.isEmpty()) {
+            if (block1_.isEmpty()) {
+              block1_ = other.block1_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureBlock1IsMutable();
+              block1_.addAll(other.block1_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.block1_.isEmpty()) {
+            if (block1Builder_.isEmpty()) {
+              block1Builder_.dispose();
+              block1Builder_ = null;
+              block1_ = other.block1_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              block1Builder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getBlock1FieldBuilder() : null;
+            } else {
+              block1Builder_.addAllMessages(other.block1_);
+            }
+          }
+        }
+        if (block2Builder_ == null) {
+          if (!other.block2_.isEmpty()) {
+            if (block2_.isEmpty()) {
+              block2_ = other.block2_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureBlock2IsMutable();
+              block2_.addAll(other.block2_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.block2_.isEmpty()) {
+            if (block2Builder_.isEmpty()) {
+              block2Builder_.dispose();
+              block2Builder_ = null;
+              block2_ = other.block2_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              block2Builder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getBlock2FieldBuilder() : null;
+            } else {
+              block2Builder_.addAllMessages(other.block2_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
-        if (!hasTypeCode()) {
+        if (!hasType()) {
           
           return false;
         }
-        if (hasBuiltin()) {
-          if (!getBuiltin().isInitialized()) {
+        for (int i = 0; i < getListOfExpressionsCount(); i++) {
+          if (!getListOfExpressions(i).isInitialized()) {
             
             return false;
           }
         }
-        if (hasAttribution()) {
-          if (!getAttribution().isInitialized()) {
+        if (hasLhs()) {
+          if (!getLhs().isInitialized()) {
             
             return false;
           }
         }
-        if (hasBinaryOperation()) {
-          if (!getBinaryOperation().isInitialized()) {
+        if (hasRhs()) {
+          if (!getRhs().isInitialized()) {
             
             return false;
           }
         }
-        if (hasFunctionCall()) {
-          if (!getFunctionCall().isInitialized()) {
+        for (int i = 0; i < getBlock1Count(); i++) {
+          if (!getBlock1(i).isInitialized()) {
             
             return false;
           }
         }
-        if (hasReturnOperator()) {
-          if (!getReturnOperator().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasObjectMessage()) {
-          if (!getObjectMessage().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasIfExpression()) {
-          if (!getIfExpression().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasForExpression()) {
-          if (!getForExpression().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasWhileExpression()) {
-          if (!getWhileExpression().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasFunctionDefinition()) {
-          if (!getFunctionDefinition().isInitialized()) {
+        for (int i = 0; i < getBlock2Count(); i++) {
+          if (!getBlock2(i).isInitialized()) {
             
             return false;
           }
@@ -3192,2260 +3528,38 @@ public final class LikelyAst {
       }
       private int bitField0_;
 
-      // required .Expression.ExpressionType type_code = 1;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.BUILTIN;
+      // required .Expression.Type type = 1;
+      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type type_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type.ID;
       /**
-       * <code>required .Expression.ExpressionType type_code = 1;</code>
+       * <code>required .Expression.Type type = 1;</code>
        */
-      public boolean hasTypeCode() {
+      public boolean hasType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .Expression.ExpressionType type_code = 1;</code>
+       * <code>required .Expression.Type type = 1;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType getTypeCode() {
-        return typeCode_;
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type getType() {
+        return type_;
       }
       /**
-       * <code>required .Expression.ExpressionType type_code = 1;</code>
+       * <code>required .Expression.Type type = 1;</code>
        */
-      public Builder setTypeCode(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType value) {
+      public Builder setType(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type value) {
         if (value == null) {
           throw new NullPointerException();
         }
         bitField0_ |= 0x00000001;
-        typeCode_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required .Expression.ExpressionType type_code = 1;</code>
+       * <code>required .Expression.Type type = 1;</code>
        */
-      public Builder clearTypeCode() {
+      public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.ExpressionType.BUILTIN;
-        onChanged();
-        return this;
-      }
-
-      // optional .Builtin builtin = 2;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Builtin builtin_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Builtin, br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.BuiltinOrBuilder> builtinBuilder_;
-      /**
-       * <code>optional .Builtin builtin = 2;</code>
-       */
-      public boolean hasBuiltin() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional .Builtin builtin = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin getBuiltin() {
-        if (builtinBuilder_ == null) {
-          return builtin_;
-        } else {
-          return builtinBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .Builtin builtin = 2;</code>
-       */
-      public Builder setBuiltin(br.com.igorbonadio.likely.lklast.LikelyAst.Builtin value) {
-        if (builtinBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          builtin_ = value;
-          onChanged();
-        } else {
-          builtinBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>optional .Builtin builtin = 2;</code>
-       */
-      public Builder setBuiltin(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.Builder builderForValue) {
-        if (builtinBuilder_ == null) {
-          builtin_ = builderForValue.build();
-          onChanged();
-        } else {
-          builtinBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>optional .Builtin builtin = 2;</code>
-       */
-      public Builder mergeBuiltin(br.com.igorbonadio.likely.lklast.LikelyAst.Builtin value) {
-        if (builtinBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              builtin_ != br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDefaultInstance()) {
-            builtin_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.newBuilder(builtin_).mergeFrom(value).buildPartial();
-          } else {
-            builtin_ = value;
-          }
-          onChanged();
-        } else {
-          builtinBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>optional .Builtin builtin = 2;</code>
-       */
-      public Builder clearBuiltin() {
-        if (builtinBuilder_ == null) {
-          builtin_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDefaultInstance();
-          onChanged();
-        } else {
-          builtinBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      /**
-       * <code>optional .Builtin builtin = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.Builder getBuiltinBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getBuiltinFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .Builtin builtin = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.BuiltinOrBuilder getBuiltinOrBuilder() {
-        if (builtinBuilder_ != null) {
-          return builtinBuilder_.getMessageOrBuilder();
-        } else {
-          return builtin_;
-        }
-      }
-      /**
-       * <code>optional .Builtin builtin = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Builtin, br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.BuiltinOrBuilder> 
-          getBuiltinFieldBuilder() {
-        if (builtinBuilder_ == null) {
-          builtinBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Builtin, br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.BuiltinOrBuilder>(
-                  builtin_,
-                  getParentForChildren(),
-                  isClean());
-          builtin_ = null;
-        }
-        return builtinBuilder_;
-      }
-
-      // optional .Attribution attribution = 3;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Attribution attribution_ = br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Attribution, br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.AttributionOrBuilder> attributionBuilder_;
-      /**
-       * <code>optional .Attribution attribution = 3;</code>
-       */
-      public boolean hasAttribution() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional .Attribution attribution = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Attribution getAttribution() {
-        if (attributionBuilder_ == null) {
-          return attribution_;
-        } else {
-          return attributionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .Attribution attribution = 3;</code>
-       */
-      public Builder setAttribution(br.com.igorbonadio.likely.lklast.LikelyAst.Attribution value) {
-        if (attributionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          attribution_ = value;
-          onChanged();
-        } else {
-          attributionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .Attribution attribution = 3;</code>
-       */
-      public Builder setAttribution(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.Builder builderForValue) {
-        if (attributionBuilder_ == null) {
-          attribution_ = builderForValue.build();
-          onChanged();
-        } else {
-          attributionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .Attribution attribution = 3;</code>
-       */
-      public Builder mergeAttribution(br.com.igorbonadio.likely.lklast.LikelyAst.Attribution value) {
-        if (attributionBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              attribution_ != br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.getDefaultInstance()) {
-            attribution_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.newBuilder(attribution_).mergeFrom(value).buildPartial();
-          } else {
-            attribution_ = value;
-          }
-          onChanged();
-        } else {
-          attributionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>optional .Attribution attribution = 3;</code>
-       */
-      public Builder clearAttribution() {
-        if (attributionBuilder_ == null) {
-          attribution_ = br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.getDefaultInstance();
-          onChanged();
-        } else {
-          attributionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      /**
-       * <code>optional .Attribution attribution = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.Builder getAttributionBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getAttributionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .Attribution attribution = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.AttributionOrBuilder getAttributionOrBuilder() {
-        if (attributionBuilder_ != null) {
-          return attributionBuilder_.getMessageOrBuilder();
-        } else {
-          return attribution_;
-        }
-      }
-      /**
-       * <code>optional .Attribution attribution = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Attribution, br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.AttributionOrBuilder> 
-          getAttributionFieldBuilder() {
-        if (attributionBuilder_ == null) {
-          attributionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Attribution, br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.AttributionOrBuilder>(
-                  attribution_,
-                  getParentForChildren(),
-                  isClean());
-          attribution_ = null;
-        }
-        return attributionBuilder_;
-      }
-
-      // optional .BinaryOperation binary_operation = 4;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation binaryOperation_ = br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation, br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperationOrBuilder> binaryOperationBuilder_;
-      /**
-       * <code>optional .BinaryOperation binary_operation = 4;</code>
-       */
-      public boolean hasBinaryOperation() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>optional .BinaryOperation binary_operation = 4;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation getBinaryOperation() {
-        if (binaryOperationBuilder_ == null) {
-          return binaryOperation_;
-        } else {
-          return binaryOperationBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .BinaryOperation binary_operation = 4;</code>
-       */
-      public Builder setBinaryOperation(br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation value) {
-        if (binaryOperationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          binaryOperation_ = value;
-          onChanged();
-        } else {
-          binaryOperationBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
-        return this;
-      }
-      /**
-       * <code>optional .BinaryOperation binary_operation = 4;</code>
-       */
-      public Builder setBinaryOperation(
-          br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.Builder builderForValue) {
-        if (binaryOperationBuilder_ == null) {
-          binaryOperation_ = builderForValue.build();
-          onChanged();
-        } else {
-          binaryOperationBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
-        return this;
-      }
-      /**
-       * <code>optional .BinaryOperation binary_operation = 4;</code>
-       */
-      public Builder mergeBinaryOperation(br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation value) {
-        if (binaryOperationBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008) &&
-              binaryOperation_ != br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.getDefaultInstance()) {
-            binaryOperation_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.newBuilder(binaryOperation_).mergeFrom(value).buildPartial();
-          } else {
-            binaryOperation_ = value;
-          }
-          onChanged();
-        } else {
-          binaryOperationBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000008;
-        return this;
-      }
-      /**
-       * <code>optional .BinaryOperation binary_operation = 4;</code>
-       */
-      public Builder clearBinaryOperation() {
-        if (binaryOperationBuilder_ == null) {
-          binaryOperation_ = br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.getDefaultInstance();
-          onChanged();
-        } else {
-          binaryOperationBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000008);
-        return this;
-      }
-      /**
-       * <code>optional .BinaryOperation binary_operation = 4;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.Builder getBinaryOperationBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getBinaryOperationFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .BinaryOperation binary_operation = 4;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperationOrBuilder getBinaryOperationOrBuilder() {
-        if (binaryOperationBuilder_ != null) {
-          return binaryOperationBuilder_.getMessageOrBuilder();
-        } else {
-          return binaryOperation_;
-        }
-      }
-      /**
-       * <code>optional .BinaryOperation binary_operation = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation, br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperationOrBuilder> 
-          getBinaryOperationFieldBuilder() {
-        if (binaryOperationBuilder_ == null) {
-          binaryOperationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation, br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperationOrBuilder>(
-                  binaryOperation_,
-                  getParentForChildren(),
-                  isClean());
-          binaryOperation_ = null;
-        }
-        return binaryOperationBuilder_;
-      }
-
-      // optional .FunctionCall function_call = 5;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall functionCall_ = br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCallOrBuilder> functionCallBuilder_;
-      /**
-       * <code>optional .FunctionCall function_call = 5;</code>
-       */
-      public boolean hasFunctionCall() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional .FunctionCall function_call = 5;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall getFunctionCall() {
-        if (functionCallBuilder_ == null) {
-          return functionCall_;
-        } else {
-          return functionCallBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .FunctionCall function_call = 5;</code>
-       */
-      public Builder setFunctionCall(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall value) {
-        if (functionCallBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          functionCall_ = value;
-          onChanged();
-        } else {
-          functionCallBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000010;
-        return this;
-      }
-      /**
-       * <code>optional .FunctionCall function_call = 5;</code>
-       */
-      public Builder setFunctionCall(
-          br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.Builder builderForValue) {
-        if (functionCallBuilder_ == null) {
-          functionCall_ = builderForValue.build();
-          onChanged();
-        } else {
-          functionCallBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000010;
-        return this;
-      }
-      /**
-       * <code>optional .FunctionCall function_call = 5;</code>
-       */
-      public Builder mergeFunctionCall(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall value) {
-        if (functionCallBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010) &&
-              functionCall_ != br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.getDefaultInstance()) {
-            functionCall_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.newBuilder(functionCall_).mergeFrom(value).buildPartial();
-          } else {
-            functionCall_ = value;
-          }
-          onChanged();
-        } else {
-          functionCallBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000010;
-        return this;
-      }
-      /**
-       * <code>optional .FunctionCall function_call = 5;</code>
-       */
-      public Builder clearFunctionCall() {
-        if (functionCallBuilder_ == null) {
-          functionCall_ = br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.getDefaultInstance();
-          onChanged();
-        } else {
-          functionCallBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000010);
-        return this;
-      }
-      /**
-       * <code>optional .FunctionCall function_call = 5;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.Builder getFunctionCallBuilder() {
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return getFunctionCallFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .FunctionCall function_call = 5;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCallOrBuilder getFunctionCallOrBuilder() {
-        if (functionCallBuilder_ != null) {
-          return functionCallBuilder_.getMessageOrBuilder();
-        } else {
-          return functionCall_;
-        }
-      }
-      /**
-       * <code>optional .FunctionCall function_call = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCallOrBuilder> 
-          getFunctionCallFieldBuilder() {
-        if (functionCallBuilder_ == null) {
-          functionCallBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCallOrBuilder>(
-                  functionCall_,
-                  getParentForChildren(),
-                  isClean());
-          functionCall_ = null;
-        }
-        return functionCallBuilder_;
-      }
-
-      // optional .Expression return_operator = 6;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression returnOperator_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> returnOperatorBuilder_;
-      /**
-       * <code>optional .Expression return_operator = 6;</code>
-       */
-      public boolean hasReturnOperator() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>optional .Expression return_operator = 6;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getReturnOperator() {
-        if (returnOperatorBuilder_ == null) {
-          return returnOperator_;
-        } else {
-          return returnOperatorBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .Expression return_operator = 6;</code>
-       */
-      public Builder setReturnOperator(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (returnOperatorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          returnOperator_ = value;
-          onChanged();
-        } else {
-          returnOperatorBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000020;
-        return this;
-      }
-      /**
-       * <code>optional .Expression return_operator = 6;</code>
-       */
-      public Builder setReturnOperator(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (returnOperatorBuilder_ == null) {
-          returnOperator_ = builderForValue.build();
-          onChanged();
-        } else {
-          returnOperatorBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000020;
-        return this;
-      }
-      /**
-       * <code>optional .Expression return_operator = 6;</code>
-       */
-      public Builder mergeReturnOperator(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (returnOperatorBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020) &&
-              returnOperator_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            returnOperator_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(returnOperator_).mergeFrom(value).buildPartial();
-          } else {
-            returnOperator_ = value;
-          }
-          onChanged();
-        } else {
-          returnOperatorBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000020;
-        return this;
-      }
-      /**
-       * <code>optional .Expression return_operator = 6;</code>
-       */
-      public Builder clearReturnOperator() {
-        if (returnOperatorBuilder_ == null) {
-          returnOperator_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          returnOperatorBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000020);
-        return this;
-      }
-      /**
-       * <code>optional .Expression return_operator = 6;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getReturnOperatorBuilder() {
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return getReturnOperatorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .Expression return_operator = 6;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getReturnOperatorOrBuilder() {
-        if (returnOperatorBuilder_ != null) {
-          return returnOperatorBuilder_.getMessageOrBuilder();
-        } else {
-          return returnOperator_;
-        }
-      }
-      /**
-       * <code>optional .Expression return_operator = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getReturnOperatorFieldBuilder() {
-        if (returnOperatorBuilder_ == null) {
-          returnOperatorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  returnOperator_,
-                  getParentForChildren(),
-                  isClean());
-          returnOperator_ = null;
-        }
-        return returnOperatorBuilder_;
-      }
-
-      // optional .ObjectMessage object_message = 7;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage objectMessage_ = br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage, br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessageOrBuilder> objectMessageBuilder_;
-      /**
-       * <code>optional .ObjectMessage object_message = 7;</code>
-       */
-      public boolean hasObjectMessage() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional .ObjectMessage object_message = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage getObjectMessage() {
-        if (objectMessageBuilder_ == null) {
-          return objectMessage_;
-        } else {
-          return objectMessageBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .ObjectMessage object_message = 7;</code>
-       */
-      public Builder setObjectMessage(br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage value) {
-        if (objectMessageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          objectMessage_ = value;
-          onChanged();
-        } else {
-          objectMessageBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>optional .ObjectMessage object_message = 7;</code>
-       */
-      public Builder setObjectMessage(
-          br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.Builder builderForValue) {
-        if (objectMessageBuilder_ == null) {
-          objectMessage_ = builderForValue.build();
-          onChanged();
-        } else {
-          objectMessageBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>optional .ObjectMessage object_message = 7;</code>
-       */
-      public Builder mergeObjectMessage(br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage value) {
-        if (objectMessageBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040) &&
-              objectMessage_ != br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.getDefaultInstance()) {
-            objectMessage_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.newBuilder(objectMessage_).mergeFrom(value).buildPartial();
-          } else {
-            objectMessage_ = value;
-          }
-          onChanged();
-        } else {
-          objectMessageBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>optional .ObjectMessage object_message = 7;</code>
-       */
-      public Builder clearObjectMessage() {
-        if (objectMessageBuilder_ == null) {
-          objectMessage_ = br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.getDefaultInstance();
-          onChanged();
-        } else {
-          objectMessageBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
-      /**
-       * <code>optional .ObjectMessage object_message = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.Builder getObjectMessageBuilder() {
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return getObjectMessageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .ObjectMessage object_message = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessageOrBuilder getObjectMessageOrBuilder() {
-        if (objectMessageBuilder_ != null) {
-          return objectMessageBuilder_.getMessageOrBuilder();
-        } else {
-          return objectMessage_;
-        }
-      }
-      /**
-       * <code>optional .ObjectMessage object_message = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage, br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessageOrBuilder> 
-          getObjectMessageFieldBuilder() {
-        if (objectMessageBuilder_ == null) {
-          objectMessageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage, br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessageOrBuilder>(
-                  objectMessage_,
-                  getParentForChildren(),
-                  isClean());
-          objectMessage_ = null;
-        }
-        return objectMessageBuilder_;
-      }
-
-      // optional .IfExpression if_expression = 8;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression ifExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression, br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.IfExpressionOrBuilder> ifExpressionBuilder_;
-      /**
-       * <code>optional .IfExpression if_expression = 8;</code>
-       */
-      public boolean hasIfExpression() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
-      }
-      /**
-       * <code>optional .IfExpression if_expression = 8;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression getIfExpression() {
-        if (ifExpressionBuilder_ == null) {
-          return ifExpression_;
-        } else {
-          return ifExpressionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .IfExpression if_expression = 8;</code>
-       */
-      public Builder setIfExpression(br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression value) {
-        if (ifExpressionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ifExpression_ = value;
-          onChanged();
-        } else {
-          ifExpressionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000080;
-        return this;
-      }
-      /**
-       * <code>optional .IfExpression if_expression = 8;</code>
-       */
-      public Builder setIfExpression(
-          br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.Builder builderForValue) {
-        if (ifExpressionBuilder_ == null) {
-          ifExpression_ = builderForValue.build();
-          onChanged();
-        } else {
-          ifExpressionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000080;
-        return this;
-      }
-      /**
-       * <code>optional .IfExpression if_expression = 8;</code>
-       */
-      public Builder mergeIfExpression(br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression value) {
-        if (ifExpressionBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080) &&
-              ifExpression_ != br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.getDefaultInstance()) {
-            ifExpression_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.newBuilder(ifExpression_).mergeFrom(value).buildPartial();
-          } else {
-            ifExpression_ = value;
-          }
-          onChanged();
-        } else {
-          ifExpressionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000080;
-        return this;
-      }
-      /**
-       * <code>optional .IfExpression if_expression = 8;</code>
-       */
-      public Builder clearIfExpression() {
-        if (ifExpressionBuilder_ == null) {
-          ifExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.getDefaultInstance();
-          onChanged();
-        } else {
-          ifExpressionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000080);
-        return this;
-      }
-      /**
-       * <code>optional .IfExpression if_expression = 8;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.Builder getIfExpressionBuilder() {
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return getIfExpressionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .IfExpression if_expression = 8;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.IfExpressionOrBuilder getIfExpressionOrBuilder() {
-        if (ifExpressionBuilder_ != null) {
-          return ifExpressionBuilder_.getMessageOrBuilder();
-        } else {
-          return ifExpression_;
-        }
-      }
-      /**
-       * <code>optional .IfExpression if_expression = 8;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression, br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.IfExpressionOrBuilder> 
-          getIfExpressionFieldBuilder() {
-        if (ifExpressionBuilder_ == null) {
-          ifExpressionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression, br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.IfExpressionOrBuilder>(
-                  ifExpression_,
-                  getParentForChildren(),
-                  isClean());
-          ifExpression_ = null;
-        }
-        return ifExpressionBuilder_;
-      }
-
-      // optional .ForExpression for_expression = 9;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression forExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression, br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ForExpressionOrBuilder> forExpressionBuilder_;
-      /**
-       * <code>optional .ForExpression for_expression = 9;</code>
-       */
-      public boolean hasForExpression() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
-      }
-      /**
-       * <code>optional .ForExpression for_expression = 9;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression getForExpression() {
-        if (forExpressionBuilder_ == null) {
-          return forExpression_;
-        } else {
-          return forExpressionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .ForExpression for_expression = 9;</code>
-       */
-      public Builder setForExpression(br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression value) {
-        if (forExpressionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          forExpression_ = value;
-          onChanged();
-        } else {
-          forExpressionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000100;
-        return this;
-      }
-      /**
-       * <code>optional .ForExpression for_expression = 9;</code>
-       */
-      public Builder setForExpression(
-          br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.Builder builderForValue) {
-        if (forExpressionBuilder_ == null) {
-          forExpression_ = builderForValue.build();
-          onChanged();
-        } else {
-          forExpressionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000100;
-        return this;
-      }
-      /**
-       * <code>optional .ForExpression for_expression = 9;</code>
-       */
-      public Builder mergeForExpression(br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression value) {
-        if (forExpressionBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100) &&
-              forExpression_ != br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.getDefaultInstance()) {
-            forExpression_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.newBuilder(forExpression_).mergeFrom(value).buildPartial();
-          } else {
-            forExpression_ = value;
-          }
-          onChanged();
-        } else {
-          forExpressionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000100;
-        return this;
-      }
-      /**
-       * <code>optional .ForExpression for_expression = 9;</code>
-       */
-      public Builder clearForExpression() {
-        if (forExpressionBuilder_ == null) {
-          forExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.getDefaultInstance();
-          onChanged();
-        } else {
-          forExpressionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000100);
-        return this;
-      }
-      /**
-       * <code>optional .ForExpression for_expression = 9;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.Builder getForExpressionBuilder() {
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return getForExpressionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .ForExpression for_expression = 9;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ForExpressionOrBuilder getForExpressionOrBuilder() {
-        if (forExpressionBuilder_ != null) {
-          return forExpressionBuilder_.getMessageOrBuilder();
-        } else {
-          return forExpression_;
-        }
-      }
-      /**
-       * <code>optional .ForExpression for_expression = 9;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression, br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ForExpressionOrBuilder> 
-          getForExpressionFieldBuilder() {
-        if (forExpressionBuilder_ == null) {
-          forExpressionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression, br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ForExpressionOrBuilder>(
-                  forExpression_,
-                  getParentForChildren(),
-                  isClean());
-          forExpression_ = null;
-        }
-        return forExpressionBuilder_;
-      }
-
-      // optional .WhileExpression while_expression = 10;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression whileExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression, br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpressionOrBuilder> whileExpressionBuilder_;
-      /**
-       * <code>optional .WhileExpression while_expression = 10;</code>
-       */
-      public boolean hasWhileExpression() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
-      }
-      /**
-       * <code>optional .WhileExpression while_expression = 10;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression getWhileExpression() {
-        if (whileExpressionBuilder_ == null) {
-          return whileExpression_;
-        } else {
-          return whileExpressionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .WhileExpression while_expression = 10;</code>
-       */
-      public Builder setWhileExpression(br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression value) {
-        if (whileExpressionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          whileExpression_ = value;
-          onChanged();
-        } else {
-          whileExpressionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-      /**
-       * <code>optional .WhileExpression while_expression = 10;</code>
-       */
-      public Builder setWhileExpression(
-          br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.Builder builderForValue) {
-        if (whileExpressionBuilder_ == null) {
-          whileExpression_ = builderForValue.build();
-          onChanged();
-        } else {
-          whileExpressionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-      /**
-       * <code>optional .WhileExpression while_expression = 10;</code>
-       */
-      public Builder mergeWhileExpression(br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression value) {
-        if (whileExpressionBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200) &&
-              whileExpression_ != br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.getDefaultInstance()) {
-            whileExpression_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.newBuilder(whileExpression_).mergeFrom(value).buildPartial();
-          } else {
-            whileExpression_ = value;
-          }
-          onChanged();
-        } else {
-          whileExpressionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000200;
-        return this;
-      }
-      /**
-       * <code>optional .WhileExpression while_expression = 10;</code>
-       */
-      public Builder clearWhileExpression() {
-        if (whileExpressionBuilder_ == null) {
-          whileExpression_ = br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.getDefaultInstance();
-          onChanged();
-        } else {
-          whileExpressionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000200);
-        return this;
-      }
-      /**
-       * <code>optional .WhileExpression while_expression = 10;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.Builder getWhileExpressionBuilder() {
-        bitField0_ |= 0x00000200;
-        onChanged();
-        return getWhileExpressionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .WhileExpression while_expression = 10;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpressionOrBuilder getWhileExpressionOrBuilder() {
-        if (whileExpressionBuilder_ != null) {
-          return whileExpressionBuilder_.getMessageOrBuilder();
-        } else {
-          return whileExpression_;
-        }
-      }
-      /**
-       * <code>optional .WhileExpression while_expression = 10;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression, br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpressionOrBuilder> 
-          getWhileExpressionFieldBuilder() {
-        if (whileExpressionBuilder_ == null) {
-          whileExpressionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression, br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpressionOrBuilder>(
-                  whileExpression_,
-                  getParentForChildren(),
-                  isClean());
-          whileExpression_ = null;
-        }
-        return whileExpressionBuilder_;
-      }
-
-      // optional .FunctionDefinition function_definition = 11;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition functionDefinition_ = br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinitionOrBuilder> functionDefinitionBuilder_;
-      /**
-       * <code>optional .FunctionDefinition function_definition = 11;</code>
-       */
-      public boolean hasFunctionDefinition() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
-      }
-      /**
-       * <code>optional .FunctionDefinition function_definition = 11;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition getFunctionDefinition() {
-        if (functionDefinitionBuilder_ == null) {
-          return functionDefinition_;
-        } else {
-          return functionDefinitionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .FunctionDefinition function_definition = 11;</code>
-       */
-      public Builder setFunctionDefinition(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition value) {
-        if (functionDefinitionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          functionDefinition_ = value;
-          onChanged();
-        } else {
-          functionDefinitionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000400;
-        return this;
-      }
-      /**
-       * <code>optional .FunctionDefinition function_definition = 11;</code>
-       */
-      public Builder setFunctionDefinition(
-          br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.Builder builderForValue) {
-        if (functionDefinitionBuilder_ == null) {
-          functionDefinition_ = builderForValue.build();
-          onChanged();
-        } else {
-          functionDefinitionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000400;
-        return this;
-      }
-      /**
-       * <code>optional .FunctionDefinition function_definition = 11;</code>
-       */
-      public Builder mergeFunctionDefinition(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition value) {
-        if (functionDefinitionBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400) &&
-              functionDefinition_ != br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.getDefaultInstance()) {
-            functionDefinition_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.newBuilder(functionDefinition_).mergeFrom(value).buildPartial();
-          } else {
-            functionDefinition_ = value;
-          }
-          onChanged();
-        } else {
-          functionDefinitionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000400;
-        return this;
-      }
-      /**
-       * <code>optional .FunctionDefinition function_definition = 11;</code>
-       */
-      public Builder clearFunctionDefinition() {
-        if (functionDefinitionBuilder_ == null) {
-          functionDefinition_ = br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.getDefaultInstance();
-          onChanged();
-        } else {
-          functionDefinitionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000400);
-        return this;
-      }
-      /**
-       * <code>optional .FunctionDefinition function_definition = 11;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.Builder getFunctionDefinitionBuilder() {
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return getFunctionDefinitionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .FunctionDefinition function_definition = 11;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinitionOrBuilder getFunctionDefinitionOrBuilder() {
-        if (functionDefinitionBuilder_ != null) {
-          return functionDefinitionBuilder_.getMessageOrBuilder();
-        } else {
-          return functionDefinition_;
-        }
-      }
-      /**
-       * <code>optional .FunctionDefinition function_definition = 11;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinitionOrBuilder> 
-          getFunctionDefinitionFieldBuilder() {
-        if (functionDefinitionBuilder_ == null) {
-          functionDefinitionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinitionOrBuilder>(
-                  functionDefinition_,
-                  getParentForChildren(),
-                  isClean());
-          functionDefinition_ = null;
-        }
-        return functionDefinitionBuilder_;
-      }
-
-      // optional string id = 12;
-      private java.lang.Object id_ = "";
-      /**
-       * <code>optional string id = 12;</code>
-       */
-      public boolean hasId() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
-      }
-      /**
-       * <code>optional string id = 12;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string id = 12;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string id = 12;</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000800;
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string id = 12;</code>
-       */
-      public Builder clearId() {
-        bitField0_ = (bitField0_ & ~0x00000800);
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string id = 12;</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000800;
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:Expression)
-    }
-
-    static {
-      defaultInstance = new Expression(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:Expression)
-  }
-
-  public interface BuiltinOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required .Builtin.BuiltinType type_code = 1;
-    /**
-     * <code>required .Builtin.BuiltinType type_code = 1;</code>
-     */
-    boolean hasTypeCode();
-    /**
-     * <code>required .Builtin.BuiltinType type_code = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType getTypeCode();
-
-    // optional int64 integer = 2;
-    /**
-     * <code>optional int64 integer = 2;</code>
-     */
-    boolean hasInteger();
-    /**
-     * <code>optional int64 integer = 2;</code>
-     */
-    long getInteger();
-
-    // optional double real = 3;
-    /**
-     * <code>optional double real = 3;</code>
-     */
-    boolean hasReal();
-    /**
-     * <code>optional double real = 3;</code>
-     */
-    double getReal();
-
-    // optional string string = 4;
-    /**
-     * <code>optional string string = 4;</code>
-     */
-    boolean hasString();
-    /**
-     * <code>optional string string = 4;</code>
-     */
-    java.lang.String getString();
-    /**
-     * <code>optional string string = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getStringBytes();
-
-    // optional bool boolean = 5;
-    /**
-     * <code>optional bool boolean = 5;</code>
-     */
-    boolean hasBoolean();
-    /**
-     * <code>optional bool boolean = 5;</code>
-     */
-    boolean getBoolean();
-
-    // repeated .Expression sequence = 6;
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
-        getSequenceList();
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getSequence(int index);
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    int getSequenceCount();
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getSequenceOrBuilderList();
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getSequenceOrBuilder(
-        int index);
-
-    // optional .Pair pair = 7;
-    /**
-     * <code>optional .Pair pair = 7;</code>
-     */
-    boolean hasPair();
-    /**
-     * <code>optional .Pair pair = 7;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Pair getPair();
-    /**
-     * <code>optional .Pair pair = 7;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder getPairOrBuilder();
-  }
-  /**
-   * Protobuf type {@code Builtin}
-   */
-  public static final class Builtin extends
-      com.google.protobuf.GeneratedMessage
-      implements BuiltinOrBuilder {
-    // Use Builtin.newBuilder() to construct.
-    private Builtin(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private Builtin(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final Builtin defaultInstance;
-    public static Builtin getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public Builtin getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Builtin(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-              br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType value = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(1, rawValue);
-              } else {
-                bitField0_ |= 0x00000001;
-                typeCode_ = value;
-              }
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              integer_ = input.readInt64();
-              break;
-            }
-            case 25: {
-              bitField0_ |= 0x00000004;
-              real_ = input.readDouble();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              string_ = input.readBytes();
-              break;
-            }
-            case 40: {
-              bitField0_ |= 0x00000010;
-              boolean_ = input.readBool();
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                sequence_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              sequence_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
-              break;
-            }
-            case 58: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000020) == 0x00000020)) {
-                subBuilder = pair_.toBuilder();
-              }
-              pair_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Pair.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pair_);
-                pair_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000020;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-          sequence_ = java.util.Collections.unmodifiableList(sequence_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Builtin_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Builtin_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.class, br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<Builtin> PARSER =
-        new com.google.protobuf.AbstractParser<Builtin>() {
-      public Builtin parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Builtin(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Builtin> getParserForType() {
-      return PARSER;
-    }
-
-    /**
-     * Protobuf enum {@code Builtin.BuiltinType}
-     */
-    public enum BuiltinType
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>INTEGER = 0;</code>
-       */
-      INTEGER(0, 0),
-      /**
-       * <code>REAL = 1;</code>
-       */
-      REAL(1, 1),
-      /**
-       * <code>STRING = 2;</code>
-       */
-      STRING(2, 2),
-      /**
-       * <code>BOOLEAN = 3;</code>
-       */
-      BOOLEAN(3, 3),
-      /**
-       * <code>SEQUENCE = 4;</code>
-       */
-      SEQUENCE(4, 4),
-      /**
-       * <code>PAIR = 5;</code>
-       */
-      PAIR(5, 5),
-      ;
-
-      /**
-       * <code>INTEGER = 0;</code>
-       */
-      public static final int INTEGER_VALUE = 0;
-      /**
-       * <code>REAL = 1;</code>
-       */
-      public static final int REAL_VALUE = 1;
-      /**
-       * <code>STRING = 2;</code>
-       */
-      public static final int STRING_VALUE = 2;
-      /**
-       * <code>BOOLEAN = 3;</code>
-       */
-      public static final int BOOLEAN_VALUE = 3;
-      /**
-       * <code>SEQUENCE = 4;</code>
-       */
-      public static final int SEQUENCE_VALUE = 4;
-      /**
-       * <code>PAIR = 5;</code>
-       */
-      public static final int PAIR_VALUE = 5;
-
-
-      public final int getNumber() { return value; }
-
-      public static BuiltinType valueOf(int value) {
-        switch (value) {
-          case 0: return INTEGER;
-          case 1: return REAL;
-          case 2: return STRING;
-          case 3: return BOOLEAN;
-          case 4: return SEQUENCE;
-          case 5: return PAIR;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<BuiltinType>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<BuiltinType>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<BuiltinType>() {
-              public BuiltinType findValueByNumber(int number) {
-                return BuiltinType.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final BuiltinType[] VALUES = values();
-
-      public static BuiltinType valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int index;
-      private final int value;
-
-      private BuiltinType(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:Builtin.BuiltinType)
-    }
-
-    private int bitField0_;
-    // required .Builtin.BuiltinType type_code = 1;
-    public static final int TYPE_CODE_FIELD_NUMBER = 1;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType typeCode_;
-    /**
-     * <code>required .Builtin.BuiltinType type_code = 1;</code>
-     */
-    public boolean hasTypeCode() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .Builtin.BuiltinType type_code = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType getTypeCode() {
-      return typeCode_;
-    }
-
-    // optional int64 integer = 2;
-    public static final int INTEGER_FIELD_NUMBER = 2;
-    private long integer_;
-    /**
-     * <code>optional int64 integer = 2;</code>
-     */
-    public boolean hasInteger() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional int64 integer = 2;</code>
-     */
-    public long getInteger() {
-      return integer_;
-    }
-
-    // optional double real = 3;
-    public static final int REAL_FIELD_NUMBER = 3;
-    private double real_;
-    /**
-     * <code>optional double real = 3;</code>
-     */
-    public boolean hasReal() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional double real = 3;</code>
-     */
-    public double getReal() {
-      return real_;
-    }
-
-    // optional string string = 4;
-    public static final int STRING_FIELD_NUMBER = 4;
-    private java.lang.Object string_;
-    /**
-     * <code>optional string string = 4;</code>
-     */
-    public boolean hasString() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional string string = 4;</code>
-     */
-    public java.lang.String getString() {
-      java.lang.Object ref = string_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          string_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string string = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getStringBytes() {
-      java.lang.Object ref = string_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        string_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional bool boolean = 5;
-    public static final int BOOLEAN_FIELD_NUMBER = 5;
-    private boolean boolean_;
-    /**
-     * <code>optional bool boolean = 5;</code>
-     */
-    public boolean hasBoolean() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>optional bool boolean = 5;</code>
-     */
-    public boolean getBoolean() {
-      return boolean_;
-    }
-
-    // repeated .Expression sequence = 6;
-    public static final int SEQUENCE_FIELD_NUMBER = 6;
-    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> sequence_;
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getSequenceList() {
-      return sequence_;
-    }
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getSequenceOrBuilderList() {
-      return sequence_;
-    }
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    public int getSequenceCount() {
-      return sequence_.size();
-    }
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getSequence(int index) {
-      return sequence_.get(index);
-    }
-    /**
-     * <code>repeated .Expression sequence = 6;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getSequenceOrBuilder(
-        int index) {
-      return sequence_.get(index);
-    }
-
-    // optional .Pair pair = 7;
-    public static final int PAIR_FIELD_NUMBER = 7;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Pair pair_;
-    /**
-     * <code>optional .Pair pair = 7;</code>
-     */
-    public boolean hasPair() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional .Pair pair = 7;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Pair getPair() {
-      return pair_;
-    }
-    /**
-     * <code>optional .Pair pair = 7;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder getPairOrBuilder() {
-      return pair_;
-    }
-
-    private void initFields() {
-      typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER;
-      integer_ = 0L;
-      real_ = 0D;
-      string_ = "";
-      boolean_ = false;
-      sequence_ = java.util.Collections.emptyList();
-      pair_ = br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasTypeCode()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getSequenceCount(); i++) {
-        if (!getSequence(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasPair()) {
-        if (!getPair().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, typeCode_.getNumber());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt64(2, integer_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeDouble(3, real_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(4, getStringBytes());
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBool(5, boolean_);
-      }
-      for (int i = 0; i < sequence_.size(); i++) {
-        output.writeMessage(6, sequence_.get(i));
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeMessage(7, pair_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, typeCode_.getNumber());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, integer_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, real_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getStringBytes());
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, boolean_);
-      }
-      for (int i = 0; i < sequence_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, sequence_.get(i));
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, pair_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.Builtin prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Builtin}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.BuiltinOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Builtin_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Builtin_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.class, br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getSequenceFieldBuilder();
-          getPairFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        integer_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        real_ = 0D;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        string_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
-        boolean_ = false;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        if (sequenceBuilder_ == null) {
-          sequence_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
-        } else {
-          sequenceBuilder_.clear();
-        }
-        if (pairBuilder_ == null) {
-          pair_ = br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance();
-        } else {
-          pairBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Builtin_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.Builtin result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.Builtin result = new br.com.igorbonadio.likely.lklast.LikelyAst.Builtin(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.typeCode_ = typeCode_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.integer_ = integer_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.real_ = real_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.string_ = string_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.boolean_ = boolean_;
-        if (sequenceBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
-            sequence_ = java.util.Collections.unmodifiableList(sequence_);
-            bitField0_ = (bitField0_ & ~0x00000020);
-          }
-          result.sequence_ = sequence_;
-        } else {
-          result.sequence_ = sequenceBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        if (pairBuilder_ == null) {
-          result.pair_ = pair_;
-        } else {
-          result.pair_ = pairBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.Builtin) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.Builtin)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.Builtin other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.getDefaultInstance()) return this;
-        if (other.hasTypeCode()) {
-          setTypeCode(other.getTypeCode());
-        }
-        if (other.hasInteger()) {
-          setInteger(other.getInteger());
-        }
-        if (other.hasReal()) {
-          setReal(other.getReal());
-        }
-        if (other.hasString()) {
-          bitField0_ |= 0x00000008;
-          string_ = other.string_;
-          onChanged();
-        }
-        if (other.hasBoolean()) {
-          setBoolean(other.getBoolean());
-        }
-        if (sequenceBuilder_ == null) {
-          if (!other.sequence_.isEmpty()) {
-            if (sequence_.isEmpty()) {
-              sequence_ = other.sequence_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-            } else {
-              ensureSequenceIsMutable();
-              sequence_.addAll(other.sequence_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.sequence_.isEmpty()) {
-            if (sequenceBuilder_.isEmpty()) {
-              sequenceBuilder_.dispose();
-              sequenceBuilder_ = null;
-              sequence_ = other.sequence_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-              sequenceBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getSequenceFieldBuilder() : null;
-            } else {
-              sequenceBuilder_.addAllMessages(other.sequence_);
-            }
-          }
-        }
-        if (other.hasPair()) {
-          mergePair(other.getPair());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasTypeCode()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getSequenceCount(); i++) {
-          if (!getSequence(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasPair()) {
-          if (!getPair().isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.Builtin parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.Builtin) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required .Builtin.BuiltinType type_code = 1;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER;
-      /**
-       * <code>required .Builtin.BuiltinType type_code = 1;</code>
-       */
-      public boolean hasTypeCode() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required .Builtin.BuiltinType type_code = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType getTypeCode() {
-        return typeCode_;
-      }
-      /**
-       * <code>required .Builtin.BuiltinType type_code = 1;</code>
-       */
-      public Builder setTypeCode(br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        typeCode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required .Builtin.BuiltinType type_code = 1;</code>
-       */
-      public Builder clearTypeCode() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        typeCode_ = br.com.igorbonadio.likely.lklast.LikelyAst.Builtin.BuiltinType.INTEGER;
+        type_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Type.ID;
         onChanged();
         return this;
       }
@@ -5590,2619 +3704,291 @@ public final class LikelyAst {
         return this;
       }
 
-      // optional bool boolean = 5;
-      private boolean boolean_ ;
+      // optional bool booelan = 5;
+      private boolean booelan_ ;
       /**
-       * <code>optional bool boolean = 5;</code>
+       * <code>optional bool booelan = 5;</code>
        */
-      public boolean hasBoolean() {
+      public boolean hasBooelan() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional bool boolean = 5;</code>
+       * <code>optional bool booelan = 5;</code>
        */
-      public boolean getBoolean() {
-        return boolean_;
+      public boolean getBooelan() {
+        return booelan_;
       }
       /**
-       * <code>optional bool boolean = 5;</code>
+       * <code>optional bool booelan = 5;</code>
        */
-      public Builder setBoolean(boolean value) {
+      public Builder setBooelan(boolean value) {
         bitField0_ |= 0x00000010;
-        boolean_ = value;
+        booelan_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool boolean = 5;</code>
+       * <code>optional bool booelan = 5;</code>
        */
-      public Builder clearBoolean() {
+      public Builder clearBooelan() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        boolean_ = false;
+        booelan_ = false;
         onChanged();
         return this;
       }
 
-      // repeated .Expression sequence = 6;
-      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> sequence_ =
+      // repeated .Expression list_of_expressions = 6;
+      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> listOfExpressions_ =
         java.util.Collections.emptyList();
-      private void ensureSequenceIsMutable() {
+      private void ensureListOfExpressionsIsMutable() {
         if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          sequence_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(sequence_);
+          listOfExpressions_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(listOfExpressions_);
           bitField0_ |= 0x00000020;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> sequenceBuilder_;
+          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> listOfExpressionsBuilder_;
 
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getSequenceList() {
-        if (sequenceBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(sequence_);
+      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getListOfExpressionsList() {
+        if (listOfExpressionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(listOfExpressions_);
         } else {
-          return sequenceBuilder_.getMessageList();
+          return listOfExpressionsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public int getSequenceCount() {
-        if (sequenceBuilder_ == null) {
-          return sequence_.size();
+      public int getListOfExpressionsCount() {
+        if (listOfExpressionsBuilder_ == null) {
+          return listOfExpressions_.size();
         } else {
-          return sequenceBuilder_.getCount();
+          return listOfExpressionsBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getSequence(int index) {
-        if (sequenceBuilder_ == null) {
-          return sequence_.get(index);
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getListOfExpressions(int index) {
+        if (listOfExpressionsBuilder_ == null) {
+          return listOfExpressions_.get(index);
         } else {
-          return sequenceBuilder_.getMessage(index);
+          return listOfExpressionsBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public Builder setSequence(
+      public Builder setListOfExpressions(
           int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (sequenceBuilder_ == null) {
+        if (listOfExpressionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureSequenceIsMutable();
-          sequence_.set(index, value);
+          ensureListOfExpressionsIsMutable();
+          listOfExpressions_.set(index, value);
           onChanged();
         } else {
-          sequenceBuilder_.setMessage(index, value);
+          listOfExpressionsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public Builder setSequence(
+      public Builder setListOfExpressions(
           int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (sequenceBuilder_ == null) {
-          ensureSequenceIsMutable();
-          sequence_.set(index, builderForValue.build());
+        if (listOfExpressionsBuilder_ == null) {
+          ensureListOfExpressionsIsMutable();
+          listOfExpressions_.set(index, builderForValue.build());
           onChanged();
         } else {
-          sequenceBuilder_.setMessage(index, builderForValue.build());
+          listOfExpressionsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public Builder addSequence(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (sequenceBuilder_ == null) {
+      public Builder addListOfExpressions(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
+        if (listOfExpressionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureSequenceIsMutable();
-          sequence_.add(value);
+          ensureListOfExpressionsIsMutable();
+          listOfExpressions_.add(value);
           onChanged();
         } else {
-          sequenceBuilder_.addMessage(value);
+          listOfExpressionsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public Builder addSequence(
+      public Builder addListOfExpressions(
           int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (sequenceBuilder_ == null) {
+        if (listOfExpressionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureSequenceIsMutable();
-          sequence_.add(index, value);
+          ensureListOfExpressionsIsMutable();
+          listOfExpressions_.add(index, value);
           onChanged();
         } else {
-          sequenceBuilder_.addMessage(index, value);
+          listOfExpressionsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public Builder addSequence(
+      public Builder addListOfExpressions(
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (sequenceBuilder_ == null) {
-          ensureSequenceIsMutable();
-          sequence_.add(builderForValue.build());
+        if (listOfExpressionsBuilder_ == null) {
+          ensureListOfExpressionsIsMutable();
+          listOfExpressions_.add(builderForValue.build());
           onChanged();
         } else {
-          sequenceBuilder_.addMessage(builderForValue.build());
+          listOfExpressionsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public Builder addSequence(
+      public Builder addListOfExpressions(
           int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (sequenceBuilder_ == null) {
-          ensureSequenceIsMutable();
-          sequence_.add(index, builderForValue.build());
+        if (listOfExpressionsBuilder_ == null) {
+          ensureListOfExpressionsIsMutable();
+          listOfExpressions_.add(index, builderForValue.build());
           onChanged();
         } else {
-          sequenceBuilder_.addMessage(index, builderForValue.build());
+          listOfExpressionsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public Builder addAllSequence(
+      public Builder addAllListOfExpressions(
           java.lang.Iterable<? extends br.com.igorbonadio.likely.lklast.LikelyAst.Expression> values) {
-        if (sequenceBuilder_ == null) {
-          ensureSequenceIsMutable();
-          super.addAll(values, sequence_);
+        if (listOfExpressionsBuilder_ == null) {
+          ensureListOfExpressionsIsMutable();
+          super.addAll(values, listOfExpressions_);
           onChanged();
         } else {
-          sequenceBuilder_.addAllMessages(values);
+          listOfExpressionsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public Builder clearSequence() {
-        if (sequenceBuilder_ == null) {
-          sequence_ = java.util.Collections.emptyList();
+      public Builder clearListOfExpressions() {
+        if (listOfExpressionsBuilder_ == null) {
+          listOfExpressions_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
-          sequenceBuilder_.clear();
+          listOfExpressionsBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public Builder removeSequence(int index) {
-        if (sequenceBuilder_ == null) {
-          ensureSequenceIsMutable();
-          sequence_.remove(index);
+      public Builder removeListOfExpressions(int index) {
+        if (listOfExpressionsBuilder_ == null) {
+          ensureListOfExpressionsIsMutable();
+          listOfExpressions_.remove(index);
           onChanged();
         } else {
-          sequenceBuilder_.remove(index);
+          listOfExpressionsBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getSequenceBuilder(
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getListOfExpressionsBuilder(
           int index) {
-        return getSequenceFieldBuilder().getBuilder(index);
+        return getListOfExpressionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getSequenceOrBuilder(
+      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getListOfExpressionsOrBuilder(
           int index) {
-        if (sequenceBuilder_ == null) {
-          return sequence_.get(index);  } else {
-          return sequenceBuilder_.getMessageOrBuilder(index);
+        if (listOfExpressionsBuilder_ == null) {
+          return listOfExpressions_.get(index);  } else {
+          return listOfExpressionsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
       public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-           getSequenceOrBuilderList() {
-        if (sequenceBuilder_ != null) {
-          return sequenceBuilder_.getMessageOrBuilderList();
+           getListOfExpressionsOrBuilderList() {
+        if (listOfExpressionsBuilder_ != null) {
+          return listOfExpressionsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(sequence_);
+          return java.util.Collections.unmodifiableList(listOfExpressions_);
         }
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addSequenceBuilder() {
-        return getSequenceFieldBuilder().addBuilder(
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addListOfExpressionsBuilder() {
+        return getListOfExpressionsFieldBuilder().addBuilder(
             br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addSequenceBuilder(
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addListOfExpressionsBuilder(
           int index) {
-        return getSequenceFieldBuilder().addBuilder(
+        return getListOfExpressionsFieldBuilder().addBuilder(
             index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
       }
       /**
-       * <code>repeated .Expression sequence = 6;</code>
+       * <code>repeated .Expression list_of_expressions = 6;</code>
        */
       public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder> 
-           getSequenceBuilderList() {
-        return getSequenceFieldBuilder().getBuilderList();
+           getListOfExpressionsBuilderList() {
+        return getListOfExpressionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getSequenceFieldBuilder() {
-        if (sequenceBuilder_ == null) {
-          sequenceBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          getListOfExpressionsFieldBuilder() {
+        if (listOfExpressionsBuilder_ == null) {
+          listOfExpressionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  sequence_,
+                  listOfExpressions_,
                   ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
                   isClean());
-          sequence_ = null;
+          listOfExpressions_ = null;
         }
-        return sequenceBuilder_;
+        return listOfExpressionsBuilder_;
       }
 
-      // optional .Pair pair = 7;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Pair pair_ = br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Pair, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder> pairBuilder_;
-      /**
-       * <code>optional .Pair pair = 7;</code>
-       */
-      public boolean hasPair() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional .Pair pair = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Pair getPair() {
-        if (pairBuilder_ == null) {
-          return pair_;
-        } else {
-          return pairBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .Pair pair = 7;</code>
-       */
-      public Builder setPair(br.com.igorbonadio.likely.lklast.LikelyAst.Pair value) {
-        if (pairBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pair_ = value;
-          onChanged();
-        } else {
-          pairBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>optional .Pair pair = 7;</code>
-       */
-      public Builder setPair(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder builderForValue) {
-        if (pairBuilder_ == null) {
-          pair_ = builderForValue.build();
-          onChanged();
-        } else {
-          pairBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>optional .Pair pair = 7;</code>
-       */
-      public Builder mergePair(br.com.igorbonadio.likely.lklast.LikelyAst.Pair value) {
-        if (pairBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040) &&
-              pair_ != br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance()) {
-            pair_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Pair.newBuilder(pair_).mergeFrom(value).buildPartial();
-          } else {
-            pair_ = value;
-          }
-          onChanged();
-        } else {
-          pairBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>optional .Pair pair = 7;</code>
-       */
-      public Builder clearPair() {
-        if (pairBuilder_ == null) {
-          pair_ = br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance();
-          onChanged();
-        } else {
-          pairBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
-      /**
-       * <code>optional .Pair pair = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder getPairBuilder() {
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return getPairFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .Pair pair = 7;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder getPairOrBuilder() {
-        if (pairBuilder_ != null) {
-          return pairBuilder_.getMessageOrBuilder();
-        } else {
-          return pair_;
-        }
-      }
-      /**
-       * <code>optional .Pair pair = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Pair, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder> 
-          getPairFieldBuilder() {
-        if (pairBuilder_ == null) {
-          pairBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Pair, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder>(
-                  pair_,
-                  getParentForChildren(),
-                  isClean());
-          pair_ = null;
-        }
-        return pairBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:Builtin)
-    }
-
-    static {
-      defaultInstance = new Builtin(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:Builtin)
-  }
-
-  public interface PairOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required .Expression key = 1;
-    /**
-     * <code>required .Expression key = 1;</code>
-     */
-    boolean hasKey();
-    /**
-     * <code>required .Expression key = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getKey();
-    /**
-     * <code>required .Expression key = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getKeyOrBuilder();
-
-    // required .Expression value = 2;
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    boolean hasValue();
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getValue();
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getValueOrBuilder();
-  }
-  /**
-   * Protobuf type {@code Pair}
-   */
-  public static final class Pair extends
-      com.google.protobuf.GeneratedMessage
-      implements PairOrBuilder {
-    // Use Pair.newBuilder() to construct.
-    private Pair(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private Pair(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final Pair defaultInstance;
-    public static Pair getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public Pair getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Pair(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = key_.toBuilder();
-              }
-              key_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(key_);
-                key_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = value_.toBuilder();
-              }
-              value_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(value_);
-                value_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Pair_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Pair_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.Pair.class, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<Pair> PARSER =
-        new com.google.protobuf.AbstractParser<Pair>() {
-      public Pair parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Pair(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Pair> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // required .Expression key = 1;
-    public static final int KEY_FIELD_NUMBER = 1;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression key_;
-    /**
-     * <code>required .Expression key = 1;</code>
-     */
-    public boolean hasKey() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .Expression key = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getKey() {
-      return key_;
-    }
-    /**
-     * <code>required .Expression key = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getKeyOrBuilder() {
-      return key_;
-    }
-
-    // required .Expression value = 2;
-    public static final int VALUE_FIELD_NUMBER = 2;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression value_;
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    public boolean hasValue() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getValue() {
-      return value_;
-    }
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getValueOrBuilder() {
-      return value_;
-    }
-
-    private void initFields() {
-      key_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasKey()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasValue()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getKey().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getValue().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, key_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, value_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, key_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, value_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Pair parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.Pair prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Pair}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.PairOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Pair_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Pair_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.Pair.class, br.com.igorbonadio.likely.lklast.LikelyAst.Pair.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.Pair.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getKeyFieldBuilder();
-          getValueFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        if (keyBuilder_ == null) {
-          key_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          keyBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (valueBuilder_ == null) {
-          value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          valueBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Pair_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Pair getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Pair build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.Pair result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Pair buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.Pair result = new br.com.igorbonadio.likely.lklast.LikelyAst.Pair(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        if (keyBuilder_ == null) {
-          result.key_ = key_;
-        } else {
-          result.key_ = keyBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        if (valueBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = valueBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.Pair) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.Pair)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.Pair other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.Pair.getDefaultInstance()) return this;
-        if (other.hasKey()) {
-          mergeKey(other.getKey());
-        }
-        if (other.hasValue()) {
-          mergeValue(other.getValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasKey()) {
-          
-          return false;
-        }
-        if (!hasValue()) {
-          
-          return false;
-        }
-        if (!getKey().isInitialized()) {
-          
-          return false;
-        }
-        if (!getValue().isInitialized()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.Pair parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.Pair) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required .Expression key = 1;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression key_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> keyBuilder_;
-      /**
-       * <code>required .Expression key = 1;</code>
-       */
-      public boolean hasKey() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required .Expression key = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getKey() {
-        if (keyBuilder_ == null) {
-          return key_;
-        } else {
-          return keyBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression key = 1;</code>
-       */
-      public Builder setKey(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (keyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          key_ = value;
-          onChanged();
-        } else {
-          keyBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression key = 1;</code>
-       */
-      public Builder setKey(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (keyBuilder_ == null) {
-          key_ = builderForValue.build();
-          onChanged();
-        } else {
-          keyBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression key = 1;</code>
-       */
-      public Builder mergeKey(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (keyBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              key_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            key_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(key_).mergeFrom(value).buildPartial();
-          } else {
-            key_ = value;
-          }
-          onChanged();
-        } else {
-          keyBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression key = 1;</code>
-       */
-      public Builder clearKey() {
-        if (keyBuilder_ == null) {
-          key_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          keyBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      /**
-       * <code>required .Expression key = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getKeyBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getKeyFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression key = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getKeyOrBuilder() {
-        if (keyBuilder_ != null) {
-          return keyBuilder_.getMessageOrBuilder();
-        } else {
-          return key_;
-        }
-      }
-      /**
-       * <code>required .Expression key = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getKeyFieldBuilder() {
-        if (keyBuilder_ == null) {
-          keyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  key_,
-                  getParentForChildren(),
-                  isClean());
-          key_ = null;
-        }
-        return keyBuilder_;
-      }
-
-      // required .Expression value = 2;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> valueBuilder_;
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public boolean hasValue() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getValue() {
-        if (valueBuilder_ == null) {
-          return value_;
-        } else {
-          return valueBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public Builder setValue(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (valueBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public Builder setValue(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (valueBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public Builder mergeValue(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (valueBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              value_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            value_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(value_).mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          valueBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public Builder clearValue() {
-        if (valueBuilder_ == null) {
-          value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          valueBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getValueBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getValueFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getValueOrBuilder() {
-        if (valueBuilder_ != null) {
-          return valueBuilder_.getMessageOrBuilder();
-        } else {
-          return value_;
-        }
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getValueFieldBuilder() {
-        if (valueBuilder_ == null) {
-          valueBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        return valueBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:Pair)
-    }
-
-    static {
-      defaultInstance = new Pair(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:Pair)
-  }
-
-  public interface AttributionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required .Expression id = 1;
-    /**
-     * <code>required .Expression id = 1;</code>
-     */
-    boolean hasId();
-    /**
-     * <code>required .Expression id = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getId();
-    /**
-     * <code>required .Expression id = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getIdOrBuilder();
-
-    // required .Expression value = 2;
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    boolean hasValue();
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getValue();
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getValueOrBuilder();
-  }
-  /**
-   * Protobuf type {@code Attribution}
-   */
-  public static final class Attribution extends
-      com.google.protobuf.GeneratedMessage
-      implements AttributionOrBuilder {
-    // Use Attribution.newBuilder() to construct.
-    private Attribution(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private Attribution(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final Attribution defaultInstance;
-    public static Attribution getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public Attribution getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Attribution(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = id_.toBuilder();
-              }
-              id_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(id_);
-                id_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = value_.toBuilder();
-              }
-              value_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(value_);
-                value_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Attribution_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Attribution_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.class, br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<Attribution> PARSER =
-        new com.google.protobuf.AbstractParser<Attribution>() {
-      public Attribution parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Attribution(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Attribution> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // required .Expression id = 1;
-    public static final int ID_FIELD_NUMBER = 1;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression id_;
-    /**
-     * <code>required .Expression id = 1;</code>
-     */
-    public boolean hasId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .Expression id = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getId() {
-      return id_;
-    }
-    /**
-     * <code>required .Expression id = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getIdOrBuilder() {
-      return id_;
-    }
-
-    // required .Expression value = 2;
-    public static final int VALUE_FIELD_NUMBER = 2;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression value_;
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    public boolean hasValue() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getValue() {
-      return value_;
-    }
-    /**
-     * <code>required .Expression value = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getValueOrBuilder() {
-      return value_;
-    }
-
-    private void initFields() {
-      id_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasValue()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getId().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getValue().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, id_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, value_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, id_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, value_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.Attribution prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Attribution}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.AttributionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Attribution_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Attribution_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.class, br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getIdFieldBuilder();
-          getValueFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        if (idBuilder_ == null) {
-          id_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          idBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (valueBuilder_ == null) {
-          value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          valueBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_Attribution_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Attribution getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Attribution build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.Attribution result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Attribution buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.Attribution result = new br.com.igorbonadio.likely.lklast.LikelyAst.Attribution(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        if (idBuilder_ == null) {
-          result.id_ = id_;
-        } else {
-          result.id_ = idBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        if (valueBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = valueBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.Attribution) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.Attribution)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.Attribution other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.Attribution.getDefaultInstance()) return this;
-        if (other.hasId()) {
-          mergeId(other.getId());
-        }
-        if (other.hasValue()) {
-          mergeValue(other.getValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasId()) {
-          
-          return false;
-        }
-        if (!hasValue()) {
-          
-          return false;
-        }
-        if (!getId().isInitialized()) {
-          
-          return false;
-        }
-        if (!getValue().isInitialized()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.Attribution parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.Attribution) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required .Expression id = 1;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression id_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> idBuilder_;
-      /**
-       * <code>required .Expression id = 1;</code>
-       */
-      public boolean hasId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required .Expression id = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getId() {
-        if (idBuilder_ == null) {
-          return id_;
-        } else {
-          return idBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression id = 1;</code>
-       */
-      public Builder setId(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (idBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          id_ = value;
-          onChanged();
-        } else {
-          idBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression id = 1;</code>
-       */
-      public Builder setId(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (idBuilder_ == null) {
-          id_ = builderForValue.build();
-          onChanged();
-        } else {
-          idBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression id = 1;</code>
-       */
-      public Builder mergeId(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (idBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              id_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            id_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(id_).mergeFrom(value).buildPartial();
-          } else {
-            id_ = value;
-          }
-          onChanged();
-        } else {
-          idBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression id = 1;</code>
-       */
-      public Builder clearId() {
-        if (idBuilder_ == null) {
-          id_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          idBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      /**
-       * <code>required .Expression id = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getIdBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression id = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getIdOrBuilder() {
-        if (idBuilder_ != null) {
-          return idBuilder_.getMessageOrBuilder();
-        } else {
-          return id_;
-        }
-      }
-      /**
-       * <code>required .Expression id = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getIdFieldBuilder() {
-        if (idBuilder_ == null) {
-          idBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  id_,
-                  getParentForChildren(),
-                  isClean());
-          id_ = null;
-        }
-        return idBuilder_;
-      }
-
-      // required .Expression value = 2;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> valueBuilder_;
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public boolean hasValue() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getValue() {
-        if (valueBuilder_ == null) {
-          return value_;
-        } else {
-          return valueBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public Builder setValue(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (valueBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public Builder setValue(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (valueBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public Builder mergeValue(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (valueBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              value_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            value_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(value_).mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          valueBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public Builder clearValue() {
-        if (valueBuilder_ == null) {
-          value_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          valueBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getValueBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getValueFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getValueOrBuilder() {
-        if (valueBuilder_ != null) {
-          return valueBuilder_.getMessageOrBuilder();
-        } else {
-          return value_;
-        }
-      }
-      /**
-       * <code>required .Expression value = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getValueFieldBuilder() {
-        if (valueBuilder_ == null) {
-          valueBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  value_,
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        return valueBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:Attribution)
-    }
-
-    static {
-      defaultInstance = new Attribution(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:Attribution)
-  }
-
-  public interface BinaryOperationOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required int32 operation = 1;
-    /**
-     * <code>required int32 operation = 1;</code>
-     */
-    boolean hasOperation();
-    /**
-     * <code>required int32 operation = 1;</code>
-     */
-    int getOperation();
-
-    // required .Expression lhs = 2;
-    /**
-     * <code>required .Expression lhs = 2;</code>
-     */
-    boolean hasLhs();
-    /**
-     * <code>required .Expression lhs = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getLhs();
-    /**
-     * <code>required .Expression lhs = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getLhsOrBuilder();
-
-    // required .Expression rhs = 3;
-    /**
-     * <code>required .Expression rhs = 3;</code>
-     */
-    boolean hasRhs();
-    /**
-     * <code>required .Expression rhs = 3;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getRhs();
-    /**
-     * <code>required .Expression rhs = 3;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getRhsOrBuilder();
-  }
-  /**
-   * Protobuf type {@code BinaryOperation}
-   */
-  public static final class BinaryOperation extends
-      com.google.protobuf.GeneratedMessage
-      implements BinaryOperationOrBuilder {
-    // Use BinaryOperation.newBuilder() to construct.
-    private BinaryOperation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private BinaryOperation(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final BinaryOperation defaultInstance;
-    public static BinaryOperation getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public BinaryOperation getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private BinaryOperation(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              operation_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = lhs_.toBuilder();
-              }
-              lhs_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(lhs_);
-                lhs_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-            case 26: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                subBuilder = rhs_.toBuilder();
-              }
-              rhs_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(rhs_);
-                rhs_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000004;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_BinaryOperation_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_BinaryOperation_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.class, br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<BinaryOperation> PARSER =
-        new com.google.protobuf.AbstractParser<BinaryOperation>() {
-      public BinaryOperation parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BinaryOperation(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<BinaryOperation> getParserForType() {
-      return PARSER;
-    }
-
-    /**
-     * Protobuf enum {@code BinaryOperation.OperationType}
-     */
-    public enum OperationType
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>ADD = 0;</code>
-       */
-      ADD(0, 0),
-      /**
-       * <code>SUB = 1;</code>
-       */
-      SUB(1, 1),
-      /**
-       * <code>MUL = 2;</code>
-       */
-      MUL(2, 2),
-      /**
-       * <code>DIV = 3;</code>
-       */
-      DIV(3, 3),
-      /**
-       * <code>EQL = 4;</code>
-       */
-      EQL(4, 4),
-      /**
-       * <code>NEQ = 5;</code>
-       */
-      NEQ(5, 5),
-      /**
-       * <code>GEQ = 6;</code>
-       */
-      GEQ(6, 6),
-      /**
-       * <code>LEQ = 7;</code>
-       */
-      LEQ(7, 7),
-      /**
-       * <code>GRE = 8;</code>
-       */
-      GRE(8, 8),
-      /**
-       * <code>LES = 9;</code>
-       */
-      LES(9, 9),
-      /**
-       * <code>STH = 10;</code>
-       */
-      STH(10, 10),
-      ;
-
-      /**
-       * <code>ADD = 0;</code>
-       */
-      public static final int ADD_VALUE = 0;
-      /**
-       * <code>SUB = 1;</code>
-       */
-      public static final int SUB_VALUE = 1;
-      /**
-       * <code>MUL = 2;</code>
-       */
-      public static final int MUL_VALUE = 2;
-      /**
-       * <code>DIV = 3;</code>
-       */
-      public static final int DIV_VALUE = 3;
-      /**
-       * <code>EQL = 4;</code>
-       */
-      public static final int EQL_VALUE = 4;
-      /**
-       * <code>NEQ = 5;</code>
-       */
-      public static final int NEQ_VALUE = 5;
-      /**
-       * <code>GEQ = 6;</code>
-       */
-      public static final int GEQ_VALUE = 6;
-      /**
-       * <code>LEQ = 7;</code>
-       */
-      public static final int LEQ_VALUE = 7;
-      /**
-       * <code>GRE = 8;</code>
-       */
-      public static final int GRE_VALUE = 8;
-      /**
-       * <code>LES = 9;</code>
-       */
-      public static final int LES_VALUE = 9;
-      /**
-       * <code>STH = 10;</code>
-       */
-      public static final int STH_VALUE = 10;
-
-
-      public final int getNumber() { return value; }
-
-      public static OperationType valueOf(int value) {
-        switch (value) {
-          case 0: return ADD;
-          case 1: return SUB;
-          case 2: return MUL;
-          case 3: return DIV;
-          case 4: return EQL;
-          case 5: return NEQ;
-          case 6: return GEQ;
-          case 7: return LEQ;
-          case 8: return GRE;
-          case 9: return LES;
-          case 10: return STH;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<OperationType>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<OperationType>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<OperationType>() {
-              public OperationType findValueByNumber(int number) {
-                return OperationType.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final OperationType[] VALUES = values();
-
-      public static OperationType valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int index;
-      private final int value;
-
-      private OperationType(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:BinaryOperation.OperationType)
-    }
-
-    private int bitField0_;
-    // required int32 operation = 1;
-    public static final int OPERATION_FIELD_NUMBER = 1;
-    private int operation_;
-    /**
-     * <code>required int32 operation = 1;</code>
-     */
-    public boolean hasOperation() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required int32 operation = 1;</code>
-     */
-    public int getOperation() {
-      return operation_;
-    }
-
-    // required .Expression lhs = 2;
-    public static final int LHS_FIELD_NUMBER = 2;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression lhs_;
-    /**
-     * <code>required .Expression lhs = 2;</code>
-     */
-    public boolean hasLhs() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .Expression lhs = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getLhs() {
-      return lhs_;
-    }
-    /**
-     * <code>required .Expression lhs = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getLhsOrBuilder() {
-      return lhs_;
-    }
-
-    // required .Expression rhs = 3;
-    public static final int RHS_FIELD_NUMBER = 3;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression rhs_;
-    /**
-     * <code>required .Expression rhs = 3;</code>
-     */
-    public boolean hasRhs() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required .Expression rhs = 3;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getRhs() {
-      return rhs_;
-    }
-    /**
-     * <code>required .Expression rhs = 3;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getRhsOrBuilder() {
-      return rhs_;
-    }
-
-    private void initFields() {
-      operation_ = 0;
-      lhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      rhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasOperation()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasLhs()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasRhs()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getLhs().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getRhs().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, operation_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, lhs_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, rhs_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, operation_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, lhs_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, rhs_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code BinaryOperation}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_BinaryOperation_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_BinaryOperation_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.class, br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getLhsFieldBuilder();
-          getRhsFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        operation_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (lhsBuilder_ == null) {
-          lhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          lhsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (rhsBuilder_ == null) {
-          rhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          rhsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_BinaryOperation_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation result = new br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.operation_ = operation_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        if (lhsBuilder_ == null) {
-          result.lhs_ = lhs_;
-        } else {
-          result.lhs_ = lhsBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        if (rhsBuilder_ == null) {
-          result.rhs_ = rhs_;
-        } else {
-          result.rhs_ = rhsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation.getDefaultInstance()) return this;
-        if (other.hasOperation()) {
-          setOperation(other.getOperation());
-        }
-        if (other.hasLhs()) {
-          mergeLhs(other.getLhs());
-        }
-        if (other.hasRhs()) {
-          mergeRhs(other.getRhs());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasOperation()) {
-          
-          return false;
-        }
-        if (!hasLhs()) {
-          
-          return false;
-        }
-        if (!hasRhs()) {
-          
-          return false;
-        }
-        if (!getLhs().isInitialized()) {
-          
-          return false;
-        }
-        if (!getRhs().isInitialized()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.BinaryOperation) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required int32 operation = 1;
-      private int operation_ ;
-      /**
-       * <code>required int32 operation = 1;</code>
-       */
-      public boolean hasOperation() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int32 operation = 1;</code>
-       */
-      public int getOperation() {
-        return operation_;
-      }
-      /**
-       * <code>required int32 operation = 1;</code>
-       */
-      public Builder setOperation(int value) {
-        bitField0_ |= 0x00000001;
-        operation_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 operation = 1;</code>
-       */
-      public Builder clearOperation() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        operation_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // required .Expression lhs = 2;
+      // optional .Expression lhs = 7;
       private br.com.igorbonadio.likely.lklast.LikelyAst.Expression lhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> lhsBuilder_;
       /**
-       * <code>required .Expression lhs = 2;</code>
+       * <code>optional .Expression lhs = 7;</code>
        */
       public boolean hasLhs() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required .Expression lhs = 2;</code>
+       * <code>optional .Expression lhs = 7;</code>
        */
       public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getLhs() {
         if (lhsBuilder_ == null) {
@@ -8212,7 +3998,7 @@ public final class LikelyAst {
         }
       }
       /**
-       * <code>required .Expression lhs = 2;</code>
+       * <code>optional .Expression lhs = 7;</code>
        */
       public Builder setLhs(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
         if (lhsBuilder_ == null) {
@@ -8224,11 +4010,11 @@ public final class LikelyAst {
         } else {
           lhsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>required .Expression lhs = 2;</code>
+       * <code>optional .Expression lhs = 7;</code>
        */
       public Builder setLhs(
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
@@ -8238,15 +4024,15 @@ public final class LikelyAst {
         } else {
           lhsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>required .Expression lhs = 2;</code>
+       * <code>optional .Expression lhs = 7;</code>
        */
       public Builder mergeLhs(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
         if (lhsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
               lhs_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
             lhs_ =
               br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(lhs_).mergeFrom(value).buildPartial();
@@ -8257,11 +4043,11 @@ public final class LikelyAst {
         } else {
           lhsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
-       * <code>required .Expression lhs = 2;</code>
+       * <code>optional .Expression lhs = 7;</code>
        */
       public Builder clearLhs() {
         if (lhsBuilder_ == null) {
@@ -8270,19 +4056,19 @@ public final class LikelyAst {
         } else {
           lhsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
       /**
-       * <code>required .Expression lhs = 2;</code>
+       * <code>optional .Expression lhs = 7;</code>
        */
       public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getLhsBuilder() {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000040;
         onChanged();
         return getLhsFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .Expression lhs = 2;</code>
+       * <code>optional .Expression lhs = 7;</code>
        */
       public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getLhsOrBuilder() {
         if (lhsBuilder_ != null) {
@@ -8292,7 +4078,7 @@ public final class LikelyAst {
         }
       }
       /**
-       * <code>required .Expression lhs = 2;</code>
+       * <code>optional .Expression lhs = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
@@ -8308,18 +4094,18 @@ public final class LikelyAst {
         return lhsBuilder_;
       }
 
-      // required .Expression rhs = 3;
+      // optional .Expression rhs = 8;
       private br.com.igorbonadio.likely.lklast.LikelyAst.Expression rhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> rhsBuilder_;
       /**
-       * <code>required .Expression rhs = 3;</code>
+       * <code>optional .Expression rhs = 8;</code>
        */
       public boolean hasRhs() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>required .Expression rhs = 3;</code>
+       * <code>optional .Expression rhs = 8;</code>
        */
       public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getRhs() {
         if (rhsBuilder_ == null) {
@@ -8329,7 +4115,7 @@ public final class LikelyAst {
         }
       }
       /**
-       * <code>required .Expression rhs = 3;</code>
+       * <code>optional .Expression rhs = 8;</code>
        */
       public Builder setRhs(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
         if (rhsBuilder_ == null) {
@@ -8341,11 +4127,11 @@ public final class LikelyAst {
         } else {
           rhsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000080;
         return this;
       }
       /**
-       * <code>required .Expression rhs = 3;</code>
+       * <code>optional .Expression rhs = 8;</code>
        */
       public Builder setRhs(
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
@@ -8355,15 +4141,15 @@ public final class LikelyAst {
         } else {
           rhsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000080;
         return this;
       }
       /**
-       * <code>required .Expression rhs = 3;</code>
+       * <code>optional .Expression rhs = 8;</code>
        */
       public Builder mergeRhs(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
         if (rhsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
               rhs_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
             rhs_ =
               br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(rhs_).mergeFrom(value).buildPartial();
@@ -8374,11 +4160,11 @@ public final class LikelyAst {
         } else {
           rhsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000080;
         return this;
       }
       /**
-       * <code>required .Expression rhs = 3;</code>
+       * <code>optional .Expression rhs = 8;</code>
        */
       public Builder clearRhs() {
         if (rhsBuilder_ == null) {
@@ -8387,19 +4173,19 @@ public final class LikelyAst {
         } else {
           rhsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
       /**
-       * <code>required .Expression rhs = 3;</code>
+       * <code>optional .Expression rhs = 8;</code>
        */
       public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getRhsBuilder() {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000080;
         onChanged();
         return getRhsFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .Expression rhs = 3;</code>
+       * <code>optional .Expression rhs = 8;</code>
        */
       public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getRhsOrBuilder() {
         if (rhsBuilder_ != null) {
@@ -8409,7 +4195,7 @@ public final class LikelyAst {
         }
       }
       /**
-       * <code>required .Expression rhs = 3;</code>
+       * <code>optional .Expression rhs = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
@@ -8425,5907 +4211,588 @@ public final class LikelyAst {
         return rhsBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:BinaryOperation)
-    }
-
-    static {
-      defaultInstance = new BinaryOperation(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:BinaryOperation)
-  }
-
-  public interface FunctionCallOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required .Expression function = 1;
-    /**
-     * <code>required .Expression function = 1;</code>
-     */
-    boolean hasFunction();
-    /**
-     * <code>required .Expression function = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getFunction();
-    /**
-     * <code>required .Expression function = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getFunctionOrBuilder();
-
-    // repeated .Expression arguments = 2;
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
-        getArgumentsList();
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getArguments(int index);
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    int getArgumentsCount();
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getArgumentsOrBuilderList();
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getArgumentsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code FunctionCall}
-   */
-  public static final class FunctionCall extends
-      com.google.protobuf.GeneratedMessage
-      implements FunctionCallOrBuilder {
-    // Use FunctionCall.newBuilder() to construct.
-    private FunctionCall(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private FunctionCall(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final FunctionCall defaultInstance;
-    public static FunctionCall getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public FunctionCall getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private FunctionCall(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = function_.toBuilder();
-              }
-              function_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(function_);
-                function_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                arguments_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              arguments_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          arguments_ = java.util.Collections.unmodifiableList(arguments_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionCall_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionCall_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.class, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<FunctionCall> PARSER =
-        new com.google.protobuf.AbstractParser<FunctionCall>() {
-      public FunctionCall parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FunctionCall(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FunctionCall> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // required .Expression function = 1;
-    public static final int FUNCTION_FIELD_NUMBER = 1;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression function_;
-    /**
-     * <code>required .Expression function = 1;</code>
-     */
-    public boolean hasFunction() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .Expression function = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getFunction() {
-      return function_;
-    }
-    /**
-     * <code>required .Expression function = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getFunctionOrBuilder() {
-      return function_;
-    }
-
-    // repeated .Expression arguments = 2;
-    public static final int ARGUMENTS_FIELD_NUMBER = 2;
-    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> arguments_;
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getArgumentsList() {
-      return arguments_;
-    }
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getArgumentsOrBuilderList() {
-      return arguments_;
-    }
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    public int getArgumentsCount() {
-      return arguments_.size();
-    }
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getArguments(int index) {
-      return arguments_.get(index);
-    }
-    /**
-     * <code>repeated .Expression arguments = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getArgumentsOrBuilder(
-        int index) {
-      return arguments_.get(index);
-    }
-
-    private void initFields() {
-      function_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      arguments_ = java.util.Collections.emptyList();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasFunction()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getFunction().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getArgumentsCount(); i++) {
-        if (!getArguments(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, function_);
-      }
-      for (int i = 0; i < arguments_.size(); i++) {
-        output.writeMessage(2, arguments_.get(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, function_);
-      }
-      for (int i = 0; i < arguments_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, arguments_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code FunctionCall}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCallOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionCall_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionCall_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.class, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getFunctionFieldBuilder();
-          getArgumentsFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        if (functionBuilder_ == null) {
-          function_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          functionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (argumentsBuilder_ == null) {
-          arguments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          argumentsBuilder_.clear();
-        }
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionCall_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall result = new br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        if (functionBuilder_ == null) {
-          result.function_ = function_;
-        } else {
-          result.function_ = functionBuilder_.build();
-        }
-        if (argumentsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            arguments_ = java.util.Collections.unmodifiableList(arguments_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.arguments_ = arguments_;
-        } else {
-          result.arguments_ = argumentsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall.getDefaultInstance()) return this;
-        if (other.hasFunction()) {
-          mergeFunction(other.getFunction());
-        }
-        if (argumentsBuilder_ == null) {
-          if (!other.arguments_.isEmpty()) {
-            if (arguments_.isEmpty()) {
-              arguments_ = other.arguments_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureArgumentsIsMutable();
-              arguments_.addAll(other.arguments_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.arguments_.isEmpty()) {
-            if (argumentsBuilder_.isEmpty()) {
-              argumentsBuilder_.dispose();
-              argumentsBuilder_ = null;
-              arguments_ = other.arguments_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              argumentsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getArgumentsFieldBuilder() : null;
-            } else {
-              argumentsBuilder_.addAllMessages(other.arguments_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasFunction()) {
-          
-          return false;
-        }
-        if (!getFunction().isInitialized()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getArgumentsCount(); i++) {
-          if (!getArguments(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.FunctionCall) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required .Expression function = 1;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression function_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> functionBuilder_;
-      /**
-       * <code>required .Expression function = 1;</code>
-       */
-      public boolean hasFunction() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required .Expression function = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getFunction() {
-        if (functionBuilder_ == null) {
-          return function_;
-        } else {
-          return functionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression function = 1;</code>
-       */
-      public Builder setFunction(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (functionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          function_ = value;
-          onChanged();
-        } else {
-          functionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression function = 1;</code>
-       */
-      public Builder setFunction(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (functionBuilder_ == null) {
-          function_ = builderForValue.build();
-          onChanged();
-        } else {
-          functionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression function = 1;</code>
-       */
-      public Builder mergeFunction(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (functionBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              function_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            function_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(function_).mergeFrom(value).buildPartial();
-          } else {
-            function_ = value;
-          }
-          onChanged();
-        } else {
-          functionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression function = 1;</code>
-       */
-      public Builder clearFunction() {
-        if (functionBuilder_ == null) {
-          function_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          functionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      /**
-       * <code>required .Expression function = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getFunctionBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getFunctionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression function = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getFunctionOrBuilder() {
-        if (functionBuilder_ != null) {
-          return functionBuilder_.getMessageOrBuilder();
-        } else {
-          return function_;
-        }
-      }
-      /**
-       * <code>required .Expression function = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getFunctionFieldBuilder() {
-        if (functionBuilder_ == null) {
-          functionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  function_,
-                  getParentForChildren(),
-                  isClean());
-          function_ = null;
-        }
-        return functionBuilder_;
-      }
-
-      // repeated .Expression arguments = 2;
-      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> arguments_ =
-        java.util.Collections.emptyList();
-      private void ensureArgumentsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          arguments_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(arguments_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> argumentsBuilder_;
-
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getArgumentsList() {
-        if (argumentsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(arguments_);
-        } else {
-          return argumentsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public int getArgumentsCount() {
-        if (argumentsBuilder_ == null) {
-          return arguments_.size();
-        } else {
-          return argumentsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getArguments(int index) {
-        if (argumentsBuilder_ == null) {
-          return arguments_.get(index);
-        } else {
-          return argumentsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public Builder setArguments(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (argumentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureArgumentsIsMutable();
-          arguments_.set(index, value);
-          onChanged();
-        } else {
-          argumentsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public Builder setArguments(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (argumentsBuilder_ == null) {
-          ensureArgumentsIsMutable();
-          arguments_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          argumentsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public Builder addArguments(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (argumentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureArgumentsIsMutable();
-          arguments_.add(value);
-          onChanged();
-        } else {
-          argumentsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public Builder addArguments(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (argumentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureArgumentsIsMutable();
-          arguments_.add(index, value);
-          onChanged();
-        } else {
-          argumentsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public Builder addArguments(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (argumentsBuilder_ == null) {
-          ensureArgumentsIsMutable();
-          arguments_.add(builderForValue.build());
-          onChanged();
-        } else {
-          argumentsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public Builder addArguments(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (argumentsBuilder_ == null) {
-          ensureArgumentsIsMutable();
-          arguments_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          argumentsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public Builder addAllArguments(
-          java.lang.Iterable<? extends br.com.igorbonadio.likely.lklast.LikelyAst.Expression> values) {
-        if (argumentsBuilder_ == null) {
-          ensureArgumentsIsMutable();
-          super.addAll(values, arguments_);
-          onChanged();
-        } else {
-          argumentsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public Builder clearArguments() {
-        if (argumentsBuilder_ == null) {
-          arguments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          argumentsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public Builder removeArguments(int index) {
-        if (argumentsBuilder_ == null) {
-          ensureArgumentsIsMutable();
-          arguments_.remove(index);
-          onChanged();
-        } else {
-          argumentsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getArgumentsBuilder(
-          int index) {
-        return getArgumentsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getArgumentsOrBuilder(
-          int index) {
-        if (argumentsBuilder_ == null) {
-          return arguments_.get(index);  } else {
-          return argumentsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-           getArgumentsOrBuilderList() {
-        if (argumentsBuilder_ != null) {
-          return argumentsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(arguments_);
-        }
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addArgumentsBuilder() {
-        return getArgumentsFieldBuilder().addBuilder(
-            br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addArgumentsBuilder(
-          int index) {
-        return getArgumentsFieldBuilder().addBuilder(
-            index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression arguments = 2;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder> 
-           getArgumentsBuilderList() {
-        return getArgumentsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getArgumentsFieldBuilder() {
-        if (argumentsBuilder_ == null) {
-          argumentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  arguments_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          arguments_ = null;
-        }
-        return argumentsBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:FunctionCall)
-    }
-
-    static {
-      defaultInstance = new FunctionCall(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:FunctionCall)
-  }
-
-  public interface ObjectMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required .Expression object = 1;
-    /**
-     * <code>required .Expression object = 1;</code>
-     */
-    boolean hasObject();
-    /**
-     * <code>required .Expression object = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getObject();
-    /**
-     * <code>required .Expression object = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getObjectOrBuilder();
-
-    // required string message = 2;
-    /**
-     * <code>required string message = 2;</code>
-     */
-    boolean hasMessage();
-    /**
-     * <code>required string message = 2;</code>
-     */
-    java.lang.String getMessage();
-    /**
-     * <code>required string message = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getMessageBytes();
-  }
-  /**
-   * Protobuf type {@code ObjectMessage}
-   */
-  public static final class ObjectMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ObjectMessageOrBuilder {
-    // Use ObjectMessage.newBuilder() to construct.
-    private ObjectMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private ObjectMessage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final ObjectMessage defaultInstance;
-    public static ObjectMessage getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public ObjectMessage getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ObjectMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = object_.toBuilder();
-              }
-              object_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(object_);
-                object_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              message_ = input.readBytes();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ObjectMessage_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ObjectMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.class, br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<ObjectMessage> PARSER =
-        new com.google.protobuf.AbstractParser<ObjectMessage>() {
-      public ObjectMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ObjectMessage(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ObjectMessage> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // required .Expression object = 1;
-    public static final int OBJECT_FIELD_NUMBER = 1;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression object_;
-    /**
-     * <code>required .Expression object = 1;</code>
-     */
-    public boolean hasObject() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .Expression object = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getObject() {
-      return object_;
-    }
-    /**
-     * <code>required .Expression object = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getObjectOrBuilder() {
-      return object_;
-    }
-
-    // required string message = 2;
-    public static final int MESSAGE_FIELD_NUMBER = 2;
-    private java.lang.Object message_;
-    /**
-     * <code>required string message = 2;</code>
-     */
-    public boolean hasMessage() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required string message = 2;</code>
-     */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          message_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string message = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getMessageBytes() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        message_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private void initFields() {
-      object_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      message_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasObject()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasMessage()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getObject().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, object_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getMessageBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, object_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getMessageBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code ObjectMessage}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ObjectMessage_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ObjectMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.class, br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getObjectFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        if (objectBuilder_ == null) {
-          object_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          objectBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        message_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ObjectMessage_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage result = new br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        if (objectBuilder_ == null) {
-          result.object_ = object_;
-        } else {
-          result.object_ = objectBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.message_ = message_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage.getDefaultInstance()) return this;
-        if (other.hasObject()) {
-          mergeObject(other.getObject());
-        }
-        if (other.hasMessage()) {
-          bitField0_ |= 0x00000002;
-          message_ = other.message_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasObject()) {
-          
-          return false;
-        }
-        if (!hasMessage()) {
-          
-          return false;
-        }
-        if (!getObject().isInitialized()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.ObjectMessage) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required .Expression object = 1;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression object_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> objectBuilder_;
-      /**
-       * <code>required .Expression object = 1;</code>
-       */
-      public boolean hasObject() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required .Expression object = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getObject() {
-        if (objectBuilder_ == null) {
-          return object_;
-        } else {
-          return objectBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression object = 1;</code>
-       */
-      public Builder setObject(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (objectBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          object_ = value;
-          onChanged();
-        } else {
-          objectBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression object = 1;</code>
-       */
-      public Builder setObject(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (objectBuilder_ == null) {
-          object_ = builderForValue.build();
-          onChanged();
-        } else {
-          objectBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression object = 1;</code>
-       */
-      public Builder mergeObject(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (objectBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              object_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            object_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(object_).mergeFrom(value).buildPartial();
-          } else {
-            object_ = value;
-          }
-          onChanged();
-        } else {
-          objectBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression object = 1;</code>
-       */
-      public Builder clearObject() {
-        if (objectBuilder_ == null) {
-          object_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          objectBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      /**
-       * <code>required .Expression object = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getObjectBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getObjectFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression object = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getObjectOrBuilder() {
-        if (objectBuilder_ != null) {
-          return objectBuilder_.getMessageOrBuilder();
-        } else {
-          return object_;
-        }
-      }
-      /**
-       * <code>required .Expression object = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getObjectFieldBuilder() {
-        if (objectBuilder_ == null) {
-          objectBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  object_,
-                  getParentForChildren(),
-                  isClean());
-          object_ = null;
-        }
-        return objectBuilder_;
-      }
-
-      // required string message = 2;
-      private java.lang.Object message_ = "";
-      /**
-       * <code>required string message = 2;</code>
-       */
-      public boolean hasMessage() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string message = 2;</code>
-       */
-      public java.lang.String getMessage() {
-        java.lang.Object ref = message_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          message_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>required string message = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getMessageBytes() {
-        java.lang.Object ref = message_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          message_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string message = 2;</code>
-       */
-      public Builder setMessage(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string message = 2;</code>
-       */
-      public Builder clearMessage() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        message_ = getDefaultInstance().getMessage();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string message = 2;</code>
-       */
-      public Builder setMessageBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:ObjectMessage)
-    }
-
-    static {
-      defaultInstance = new ObjectMessage(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:ObjectMessage)
-  }
-
-  public interface IfExpressionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required .Expression condition = 1;
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    boolean hasCondition();
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getCondition();
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getConditionOrBuilder();
-
-    // repeated .Expression true_statements = 2;
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
-        getTrueStatementsList();
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getTrueStatements(int index);
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    int getTrueStatementsCount();
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getTrueStatementsOrBuilderList();
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getTrueStatementsOrBuilder(
-        int index);
-
-    // repeated .Expression false_statements = 3;
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
-        getFalseStatementsList();
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getFalseStatements(int index);
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    int getFalseStatementsCount();
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getFalseStatementsOrBuilderList();
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getFalseStatementsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code IfExpression}
-   */
-  public static final class IfExpression extends
-      com.google.protobuf.GeneratedMessage
-      implements IfExpressionOrBuilder {
-    // Use IfExpression.newBuilder() to construct.
-    private IfExpression(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private IfExpression(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final IfExpression defaultInstance;
-    public static IfExpression getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public IfExpression getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private IfExpression(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = condition_.toBuilder();
-              }
-              condition_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(condition_);
-                condition_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                trueStatements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              trueStatements_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                falseStatements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              falseStatements_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          trueStatements_ = java.util.Collections.unmodifiableList(trueStatements_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          falseStatements_ = java.util.Collections.unmodifiableList(falseStatements_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_IfExpression_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_IfExpression_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.class, br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<IfExpression> PARSER =
-        new com.google.protobuf.AbstractParser<IfExpression>() {
-      public IfExpression parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new IfExpression(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<IfExpression> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // required .Expression condition = 1;
-    public static final int CONDITION_FIELD_NUMBER = 1;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression condition_;
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    public boolean hasCondition() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getCondition() {
-      return condition_;
-    }
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getConditionOrBuilder() {
-      return condition_;
-    }
-
-    // repeated .Expression true_statements = 2;
-    public static final int TRUE_STATEMENTS_FIELD_NUMBER = 2;
-    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> trueStatements_;
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getTrueStatementsList() {
-      return trueStatements_;
-    }
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getTrueStatementsOrBuilderList() {
-      return trueStatements_;
-    }
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    public int getTrueStatementsCount() {
-      return trueStatements_.size();
-    }
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getTrueStatements(int index) {
-      return trueStatements_.get(index);
-    }
-    /**
-     * <code>repeated .Expression true_statements = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getTrueStatementsOrBuilder(
-        int index) {
-      return trueStatements_.get(index);
-    }
-
-    // repeated .Expression false_statements = 3;
-    public static final int FALSE_STATEMENTS_FIELD_NUMBER = 3;
-    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> falseStatements_;
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getFalseStatementsList() {
-      return falseStatements_;
-    }
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getFalseStatementsOrBuilderList() {
-      return falseStatements_;
-    }
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    public int getFalseStatementsCount() {
-      return falseStatements_.size();
-    }
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getFalseStatements(int index) {
-      return falseStatements_.get(index);
-    }
-    /**
-     * <code>repeated .Expression false_statements = 3;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getFalseStatementsOrBuilder(
-        int index) {
-      return falseStatements_.get(index);
-    }
-
-    private void initFields() {
-      condition_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      trueStatements_ = java.util.Collections.emptyList();
-      falseStatements_ = java.util.Collections.emptyList();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasCondition()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getCondition().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getTrueStatementsCount(); i++) {
-        if (!getTrueStatements(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      for (int i = 0; i < getFalseStatementsCount(); i++) {
-        if (!getFalseStatements(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, condition_);
-      }
-      for (int i = 0; i < trueStatements_.size(); i++) {
-        output.writeMessage(2, trueStatements_.get(i));
-      }
-      for (int i = 0; i < falseStatements_.size(); i++) {
-        output.writeMessage(3, falseStatements_.get(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, condition_);
-      }
-      for (int i = 0; i < trueStatements_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, trueStatements_.get(i));
-      }
-      for (int i = 0; i < falseStatements_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, falseStatements_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code IfExpression}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.IfExpressionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_IfExpression_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_IfExpression_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.class, br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getConditionFieldBuilder();
-          getTrueStatementsFieldBuilder();
-          getFalseStatementsFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        if (conditionBuilder_ == null) {
-          condition_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          conditionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (trueStatementsBuilder_ == null) {
-          trueStatements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          trueStatementsBuilder_.clear();
-        }
-        if (falseStatementsBuilder_ == null) {
-          falseStatements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          falseStatementsBuilder_.clear();
-        }
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_IfExpression_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression result = new br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        if (conditionBuilder_ == null) {
-          result.condition_ = condition_;
-        } else {
-          result.condition_ = conditionBuilder_.build();
-        }
-        if (trueStatementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            trueStatements_ = java.util.Collections.unmodifiableList(trueStatements_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.trueStatements_ = trueStatements_;
-        } else {
-          result.trueStatements_ = trueStatementsBuilder_.build();
-        }
-        if (falseStatementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            falseStatements_ = java.util.Collections.unmodifiableList(falseStatements_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.falseStatements_ = falseStatements_;
-        } else {
-          result.falseStatements_ = falseStatementsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression.getDefaultInstance()) return this;
-        if (other.hasCondition()) {
-          mergeCondition(other.getCondition());
-        }
-        if (trueStatementsBuilder_ == null) {
-          if (!other.trueStatements_.isEmpty()) {
-            if (trueStatements_.isEmpty()) {
-              trueStatements_ = other.trueStatements_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureTrueStatementsIsMutable();
-              trueStatements_.addAll(other.trueStatements_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.trueStatements_.isEmpty()) {
-            if (trueStatementsBuilder_.isEmpty()) {
-              trueStatementsBuilder_.dispose();
-              trueStatementsBuilder_ = null;
-              trueStatements_ = other.trueStatements_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              trueStatementsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getTrueStatementsFieldBuilder() : null;
-            } else {
-              trueStatementsBuilder_.addAllMessages(other.trueStatements_);
-            }
-          }
-        }
-        if (falseStatementsBuilder_ == null) {
-          if (!other.falseStatements_.isEmpty()) {
-            if (falseStatements_.isEmpty()) {
-              falseStatements_ = other.falseStatements_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureFalseStatementsIsMutable();
-              falseStatements_.addAll(other.falseStatements_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.falseStatements_.isEmpty()) {
-            if (falseStatementsBuilder_.isEmpty()) {
-              falseStatementsBuilder_.dispose();
-              falseStatementsBuilder_ = null;
-              falseStatements_ = other.falseStatements_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              falseStatementsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getFalseStatementsFieldBuilder() : null;
-            } else {
-              falseStatementsBuilder_.addAllMessages(other.falseStatements_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasCondition()) {
-          
-          return false;
-        }
-        if (!getCondition().isInitialized()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getTrueStatementsCount(); i++) {
-          if (!getTrueStatements(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        for (int i = 0; i < getFalseStatementsCount(); i++) {
-          if (!getFalseStatements(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.IfExpression) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required .Expression condition = 1;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression condition_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> conditionBuilder_;
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public boolean hasCondition() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getCondition() {
-        if (conditionBuilder_ == null) {
-          return condition_;
-        } else {
-          return conditionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public Builder setCondition(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (conditionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          condition_ = value;
-          onChanged();
-        } else {
-          conditionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public Builder setCondition(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (conditionBuilder_ == null) {
-          condition_ = builderForValue.build();
-          onChanged();
-        } else {
-          conditionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public Builder mergeCondition(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (conditionBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              condition_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            condition_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(condition_).mergeFrom(value).buildPartial();
-          } else {
-            condition_ = value;
-          }
-          onChanged();
-        } else {
-          conditionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public Builder clearCondition() {
-        if (conditionBuilder_ == null) {
-          condition_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          conditionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getConditionBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getConditionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getConditionOrBuilder() {
-        if (conditionBuilder_ != null) {
-          return conditionBuilder_.getMessageOrBuilder();
-        } else {
-          return condition_;
-        }
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getConditionFieldBuilder() {
-        if (conditionBuilder_ == null) {
-          conditionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  condition_,
-                  getParentForChildren(),
-                  isClean());
-          condition_ = null;
-        }
-        return conditionBuilder_;
-      }
-
-      // repeated .Expression true_statements = 2;
-      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> trueStatements_ =
-        java.util.Collections.emptyList();
-      private void ensureTrueStatementsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          trueStatements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(trueStatements_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> trueStatementsBuilder_;
-
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getTrueStatementsList() {
-        if (trueStatementsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(trueStatements_);
-        } else {
-          return trueStatementsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public int getTrueStatementsCount() {
-        if (trueStatementsBuilder_ == null) {
-          return trueStatements_.size();
-        } else {
-          return trueStatementsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getTrueStatements(int index) {
-        if (trueStatementsBuilder_ == null) {
-          return trueStatements_.get(index);
-        } else {
-          return trueStatementsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public Builder setTrueStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (trueStatementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTrueStatementsIsMutable();
-          trueStatements_.set(index, value);
-          onChanged();
-        } else {
-          trueStatementsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public Builder setTrueStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (trueStatementsBuilder_ == null) {
-          ensureTrueStatementsIsMutable();
-          trueStatements_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          trueStatementsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public Builder addTrueStatements(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (trueStatementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTrueStatementsIsMutable();
-          trueStatements_.add(value);
-          onChanged();
-        } else {
-          trueStatementsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public Builder addTrueStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (trueStatementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTrueStatementsIsMutable();
-          trueStatements_.add(index, value);
-          onChanged();
-        } else {
-          trueStatementsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public Builder addTrueStatements(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (trueStatementsBuilder_ == null) {
-          ensureTrueStatementsIsMutable();
-          trueStatements_.add(builderForValue.build());
-          onChanged();
-        } else {
-          trueStatementsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public Builder addTrueStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (trueStatementsBuilder_ == null) {
-          ensureTrueStatementsIsMutable();
-          trueStatements_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          trueStatementsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public Builder addAllTrueStatements(
-          java.lang.Iterable<? extends br.com.igorbonadio.likely.lklast.LikelyAst.Expression> values) {
-        if (trueStatementsBuilder_ == null) {
-          ensureTrueStatementsIsMutable();
-          super.addAll(values, trueStatements_);
-          onChanged();
-        } else {
-          trueStatementsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public Builder clearTrueStatements() {
-        if (trueStatementsBuilder_ == null) {
-          trueStatements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          trueStatementsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public Builder removeTrueStatements(int index) {
-        if (trueStatementsBuilder_ == null) {
-          ensureTrueStatementsIsMutable();
-          trueStatements_.remove(index);
-          onChanged();
-        } else {
-          trueStatementsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getTrueStatementsBuilder(
-          int index) {
-        return getTrueStatementsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getTrueStatementsOrBuilder(
-          int index) {
-        if (trueStatementsBuilder_ == null) {
-          return trueStatements_.get(index);  } else {
-          return trueStatementsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-           getTrueStatementsOrBuilderList() {
-        if (trueStatementsBuilder_ != null) {
-          return trueStatementsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(trueStatements_);
-        }
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addTrueStatementsBuilder() {
-        return getTrueStatementsFieldBuilder().addBuilder(
-            br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addTrueStatementsBuilder(
-          int index) {
-        return getTrueStatementsFieldBuilder().addBuilder(
-            index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression true_statements = 2;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder> 
-           getTrueStatementsBuilderList() {
-        return getTrueStatementsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getTrueStatementsFieldBuilder() {
-        if (trueStatementsBuilder_ == null) {
-          trueStatementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  trueStatements_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          trueStatements_ = null;
-        }
-        return trueStatementsBuilder_;
-      }
-
-      // repeated .Expression false_statements = 3;
-      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> falseStatements_ =
-        java.util.Collections.emptyList();
-      private void ensureFalseStatementsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          falseStatements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(falseStatements_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> falseStatementsBuilder_;
-
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getFalseStatementsList() {
-        if (falseStatementsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(falseStatements_);
-        } else {
-          return falseStatementsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public int getFalseStatementsCount() {
-        if (falseStatementsBuilder_ == null) {
-          return falseStatements_.size();
-        } else {
-          return falseStatementsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getFalseStatements(int index) {
-        if (falseStatementsBuilder_ == null) {
-          return falseStatements_.get(index);
-        } else {
-          return falseStatementsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public Builder setFalseStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (falseStatementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFalseStatementsIsMutable();
-          falseStatements_.set(index, value);
-          onChanged();
-        } else {
-          falseStatementsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public Builder setFalseStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (falseStatementsBuilder_ == null) {
-          ensureFalseStatementsIsMutable();
-          falseStatements_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          falseStatementsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public Builder addFalseStatements(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (falseStatementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFalseStatementsIsMutable();
-          falseStatements_.add(value);
-          onChanged();
-        } else {
-          falseStatementsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public Builder addFalseStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (falseStatementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFalseStatementsIsMutable();
-          falseStatements_.add(index, value);
-          onChanged();
-        } else {
-          falseStatementsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public Builder addFalseStatements(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (falseStatementsBuilder_ == null) {
-          ensureFalseStatementsIsMutable();
-          falseStatements_.add(builderForValue.build());
-          onChanged();
-        } else {
-          falseStatementsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public Builder addFalseStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (falseStatementsBuilder_ == null) {
-          ensureFalseStatementsIsMutable();
-          falseStatements_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          falseStatementsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public Builder addAllFalseStatements(
-          java.lang.Iterable<? extends br.com.igorbonadio.likely.lklast.LikelyAst.Expression> values) {
-        if (falseStatementsBuilder_ == null) {
-          ensureFalseStatementsIsMutable();
-          super.addAll(values, falseStatements_);
-          onChanged();
-        } else {
-          falseStatementsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public Builder clearFalseStatements() {
-        if (falseStatementsBuilder_ == null) {
-          falseStatements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          falseStatementsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public Builder removeFalseStatements(int index) {
-        if (falseStatementsBuilder_ == null) {
-          ensureFalseStatementsIsMutable();
-          falseStatements_.remove(index);
-          onChanged();
-        } else {
-          falseStatementsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getFalseStatementsBuilder(
-          int index) {
-        return getFalseStatementsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getFalseStatementsOrBuilder(
-          int index) {
-        if (falseStatementsBuilder_ == null) {
-          return falseStatements_.get(index);  } else {
-          return falseStatementsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-           getFalseStatementsOrBuilderList() {
-        if (falseStatementsBuilder_ != null) {
-          return falseStatementsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(falseStatements_);
-        }
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addFalseStatementsBuilder() {
-        return getFalseStatementsFieldBuilder().addBuilder(
-            br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addFalseStatementsBuilder(
-          int index) {
-        return getFalseStatementsFieldBuilder().addBuilder(
-            index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression false_statements = 3;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder> 
-           getFalseStatementsBuilderList() {
-        return getFalseStatementsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getFalseStatementsFieldBuilder() {
-        if (falseStatementsBuilder_ == null) {
-          falseStatementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  falseStatements_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
-                  getParentForChildren(),
-                  isClean());
-          falseStatements_ = null;
-        }
-        return falseStatementsBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:IfExpression)
-    }
-
-    static {
-      defaultInstance = new IfExpression(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:IfExpression)
-  }
-
-  public interface ForExpressionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required string variable = 1;
-    /**
-     * <code>required string variable = 1;</code>
-     */
-    boolean hasVariable();
-    /**
-     * <code>required string variable = 1;</code>
-     */
-    java.lang.String getVariable();
-    /**
-     * <code>required string variable = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getVariableBytes();
-
-    // required .Expression lower_bound = 2;
-    /**
-     * <code>required .Expression lower_bound = 2;</code>
-     */
-    boolean hasLowerBound();
-    /**
-     * <code>required .Expression lower_bound = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getLowerBound();
-    /**
-     * <code>required .Expression lower_bound = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getLowerBoundOrBuilder();
-
-    // required .Expression upper_bound = 3;
-    /**
-     * <code>required .Expression upper_bound = 3;</code>
-     */
-    boolean hasUpperBound();
-    /**
-     * <code>required .Expression upper_bound = 3;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getUpperBound();
-    /**
-     * <code>required .Expression upper_bound = 3;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getUpperBoundOrBuilder();
-
-    // repeated .Expression statements = 4;
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
-        getStatementsList();
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getStatements(int index);
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    int getStatementsCount();
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getStatementsOrBuilderList();
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getStatementsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code ForExpression}
-   */
-  public static final class ForExpression extends
-      com.google.protobuf.GeneratedMessage
-      implements ForExpressionOrBuilder {
-    // Use ForExpression.newBuilder() to construct.
-    private ForExpression(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private ForExpression(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final ForExpression defaultInstance;
-    public static ForExpression getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public ForExpression getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ForExpression(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              variable_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = lowerBound_.toBuilder();
-              }
-              lowerBound_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(lowerBound_);
-                lowerBound_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-            case 26: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                subBuilder = upperBound_.toBuilder();
-              }
-              upperBound_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(upperBound_);
-                upperBound_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000004;
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                statements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              statements_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          statements_ = java.util.Collections.unmodifiableList(statements_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ForExpression_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ForExpression_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.class, br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<ForExpression> PARSER =
-        new com.google.protobuf.AbstractParser<ForExpression>() {
-      public ForExpression parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ForExpression(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ForExpression> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // required string variable = 1;
-    public static final int VARIABLE_FIELD_NUMBER = 1;
-    private java.lang.Object variable_;
-    /**
-     * <code>required string variable = 1;</code>
-     */
-    public boolean hasVariable() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required string variable = 1;</code>
-     */
-    public java.lang.String getVariable() {
-      java.lang.Object ref = variable_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          variable_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string variable = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getVariableBytes() {
-      java.lang.Object ref = variable_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        variable_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // required .Expression lower_bound = 2;
-    public static final int LOWER_BOUND_FIELD_NUMBER = 2;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression lowerBound_;
-    /**
-     * <code>required .Expression lower_bound = 2;</code>
-     */
-    public boolean hasLowerBound() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .Expression lower_bound = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getLowerBound() {
-      return lowerBound_;
-    }
-    /**
-     * <code>required .Expression lower_bound = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getLowerBoundOrBuilder() {
-      return lowerBound_;
-    }
-
-    // required .Expression upper_bound = 3;
-    public static final int UPPER_BOUND_FIELD_NUMBER = 3;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression upperBound_;
-    /**
-     * <code>required .Expression upper_bound = 3;</code>
-     */
-    public boolean hasUpperBound() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required .Expression upper_bound = 3;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getUpperBound() {
-      return upperBound_;
-    }
-    /**
-     * <code>required .Expression upper_bound = 3;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getUpperBoundOrBuilder() {
-      return upperBound_;
-    }
-
-    // repeated .Expression statements = 4;
-    public static final int STATEMENTS_FIELD_NUMBER = 4;
-    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> statements_;
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getStatementsList() {
-      return statements_;
-    }
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getStatementsOrBuilderList() {
-      return statements_;
-    }
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    public int getStatementsCount() {
-      return statements_.size();
-    }
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getStatements(int index) {
-      return statements_.get(index);
-    }
-    /**
-     * <code>repeated .Expression statements = 4;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getStatementsOrBuilder(
-        int index) {
-      return statements_.get(index);
-    }
-
-    private void initFields() {
-      variable_ = "";
-      lowerBound_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      upperBound_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      statements_ = java.util.Collections.emptyList();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasVariable()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasLowerBound()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasUpperBound()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getLowerBound().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getUpperBound().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getStatementsCount(); i++) {
-        if (!getStatements(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getVariableBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, lowerBound_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, upperBound_);
-      }
-      for (int i = 0; i < statements_.size(); i++) {
-        output.writeMessage(4, statements_.get(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getVariableBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, lowerBound_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, upperBound_);
-      }
-      for (int i = 0; i < statements_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, statements_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code ForExpression}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.ForExpressionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ForExpression_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ForExpression_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.class, br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getLowerBoundFieldBuilder();
-          getUpperBoundFieldBuilder();
-          getStatementsFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        variable_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (lowerBoundBuilder_ == null) {
-          lowerBound_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          lowerBoundBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (upperBoundBuilder_ == null) {
-          upperBound_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          upperBoundBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        if (statementsBuilder_ == null) {
-          statements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          statementsBuilder_.clear();
-        }
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_ForExpression_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression result = new br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.variable_ = variable_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        if (lowerBoundBuilder_ == null) {
-          result.lowerBound_ = lowerBound_;
-        } else {
-          result.lowerBound_ = lowerBoundBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        if (upperBoundBuilder_ == null) {
-          result.upperBound_ = upperBound_;
-        } else {
-          result.upperBound_ = upperBoundBuilder_.build();
-        }
-        if (statementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            statements_ = java.util.Collections.unmodifiableList(statements_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.statements_ = statements_;
-        } else {
-          result.statements_ = statementsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression.getDefaultInstance()) return this;
-        if (other.hasVariable()) {
-          bitField0_ |= 0x00000001;
-          variable_ = other.variable_;
-          onChanged();
-        }
-        if (other.hasLowerBound()) {
-          mergeLowerBound(other.getLowerBound());
-        }
-        if (other.hasUpperBound()) {
-          mergeUpperBound(other.getUpperBound());
-        }
-        if (statementsBuilder_ == null) {
-          if (!other.statements_.isEmpty()) {
-            if (statements_.isEmpty()) {
-              statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureStatementsIsMutable();
-              statements_.addAll(other.statements_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.statements_.isEmpty()) {
-            if (statementsBuilder_.isEmpty()) {
-              statementsBuilder_.dispose();
-              statementsBuilder_ = null;
-              statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              statementsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getStatementsFieldBuilder() : null;
-            } else {
-              statementsBuilder_.addAllMessages(other.statements_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasVariable()) {
-          
-          return false;
-        }
-        if (!hasLowerBound()) {
-          
-          return false;
-        }
-        if (!hasUpperBound()) {
-          
-          return false;
-        }
-        if (!getLowerBound().isInitialized()) {
-          
-          return false;
-        }
-        if (!getUpperBound().isInitialized()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getStatementsCount(); i++) {
-          if (!getStatements(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.ForExpression) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required string variable = 1;
-      private java.lang.Object variable_ = "";
-      /**
-       * <code>required string variable = 1;</code>
-       */
-      public boolean hasVariable() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required string variable = 1;</code>
-       */
-      public java.lang.String getVariable() {
-        java.lang.Object ref = variable_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          variable_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>required string variable = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getVariableBytes() {
-        java.lang.Object ref = variable_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          variable_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string variable = 1;</code>
-       */
-      public Builder setVariable(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        variable_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string variable = 1;</code>
-       */
-      public Builder clearVariable() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        variable_ = getDefaultInstance().getVariable();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string variable = 1;</code>
-       */
-      public Builder setVariableBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        variable_ = value;
-        onChanged();
-        return this;
-      }
-
-      // required .Expression lower_bound = 2;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression lowerBound_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> lowerBoundBuilder_;
-      /**
-       * <code>required .Expression lower_bound = 2;</code>
-       */
-      public boolean hasLowerBound() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .Expression lower_bound = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getLowerBound() {
-        if (lowerBoundBuilder_ == null) {
-          return lowerBound_;
-        } else {
-          return lowerBoundBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression lower_bound = 2;</code>
-       */
-      public Builder setLowerBound(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (lowerBoundBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          lowerBound_ = value;
-          onChanged();
-        } else {
-          lowerBoundBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .Expression lower_bound = 2;</code>
-       */
-      public Builder setLowerBound(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (lowerBoundBuilder_ == null) {
-          lowerBound_ = builderForValue.build();
-          onChanged();
-        } else {
-          lowerBoundBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .Expression lower_bound = 2;</code>
-       */
-      public Builder mergeLowerBound(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (lowerBoundBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              lowerBound_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            lowerBound_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(lowerBound_).mergeFrom(value).buildPartial();
-          } else {
-            lowerBound_ = value;
-          }
-          onChanged();
-        } else {
-          lowerBoundBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .Expression lower_bound = 2;</code>
-       */
-      public Builder clearLowerBound() {
-        if (lowerBoundBuilder_ == null) {
-          lowerBound_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          lowerBoundBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      /**
-       * <code>required .Expression lower_bound = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getLowerBoundBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getLowerBoundFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression lower_bound = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getLowerBoundOrBuilder() {
-        if (lowerBoundBuilder_ != null) {
-          return lowerBoundBuilder_.getMessageOrBuilder();
-        } else {
-          return lowerBound_;
-        }
-      }
-      /**
-       * <code>required .Expression lower_bound = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getLowerBoundFieldBuilder() {
-        if (lowerBoundBuilder_ == null) {
-          lowerBoundBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  lowerBound_,
-                  getParentForChildren(),
-                  isClean());
-          lowerBound_ = null;
-        }
-        return lowerBoundBuilder_;
-      }
-
-      // required .Expression upper_bound = 3;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression upperBound_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> upperBoundBuilder_;
-      /**
-       * <code>required .Expression upper_bound = 3;</code>
-       */
-      public boolean hasUpperBound() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required .Expression upper_bound = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getUpperBound() {
-        if (upperBoundBuilder_ == null) {
-          return upperBound_;
-        } else {
-          return upperBoundBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression upper_bound = 3;</code>
-       */
-      public Builder setUpperBound(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (upperBoundBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          upperBound_ = value;
-          onChanged();
-        } else {
-          upperBoundBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>required .Expression upper_bound = 3;</code>
-       */
-      public Builder setUpperBound(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (upperBoundBuilder_ == null) {
-          upperBound_ = builderForValue.build();
-          onChanged();
-        } else {
-          upperBoundBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>required .Expression upper_bound = 3;</code>
-       */
-      public Builder mergeUpperBound(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (upperBoundBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              upperBound_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            upperBound_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(upperBound_).mergeFrom(value).buildPartial();
-          } else {
-            upperBound_ = value;
-          }
-          onChanged();
-        } else {
-          upperBoundBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>required .Expression upper_bound = 3;</code>
-       */
-      public Builder clearUpperBound() {
-        if (upperBoundBuilder_ == null) {
-          upperBound_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          upperBoundBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      /**
-       * <code>required .Expression upper_bound = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getUpperBoundBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getUpperBoundFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression upper_bound = 3;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getUpperBoundOrBuilder() {
-        if (upperBoundBuilder_ != null) {
-          return upperBoundBuilder_.getMessageOrBuilder();
-        } else {
-          return upperBound_;
-        }
-      }
-      /**
-       * <code>required .Expression upper_bound = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getUpperBoundFieldBuilder() {
-        if (upperBoundBuilder_ == null) {
-          upperBoundBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  upperBound_,
-                  getParentForChildren(),
-                  isClean());
-          upperBound_ = null;
-        }
-        return upperBoundBuilder_;
-      }
-
-      // repeated .Expression statements = 4;
-      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> statements_ =
-        java.util.Collections.emptyList();
-      private void ensureStatementsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          statements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(statements_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> statementsBuilder_;
-
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getStatementsList() {
-        if (statementsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(statements_);
-        } else {
-          return statementsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public int getStatementsCount() {
-        if (statementsBuilder_ == null) {
-          return statements_.size();
-        } else {
-          return statementsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getStatements(int index) {
-        if (statementsBuilder_ == null) {
-          return statements_.get(index);
-        } else {
-          return statementsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public Builder setStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (statementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStatementsIsMutable();
-          statements_.set(index, value);
-          onChanged();
-        } else {
-          statementsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public Builder setStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          statementsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public Builder addStatements(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (statementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStatementsIsMutable();
-          statements_.add(value);
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public Builder addStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (statementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStatementsIsMutable();
-          statements_.add(index, value);
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public Builder addStatements(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.add(builderForValue.build());
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public Builder addStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public Builder addAllStatements(
-          java.lang.Iterable<? extends br.com.igorbonadio.likely.lklast.LikelyAst.Expression> values) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          super.addAll(values, statements_);
-          onChanged();
-        } else {
-          statementsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public Builder clearStatements() {
-        if (statementsBuilder_ == null) {
-          statements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          statementsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public Builder removeStatements(int index) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.remove(index);
-          onChanged();
-        } else {
-          statementsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getStatementsBuilder(
-          int index) {
-        return getStatementsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getStatementsOrBuilder(
-          int index) {
-        if (statementsBuilder_ == null) {
-          return statements_.get(index);  } else {
-          return statementsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-           getStatementsOrBuilderList() {
-        if (statementsBuilder_ != null) {
-          return statementsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(statements_);
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addStatementsBuilder() {
-        return getStatementsFieldBuilder().addBuilder(
-            br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addStatementsBuilder(
-          int index) {
-        return getStatementsFieldBuilder().addBuilder(
-            index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression statements = 4;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder> 
-           getStatementsBuilderList() {
-        return getStatementsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getStatementsFieldBuilder() {
-        if (statementsBuilder_ == null) {
-          statementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  statements_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
-                  getParentForChildren(),
-                  isClean());
-          statements_ = null;
-        }
-        return statementsBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:ForExpression)
-    }
-
-    static {
-      defaultInstance = new ForExpression(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:ForExpression)
-  }
-
-  public interface WhileExpressionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // required .Expression condition = 1;
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    boolean hasCondition();
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getCondition();
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getConditionOrBuilder();
-
-    // repeated .Expression statements = 2;
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
-        getStatementsList();
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getStatements(int index);
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    int getStatementsCount();
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getStatementsOrBuilderList();
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getStatementsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code WhileExpression}
-   */
-  public static final class WhileExpression extends
-      com.google.protobuf.GeneratedMessage
-      implements WhileExpressionOrBuilder {
-    // Use WhileExpression.newBuilder() to construct.
-    private WhileExpression(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private WhileExpression(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final WhileExpression defaultInstance;
-    public static WhileExpression getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public WhileExpression getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private WhileExpression(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = condition_.toBuilder();
-              }
-              condition_ = input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(condition_);
-                condition_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                statements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              statements_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          statements_ = java.util.Collections.unmodifiableList(statements_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_WhileExpression_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_WhileExpression_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.class, br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<WhileExpression> PARSER =
-        new com.google.protobuf.AbstractParser<WhileExpression>() {
-      public WhileExpression parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WhileExpression(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<WhileExpression> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    // required .Expression condition = 1;
-    public static final int CONDITION_FIELD_NUMBER = 1;
-    private br.com.igorbonadio.likely.lklast.LikelyAst.Expression condition_;
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    public boolean hasCondition() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getCondition() {
-      return condition_;
-    }
-    /**
-     * <code>required .Expression condition = 1;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getConditionOrBuilder() {
-      return condition_;
-    }
-
-    // repeated .Expression statements = 2;
-    public static final int STATEMENTS_FIELD_NUMBER = 2;
-    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> statements_;
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getStatementsList() {
-      return statements_;
-    }
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getStatementsOrBuilderList() {
-      return statements_;
-    }
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public int getStatementsCount() {
-      return statements_.size();
-    }
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getStatements(int index) {
-      return statements_.get(index);
-    }
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getStatementsOrBuilder(
-        int index) {
-      return statements_.get(index);
-    }
-
-    private void initFields() {
-      condition_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      statements_ = java.util.Collections.emptyList();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      if (!hasCondition()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getCondition().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getStatementsCount(); i++) {
-        if (!getStatements(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, condition_);
-      }
-      for (int i = 0; i < statements_.size(); i++) {
-        output.writeMessage(2, statements_.get(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, condition_);
-      }
-      for (int i = 0; i < statements_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, statements_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code WhileExpression}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpressionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_WhileExpression_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_WhileExpression_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.class, br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getConditionFieldBuilder();
-          getStatementsFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        if (conditionBuilder_ == null) {
-          condition_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-        } else {
-          conditionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (statementsBuilder_ == null) {
-          statements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          statementsBuilder_.clear();
-        }
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_WhileExpression_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression result = new br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        if (conditionBuilder_ == null) {
-          result.condition_ = condition_;
-        } else {
-          result.condition_ = conditionBuilder_.build();
-        }
-        if (statementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            statements_ = java.util.Collections.unmodifiableList(statements_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.statements_ = statements_;
-        } else {
-          result.statements_ = statementsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression.getDefaultInstance()) return this;
-        if (other.hasCondition()) {
-          mergeCondition(other.getCondition());
-        }
-        if (statementsBuilder_ == null) {
-          if (!other.statements_.isEmpty()) {
-            if (statements_.isEmpty()) {
-              statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureStatementsIsMutable();
-              statements_.addAll(other.statements_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.statements_.isEmpty()) {
-            if (statementsBuilder_.isEmpty()) {
-              statementsBuilder_.dispose();
-              statementsBuilder_ = null;
-              statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              statementsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getStatementsFieldBuilder() : null;
-            } else {
-              statementsBuilder_.addAllMessages(other.statements_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasCondition()) {
-          
-          return false;
-        }
-        if (!getCondition().isInitialized()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getStatementsCount(); i++) {
-          if (!getStatements(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.WhileExpression) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // required .Expression condition = 1;
-      private br.com.igorbonadio.likely.lklast.LikelyAst.Expression condition_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> conditionBuilder_;
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public boolean hasCondition() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getCondition() {
-        if (conditionBuilder_ == null) {
-          return condition_;
-        } else {
-          return conditionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public Builder setCondition(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (conditionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          condition_ = value;
-          onChanged();
-        } else {
-          conditionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public Builder setCondition(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (conditionBuilder_ == null) {
-          condition_ = builderForValue.build();
-          onChanged();
-        } else {
-          conditionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public Builder mergeCondition(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (conditionBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              condition_ != br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance()) {
-            condition_ =
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression.newBuilder(condition_).mergeFrom(value).buildPartial();
-          } else {
-            condition_ = value;
-          }
-          onChanged();
-        } else {
-          conditionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public Builder clearCondition() {
-        if (conditionBuilder_ == null) {
-          condition_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
-          onChanged();
-        } else {
-          conditionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getConditionBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getConditionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getConditionOrBuilder() {
-        if (conditionBuilder_ != null) {
-          return conditionBuilder_.getMessageOrBuilder();
-        } else {
-          return condition_;
-        }
-      }
-      /**
-       * <code>required .Expression condition = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getConditionFieldBuilder() {
-        if (conditionBuilder_ == null) {
-          conditionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  condition_,
-                  getParentForChildren(),
-                  isClean());
-          condition_ = null;
-        }
-        return conditionBuilder_;
-      }
-
-      // repeated .Expression statements = 2;
-      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> statements_ =
-        java.util.Collections.emptyList();
-      private void ensureStatementsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          statements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(statements_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> statementsBuilder_;
-
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getStatementsList() {
-        if (statementsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(statements_);
-        } else {
-          return statementsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public int getStatementsCount() {
-        if (statementsBuilder_ == null) {
-          return statements_.size();
-        } else {
-          return statementsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getStatements(int index) {
-        if (statementsBuilder_ == null) {
-          return statements_.get(index);
-        } else {
-          return statementsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public Builder setStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (statementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStatementsIsMutable();
-          statements_.set(index, value);
-          onChanged();
-        } else {
-          statementsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public Builder setStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          statementsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public Builder addStatements(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (statementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStatementsIsMutable();
-          statements_.add(value);
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public Builder addStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (statementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStatementsIsMutable();
-          statements_.add(index, value);
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public Builder addStatements(
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.add(builderForValue.build());
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public Builder addStatements(
-          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public Builder addAllStatements(
-          java.lang.Iterable<? extends br.com.igorbonadio.likely.lklast.LikelyAst.Expression> values) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          super.addAll(values, statements_);
-          onChanged();
-        } else {
-          statementsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public Builder clearStatements() {
-        if (statementsBuilder_ == null) {
-          statements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          statementsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public Builder removeStatements(int index) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.remove(index);
-          onChanged();
-        } else {
-          statementsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getStatementsBuilder(
-          int index) {
-        return getStatementsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getStatementsOrBuilder(
-          int index) {
-        if (statementsBuilder_ == null) {
-          return statements_.get(index);  } else {
-          return statementsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-           getStatementsOrBuilderList() {
-        if (statementsBuilder_ != null) {
-          return statementsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(statements_);
-        }
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addStatementsBuilder() {
-        return getStatementsFieldBuilder().addBuilder(
-            br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addStatementsBuilder(
-          int index) {
-        return getStatementsFieldBuilder().addBuilder(
-            index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Expression statements = 2;</code>
-       */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder> 
-           getStatementsBuilderList() {
-        return getStatementsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getStatementsFieldBuilder() {
-        if (statementsBuilder_ == null) {
-          statementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  statements_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          statements_ = null;
-        }
-        return statementsBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:WhileExpression)
-    }
-
-    static {
-      defaultInstance = new WhileExpression(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:WhileExpression)
-  }
-
-  public interface FunctionDefinitionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-
-    // repeated string parameters = 1;
-    /**
-     * <code>repeated string parameters = 1;</code>
-     */
-    java.util.List<java.lang.String>
-    getParametersList();
-    /**
-     * <code>repeated string parameters = 1;</code>
-     */
-    int getParametersCount();
-    /**
-     * <code>repeated string parameters = 1;</code>
-     */
-    java.lang.String getParameters(int index);
-    /**
-     * <code>repeated string parameters = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getParametersBytes(int index);
-
-    // repeated .Expression statements = 2;
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> 
-        getStatementsList();
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.Expression getStatements(int index);
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    int getStatementsCount();
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getStatementsOrBuilderList();
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getStatementsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code FunctionDefinition}
-   */
-  public static final class FunctionDefinition extends
-      com.google.protobuf.GeneratedMessage
-      implements FunctionDefinitionOrBuilder {
-    // Use FunctionDefinition.newBuilder() to construct.
-    private FunctionDefinition(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private FunctionDefinition(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final FunctionDefinition defaultInstance;
-    public static FunctionDefinition getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public FunctionDefinition getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private FunctionDefinition(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                parameters_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              parameters_.add(input.readBytes());
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                statements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              statements_.add(input.readMessage(br.com.igorbonadio.likely.lklast.LikelyAst.Expression.PARSER, extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          parameters_ = new com.google.protobuf.UnmodifiableLazyStringList(parameters_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          statements_ = java.util.Collections.unmodifiableList(statements_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionDefinition_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionDefinition_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.class, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<FunctionDefinition> PARSER =
-        new com.google.protobuf.AbstractParser<FunctionDefinition>() {
-      public FunctionDefinition parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FunctionDefinition(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FunctionDefinition> getParserForType() {
-      return PARSER;
-    }
-
-    // repeated string parameters = 1;
-    public static final int PARAMETERS_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList parameters_;
-    /**
-     * <code>repeated string parameters = 1;</code>
-     */
-    public java.util.List<java.lang.String>
-        getParametersList() {
-      return parameters_;
-    }
-    /**
-     * <code>repeated string parameters = 1;</code>
-     */
-    public int getParametersCount() {
-      return parameters_.size();
-    }
-    /**
-     * <code>repeated string parameters = 1;</code>
-     */
-    public java.lang.String getParameters(int index) {
-      return parameters_.get(index);
-    }
-    /**
-     * <code>repeated string parameters = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getParametersBytes(int index) {
-      return parameters_.getByteString(index);
-    }
-
-    // repeated .Expression statements = 2;
-    public static final int STATEMENTS_FIELD_NUMBER = 2;
-    private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> statements_;
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getStatementsList() {
-      return statements_;
-    }
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-        getStatementsOrBuilderList() {
-      return statements_;
-    }
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public int getStatementsCount() {
-      return statements_.size();
-    }
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getStatements(int index) {
-      return statements_.get(index);
-    }
-    /**
-     * <code>repeated .Expression statements = 2;</code>
-     */
-    public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getStatementsOrBuilder(
-        int index) {
-      return statements_.get(index);
-    }
-
-    private void initFields() {
-      parameters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      statements_ = java.util.Collections.emptyList();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-
-      for (int i = 0; i < getStatementsCount(); i++) {
-        if (!getStatements(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      for (int i = 0; i < parameters_.size(); i++) {
-        output.writeBytes(1, parameters_.getByteString(i));
-      }
-      for (int i = 0; i < statements_.size(); i++) {
-        output.writeMessage(2, statements_.get(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < parameters_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(parameters_.getByteString(i));
-        }
-        size += dataSize;
-        size += 1 * getParametersList().size();
-      }
-      for (int i = 0; i < statements_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, statements_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code FunctionDefinition}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinitionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionDefinition_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionDefinition_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.class, br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.Builder.class);
-      }
-
-      // Construct using br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getStatementsFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        parameters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (statementsBuilder_ == null) {
-          statements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          statementsBuilder_.clear();
-        }
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.internal_static_FunctionDefinition_descriptor;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition getDefaultInstanceForType() {
-        return br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.getDefaultInstance();
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition build() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition buildPartial() {
-        br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition result = new br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          parameters_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              parameters_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.parameters_ = parameters_;
-        if (statementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            statements_ = java.util.Collections.unmodifiableList(statements_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.statements_ = statements_;
-        } else {
-          result.statements_ = statementsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition) {
-          return mergeFrom((br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition other) {
-        if (other == br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition.getDefaultInstance()) return this;
-        if (!other.parameters_.isEmpty()) {
-          if (parameters_.isEmpty()) {
-            parameters_ = other.parameters_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureParametersIsMutable();
-            parameters_.addAll(other.parameters_);
-          }
-          onChanged();
-        }
-        if (statementsBuilder_ == null) {
-          if (!other.statements_.isEmpty()) {
-            if (statements_.isEmpty()) {
-              statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureStatementsIsMutable();
-              statements_.addAll(other.statements_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.statements_.isEmpty()) {
-            if (statementsBuilder_.isEmpty()) {
-              statementsBuilder_.dispose();
-              statementsBuilder_ = null;
-              statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              statementsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getStatementsFieldBuilder() : null;
-            } else {
-              statementsBuilder_.addAllMessages(other.statements_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        for (int i = 0; i < getStatementsCount(); i++) {
-          if (!getStatements(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.com.igorbonadio.likely.lklast.LikelyAst.FunctionDefinition) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      // repeated string parameters = 1;
-      private com.google.protobuf.LazyStringList parameters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureParametersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          parameters_ = new com.google.protobuf.LazyStringArrayList(parameters_);
-          bitField0_ |= 0x00000001;
+      // repeated string list_of_string = 9;
+      private com.google.protobuf.LazyStringList listOfString_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureListOfStringIsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          listOfString_ = new com.google.protobuf.LazyStringArrayList(listOfString_);
+          bitField0_ |= 0x00000100;
          }
       }
       /**
-       * <code>repeated string parameters = 1;</code>
+       * <code>repeated string list_of_string = 9;</code>
        */
       public java.util.List<java.lang.String>
-          getParametersList() {
-        return java.util.Collections.unmodifiableList(parameters_);
+          getListOfStringList() {
+        return java.util.Collections.unmodifiableList(listOfString_);
       }
       /**
-       * <code>repeated string parameters = 1;</code>
+       * <code>repeated string list_of_string = 9;</code>
        */
-      public int getParametersCount() {
-        return parameters_.size();
+      public int getListOfStringCount() {
+        return listOfString_.size();
       }
       /**
-       * <code>repeated string parameters = 1;</code>
+       * <code>repeated string list_of_string = 9;</code>
        */
-      public java.lang.String getParameters(int index) {
-        return parameters_.get(index);
+      public java.lang.String getListOfString(int index) {
+        return listOfString_.get(index);
       }
       /**
-       * <code>repeated string parameters = 1;</code>
+       * <code>repeated string list_of_string = 9;</code>
        */
       public com.google.protobuf.ByteString
-          getParametersBytes(int index) {
-        return parameters_.getByteString(index);
+          getListOfStringBytes(int index) {
+        return listOfString_.getByteString(index);
       }
       /**
-       * <code>repeated string parameters = 1;</code>
+       * <code>repeated string list_of_string = 9;</code>
        */
-      public Builder setParameters(
+      public Builder setListOfString(
           int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureParametersIsMutable();
-        parameters_.set(index, value);
+  ensureListOfStringIsMutable();
+        listOfString_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string parameters = 1;</code>
+       * <code>repeated string list_of_string = 9;</code>
        */
-      public Builder addParameters(
+      public Builder addListOfString(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureParametersIsMutable();
-        parameters_.add(value);
+  ensureListOfStringIsMutable();
+        listOfString_.add(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string parameters = 1;</code>
+       * <code>repeated string list_of_string = 9;</code>
        */
-      public Builder addAllParameters(
+      public Builder addAllListOfString(
           java.lang.Iterable<java.lang.String> values) {
-        ensureParametersIsMutable();
-        super.addAll(values, parameters_);
+        ensureListOfStringIsMutable();
+        super.addAll(values, listOfString_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string parameters = 1;</code>
+       * <code>repeated string list_of_string = 9;</code>
        */
-      public Builder clearParameters() {
-        parameters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+      public Builder clearListOfString() {
+        listOfString_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string parameters = 1;</code>
+       * <code>repeated string list_of_string = 9;</code>
        */
-      public Builder addParametersBytes(
+      public Builder addListOfStringBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureParametersIsMutable();
-        parameters_.add(value);
+  ensureListOfStringIsMutable();
+        listOfString_.add(value);
         onChanged();
         return this;
       }
 
-      // repeated .Expression statements = 2;
-      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> statements_ =
+      // repeated .Expression block1 = 10;
+      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> block1_ =
         java.util.Collections.emptyList();
-      private void ensureStatementsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          statements_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(statements_);
-          bitField0_ |= 0x00000002;
+      private void ensureBlock1IsMutable() {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+          block1_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(block1_);
+          bitField0_ |= 0x00000200;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> statementsBuilder_;
+          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> block1Builder_;
 
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getStatementsList() {
-        if (statementsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(statements_);
+      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getBlock1List() {
+        if (block1Builder_ == null) {
+          return java.util.Collections.unmodifiableList(block1_);
         } else {
-          return statementsBuilder_.getMessageList();
+          return block1Builder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public int getStatementsCount() {
-        if (statementsBuilder_ == null) {
-          return statements_.size();
+      public int getBlock1Count() {
+        if (block1Builder_ == null) {
+          return block1_.size();
         } else {
-          return statementsBuilder_.getCount();
+          return block1Builder_.getCount();
         }
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getStatements(int index) {
-        if (statementsBuilder_ == null) {
-          return statements_.get(index);
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getBlock1(int index) {
+        if (block1Builder_ == null) {
+          return block1_.get(index);
         } else {
-          return statementsBuilder_.getMessage(index);
+          return block1Builder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public Builder setStatements(
+      public Builder setBlock1(
           int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (statementsBuilder_ == null) {
+        if (block1Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureStatementsIsMutable();
-          statements_.set(index, value);
+          ensureBlock1IsMutable();
+          block1_.set(index, value);
           onChanged();
         } else {
-          statementsBuilder_.setMessage(index, value);
+          block1Builder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public Builder setStatements(
+      public Builder setBlock1(
           int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.set(index, builderForValue.build());
+        if (block1Builder_ == null) {
+          ensureBlock1IsMutable();
+          block1_.set(index, builderForValue.build());
           onChanged();
         } else {
-          statementsBuilder_.setMessage(index, builderForValue.build());
+          block1Builder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public Builder addStatements(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (statementsBuilder_ == null) {
+      public Builder addBlock1(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
+        if (block1Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureStatementsIsMutable();
-          statements_.add(value);
+          ensureBlock1IsMutable();
+          block1_.add(value);
           onChanged();
         } else {
-          statementsBuilder_.addMessage(value);
+          block1Builder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public Builder addStatements(
+      public Builder addBlock1(
           int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
-        if (statementsBuilder_ == null) {
+        if (block1Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureStatementsIsMutable();
-          statements_.add(index, value);
+          ensureBlock1IsMutable();
+          block1_.add(index, value);
           onChanged();
         } else {
-          statementsBuilder_.addMessage(index, value);
+          block1Builder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public Builder addStatements(
+      public Builder addBlock1(
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.add(builderForValue.build());
+        if (block1Builder_ == null) {
+          ensureBlock1IsMutable();
+          block1_.add(builderForValue.build());
           onChanged();
         } else {
-          statementsBuilder_.addMessage(builderForValue.build());
+          block1Builder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public Builder addStatements(
+      public Builder addBlock1(
           int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.add(index, builderForValue.build());
+        if (block1Builder_ == null) {
+          ensureBlock1IsMutable();
+          block1_.add(index, builderForValue.build());
           onChanged();
         } else {
-          statementsBuilder_.addMessage(index, builderForValue.build());
+          block1Builder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public Builder addAllStatements(
+      public Builder addAllBlock1(
           java.lang.Iterable<? extends br.com.igorbonadio.likely.lklast.LikelyAst.Expression> values) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          super.addAll(values, statements_);
+        if (block1Builder_ == null) {
+          ensureBlock1IsMutable();
+          super.addAll(values, block1_);
           onChanged();
         } else {
-          statementsBuilder_.addAllMessages(values);
+          block1Builder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public Builder clearStatements() {
-        if (statementsBuilder_ == null) {
-          statements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+      public Builder clearBlock1() {
+        if (block1Builder_ == null) {
+          block1_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
           onChanged();
         } else {
-          statementsBuilder_.clear();
+          block1Builder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public Builder removeStatements(int index) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.remove(index);
+      public Builder removeBlock1(int index) {
+        if (block1Builder_ == null) {
+          ensureBlock1IsMutable();
+          block1_.remove(index);
           onChanged();
         } else {
-          statementsBuilder_.remove(index);
+          block1Builder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getStatementsBuilder(
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getBlock1Builder(
           int index) {
-        return getStatementsFieldBuilder().getBuilder(index);
+        return getBlock1FieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getStatementsOrBuilder(
+      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getBlock1OrBuilder(
           int index) {
-        if (statementsBuilder_ == null) {
-          return statements_.get(index);  } else {
-          return statementsBuilder_.getMessageOrBuilder(index);
+        if (block1Builder_ == null) {
+          return block1_.get(index);  } else {
+          return block1Builder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
       public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-           getStatementsOrBuilderList() {
-        if (statementsBuilder_ != null) {
-          return statementsBuilder_.getMessageOrBuilderList();
+           getBlock1OrBuilderList() {
+        if (block1Builder_ != null) {
+          return block1Builder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(statements_);
+          return java.util.Collections.unmodifiableList(block1_);
         }
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addStatementsBuilder() {
-        return getStatementsFieldBuilder().addBuilder(
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addBlock1Builder() {
+        return getBlock1FieldBuilder().addBuilder(
             br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
-      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addStatementsBuilder(
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addBlock1Builder(
           int index) {
-        return getStatementsFieldBuilder().addBuilder(
+        return getBlock1FieldBuilder().addBuilder(
             index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
       }
       /**
-       * <code>repeated .Expression statements = 2;</code>
+       * <code>repeated .Expression block1 = 10;</code>
        */
       public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder> 
-           getStatementsBuilderList() {
-        return getStatementsFieldBuilder().getBuilderList();
+           getBlock1BuilderList() {
+        return getBlock1FieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
           br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
-          getStatementsFieldBuilder() {
-        if (statementsBuilder_ == null) {
-          statementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          getBlock1FieldBuilder() {
+        if (block1Builder_ == null) {
+          block1Builder_ = new com.google.protobuf.RepeatedFieldBuilder<
               br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
-                  statements_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  block1_,
+                  ((bitField0_ & 0x00000200) == 0x00000200),
                   getParentForChildren(),
                   isClean());
-          statements_ = null;
+          block1_ = null;
         }
-        return statementsBuilder_;
+        return block1Builder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:FunctionDefinition)
+      // repeated .Expression block2 = 11;
+      private java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> block2_ =
+        java.util.Collections.emptyList();
+      private void ensureBlock2IsMutable() {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+          block2_ = new java.util.ArrayList<br.com.igorbonadio.likely.lklast.LikelyAst.Expression>(block2_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> block2Builder_;
+
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression> getBlock2List() {
+        if (block2Builder_ == null) {
+          return java.util.Collections.unmodifiableList(block2_);
+        } else {
+          return block2Builder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public int getBlock2Count() {
+        if (block2Builder_ == null) {
+          return block2_.size();
+        } else {
+          return block2Builder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression getBlock2(int index) {
+        if (block2Builder_ == null) {
+          return block2_.get(index);
+        } else {
+          return block2Builder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public Builder setBlock2(
+          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
+        if (block2Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlock2IsMutable();
+          block2_.set(index, value);
+          onChanged();
+        } else {
+          block2Builder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public Builder setBlock2(
+          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
+        if (block2Builder_ == null) {
+          ensureBlock2IsMutable();
+          block2_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          block2Builder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public Builder addBlock2(br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
+        if (block2Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlock2IsMutable();
+          block2_.add(value);
+          onChanged();
+        } else {
+          block2Builder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public Builder addBlock2(
+          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression value) {
+        if (block2Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlock2IsMutable();
+          block2_.add(index, value);
+          onChanged();
+        } else {
+          block2Builder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public Builder addBlock2(
+          br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
+        if (block2Builder_ == null) {
+          ensureBlock2IsMutable();
+          block2_.add(builderForValue.build());
+          onChanged();
+        } else {
+          block2Builder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public Builder addBlock2(
+          int index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder builderForValue) {
+        if (block2Builder_ == null) {
+          ensureBlock2IsMutable();
+          block2_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          block2Builder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public Builder addAllBlock2(
+          java.lang.Iterable<? extends br.com.igorbonadio.likely.lklast.LikelyAst.Expression> values) {
+        if (block2Builder_ == null) {
+          ensureBlock2IsMutable();
+          super.addAll(values, block2_);
+          onChanged();
+        } else {
+          block2Builder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public Builder clearBlock2() {
+        if (block2Builder_ == null) {
+          block2_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          block2Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public Builder removeBlock2(int index) {
+        if (block2Builder_ == null) {
+          ensureBlock2IsMutable();
+          block2_.remove(index);
+          onChanged();
+        } else {
+          block2Builder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder getBlock2Builder(
+          int index) {
+        return getBlock2FieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder getBlock2OrBuilder(
+          int index) {
+        if (block2Builder_ == null) {
+          return block2_.get(index);  } else {
+          return block2Builder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public java.util.List<? extends br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
+           getBlock2OrBuilderList() {
+        if (block2Builder_ != null) {
+          return block2Builder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(block2_);
+        }
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addBlock2Builder() {
+        return getBlock2FieldBuilder().addBuilder(
+            br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder addBlock2Builder(
+          int index) {
+        return getBlock2FieldBuilder().addBuilder(
+            index, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Expression block2 = 11;</code>
+       */
+      public java.util.List<br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder> 
+           getBlock2BuilderList() {
+        return getBlock2FieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder> 
+          getBlock2FieldBuilder() {
+        if (block2Builder_ == null) {
+          block2Builder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              br.com.igorbonadio.likely.lklast.LikelyAst.Expression, br.com.igorbonadio.likely.lklast.LikelyAst.Expression.Builder, br.com.igorbonadio.likely.lklast.LikelyAst.ExpressionOrBuilder>(
+                  block2_,
+                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  getParentForChildren(),
+                  isClean());
+          block2_ = null;
+        }
+        return block2Builder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Expression)
     }
 
     static {
-      defaultInstance = new FunctionDefinition(true);
+      defaultInstance = new Expression(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:FunctionDefinition)
+    // @@protoc_insertion_point(class_scope:Expression)
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
@@ -14343,56 +4810,6 @@ public final class LikelyAst {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Expression_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Builtin_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Builtin_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Pair_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Pair_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Attribution_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Attribution_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_BinaryOperation_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_BinaryOperation_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_FunctionCall_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_FunctionCall_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_ObjectMessage_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ObjectMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_IfExpression_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_IfExpression_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_ForExpression_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ForExpression_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_WhileExpression_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_WhileExpression_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_FunctionDefinition_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_FunctionDefinition_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14406,54 +4823,26 @@ public final class LikelyAst {
       "d_packages\030\001 \003(\0132\016.ImportPackage\022\037\n\nstat" +
       "ements\030\002 \003(\0132\013.Expression\";\n\rImportPacka" +
       "ge\022\024\n\014package_name\030\001 \002(\t\022\024\n\014package_path" +
-      "\030\002 \002(\t\"\262\005\n\nExpression\022-\n\ttype_code\030\001 \002(\016" +
-      "2\032.Expression.ExpressionType\022\031\n\007builtin\030" +
-      "\002 \001(\0132\010.Builtin\022!\n\013attribution\030\003 \001(\0132\014.A" +
-      "ttribution\022*\n\020binary_operation\030\004 \001(\0132\020.B" +
-      "inaryOperation\022$\n\rfunction_call\030\005 \001(\0132\r." +
-      "FunctionCall\022$\n\017return_operator\030\006 \001(\0132\013.",
-      "Expression\022&\n\016object_message\030\007 \001(\0132\016.Obj" +
-      "ectMessage\022$\n\rif_expression\030\010 \001(\0132\r.IfEx" +
-      "pression\022&\n\016for_expression\030\t \001(\0132\016.ForEx" +
-      "pression\022*\n\020while_expression\030\n \001(\0132\020.Whi" +
-      "leExpression\0220\n\023function_definition\030\013 \001(" +
-      "\0132\023.FunctionDefinition\022\n\n\002id\030\014 \001(\t\"\336\001\n\016E" +
-      "xpressionType\022\013\n\007BUILTIN\020\000\022\017\n\013ATTRIBUTIO" +
-      "N\020\001\022\024\n\020BINARY_OPERATION\020\002\022\021\n\rFUNCTION_CA" +
-      "LL\020\003\022\023\n\017RETURN_OPERATOR\020\004\022\022\n\016OBJECT_MESS" +
-      "AGE\020\005\022\021\n\rIF_EXPRESSION\020\006\022\022\n\016FOR_EXPRESSI",
-      "ON\020\007\022\024\n\020WHILE_EXPRESSION\020\010\022\027\n\023FUNCTION_D" +
-      "EFINITION\020\t\022\006\n\002ID\020\n\"\375\001\n\007Builtin\022\'\n\ttype_" +
-      "code\030\001 \002(\0162\024.Builtin.BuiltinType\022\017\n\007inte" +
-      "ger\030\002 \001(\003\022\014\n\004real\030\003 \001(\001\022\016\n\006string\030\004 \001(\t\022" +
-      "\017\n\007boolean\030\005 \001(\010\022\035\n\010sequence\030\006 \003(\0132\013.Exp" +
-      "ression\022\023\n\004pair\030\007 \001(\0132\005.Pair\"U\n\013BuiltinT" +
-      "ype\022\013\n\007INTEGER\020\000\022\010\n\004REAL\020\001\022\n\n\006STRING\020\002\022\013" +
-      "\n\007BOOLEAN\020\003\022\014\n\010SEQUENCE\020\004\022\010\n\004PAIR\020\005\"<\n\004P" +
-      "air\022\030\n\003key\030\001 \002(\0132\013.Expression\022\032\n\005value\030\002" +
-      " \002(\0132\013.Expression\"B\n\013Attribution\022\027\n\002id\030\001",
-      " \002(\0132\013.Expression\022\032\n\005value\030\002 \002(\0132\013.Expre" +
-      "ssion\"\314\001\n\017BinaryOperation\022\021\n\toperation\030\001" +
-      " \002(\005\022\030\n\003lhs\030\002 \002(\0132\013.Expression\022\030\n\003rhs\030\003 " +
-      "\002(\0132\013.Expression\"r\n\rOperationType\022\007\n\003ADD" +
-      "\020\000\022\007\n\003SUB\020\001\022\007\n\003MUL\020\002\022\007\n\003DIV\020\003\022\007\n\003EQL\020\004\022\007" +
-      "\n\003NEQ\020\005\022\007\n\003GEQ\020\006\022\007\n\003LEQ\020\007\022\007\n\003GRE\020\010\022\007\n\003LE" +
-      "S\020\t\022\007\n\003STH\020\n\"M\n\014FunctionCall\022\035\n\010function" +
-      "\030\001 \002(\0132\013.Expression\022\036\n\targuments\030\002 \003(\0132\013" +
-      ".Expression\"=\n\rObjectMessage\022\033\n\006object\030\001" +
-      " \002(\0132\013.Expression\022\017\n\007message\030\002 \002(\t\"{\n\014If",
-      "Expression\022\036\n\tcondition\030\001 \002(\0132\013.Expressi" +
-      "on\022$\n\017true_statements\030\002 \003(\0132\013.Expression" +
-      "\022%\n\020false_statements\030\003 \003(\0132\013.Expression\"" +
-      "\206\001\n\rForExpression\022\020\n\010variable\030\001 \002(\t\022 \n\013l" +
-      "ower_bound\030\002 \002(\0132\013.Expression\022 \n\013upper_b" +
-      "ound\030\003 \002(\0132\013.Expression\022\037\n\nstatements\030\004 " +
-      "\003(\0132\013.Expression\"R\n\017WhileExpression\022\036\n\tc" +
-      "ondition\030\001 \002(\0132\013.Expression\022\037\n\nstatement" +
-      "s\030\002 \003(\0132\013.Expression\"I\n\022FunctionDefiniti" +
-      "on\022\022\n\nparameters\030\001 \003(\t\022\037\n\nstatements\030\002 \003",
-      "(\0132\013.ExpressionB\"\n br.com.igorbonadio.li" +
-      "kely.lklast"
+      "\030\002 \002(\t\"\315\005\n\nExpression\022\036\n\004type\030\001 \002(\0162\020.Ex" +
+      "pression.Type\022\017\n\007integer\030\002 \001(\003\022\014\n\004real\030\003" +
+      " \001(\001\022\016\n\006string\030\004 \001(\t\022\017\n\007booelan\030\005 \001(\010\022(\n" +
+      "\023list_of_expressions\030\006 \003(\0132\013.Expression\022" +
+      "\030\n\003lhs\030\007 \001(\0132\013.Expression\022\030\n\003rhs\030\010 \001(\0132\013" +
+      ".Expression\022\026\n\016list_of_string\030\t \003(\t\022\033\n\006b",
+      "lock1\030\n \003(\0132\013.Expression\022\033\n\006block2\030\013 \003(\013" +
+      "2\013.Expression\"\256\003\n\004Type\022\006\n\002ID\020\000\022\013\n\007INTEGE" +
+      "R\020\001\022\010\n\004REAL\020\002\022\n\n\006STRING\020\003\022\013\n\007BOOLEAN\020\004\022\014" +
+      "\n\010SEQUENCE\020\005\022\010\n\004HASH\020\006\022\010\n\004PAIR\020\007\022\017\n\013ATTR" +
+      "IBUTION\020\010\022\014\n\010ADDITION\020\t\022\017\n\013SUBTRACTION\020\n" +
+      "\022\022\n\016MULTIPLICATION\020\013\022\014\n\010DIVISION\020\014\022\014\n\010EQ" +
+      "UAL_TO\020\r\022\020\n\014NOT_EQUAL_TO\020\016\022\020\n\014GREATER_TH" +
+      "AN\020\017\022\034\n\030GREATER_THAN_OR_EQUAL_TO\020\020\022\r\n\tLE" +
+      "SS_THAN\020\021\022\031\n\025LESS_THAN_OR_EQUAL_TO\020\022\022\007\n\003" +
+      "AND\020\023\022\006\n\002OR\020\024\022\007\n\003NOT\020\025\022\027\n\023FUNCTION_DEFIN",
+      "ITION\020\026\022\021\n\rFUNCTION_CALL\020\027\022\n\n\006RETURN\020\030\022\022" +
+      "\n\016OBJECT_MESSAGE\020\031\022\006\n\002IF\020\032\022\007\n\003FOR\020\033\022\t\n\005W" +
+      "HILE\020\034B\"\n br.com.igorbonadio.likely.lkla" +
+      "st"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -14477,67 +4866,7 @@ public final class LikelyAst {
           internal_static_Expression_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_Expression_descriptor,
-              new java.lang.String[] { "TypeCode", "Builtin", "Attribution", "BinaryOperation", "FunctionCall", "ReturnOperator", "ObjectMessage", "IfExpression", "ForExpression", "WhileExpression", "FunctionDefinition", "Id", });
-          internal_static_Builtin_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Builtin_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Builtin_descriptor,
-              new java.lang.String[] { "TypeCode", "Integer", "Real", "String", "Boolean", "Sequence", "Pair", });
-          internal_static_Pair_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_Pair_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Pair_descriptor,
-              new java.lang.String[] { "Key", "Value", });
-          internal_static_Attribution_descriptor =
-            getDescriptor().getMessageTypes().get(5);
-          internal_static_Attribution_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Attribution_descriptor,
-              new java.lang.String[] { "Id", "Value", });
-          internal_static_BinaryOperation_descriptor =
-            getDescriptor().getMessageTypes().get(6);
-          internal_static_BinaryOperation_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_BinaryOperation_descriptor,
-              new java.lang.String[] { "Operation", "Lhs", "Rhs", });
-          internal_static_FunctionCall_descriptor =
-            getDescriptor().getMessageTypes().get(7);
-          internal_static_FunctionCall_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_FunctionCall_descriptor,
-              new java.lang.String[] { "Function", "Arguments", });
-          internal_static_ObjectMessage_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_ObjectMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_ObjectMessage_descriptor,
-              new java.lang.String[] { "Object", "Message", });
-          internal_static_IfExpression_descriptor =
-            getDescriptor().getMessageTypes().get(9);
-          internal_static_IfExpression_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_IfExpression_descriptor,
-              new java.lang.String[] { "Condition", "TrueStatements", "FalseStatements", });
-          internal_static_ForExpression_descriptor =
-            getDescriptor().getMessageTypes().get(10);
-          internal_static_ForExpression_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_ForExpression_descriptor,
-              new java.lang.String[] { "Variable", "LowerBound", "UpperBound", "Statements", });
-          internal_static_WhileExpression_descriptor =
-            getDescriptor().getMessageTypes().get(11);
-          internal_static_WhileExpression_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_WhileExpression_descriptor,
-              new java.lang.String[] { "Condition", "Statements", });
-          internal_static_FunctionDefinition_descriptor =
-            getDescriptor().getMessageTypes().get(12);
-          internal_static_FunctionDefinition_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_FunctionDefinition_descriptor,
-              new java.lang.String[] { "Parameters", "Statements", });
+              new java.lang.String[] { "Type", "Integer", "Real", "String", "Booelan", "ListOfExpressions", "Lhs", "Rhs", "ListOfString", "Block1", "Block2", });
           return null;
         }
       };

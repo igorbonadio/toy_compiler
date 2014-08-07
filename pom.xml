@@ -40,7 +40,7 @@
               <goal>antlr4</goal>
             </goals>
             <configuration>
-              <visitor>false</visitor>
+              <visitor>true</visitor>
             </configuration>
           </execution>
         </executions>
