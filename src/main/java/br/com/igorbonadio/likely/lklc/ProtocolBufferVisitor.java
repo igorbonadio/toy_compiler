@@ -46,7 +46,9 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       expr.setType(Expression.Type.ID)
           .setString(ctx.ID().getText());
     } else if (ctx.ARROW() != null) {
-
+      expr.setType(Expression.Type.PAIR)
+          .setLhs(visit(ctx.expr(0)))
+          .setRhs(visit(ctx.expr(1)));
     } else if (ctx.op() != null) {
 
     } else if (ctx.OPEN_PAREN() != null) {
