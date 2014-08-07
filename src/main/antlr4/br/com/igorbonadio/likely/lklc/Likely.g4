@@ -78,7 +78,7 @@ expr : ID
      | seq
      | expr ARROW expr
      | expr op expr
-     | '(' expr ')'
+     | OPEN_PAREN expr CLOSE_PAREN
      | func_call
      | dist
      | return_expr

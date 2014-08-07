@@ -24,11 +24,49 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     Expression.Builder expr = Expression.newBuilder();
     if (ctx.literal() != null) {
       expr = visit(ctx.literal());
+    } else if (ctx.attr() != null) {
+      expr = visit(ctx.attr());
+    } else if (ctx.seq() != null) {
+      expr = visit(ctx.seq());
+    } else if (ctx.func_call() != null) {
+      expr = visit(ctx.func_call());
+    } else if (ctx.func_call() != null) {
+      expr = visit(ctx.func_call());
+    } else if (ctx.dist() != null) {
+      expr = visit(ctx.dist());
+    } else if (ctx.return_expr() != null) {
+      expr = visit(ctx.return_expr());
+    } else if (ctx.obj_msg() != null) {
+      expr = visit(ctx.obj_msg());
+    } else if (ctx.constructor_call() != null) {
+      expr = visit(ctx.constructor_call());
+    } else if (ctx.comp_expr() != null) {
+      expr = visit(ctx.comp_expr());
     } else if (ctx.ID() != null) {
       expr.setType(Expression.Type.ID)
           .setString(ctx.ID().getText());
+    } else if (ctx.ARROW() != null) {
+
+    } else if (ctx.op() != null) {
+
+    } else if (ctx.OPEN_PAREN() != null) {
+
     }
     return expr;
+  }
+
+  public Expression.Builder visitAttr(LikelyParser.AttrContext ctx) {
+    Expression.Builder container = Expression.newBuilder();
+    if (ctx.ID() != null) {
+      container.setType(Expression.Type.ID)
+               .setString(ctx.ID().getText());
+    } else if (ctx.obj_msg() != null) {
+      container = visit(ctx.obj_msg());
+    }
+    return Expression.newBuilder()
+      .setType(Expression.Type.ATTRIBUTION)
+      .setLhs(container)
+      .setRhs(visit(ctx.expr()));
   }
 
   public Expression.Builder visitLiteral(LikelyParser.LiteralContext ctx) {
