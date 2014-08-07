@@ -1759,15 +1759,15 @@ public final class LikelyAst {
     com.google.protobuf.ByteString
         getStringBytes();
 
-    // optional bool booelan = 5;
+    // optional bool boolean = 5;
     /**
-     * <code>optional bool booelan = 5;</code>
+     * <code>optional bool boolean = 5;</code>
      */
-    boolean hasBooelan();
+    boolean hasBoolean();
     /**
-     * <code>optional bool booelan = 5;</code>
+     * <code>optional bool boolean = 5;</code>
      */
-    boolean getBooelan();
+    boolean getBoolean();
 
     // repeated .Expression list_of_expressions = 6;
     /**
@@ -1971,7 +1971,7 @@ public final class LikelyAst {
             }
             case 40: {
               bitField0_ |= 0x00000010;
-              booelan_ = input.readBool();
+              boolean_ = input.readBool();
               break;
             }
             case 50: {
@@ -2732,20 +2732,20 @@ public final class LikelyAst {
       }
     }
 
-    // optional bool booelan = 5;
-    public static final int BOOELAN_FIELD_NUMBER = 5;
-    private boolean booelan_;
+    // optional bool boolean = 5;
+    public static final int BOOLEAN_FIELD_NUMBER = 5;
+    private boolean boolean_;
     /**
-     * <code>optional bool booelan = 5;</code>
+     * <code>optional bool boolean = 5;</code>
      */
-    public boolean hasBooelan() {
+    public boolean hasBoolean() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional bool booelan = 5;</code>
+     * <code>optional bool boolean = 5;</code>
      */
-    public boolean getBooelan() {
-      return booelan_;
+    public boolean getBoolean() {
+      return boolean_;
     }
 
     // repeated .Expression list_of_expressions = 6;
@@ -2935,7 +2935,7 @@ public final class LikelyAst {
       integer_ = 0L;
       real_ = 0D;
       string_ = "";
-      booelan_ = false;
+      boolean_ = false;
       listOfExpressions_ = java.util.Collections.emptyList();
       lhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
       rhs_ = br.com.igorbonadio.likely.lklast.LikelyAst.Expression.getDefaultInstance();
@@ -3002,7 +3002,7 @@ public final class LikelyAst {
         output.writeBytes(4, getStringBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBool(5, booelan_);
+        output.writeBool(5, boolean_);
       }
       for (int i = 0; i < listOfExpressions_.size(); i++) {
         output.writeMessage(6, listOfExpressions_.get(i));
@@ -3049,7 +3049,7 @@ public final class LikelyAst {
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, booelan_);
+          .computeBoolSize(5, boolean_);
       }
       for (int i = 0; i < listOfExpressions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -3209,7 +3209,7 @@ public final class LikelyAst {
         bitField0_ = (bitField0_ & ~0x00000004);
         string_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
-        booelan_ = false;
+        boolean_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
         if (listOfExpressionsBuilder_ == null) {
           listOfExpressions_ = java.util.Collections.emptyList();
@@ -3290,7 +3290,7 @@ public final class LikelyAst {
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.booelan_ = booelan_;
+        result.boolean_ = boolean_;
         if (listOfExpressionsBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020)) {
             listOfExpressions_ = java.util.Collections.unmodifiableList(listOfExpressions_);
@@ -3370,8 +3370,8 @@ public final class LikelyAst {
           string_ = other.string_;
           onChanged();
         }
-        if (other.hasBooelan()) {
-          setBooelan(other.getBooelan());
+        if (other.hasBoolean()) {
+          setBoolean(other.getBoolean());
         }
         if (listOfExpressionsBuilder_ == null) {
           if (!other.listOfExpressions_.isEmpty()) {
@@ -3704,35 +3704,35 @@ public final class LikelyAst {
         return this;
       }
 
-      // optional bool booelan = 5;
-      private boolean booelan_ ;
+      // optional bool boolean = 5;
+      private boolean boolean_ ;
       /**
-       * <code>optional bool booelan = 5;</code>
+       * <code>optional bool boolean = 5;</code>
        */
-      public boolean hasBooelan() {
+      public boolean hasBoolean() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional bool booelan = 5;</code>
+       * <code>optional bool boolean = 5;</code>
        */
-      public boolean getBooelan() {
-        return booelan_;
+      public boolean getBoolean() {
+        return boolean_;
       }
       /**
-       * <code>optional bool booelan = 5;</code>
+       * <code>optional bool boolean = 5;</code>
        */
-      public Builder setBooelan(boolean value) {
+      public Builder setBoolean(boolean value) {
         bitField0_ |= 0x00000010;
-        booelan_ = value;
+        boolean_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bool booelan = 5;</code>
+       * <code>optional bool boolean = 5;</code>
        */
-      public Builder clearBooelan() {
+      public Builder clearBoolean() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        booelan_ = false;
+        boolean_ = false;
         onChanged();
         return this;
       }
@@ -4825,7 +4825,7 @@ public final class LikelyAst {
       "ge\022\024\n\014package_name\030\001 \002(\t\022\024\n\014package_path" +
       "\030\002 \002(\t\"\315\005\n\nExpression\022\036\n\004type\030\001 \002(\0162\020.Ex" +
       "pression.Type\022\017\n\007integer\030\002 \001(\003\022\014\n\004real\030\003" +
-      " \001(\001\022\016\n\006string\030\004 \001(\t\022\017\n\007booelan\030\005 \001(\010\022(\n" +
+      " \001(\001\022\016\n\006string\030\004 \001(\t\022\017\n\007boolean\030\005 \001(\010\022(\n" +
       "\023list_of_expressions\030\006 \003(\0132\013.Expression\022" +
       "\030\n\003lhs\030\007 \001(\0132\013.Expression\022\030\n\003rhs\030\010 \001(\0132\013" +
       ".Expression\022\026\n\016list_of_string\030\t \003(\t\022\033\n\006b",
@@ -4866,7 +4866,7 @@ public final class LikelyAst {
           internal_static_Expression_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_Expression_descriptor,
-              new java.lang.String[] { "Type", "Integer", "Real", "String", "Booelan", "ListOfExpressions", "Lhs", "Rhs", "ListOfString", "Block1", "Block2", });
+              new java.lang.String[] { "Type", "Integer", "Real", "String", "Boolean", "ListOfExpressions", "Lhs", "Rhs", "ListOfString", "Block1", "Block2", });
           return null;
         }
       };

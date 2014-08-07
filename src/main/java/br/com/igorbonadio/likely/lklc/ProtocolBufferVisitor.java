@@ -31,6 +31,9 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     } else if (ctx.STRING() != null) {
       expr.setType(Expression.Type.STRING)
           .setString(ctx.STRING().getText().substring(1, ctx.STRING().getText().length()-1));
+    } if (ctx.bool() != null) {
+      expr.setType(Expression.Type.BOOLEAN)
+          .setBoolean(ctx.bool().getText().equals("true"));
     }
     return expr;
   }
