@@ -2056,7 +2056,7 @@ public final class LikelyAst {
        * <code>ID = 0;</code>
        *
        * <pre>
-       * Expression{string}
+       * Expression{string}                        = {name}
        * </pre>
        */
       ID(0, 0),
@@ -2064,7 +2064,7 @@ public final class LikelyAst {
        * <code>INTEGER = 1;</code>
        *
        * <pre>
-       * Expression{integer}
+       * Expression{integer}                      = {number}
        * </pre>
        */
       INTEGER(1, 1),
@@ -2072,7 +2072,7 @@ public final class LikelyAst {
        * <code>REAL = 2;</code>
        *
        * <pre>
-       * Expression{real}
+       * Expression{real}                         = {number}
        * </pre>
        */
       REAL(2, 2),
@@ -2080,7 +2080,7 @@ public final class LikelyAst {
        * <code>STRING = 3;</code>
        *
        * <pre>
-       * Expression{string}
+       * Expression{string}                       = {text}
        * </pre>
        */
       STRING(3, 3),
@@ -2088,7 +2088,7 @@ public final class LikelyAst {
        * <code>BOOLEAN = 4;</code>
        *
        * <pre>
-       * Expression{boolean}
+       * Expression{boolean}                      = {boolean}
        * </pre>
        */
       BOOLEAN(4, 4),
@@ -2096,7 +2096,7 @@ public final class LikelyAst {
        * <code>SEQUENCE = 5;</code>
        *
        * <pre>
-       * Expression{block_true}
+       * Expression{block_true}                   = {sequence}
        * </pre>
        */
       SEQUENCE(5, 5),
@@ -2104,7 +2104,7 @@ public final class LikelyAst {
        * <code>HASH = 6;</code>
        *
        * <pre>
-       * Expression{block_true}
+       * Expression{block_true}                   = {sequence_of_pairs}
        * </pre>
        */
       HASH(6, 6),
@@ -2112,7 +2112,7 @@ public final class LikelyAst {
        * <code>PAIR = 7;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {key, value}
        * </pre>
        */
       PAIR(7, 7),
@@ -2120,7 +2120,7 @@ public final class LikelyAst {
        * <code>ATTRIBUTION = 8;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {container, value}
        * </pre>
        */
       ATTRIBUTION(8, 8),
@@ -2128,7 +2128,7 @@ public final class LikelyAst {
        * <code>ADDITION = 9;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       ADDITION(9, 9),
@@ -2136,7 +2136,7 @@ public final class LikelyAst {
        * <code>SUBTRACTION = 10;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       SUBTRACTION(10, 10),
@@ -2144,7 +2144,7 @@ public final class LikelyAst {
        * <code>MULTIPLICATION = 11;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       MULTIPLICATION(11, 11),
@@ -2152,7 +2152,7 @@ public final class LikelyAst {
        * <code>DIVISION = 12;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       DIVISION(12, 12),
@@ -2160,7 +2160,7 @@ public final class LikelyAst {
        * <code>EQUAL_TO = 13;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       EQUAL_TO(13, 13),
@@ -2168,7 +2168,7 @@ public final class LikelyAst {
        * <code>NOT_EQUAL_TO = 14;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       NOT_EQUAL_TO(14, 14),
@@ -2176,7 +2176,7 @@ public final class LikelyAst {
        * <code>GREATER_THAN = 15;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       GREATER_THAN(15, 15),
@@ -2184,7 +2184,7 @@ public final class LikelyAst {
        * <code>GREATER_THAN_OR_EQUAL_TO = 16;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       GREATER_THAN_OR_EQUAL_TO(16, 16),
@@ -2192,7 +2192,7 @@ public final class LikelyAst {
        * <code>LESS_THAN = 17;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       LESS_THAN(17, 17),
@@ -2200,7 +2200,7 @@ public final class LikelyAst {
        * <code>LESS_THAN_OR_EQUAL_TO = 18;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       LESS_THAN_OR_EQUAL_TO(18, 18),
@@ -2208,7 +2208,7 @@ public final class LikelyAst {
        * <code>AND = 19;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       AND(19, 19),
@@ -2216,7 +2216,7 @@ public final class LikelyAst {
        * <code>OR = 20;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       OR(20, 20),
@@ -2224,7 +2224,7 @@ public final class LikelyAst {
        * <code>NOT = 21;</code>
        *
        * <pre>
-       * Expression{rhs}
+       * Expression{rhs}                          = {a}
        * </pre>
        */
       NOT(21, 21),
@@ -2232,7 +2232,7 @@ public final class LikelyAst {
        * <code>FUNCTION_DEFINITION = 22;</code>
        *
        * <pre>
-       * Expression{strings, block_true}
+       * Expression{strings, block_true}          = {parameters, statements}
        * </pre>
        */
       FUNCTION_DEFINITION(22, 22),
@@ -2240,7 +2240,7 @@ public final class LikelyAst {
        * <code>FUNCTION_CALL = 23;</code>
        *
        * <pre>
-       * Expression{lhs, block_true}
+       * Expression{lhs, block_true, block_false} = {name, arguments, constructor_block}
        * </pre>
        */
       FUNCTION_CALL(23, 23),
@@ -2248,7 +2248,7 @@ public final class LikelyAst {
        * <code>RETURN = 24;</code>
        *
        * <pre>
-       * Expression{rhs}
+       * Expression{rhs}                          = {value}
        * </pre>
        */
       RETURN(24, 24),
@@ -2256,7 +2256,7 @@ public final class LikelyAst {
        * <code>OBJECT_MESSAGE = 25;</code>
        *
        * <pre>
-       * Expression{lhs, string}
+       * Expression{lhs, string}                  = {object, message}
        * </pre>
        */
       OBJECT_MESSAGE(25, 25),
@@ -2264,7 +2264,7 @@ public final class LikelyAst {
        * <code>IF = 26;</code>
        *
        * <pre>
-       * Expression{rhs, block_true, block_false}
+       * Expression{rhs, block_true, block_false} = {condition, block_true, block_false}
        * </pre>
        */
       IF(26, 26),
@@ -2272,7 +2272,7 @@ public final class LikelyAst {
        * <code>FOR = 27;</code>
        *
        * <pre>
-       * Expression{string, lhs, rhs, block_true}
+       * Expression{string, lhs, rhs, block_true} = {variable, lower_bound, upper_bound, block}
        * </pre>
        */
       FOR(27, 27),
@@ -2280,17 +2280,25 @@ public final class LikelyAst {
        * <code>WHILE = 28;</code>
        *
        * <pre>
-       * Expression{rhs, block_true}
+       * Expression{rhs, block_true}              = {condition, block}
        * </pre>
        */
       WHILE(28, 28),
+      /**
+       * <code>PROBABILITY = 29;</code>
+       *
+       * <pre>
+       * Expression{block_true, block_false, rhs} = {joint_variables, conditional_variables, value}
+       * </pre>
+       */
+      PROBABILITY(29, 29),
       ;
 
       /**
        * <code>ID = 0;</code>
        *
        * <pre>
-       * Expression{string}
+       * Expression{string}                        = {name}
        * </pre>
        */
       public static final int ID_VALUE = 0;
@@ -2298,7 +2306,7 @@ public final class LikelyAst {
        * <code>INTEGER = 1;</code>
        *
        * <pre>
-       * Expression{integer}
+       * Expression{integer}                      = {number}
        * </pre>
        */
       public static final int INTEGER_VALUE = 1;
@@ -2306,7 +2314,7 @@ public final class LikelyAst {
        * <code>REAL = 2;</code>
        *
        * <pre>
-       * Expression{real}
+       * Expression{real}                         = {number}
        * </pre>
        */
       public static final int REAL_VALUE = 2;
@@ -2314,7 +2322,7 @@ public final class LikelyAst {
        * <code>STRING = 3;</code>
        *
        * <pre>
-       * Expression{string}
+       * Expression{string}                       = {text}
        * </pre>
        */
       public static final int STRING_VALUE = 3;
@@ -2322,7 +2330,7 @@ public final class LikelyAst {
        * <code>BOOLEAN = 4;</code>
        *
        * <pre>
-       * Expression{boolean}
+       * Expression{boolean}                      = {boolean}
        * </pre>
        */
       public static final int BOOLEAN_VALUE = 4;
@@ -2330,7 +2338,7 @@ public final class LikelyAst {
        * <code>SEQUENCE = 5;</code>
        *
        * <pre>
-       * Expression{block_true}
+       * Expression{block_true}                   = {sequence}
        * </pre>
        */
       public static final int SEQUENCE_VALUE = 5;
@@ -2338,7 +2346,7 @@ public final class LikelyAst {
        * <code>HASH = 6;</code>
        *
        * <pre>
-       * Expression{block_true}
+       * Expression{block_true}                   = {sequence_of_pairs}
        * </pre>
        */
       public static final int HASH_VALUE = 6;
@@ -2346,7 +2354,7 @@ public final class LikelyAst {
        * <code>PAIR = 7;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {key, value}
        * </pre>
        */
       public static final int PAIR_VALUE = 7;
@@ -2354,7 +2362,7 @@ public final class LikelyAst {
        * <code>ATTRIBUTION = 8;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {container, value}
        * </pre>
        */
       public static final int ATTRIBUTION_VALUE = 8;
@@ -2362,7 +2370,7 @@ public final class LikelyAst {
        * <code>ADDITION = 9;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int ADDITION_VALUE = 9;
@@ -2370,7 +2378,7 @@ public final class LikelyAst {
        * <code>SUBTRACTION = 10;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int SUBTRACTION_VALUE = 10;
@@ -2378,7 +2386,7 @@ public final class LikelyAst {
        * <code>MULTIPLICATION = 11;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int MULTIPLICATION_VALUE = 11;
@@ -2386,7 +2394,7 @@ public final class LikelyAst {
        * <code>DIVISION = 12;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int DIVISION_VALUE = 12;
@@ -2394,7 +2402,7 @@ public final class LikelyAst {
        * <code>EQUAL_TO = 13;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int EQUAL_TO_VALUE = 13;
@@ -2402,7 +2410,7 @@ public final class LikelyAst {
        * <code>NOT_EQUAL_TO = 14;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int NOT_EQUAL_TO_VALUE = 14;
@@ -2410,7 +2418,7 @@ public final class LikelyAst {
        * <code>GREATER_THAN = 15;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int GREATER_THAN_VALUE = 15;
@@ -2418,7 +2426,7 @@ public final class LikelyAst {
        * <code>GREATER_THAN_OR_EQUAL_TO = 16;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int GREATER_THAN_OR_EQUAL_TO_VALUE = 16;
@@ -2426,7 +2434,7 @@ public final class LikelyAst {
        * <code>LESS_THAN = 17;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int LESS_THAN_VALUE = 17;
@@ -2434,7 +2442,7 @@ public final class LikelyAst {
        * <code>LESS_THAN_OR_EQUAL_TO = 18;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int LESS_THAN_OR_EQUAL_TO_VALUE = 18;
@@ -2442,7 +2450,7 @@ public final class LikelyAst {
        * <code>AND = 19;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int AND_VALUE = 19;
@@ -2450,7 +2458,7 @@ public final class LikelyAst {
        * <code>OR = 20;</code>
        *
        * <pre>
-       * Expression{lhs, rhs}
+       * Expression{lhs, rhs}                     = {a, b}
        * </pre>
        */
       public static final int OR_VALUE = 20;
@@ -2458,7 +2466,7 @@ public final class LikelyAst {
        * <code>NOT = 21;</code>
        *
        * <pre>
-       * Expression{rhs}
+       * Expression{rhs}                          = {a}
        * </pre>
        */
       public static final int NOT_VALUE = 21;
@@ -2466,7 +2474,7 @@ public final class LikelyAst {
        * <code>FUNCTION_DEFINITION = 22;</code>
        *
        * <pre>
-       * Expression{strings, block_true}
+       * Expression{strings, block_true}          = {parameters, statements}
        * </pre>
        */
       public static final int FUNCTION_DEFINITION_VALUE = 22;
@@ -2474,7 +2482,7 @@ public final class LikelyAst {
        * <code>FUNCTION_CALL = 23;</code>
        *
        * <pre>
-       * Expression{lhs, block_true}
+       * Expression{lhs, block_true, block_false} = {name, arguments, constructor_block}
        * </pre>
        */
       public static final int FUNCTION_CALL_VALUE = 23;
@@ -2482,7 +2490,7 @@ public final class LikelyAst {
        * <code>RETURN = 24;</code>
        *
        * <pre>
-       * Expression{rhs}
+       * Expression{rhs}                          = {value}
        * </pre>
        */
       public static final int RETURN_VALUE = 24;
@@ -2490,7 +2498,7 @@ public final class LikelyAst {
        * <code>OBJECT_MESSAGE = 25;</code>
        *
        * <pre>
-       * Expression{lhs, string}
+       * Expression{lhs, string}                  = {object, message}
        * </pre>
        */
       public static final int OBJECT_MESSAGE_VALUE = 25;
@@ -2498,7 +2506,7 @@ public final class LikelyAst {
        * <code>IF = 26;</code>
        *
        * <pre>
-       * Expression{rhs, block_true, block_false}
+       * Expression{rhs, block_true, block_false} = {condition, block_true, block_false}
        * </pre>
        */
       public static final int IF_VALUE = 26;
@@ -2506,7 +2514,7 @@ public final class LikelyAst {
        * <code>FOR = 27;</code>
        *
        * <pre>
-       * Expression{string, lhs, rhs, block_true}
+       * Expression{string, lhs, rhs, block_true} = {variable, lower_bound, upper_bound, block}
        * </pre>
        */
       public static final int FOR_VALUE = 27;
@@ -2514,10 +2522,18 @@ public final class LikelyAst {
        * <code>WHILE = 28;</code>
        *
        * <pre>
-       * Expression{rhs, block_true}
+       * Expression{rhs, block_true}              = {condition, block}
        * </pre>
        */
       public static final int WHILE_VALUE = 28;
+      /**
+       * <code>PROBABILITY = 29;</code>
+       *
+       * <pre>
+       * Expression{block_true, block_false, rhs} = {joint_variables, conditional_variables, value}
+       * </pre>
+       */
+      public static final int PROBABILITY_VALUE = 29;
 
 
       public final int getNumber() { return value; }
@@ -2553,6 +2569,7 @@ public final class LikelyAst {
           case 26: return IF;
           case 27: return FOR;
           case 28: return WHILE;
+          case 29: return PROBABILITY;
           default: return null;
         }
       }
@@ -4449,13 +4466,13 @@ public final class LikelyAst {
       "d_packages\030\001 \003(\0132\016.ImportPackage\022\037\n\nstat" +
       "ements\030\002 \003(\0132\013.Expression\";\n\rImportPacka" +
       "ge\022\024\n\014package_name\030\001 \002(\t\022\024\n\014package_path" +
-      "\030\002 \002(\t\"\245\005\n\nExpression\022\036\n\004type\030\001 \002(\0162\020.Ex" +
+      "\030\002 \002(\t\"\266\005\n\nExpression\022\036\n\004type\030\001 \002(\0162\020.Ex" +
       "pression.Type\022\017\n\007integer\030\002 \001(\003\022\014\n\004real\030\003" +
       " \001(\001\022\016\n\006string\030\004 \001(\t\022\017\n\007boolean\030\005 \001(\010\022\030\n" +
       "\003lhs\030\006 \001(\0132\013.Expression\022\030\n\003rhs\030\007 \001(\0132\013.E" +
       "xpression\022\017\n\007strings\030\010 \003(\t\022\037\n\nblock_true" +
       "\030\t \003(\0132\013.Expression\022 \n\013block_false\030\n \003(\013",
-      "2\013.Expression\"\256\003\n\004Type\022\006\n\002ID\020\000\022\013\n\007INTEGE" +
+      "2\013.Expression\"\277\003\n\004Type\022\006\n\002ID\020\000\022\013\n\007INTEGE" +
       "R\020\001\022\010\n\004REAL\020\002\022\n\n\006STRING\020\003\022\013\n\007BOOLEAN\020\004\022\014" +
       "\n\010SEQUENCE\020\005\022\010\n\004HASH\020\006\022\010\n\004PAIR\020\007\022\017\n\013ATTR" +
       "IBUTION\020\010\022\014\n\010ADDITION\020\t\022\017\n\013SUBTRACTION\020\n" +
@@ -4466,8 +4483,8 @@ public final class LikelyAst {
       "AND\020\023\022\006\n\002OR\020\024\022\007\n\003NOT\020\025\022\027\n\023FUNCTION_DEFIN" +
       "ITION\020\026\022\021\n\rFUNCTION_CALL\020\027\022\n\n\006RETURN\020\030\022\022",
       "\n\016OBJECT_MESSAGE\020\031\022\006\n\002IF\020\032\022\007\n\003FOR\020\033\022\t\n\005W" +
-      "HILE\020\034B\"\n br.com.igorbonadio.likely.lkla" +
-      "st"
+      "HILE\020\034\022\017\n\013PROBABILITY\020\035B\"\n br.com.igorbo" +
+      "nadio.likely.lklast"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
