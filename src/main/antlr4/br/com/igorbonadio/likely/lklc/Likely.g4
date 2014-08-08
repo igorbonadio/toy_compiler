@@ -116,7 +116,8 @@ op : '+'
    | '<='
    | '>'
    | '<'
-   | ':'
+   | 'and'
+   | 'or'
    ;
 
 func_call : func list+

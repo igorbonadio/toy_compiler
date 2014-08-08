@@ -73,4 +73,28 @@ public class OperationsTest extends TestCase {
 
     assertEquals(program.toString(), expectedProgram.toString());
   }
+
+  public void testAnd() {
+    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("true and false"))));
+    ParseTree tree = parser.file_input();
+
+    ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
+    visitor.visit(tree);
+    Program program = visitor.getProtocolBuffer();
+
+    Program expectedProgram = Program.newBuilder()
+      .addStatements(
+        Expression.newBuilder()
+          .setType(Expression.Type.AND)
+          .setLhs(
+            Expression.newBuilder()
+              .setType(Expression.Type.BOOLEAN)
+              .setBoolean(true))
+          .setRhs(
+            Expression.newBuilder()
+              .setType(Expression.Type.BOOLEAN)
+              .setBoolean(false))).build();
+
+    assertEquals(program.toString(), expectedProgram.toString());
+  }
 }

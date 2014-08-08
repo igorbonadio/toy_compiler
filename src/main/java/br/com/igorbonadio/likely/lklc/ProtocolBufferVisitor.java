@@ -223,6 +223,8 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       case ">=":  expr.setType(Expression.Type.GREATER_THAN_OR_EQUAL_TO); break;
       case "<":   expr.setType(Expression.Type.LESS_THAN); break;
       case "<=":  expr.setType(Expression.Type.LESS_THAN_OR_EQUAL_TO); break;
+      case "and": expr.setType(Expression.Type.AND); break;
+      case "or":  expr.setType(Expression.Type.OR); break;
     }
     return expr;
   }
