@@ -105,4 +105,28 @@ public class FunctionCallTest extends TestCase {
 
     assertEquals(program.toString(), expectedProgram.toString());
   }
+
+  public void testObjectMessageFunctionCall() {
+    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("x.f()"))));
+    ParseTree tree = parser.file_input();
+
+    ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
+    visitor.visit(tree);
+    Program program = visitor.getProtocolBuffer();
+
+    Program expectedProgram = Program.newBuilder()
+      .addStatements(
+        Expression.newBuilder()
+          .setType(Expression.Type.FUNCTION_CALL)
+          .setLhs(
+            Expression.newBuilder()
+              .setType(Expression.Type.OBJECT_MESSAGE)
+              .setLhs(
+                Expression.newBuilder()
+                  .setType(Expression.Type.ID)
+                  .setString("x"))
+              .setString("f"))).build();
+
+    assertEquals(program.toString(), expectedProgram.toString());
+  }
 }
