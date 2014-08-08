@@ -73,6 +73,13 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
+  public Expression.Builder visitWhile_expr(LikelyParser.While_exprContext ctx) {
+    Expression.Builder expr = visit(ctx.block());
+    expr.setType(Expression.Type.WHILE)
+        .setRhs(visit(ctx.expr()));
+    return expr;
+  }
+
   public Expression.Builder visitFor_expr(LikelyParser.For_exprContext ctx) {
     Expression.Builder expr = visit(ctx.block());
     expr.setType(Expression.Type.FOR)
