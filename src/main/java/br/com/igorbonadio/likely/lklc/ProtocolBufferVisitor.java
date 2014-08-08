@@ -59,9 +59,35 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  // public Expression.Builder visitFunc_call(LikelyParser.Func_callContext ctx) {
+  public Expression.Builder visitFunc_call(LikelyParser.Func_callContext ctx) {
+    Expression.Builder func = visit(ctx.func());
+    int nCall = ctx.list().size();
+    for (int i = 0; i < nCall; i++) {
+      Expression.Builder args = visit(ctx.list(i));
+      args.setType(Expression.Type.FUNCTION_CALL)
+          .setLhs(func);
+      func = args;
+    }
+    return func;
+  }
 
-  // }
+  public Expression.Builder visitList(LikelyParser.ListContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    if (ctx.list_body() != null)
+      expr = visit(ctx.list_body());
+    return expr;
+  }
+
+  public Expression.Builder visitFunc(LikelyParser.FuncContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    if (ctx.ID() != null) {
+      expr.setType(Expression.Type.ID)
+          .setString(ctx.ID().getText());
+    } else if (ctx.obj_msg() != null) {
+      expr = visit(ctx.obj_msg());
+    }
+    return expr;
+  }
 
   public Expression.Builder visitOp(LikelyParser.OpContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
