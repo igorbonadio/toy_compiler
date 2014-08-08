@@ -59,6 +59,12 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
+  public Expression.Builder visitReturn_expr(LikelyParser.Return_exprContext ctx) {
+    return Expression.newBuilder()
+      .setType(Expression.Type.RETURN)
+      .setRhs(visit(ctx.expr()));
+  }
+
   public Expression.Builder visitFunc_call(LikelyParser.Func_callContext ctx) {
     Expression.Builder func = visit(ctx.func());
     int nCall = ctx.list().size();
