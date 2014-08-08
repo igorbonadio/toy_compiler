@@ -55,11 +55,11 @@ public class FunctionCallTest extends TestCase {
             Expression.newBuilder()
               .setType(Expression.Type.ID)
               .setString("f"))
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(1))
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(2))).build();
@@ -86,19 +86,19 @@ public class FunctionCallTest extends TestCase {
                 Expression.newBuilder()
                   .setType(Expression.Type.ID)
                   .setString("f"))
-              .addExpressions(
+              .addBlockTrue(
                 Expression.newBuilder()
                   .setType(Expression.Type.INTEGER)
                   .setInteger(1))
-              .addExpressions(
+              .addBlockTrue(
                 Expression.newBuilder()
                   .setType(Expression.Type.INTEGER)
                   .setInteger(2)))
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(3))
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(4))).build();

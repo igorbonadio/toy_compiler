@@ -97,16 +97,16 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       .setType(Expression.Type.IF)
       .setRhs(visit(ctx.expr()));
 
-    java.util.List<Expression> trueBlock = visit(ctx.block(0)).getBlock1List();
-    java.util.List<Expression> falseBlock = visit(ctx.block(1)).getBlock1List();
+    java.util.List<Expression> trueBlock = visit(ctx.block(0)).getBlockTrueList();
+    java.util.List<Expression> falseBlock = visit(ctx.block(1)).getBlockTrueList();
 
 
     for (int i = 0; i < trueBlock.size(); i++) {
-      expr.addBlock1(trueBlock.get(i));
+      expr.addBlockTrue(trueBlock.get(i));
     }
 
     for (int i = 0; i < falseBlock.size(); i++) {
-      expr.addBlock2(falseBlock.get(i));
+      expr.addBlockFalse(falseBlock.get(i));
     }
 
     return expr;
@@ -126,7 +126,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     Expression.Builder expr = Expression.newBuilder();
     int nExpr = ctx.expr().size();
     for (int i = 0; i < nExpr; i++) {
-      expr.addBlock1(visit(ctx.expr(i)));
+      expr.addBlockTrue(visit(ctx.expr(i)));
     }
     return expr;
   }
@@ -135,7 +135,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     Expression.Builder expr = Expression.newBuilder();
     int nExpr = ctx.expr().size();
     for (int i = 0; i < nExpr; i++) {
-      expr.addBlock1(visit(ctx.expr(i)));
+      expr.addBlockTrue(visit(ctx.expr(i)));
     }
     return expr;
   }
@@ -253,7 +253,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   public Expression.Builder visitList_body_fat(LikelyParser.List_body_fatContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     for (int i = 0; i < ctx.expr().size(); i++) {
-      expr.addExpressions(visit(ctx.expr(i)));
+      expr.addBlockTrue(visit(ctx.expr(i)));
     }
     return expr;
   }
@@ -261,7 +261,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   public Expression.Builder visitList_body_thin(LikelyParser.List_body_thinContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     for (int i = 0; i < ctx.expr().size(); i++) {
-      expr.addExpressions(visit(ctx.expr(i)));
+      expr.addBlockTrue(visit(ctx.expr(i)));
     }
     return expr;
   }

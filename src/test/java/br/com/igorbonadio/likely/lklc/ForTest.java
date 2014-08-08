@@ -40,7 +40,7 @@ public class ForTest extends TestCase {
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(2))
-          .addBlock1(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(3))).build();

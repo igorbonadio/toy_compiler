@@ -47,7 +47,7 @@ public class SequenceTest extends TestCase {
       .addStatements(
         Expression.newBuilder()
           .setType(Expression.Type.SEQUENCE)
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(1))).build();
@@ -67,11 +67,11 @@ public class SequenceTest extends TestCase {
       .addStatements(
         Expression.newBuilder()
           .setType(Expression.Type.SEQUENCE)
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(1))
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(2))).build();
@@ -91,25 +91,25 @@ public class SequenceTest extends TestCase {
       .addStatements(
         Expression.newBuilder()
           .setType(Expression.Type.SEQUENCE)
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.SEQUENCE)
-              .addExpressions(
+              .addBlockTrue(
                 Expression.newBuilder()
                   .setType(Expression.Type.INTEGER)
                   .setInteger(1))
-              .addExpressions(
+              .addBlockTrue(
                 Expression.newBuilder()
                   .setType(Expression.Type.INTEGER)
                   .setInteger(2)))
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.SEQUENCE)
-              .addExpressions(
+              .addBlockTrue(
                 Expression.newBuilder()
                   .setType(Expression.Type.INTEGER)
                   .setInteger(3))
-              .addExpressions(
+              .addBlockTrue(
                 Expression.newBuilder()
                   .setType(Expression.Type.INTEGER)
                   .setInteger(4)))).build();
@@ -129,7 +129,7 @@ public class SequenceTest extends TestCase {
       .addStatements(
         Expression.newBuilder()
           .setType(Expression.Type.SEQUENCE)
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(1))).build();
@@ -149,11 +149,11 @@ public class SequenceTest extends TestCase {
       .addStatements(
         Expression.newBuilder()
           .setType(Expression.Type.SEQUENCE)
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(1))
-          .addExpressions(
+          .addBlockTrue(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(2))).build();
