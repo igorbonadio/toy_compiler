@@ -59,6 +59,10 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
+  // public Expression.Builder visitFunc_call(LikelyParser.Func_callContext ctx) {
+
+  // }
+
   public Expression.Builder visitOp(LikelyParser.OpContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     switch (ctx.getText()) {
@@ -77,7 +81,9 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitSeq(LikelyParser.SeqContext ctx) {
-    Expression.Builder expr = visit(ctx.list_body());
+    Expression.Builder expr = Expression.newBuilder();
+    if (ctx.list_body() != null)
+      expr = visit(ctx.list_body());
     expr.setType(Expression.Type.SEQUENCE);
     return expr;
   }

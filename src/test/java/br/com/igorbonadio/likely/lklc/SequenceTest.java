@@ -19,6 +19,22 @@ public class SequenceTest extends TestCase {
     return new TestSuite(SequenceTest.class);
   }
 
+  public void testEmptySequence() {
+    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("[]"))));
+    ParseTree tree = parser.file_input();
+
+    ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
+    visitor.visit(tree);
+    Program program = visitor.getProtocolBuffer();
+
+    Program expectedProgram = Program.newBuilder()
+      .addStatements(
+        Expression.newBuilder()
+          .setType(Expression.Type.SEQUENCE)).build();
+
+    assertEquals(program.toString(), expectedProgram.toString());
+  }
+
   public void testFatSequenceWith1Element() {
     LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("[1]"))));
     ParseTree tree = parser.file_input();
