@@ -78,6 +78,7 @@ expr : ID
      | seq
      | expr ARROW expr
      | expr op expr
+     | NOT expr
      | OPEN_PAREN expr CLOSE_PAREN
      | func_call
      | dist
