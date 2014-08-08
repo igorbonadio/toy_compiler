@@ -59,6 +59,68 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
+  public Expression.Builder visitComp_expr(LikelyParser.Comp_exprContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    if (ctx.if_expr() != null) {
+      expr = visit(ctx.if_expr());
+    } else if (ctx.for_expr() != null) {
+      expr = visit(ctx.for_expr());
+    } else if (ctx.while_expr() != null) {
+      expr = visit(ctx.while_expr());
+    } else if (ctx.func_def() != null) {
+      expr = visit(ctx.func_def());
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitIf_expr(LikelyParser.If_exprContext ctx) {
+    Expression.Builder expr = Expression.newBuilder()
+      .setType(Expression.Type.IF)
+      .setRhs(visit(ctx.expr()));
+
+    java.util.List<Expression> trueBlock = visit(ctx.block(0)).getBlock1List();
+    java.util.List<Expression> falseBlock = visit(ctx.block(1)).getBlock1List();
+
+
+    for (int i = 0; i < trueBlock.size(); i++) {
+      expr.addBlock1(trueBlock.get(i));
+    }
+
+    for (int i = 0; i < falseBlock.size(); i++) {
+      expr.addBlock2(falseBlock.get(i));
+    }
+
+    return expr;
+  }
+
+  public Expression.Builder visitBlock(LikelyParser.BlockContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    if (ctx.fat_expr() != null) {
+      expr = visit(ctx.fat_expr());
+    } else if (ctx.thin_expr() != null) {
+      expr = visit(ctx.thin_expr());
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitFat_expr(LikelyParser.Fat_exprContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    int nExpr = ctx.expr().size();
+    for (int i = 0; i < nExpr; i++) {
+      expr.addBlock1(visit(ctx.expr(i)));
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitThin_expr(LikelyParser.Thin_exprContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    int nExpr = ctx.expr().size();
+    for (int i = 0; i < nExpr; i++) {
+      expr.addBlock1(visit(ctx.expr(i)));
+    }
+    return expr;
+  }
+
   public Expression.Builder visitObj_msg(LikelyParser.Obj_msgContext ctx) {
     Expression.Builder obj = visit(ctx.obj());
     int nMsg = ctx.ID().size();

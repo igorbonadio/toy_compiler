@@ -183,11 +183,11 @@ constructor_call : func_call ':' block
                  ;
 
 block : fat_expr
-      | thin_exp
+      | thin_expr
       ;
 
-thin_exp : NEWLINE+ INDENT (expr NEWLINE*)* DEDENT
-         ;
+thin_expr : NEWLINE+ INDENT (expr NEWLINE*)* DEDENT
+          ;
 
 fat_expr : expr
          | '{' (expr ';')* expr? '}'
