@@ -154,16 +154,22 @@ dist_body_fat : prob (',' prob)*
 dist_body_thin : NEWLINE+ INDENT (prob NEWLINE+)* DEDENT
                ;
 
-prob : prob_vars '=' expr
+prob : prob_vars '=' number
      ;
 
 prob_vars : joint_vars
           | cond_vars
           ;
 
-joint_vars : ID
-           | list
+joint_vars : sample
+           | '(' var_list? ')'
            ;
+
+sample : ID+
+       ;
+
+var_list : sample (',' sample)*
+         ;
 
 cond_vars : joint_vars '|' joint_vars
           ;

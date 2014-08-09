@@ -35,7 +35,7 @@ public class WhileTest extends TestCase {
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(1))
-          .addBlockTrue(
+          .addBlock1(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(2))).build();

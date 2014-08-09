@@ -36,7 +36,7 @@ public class StringTest extends TestCase {
     assertEquals(program.toString(), expectedProgram.toString());
   }
 
-  public void test2Strings() {
+  public void test2Strings1() {
     LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("\"hello\"\n\"pequena\""))));
     ParseTree tree = parser.file_input();
 

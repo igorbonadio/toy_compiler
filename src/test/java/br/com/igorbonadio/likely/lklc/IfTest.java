@@ -35,11 +35,11 @@ public class IfTest extends TestCase {
             Expression.newBuilder()
               .setType(Expression.Type.ID)
               .setString("x"))
-          .addBlockTrue(
+          .addBlock1(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(1))
-          .addBlockFalse(
+          .addBlock2(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(2))).build();

@@ -62,11 +62,112 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
+  public Expression.Builder visitDist(LikelyParser.DistContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    if (ctx.dist_body() != null) {
+      expr = visit(ctx.dist_body());
+    }
+    expr.setType(Expression.Type.FUNCTION_CALL);
+    return expr;
+  }
+
+  public Expression.Builder visitDist_body(LikelyParser.Dist_bodyContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    if (ctx.dist_body_fat() != null) {
+      expr = visit(ctx.dist_body_fat());
+    } else if (ctx.dist_body_thin() != null) {
+      expr = visit(ctx.dist_body_thin());
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitDist_body_fat(LikelyParser.Dist_body_fatContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    int nProb = ctx.prob().size();
+    for (int i = 0; i < nProb; i++) {
+      expr.addBlock1(visit(ctx.prob(i)));
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitDist_body_thin(LikelyParser.Dist_body_thinContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    int nProb = ctx.prob().size();
+    for (int i = 0; i < nProb; i++) {
+      expr.addBlock1(visit(ctx.prob(i)));
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitProb(LikelyParser.ProbContext ctx) {
+    Expression.Builder expr = visit(ctx.prob_vars());
+    expr.setType(Expression.Type.PROBABILITY)
+        .setRhs(visit(ctx.number()));
+    return expr;
+  }
+
+  public Expression.Builder visitProb_vars(LikelyParser.Prob_varsContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    if (ctx.joint_vars() != null) {
+      expr = visit(ctx.joint_vars());
+    } else if (ctx.cond_vars() != null) {
+      expr = visit(ctx.cond_vars());
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitJoint_vars(LikelyParser.Joint_varsContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    if (ctx.sample() != null) {
+      java.util.List<String> s = visit(ctx.sample()).getStrings1List();
+      String txt = "";
+      for (int j = 0; j < s.size(); j++) {
+        txt = txt.concat(s.get(j)).concat(" ");
+      }
+      expr.addStrings1(txt.trim());
+    } else if (ctx.var_list() != null) {
+      expr = visit(ctx.var_list());
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitVar_list(LikelyParser.Var_listContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    int nVar = ctx.sample().size();
+    for (int i = 0; i < nVar; i++) {
+      java.util.List<String> s = visit(ctx.sample(i)).getStrings1List();
+      String txt = "";
+      for (int j = 0; j < s.size(); j++) {
+        txt = txt.concat(s.get(j)).concat(" ");
+      }
+      expr.addStrings1(txt.trim());
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitSample(LikelyParser.SampleContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    int nSample = ctx.ID().size();
+    for (int i = 0; i < nSample; i++) {
+      expr.addStrings1(ctx.ID(i).getText());
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitCond_vars(LikelyParser.Cond_varsContext ctx) {
+    Expression.Builder expr = visit(ctx.joint_vars(0));
+    java.util.List<String> cond = visit(ctx.joint_vars(1)).getStrings1List();
+    for (int i = 0; i < cond.size(); i++) {
+      expr.addStrings2(cond.get(i));
+    }
+    return expr;
+  }
+
   public Expression.Builder visitConstructor_call(LikelyParser.Constructor_callContext ctx) {
     Expression.Builder expr = visit(ctx.func_call());
-    java.util.List<Expression> block = visit(ctx.block()).getBlockTrueList();
+    java.util.List<Expression> block = visit(ctx.block()).getBlock1List();
     for (int i = 0; i < block.size(); i++) {
-      expr.addBlockFalse(block.get(i));
+      expr.addBlock2(block.get(i));
     }
     return expr;
   }
@@ -106,16 +207,16 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       .setType(Expression.Type.IF)
       .setRhs(visit(ctx.expr()));
 
-    java.util.List<Expression> trueBlock = visit(ctx.block(0)).getBlockTrueList();
-    java.util.List<Expression> falseBlock = visit(ctx.block(1)).getBlockTrueList();
+    java.util.List<Expression> trueBlock = visit(ctx.block(0)).getBlock1List();
+    java.util.List<Expression> falseBlock = visit(ctx.block(1)).getBlock1List();
 
 
     for (int i = 0; i < trueBlock.size(); i++) {
-      expr.addBlockTrue(trueBlock.get(i));
+      expr.addBlock1(trueBlock.get(i));
     }
 
     for (int i = 0; i < falseBlock.size(); i++) {
-      expr.addBlockFalse(falseBlock.get(i));
+      expr.addBlock2(falseBlock.get(i));
     }
 
     return expr;
@@ -135,7 +236,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     Expression.Builder expr = Expression.newBuilder();
     int nExpr = ctx.expr().size();
     for (int i = 0; i < nExpr; i++) {
-      expr.addBlockTrue(visit(ctx.expr(i)));
+      expr.addBlock1(visit(ctx.expr(i)));
     }
     return expr;
   }
@@ -144,7 +245,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     Expression.Builder expr = Expression.newBuilder();
     int nExpr = ctx.expr().size();
     for (int i = 0; i < nExpr; i++) {
-      expr.addBlockTrue(visit(ctx.expr(i)));
+      expr.addBlock1(visit(ctx.expr(i)));
     }
     return expr;
   }
@@ -262,7 +363,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   public Expression.Builder visitList_body_fat(LikelyParser.List_body_fatContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     for (int i = 0; i < ctx.expr().size(); i++) {
-      expr.addBlockTrue(visit(ctx.expr(i)));
+      expr.addBlock1(visit(ctx.expr(i)));
     }
     return expr;
   }
@@ -270,7 +371,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   public Expression.Builder visitList_body_thin(LikelyParser.List_body_thinContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     for (int i = 0; i < ctx.expr().size(); i++) {
-      expr.addBlockTrue(visit(ctx.expr(i)));
+      expr.addBlock1(visit(ctx.expr(i)));
     }
     return expr;
   }

@@ -35,7 +35,7 @@ public class ConstructorCallTest extends TestCase {
             Expression.newBuilder()
               .setType(Expression.Type.ID)
               .setString("f"))
-          .addBlockFalse(
+          .addBlock2(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(1))).build();
