@@ -102,7 +102,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   public Expression.Builder visitProb(LikelyParser.ProbContext ctx) {
     Expression.Builder expr = visit(ctx.prob_vars());
     expr.setType(Expression.Type.PROBABILITY)
-        .setRhs(visit(ctx.number()));
+        .setRhs(visit(ctx.expr()));
     return expr;
   }
 
