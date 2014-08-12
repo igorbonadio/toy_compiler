@@ -66,7 +66,7 @@ file_input : NEWLINE* header ( NEWLINE | stmt )*
 header : impt*
        ;
 
-impt : 'import' (ID | '.')? STRING (NEWLINE | ';')
+impt : 'import' (ID | '.')? STRING (NEWLINE | ';' | EOF)
      ;
 
 stmt : expr (NEWLINE? | ';' | EOF)

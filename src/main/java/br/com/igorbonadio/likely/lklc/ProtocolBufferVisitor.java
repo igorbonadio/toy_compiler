@@ -10,9 +10,31 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
 
   public Expression.Builder visitFile_input(LikelyParser.File_inputContext ctx) {
     program = Program.newBuilder();
+    visit(ctx.header());
     for (int i = 0; i < ctx.stmt().size(); i++) {
       program.addStatements(visit(ctx.stmt(i)));
     }
+    return null;
+  }
+
+  public Expression.Builder visitHeader(LikelyParser.HeaderContext ctx) {
+    for (int i = 0; i < ctx.impt().size(); i++) {
+      visit(ctx.impt(i));
+    }
+    return null;
+  }
+
+  public Expression.Builder visitImpt(LikelyParser.ImptContext ctx) {
+    ImportPackage.Builder impts = ImportPackage.newBuilder();
+    String path = ctx.STRING().getText().substring(1, ctx.STRING().getText().length()-1);
+    if (ctx.ID() != null) {
+      impts.setPackageName(ctx.ID().getText());
+    } else {
+      String[] p = path.split("/");
+      impts.setPackageName(p[p.length-1]);
+    }
+    impts.setPackagePath(path);
+    program.addImportedPackages(impts);
     return null;
   }
 
