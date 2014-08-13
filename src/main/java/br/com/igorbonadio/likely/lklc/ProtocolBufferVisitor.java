@@ -11,8 +11,8 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   public Expression.Builder visitFile_input(LikelyParser.File_inputContext ctx) {
     program = Program.newBuilder();
     visit(ctx.header());
-    for (int i = 0; i < ctx.stmt().size(); i++) {
-      program.addStatements(visit(ctx.stmt(i)));
+    for (int i = 0; i < ctx.statement().size(); i++) {
+      program.addStatements(visit(ctx.statement(i)));
     }
     return null;
   }
@@ -38,7 +38,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return null;
   }
 
-  public Expression.Builder visitStmt(LikelyParser.StmtContext ctx) {
+  public Expression.Builder visitStatement(LikelyParser.StatementContext ctx) {
     return visit(ctx.expr());
   }
 

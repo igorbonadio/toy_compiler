@@ -60,7 +60,7 @@ tokens { INDENT, DEDENT }
   }
 }
 
-file_input : NEWLINE* header ( NEWLINE | stmt )*
+file_input : NEWLINE* header ( NEWLINE | statement )*
            ;
 
 header : impt*
@@ -69,8 +69,8 @@ header : impt*
 impt : 'import' (ID | '.')? STRING (NEWLINE | ';' | EOF)
      ;
 
-stmt : expr (NEWLINE? | ';' | EOF)
-     ;
+statement : expr (NEWLINE? | ';' | EOF)
+          ;
 
 expr : ID
      | literal
