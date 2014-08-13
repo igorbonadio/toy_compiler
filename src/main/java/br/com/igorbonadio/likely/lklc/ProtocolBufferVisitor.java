@@ -60,8 +60,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.return_expr(),
       ctx.obj_msg(),
       ctx.constructor_call(),
-      ctx.comp_expr()
-    );
+      ctx.comp_expr());
     if (ctx.OPEN_PAREN() != null) {
       expr = visit(ctx.expr(0));
     } else if (ctx.ID() != null) {
@@ -273,8 +272,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.literal(),
       ctx.seq(),
       ctx.prob(),
-      ctx.expr()
-    );
+      ctx.expr());
     if (ctx.ID() != null) {
       expr = Expression.newBuilder()
         .setType(Expression.Type.ID)
