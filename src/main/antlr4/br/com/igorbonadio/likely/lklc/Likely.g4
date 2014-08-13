@@ -84,7 +84,7 @@ expression : ID
      | distribution
      | returnExpression
      | objectMessage
-     | constructor_call
+     | constructorCall
      | comp_expr
      ;
 
@@ -187,7 +187,7 @@ obj : literal
     | '(' expression ')'
     ;
 
-constructor_call : functionCall ':' block
+constructorCall : functionCall ':' block
                  ;
 
 block : fat_expr

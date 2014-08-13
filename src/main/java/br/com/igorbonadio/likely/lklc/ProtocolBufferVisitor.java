@@ -51,7 +51,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.distribution(),
       ctx.returnExpression(),
       ctx.objectMessage(),
-      ctx.constructor_call(),
+      ctx.constructorCall(),
       ctx.comp_expr());
     if (ctx.OPEN_PAREN() != null) {
       expr = visit(ctx.expression(0));
@@ -155,7 +155,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitConstructor_call(LikelyParser.Constructor_callContext ctx) {
+  public Expression.Builder visitConstructorCall(LikelyParser.ConstructorCallContext ctx) {
     Expression.Builder expr = visit(ctx.functionCall());
     java.util.List<Expression> block = visit(ctx.block()).getBlock1List();
     for (int i = 0; i < block.size(); i++) {
