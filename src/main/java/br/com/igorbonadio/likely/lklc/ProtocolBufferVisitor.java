@@ -42,42 +42,51 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return visit(ctx.expr());
   }
 
+  private Expression.Builder visitIfNotNull(ParserRuleContext ctx) {
+    if (ctx != null)
+      return visit(ctx);
+    return Expression.newBuilder();
+  }
+
+  private Expression.Builder visitIfNotNull(ParserRuleContext[] ctxs) {
+    for (int i = 0; i < ctxs.length; i++) {
+      if (ctxs[i] != null)
+        return visit(ctxs[i]);
+    }
+    return Expression.newBuilder();
+  }
+
   public Expression.Builder visitExpr(LikelyParser.ExprContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.literal() != null) {
-      expr = visit(ctx.literal());
-    } else if (ctx.attr() != null) {
-      expr = visit(ctx.attr());
-    } else if (ctx.seq() != null) {
-      expr = visit(ctx.seq());
-    } else if (ctx.func_call() != null) {
-      expr = visit(ctx.func_call());
-    } else if (ctx.func_call() != null) {
-      expr = visit(ctx.func_call());
-    } else if (ctx.dist() != null) {
-      expr = visit(ctx.dist());
-    } else if (ctx.return_expr() != null) {
-      expr = visit(ctx.return_expr());
-    } else if (ctx.obj_msg() != null) {
-      expr = visit(ctx.obj_msg());
-    } else if (ctx.constructor_call() != null) {
-      expr = visit(ctx.constructor_call());
-    } else if (ctx.comp_expr() != null) {
-      expr = visit(ctx.comp_expr());
+    ParserRuleContext[] ctxs = {
+      ctx.literal(),
+      ctx.attr(),
+      ctx.seq(),
+      ctx.func_call(),
+      ctx.dist(),
+      ctx.return_expr(),
+      ctx.obj_msg(),
+      ctx.constructor_call(),
+      ctx.comp_expr()
+    };
+    Expression.Builder expr = visitIfNotNull(ctxs);
+    if (ctx.OPEN_PAREN() != null) {
+      expr = visit(ctx.expr(0));
     } else if (ctx.ID() != null) {
+      expr = Expression.newBuilder();
       expr.setType(Expression.Type.ID)
           .setString(ctx.ID().getText());
     } else if (ctx.ARROW() != null) {
+      expr = Expression.newBuilder();
       expr.setType(Expression.Type.PAIR)
           .setLhs(visit(ctx.expr(0)))
           .setRhs(visit(ctx.expr(1)));
     } else if (ctx.op() != null) {
+      expr = Expression.newBuilder();
       expr = visit(ctx.op());
       expr.setLhs(visit(ctx.expr(0)))
           .setRhs(visit(ctx.expr(1)));
-    } else if (ctx.OPEN_PAREN() != null) {
-      expr = visit(ctx.expr(0));
     } else if (ctx.NOT() != null) {
+      expr = Expression.newBuilder();
       expr.setType(Expression.Type.NOT)
           .setRhs(visit(ctx.expr(0)));
     }
@@ -85,21 +94,17 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitDist(LikelyParser.DistContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.dist_body() != null) {
-      expr = visit(ctx.dist_body());
-    }
+    Expression.Builder expr = visitIfNotNull(ctx.dist_body());
     expr.setType(Expression.Type.FUNCTION_CALL);
     return expr;
   }
 
   public Expression.Builder visitDist_body(LikelyParser.Dist_bodyContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.dist_body_fat() != null) {
-      expr = visit(ctx.dist_body_fat());
-    } else if (ctx.dist_body_thin() != null) {
-      expr = visit(ctx.dist_body_thin());
-    }
+    ParserRuleContext[] ctxs = {
+      ctx.dist_body_fat(),
+      ctx.dist_body_thin()
+    };
+    Expression.Builder expr = visitIfNotNull(ctxs);
     return expr;
   }
 
@@ -129,12 +134,11 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitProb_vars(LikelyParser.Prob_varsContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.joint_vars() != null) {
-      expr = visit(ctx.joint_vars());
-    } else if (ctx.cond_vars() != null) {
-      expr = visit(ctx.cond_vars());
-    }
+    ParserRuleContext[] ctxs = {
+      ctx.joint_vars(),
+      ctx.cond_vars()
+    };
+    Expression.Builder expr = visitIfNotNull(ctxs);
     return expr;
   }
 
@@ -195,16 +199,13 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitComp_expr(LikelyParser.Comp_exprContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.if_expr() != null) {
-      expr = visit(ctx.if_expr());
-    } else if (ctx.for_expr() != null) {
-      expr = visit(ctx.for_expr());
-    } else if (ctx.while_expr() != null) {
-      expr = visit(ctx.while_expr());
-    } else if (ctx.func_def() != null) {
-      expr = visit(ctx.func_def());
-    }
+    ParserRuleContext[] ctxs = {
+      ctx.if_expr(),
+      ctx.for_expr(),
+      ctx.while_expr(),
+      ctx.func_def()
+    };
+    Expression.Builder expr = visitIfNotNull(ctxs);
     return expr;
   }
 
@@ -245,12 +246,11 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitBlock(LikelyParser.BlockContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.fat_expr() != null) {
-      expr = visit(ctx.fat_expr());
-    } else if (ctx.thin_expr() != null) {
-      expr = visit(ctx.thin_expr());
-    }
+    ParserRuleContext[] ctxs = {
+      ctx.fat_expr(),
+      ctx.thin_expr()
+    };
+    Expression.Builder expr = visitIfNotNull(ctxs);
     return expr;
   }
 
@@ -292,16 +292,14 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitObj(LikelyParser.ObjContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.literal() != null) {
-      expr = visit(ctx.literal());
-    } else if (ctx.seq() != null) {
-      expr = visit(ctx.seq());
-    } else if (ctx.prob() != null) {
-      expr = visit(ctx.prob());
-    } else if (ctx.expr() != null) {
-      expr = visit(ctx.expr());
-    } else if (ctx.ID() != null) {
+    ParserRuleContext[] ctxs = {
+      ctx.literal(),
+      ctx.seq(),
+      ctx.prob(),
+      ctx.expr()
+    };
+    Expression.Builder expr = visitIfNotNull(ctxs);
+    if (ctx.ID() != null) {
       expr = Expression.newBuilder()
         .setType(Expression.Type.ID)
         .setString(ctx.ID().getText());
@@ -328,19 +326,16 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitList(LikelyParser.ListContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.list_body() != null)
-      expr = visit(ctx.list_body());
+    Expression.Builder expr = visitIfNotNull(ctx.list_body());
     return expr;
   }
 
   public Expression.Builder visitFunc(LikelyParser.FuncContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
+    Expression.Builder expr = visitIfNotNull(ctx.obj_msg());
     if (ctx.ID() != null) {
+      expr = Expression.newBuilder();
       expr.setType(Expression.Type.ID)
           .setString(ctx.ID().getText());
-    } else if (ctx.obj_msg() != null) {
-      expr = visit(ctx.obj_msg());
     }
     return expr;
   }
@@ -365,20 +360,17 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitSeq(LikelyParser.SeqContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.list_body() != null)
-      expr = visit(ctx.list_body());
+    Expression.Builder expr = visitIfNotNull(ctx.list_body());
     expr.setType(Expression.Type.SEQUENCE);
     return expr;
   }
 
   public Expression.Builder visitList_body(LikelyParser.List_bodyContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.list_body_fat() != null) {
-      expr = visit(ctx.list_body_fat());
-    } else if (ctx.list_body_thin() != null) {
-      expr = visit(ctx.list_body_thin());
-    }
+    ParserRuleContext[] ctxs = {
+      ctx.list_body_fat(),
+      ctx.list_body_thin()
+    };
+    Expression.Builder expr = visitIfNotNull(ctxs);
     return expr;
   }
 
@@ -399,12 +391,11 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitAttr(LikelyParser.AttrContext ctx) {
-    Expression.Builder container = Expression.newBuilder();
+    Expression.Builder container = visitIfNotNull(ctx.obj_msg());
     if (ctx.ID() != null) {
+      container = Expression.newBuilder();
       container.setType(Expression.Type.ID)
                .setString(ctx.ID().getText());
-    } else if (ctx.obj_msg() != null) {
-      container = visit(ctx.obj_msg());
     }
     return Expression.newBuilder()
       .setType(Expression.Type.ATTRIBUTION)
@@ -413,10 +404,8 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitLiteral(LikelyParser.LiteralContext ctx) {
-    Expression.Builder expr = Expression.newBuilder();
-    if (ctx.number() != null) {
-      expr = visit(ctx.number());
-    } else if (ctx.STRING() != null) {
+    Expression.Builder expr = visitIfNotNull(ctx.number());
+    if (ctx.STRING() != null) {
       expr.setType(Expression.Type.STRING)
           .setString(ctx.STRING().getText().substring(1, ctx.STRING().getText().length()-1));
     } if (ctx.bool() != null) {
