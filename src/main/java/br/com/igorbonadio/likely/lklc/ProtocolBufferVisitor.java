@@ -50,7 +50,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.functionCall(),
       ctx.distribution(),
       ctx.returnExpression(),
-      ctx.obj_msg(),
+      ctx.objectMessage(),
       ctx.constructor_call(),
       ctx.comp_expr());
     if (ctx.OPEN_PAREN() != null) {
@@ -220,19 +220,19 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return addExpressionToBlock1(ctx.expression());
   }
 
-  public Expression.Builder visitObj_msg(LikelyParser.Obj_msgContext ctx) {
+  public Expression.Builder visitObjectMessage(LikelyParser.ObjectMessageContext ctx) {
     Expression.Builder obj = visit(ctx.obj());
     int nMsg = ctx.ID().size();
     for (int i = 0; i < nMsg; i++) {
-      Expression.Builder obj_msg = Expression.newBuilder()
+      Expression.Builder objectMessage = Expression.newBuilder()
         .setType(Expression.Type.OBJECT_MESSAGE)
         .setLhs(obj)
         .setString(ctx.ID(i).getText());
-      obj = obj_msg;
+      obj = objectMessage;
       if (ctx.list(i) != null) {
         Expression.Builder f_call = visit(ctx.list(i));
         f_call.setType(Expression.Type.FUNCTION_CALL)
-              .setLhs(obj_msg);
+              .setLhs(objectMessage);
         obj = f_call;
       }
     }
@@ -271,7 +271,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitFunc(LikelyParser.FuncContext ctx) {
-    Expression.Builder expr = visitIfNotNull(ctx.obj_msg());
+    Expression.Builder expr = visitIfNotNull(ctx.objectMessage());
     if (ctx.ID() != null)
       expr = createID(ctx.ID());
     return expr;
@@ -316,7 +316,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitAttribution(LikelyParser.AttributionContext ctx) {
-    Expression.Builder container = visitIfNotNull(ctx.obj_msg());
+    Expression.Builder container = visitIfNotNull(ctx.objectMessage());
     if (ctx.ID() != null)
       container = createID(ctx.ID());
     return Expression.newBuilder()

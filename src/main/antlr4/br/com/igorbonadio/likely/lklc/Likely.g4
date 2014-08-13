@@ -83,7 +83,7 @@ expression : ID
      | functionCall
      | distribution
      | returnExpression
-     | obj_msg
+     | objectMessage
      | constructor_call
      | comp_expr
      ;
@@ -101,7 +101,7 @@ bool : 'true'
      | 'false'
      ;
 
-attribution : (ID | obj_msg) '=' expression
+attribution : (ID | objectMessage) '=' expression
             ;
 
 sequence : '[' list_body? ']'
@@ -125,7 +125,7 @@ functionCall : func list+
              ;
 
 func : ID
-     | obj_msg
+     | objectMessage
      ;
 
 list : '(' list_body? ')'
@@ -177,8 +177,8 @@ cond_vars : joint_vars '|' joint_vars
 returnExpression : 'return' expression
             ;
 
-obj_msg : obj ('.' ID list?)+
-        ;
+objectMessage : obj ('.' ID list?)+
+              ;
 
 obj : literal
     | ID
