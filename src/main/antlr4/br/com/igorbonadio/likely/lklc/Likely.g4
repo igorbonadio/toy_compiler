@@ -63,11 +63,11 @@ tokens { INDENT, DEDENT }
 file_input : NEWLINE* header ( NEWLINE | statement )*
            ;
 
-header : impt*
+header : importPackage*
        ;
 
-impt : 'import' (ID | '.')? STRING (NEWLINE | ';' | EOF)
-     ;
+importPackage : 'import' (ID | '.')? STRING (NEWLINE | ';' | EOF)
+              ;
 
 statement : expr (NEWLINE? | ';' | EOF)
           ;

@@ -18,13 +18,13 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitHeader(LikelyParser.HeaderContext ctx) {
-    for (int i = 0; i < ctx.impt().size(); i++) {
-      visit(ctx.impt(i));
+    for (int i = 0; i < ctx.importPackage().size(); i++) {
+      visit(ctx.importPackage(i));
     }
     return null;
   }
 
-  public Expression.Builder visitImpt(LikelyParser.ImptContext ctx) {
+  public Expression.Builder visitImportPackage(LikelyParser.ImportPackageContext ctx) {
     ImportPackage.Builder impts = ImportPackage.newBuilder();
     String path = removeQuotes(ctx.STRING().getText());
     if (ctx.ID() != null) {
