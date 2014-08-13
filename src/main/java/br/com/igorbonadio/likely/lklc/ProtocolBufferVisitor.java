@@ -48,7 +48,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.attribution(),
       ctx.sequence(),
       ctx.functionCall(),
-      ctx.dist(),
+      ctx.distribution(),
       ctx.return_expr(),
       ctx.obj_msg(),
       ctx.constructor_call(),
@@ -77,7 +77,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitDist(LikelyParser.DistContext ctx) {
+  public Expression.Builder visitDistribution(LikelyParser.DistributionContext ctx) {
     return visitIfNotNull(ctx.dist_body())
       .setType(Expression.Type.FUNCTION_CALL);
   }

@@ -81,7 +81,7 @@ expression : ID
      | NOT expression
      | OPEN_PAREN expression CLOSE_PAREN
      | functionCall
-     | dist
+     | distribution
      | return_expr
      | obj_msg
      | constructor_call
@@ -141,7 +141,7 @@ list_body_fat : expression (',' expression)*
 list_body_thin : NEWLINE+ INDENT (expression NEWLINE+)* DEDENT
                ;
 
-dist : 'Prob' '(' dist_body? ')'
+distribution : 'Prob' '(' dist_body? ')'
      ;
 
 dist_body : dist_body_fat
