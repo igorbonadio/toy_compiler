@@ -304,14 +304,14 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   public Expression.Builder visitListBody(LikelyParser.ListBodyContext ctx) {
     return visitIfNotNull(
       ctx.fatListBody(),
-      ctx.list_body_thin());
+      ctx.thinListBody());
   }
 
   public Expression.Builder visitFatListBody(LikelyParser.FatListBodyContext ctx) {
     return addExpressionToBlock1(ctx.expression());
   }
 
-  public Expression.Builder visitList_body_thin(LikelyParser.List_body_thinContext ctx) {
+  public Expression.Builder visitThinListBody(LikelyParser.ThinListBodyContext ctx) {
     return addExpressionToBlock1(ctx.expression());
   }
 

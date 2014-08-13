@@ -132,14 +132,14 @@ list : '(' listBody? ')'
      ;
 
 listBody : fatListBody
-          | list_body_thin
+          | thinListBody
           ;
 
 fatListBody : expression (',' expression)*
             ;
 
-list_body_thin : NEWLINE+ INDENT (expression NEWLINE+)* DEDENT
-               ;
+thinListBody : NEWLINE+ INDENT (expression NEWLINE+)* DEDENT
+             ;
 
 distribution : 'Prob' '(' dist_body? ')'
      ;
