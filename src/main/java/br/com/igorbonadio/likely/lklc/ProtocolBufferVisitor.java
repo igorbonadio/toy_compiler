@@ -385,7 +385,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return Expression.newBuilder();
   }
 
-  private Expression.Builder addProbabilitiesToBlock1(java.util.List<LikelyParser.ProbContext> elements) {
+  private Expression.Builder addProbabilitiesToBlock1(java.util.List<LikelyParser.ProbabilityContext> elements) {
     Expression.Builder expr = Expression.newBuilder();
     for (int i = 0; i < elements.size(); i++) {
       expr.addBlock1(visit(elements.get(i)));
