@@ -78,21 +78,21 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitDistribution(LikelyParser.DistributionContext ctx) {
-    return visitIfNotNull(ctx.dist_body())
+    return visitIfNotNull(ctx.distBody())
       .setType(Expression.Type.FUNCTION_CALL);
   }
 
-  public Expression.Builder visitDist_body(LikelyParser.Dist_bodyContext ctx) {
+  public Expression.Builder visitDistBody(LikelyParser.DistBodyContext ctx) {
     return visitIfNotNull(
-      ctx.dist_body_fat(),
-      ctx.dist_body_thin());
+      ctx.fatDistBody(),
+      ctx.thinDistBody());
   }
 
-  public Expression.Builder visitDist_body_fat(LikelyParser.Dist_body_fatContext ctx) {
+  public Expression.Builder visitFatDistBody(LikelyParser.FatDistBodyContext ctx) {
     return addProbabilitiesToBlock1(ctx.prob());
   }
 
-  public Expression.Builder visitDist_body_thin(LikelyParser.Dist_body_thinContext ctx) {
+  public Expression.Builder visitThinDistBody(LikelyParser.ThinDistBodyContext ctx) {
     return addProbabilitiesToBlock1(ctx.prob());
   }
 

@@ -141,17 +141,17 @@ fatListBody : expression (',' expression)*
 thinListBody : NEWLINE+ INDENT (expression NEWLINE+)* DEDENT
              ;
 
-distribution : 'Prob' '(' dist_body? ')'
+distribution : 'Prob' '(' distBody? ')'
      ;
 
-dist_body : dist_body_fat
-          | dist_body_thin
+distBody : fatDistBody
+          | thinDistBody
           ;
 
-dist_body_fat : prob (',' prob)*
+fatDistBody : prob (',' prob)*
               ;
 
-dist_body_thin : NEWLINE+ INDENT (prob NEWLINE+)* DEDENT
+thinDistBody : NEWLINE+ INDENT (prob NEWLINE+)* DEDENT
                ;
 
 prob : prob_vars '=' expression
