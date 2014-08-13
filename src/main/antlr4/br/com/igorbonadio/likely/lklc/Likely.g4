@@ -85,7 +85,7 @@ expression : ID
      | returnExpression
      | objectMessage
      | constructorCall
-     | comp_expr
+     | complexExpression
      ;
 
 literal : number
@@ -201,7 +201,7 @@ fat_expr : expression
          | '{' (expression ';')* expression? '}'
          ;
 
-comp_expr : if_expr
+complexExpression : if_expr
           | for_expr
           | while_expr
           | func_def
