@@ -74,7 +74,7 @@ statement : expr (NEWLINE? | ';' | EOF)
 
 expr : ID
      | literal
-     | attr
+     | attribution
      | seq
      | expr ARROW expr
      | expr op expr
@@ -101,8 +101,8 @@ bool : 'true'
      | 'false'
      ;
 
-attr : (ID | obj_msg) '=' expr
-     ;
+attribution : (ID | obj_msg) '=' expr
+            ;
 
 seq : '[' list_body? ']'
     ;

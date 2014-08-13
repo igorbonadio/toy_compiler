@@ -45,7 +45,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   public Expression.Builder visitExpr(LikelyParser.ExprContext ctx) {
     Expression.Builder expr = visitIfNotNull(
       ctx.literal(),
-      ctx.attr(),
+      ctx.attribution(),
       ctx.seq(),
       ctx.func_call(),
       ctx.dist(),
@@ -315,7 +315,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return addExpressionToBlock1(ctx.expr());
   }
 
-  public Expression.Builder visitAttr(LikelyParser.AttrContext ctx) {
+  public Expression.Builder visitAttribution(LikelyParser.AttributionContext ctx) {
     Expression.Builder container = visitIfNotNull(ctx.obj_msg());
     if (ctx.ID() != null)
       container = createID(ctx.ID());
