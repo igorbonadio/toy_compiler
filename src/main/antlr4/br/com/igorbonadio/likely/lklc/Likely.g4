@@ -80,7 +80,7 @@ expression : ID
      | expression op expression
      | NOT expression
      | OPEN_PAREN expression CLOSE_PAREN
-     | func_call
+     | functionCall
      | dist
      | return_expr
      | obj_msg
@@ -121,8 +121,8 @@ op : '+'
    | 'or'
    ;
 
-func_call : func list+
-          ;
+functionCall : func list+
+             ;
 
 func : ID
      | obj_msg
@@ -187,7 +187,7 @@ obj : literal
     | '(' expression ')'
     ;
 
-constructor_call : func_call ':' block
+constructor_call : functionCall ':' block
                  ;
 
 block : fat_expr

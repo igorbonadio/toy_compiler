@@ -47,7 +47,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.literal(),
       ctx.attribution(),
       ctx.sequence(),
-      ctx.func_call(),
+      ctx.functionCall(),
       ctx.dist(),
       ctx.return_expr(),
       ctx.obj_msg(),
@@ -156,7 +156,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitConstructor_call(LikelyParser.Constructor_callContext ctx) {
-    Expression.Builder expr = visit(ctx.func_call());
+    Expression.Builder expr = visit(ctx.functionCall());
     java.util.List<Expression> block = visit(ctx.block()).getBlock1List();
     for (int i = 0; i < block.size(); i++) {
       expr.addBlock2(block.get(i));
@@ -255,7 +255,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       .setRhs(visit(ctx.expression()));
   }
 
-  public Expression.Builder visitFunc_call(LikelyParser.Func_callContext ctx) {
+  public Expression.Builder visitFunctionCall(LikelyParser.FunctionCallContext ctx) {
     Expression.Builder func = visit(ctx.func());
     for (int i = 0; i < ctx.list().size(); i++) {
       Expression.Builder args = visit(ctx.list(i))
