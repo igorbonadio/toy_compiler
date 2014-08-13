@@ -335,14 +335,10 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return addExpressionToBlock1(ctx.expr());
   }
 
-  // TODO
   public Expression.Builder visitAttr(LikelyParser.AttrContext ctx) {
     Expression.Builder container = visitIfNotNull(ctx.obj_msg());
-    if (ctx.ID() != null) {
-      container = Expression.newBuilder();
-      container.setType(Expression.Type.ID)
-               .setString(ctx.ID().getText());
-    }
+    if (ctx.ID() != null)
+      container = createID(ctx.ID());
     return Expression.newBuilder()
       .setType(Expression.Type.ATTRIBUTION)
       .setLhs(container)
@@ -365,6 +361,12 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
 
   public Program getProtocolBuffer() {
     return program.build();
+  }
+
+  private Expression.Builder createID(TerminalNode terminal) {
+    return Expression.newBuilder()
+      .setType(Expression.Type.ID)
+      .setString(terminal.getText());
   }
 
   private Expression.Builder createString(TerminalNode terminal) {
