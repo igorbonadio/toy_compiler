@@ -46,7 +46,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     Expression.Builder expr = visitIfNotNull(
       ctx.literal(),
       ctx.attribution(),
-      ctx.seq(),
+      ctx.sequence(),
       ctx.func_call(),
       ctx.dist(),
       ctx.return_expr(),
@@ -244,7 +244,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       return createID(ctx.ID());
     return visitIfNotNull(
       ctx.literal(),
-      ctx.seq(),
+      ctx.sequence(),
       ctx.prob(),
       ctx.expr());
   }
@@ -296,7 +296,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitSeq(LikelyParser.SeqContext ctx) {
+  public Expression.Builder visitSequence(LikelyParser.SequenceContext ctx) {
     return visitIfNotNull(ctx.list_body())
       .setType(Expression.Type.SEQUENCE);
   }
