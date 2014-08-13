@@ -157,13 +157,13 @@ thinDistBody : NEWLINE+ INDENT (probability NEWLINE+)* DEDENT
 probability : probabilityVariable '=' expression
      ;
 
-probabilityVariable : joint_vars
+probabilityVariable : jointVariable
                     | cond_vars
                     ;
 
-joint_vars : sample
-           | '(' var_list? ')'
-           ;
+jointVariable : sample
+              | '(' var_list? ')'
+              ;
 
 sample : ID+
        ;
@@ -171,7 +171,7 @@ sample : ID+
 var_list : sample (',' sample)*
          ;
 
-cond_vars : joint_vars '|' joint_vars
+cond_vars : jointVariable '|' jointVariable
           ;
 
 returnExpression : 'return' expression
