@@ -349,20 +349,14 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       .setRhs(visit(ctx.expr()));
   }
 
-  // TODO
   public Expression.Builder visitLiteral(LikelyParser.LiteralContext ctx) {
-    Expression.Builder expr = visitIfNotNull(ctx.number());
-    if (ctx.STRING() != null) {
-      expr.setType(Expression.Type.STRING)
-          .setString(ctx.STRING().getText().substring(1, ctx.STRING().getText().length()-1));
-    } if (ctx.bool() != null) {
-      expr.setType(Expression.Type.BOOLEAN)
-          .setBoolean(ctx.bool().getText().equals("true"));
-    }
-    return expr;
+    if (ctx.STRING() != null)
+      return createString(ctx.STRING());
+    else if (ctx.bool() != null)
+      return createBoolean(ctx.bool());
+    return visitIfNotNull(ctx.number());
   }
 
-  // TODO
   public Expression.Builder visitNumber(LikelyParser.NumberContext ctx) {
     if (ctx.INTEGER() != null)
       return createInteger(ctx.INTEGER());
@@ -371,6 +365,18 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
 
   public Program getProtocolBuffer() {
     return program.build();
+  }
+
+  private Expression.Builder createString(TerminalNode terminal) {
+    return Expression.newBuilder()
+      .setType(Expression.Type.STRING)
+      .setString(terminal.getText().substring(1, terminal.getText().length()-1));
+  }
+
+  private Expression.Builder createBoolean(LikelyParser.BoolContext bool) {
+    return Expression.newBuilder()
+      .setType(Expression.Type.BOOLEAN)
+      .setBoolean(bool.getText().equals("true"));
   }
 
   private Expression.Builder createInteger(TerminalNode terminal) {
