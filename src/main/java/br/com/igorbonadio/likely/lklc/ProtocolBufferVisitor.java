@@ -303,11 +303,11 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
 
   public Expression.Builder visitListBody(LikelyParser.ListBodyContext ctx) {
     return visitIfNotNull(
-      ctx.list_body_fat(),
+      ctx.fatListBody(),
       ctx.list_body_thin());
   }
 
-  public Expression.Builder visitList_body_fat(LikelyParser.List_body_fatContext ctx) {
+  public Expression.Builder visitFatListBody(LikelyParser.FatListBodyContext ctx) {
     return addExpressionToBlock1(ctx.expression());
   }
 

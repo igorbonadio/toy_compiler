@@ -131,12 +131,12 @@ func : ID
 list : '(' listBody? ')'
      ;
 
-listBody : list_body_fat
+listBody : fatListBody
           | list_body_thin
           ;
 
-list_body_fat : expression (',' expression)*
-              ;
+fatListBody : expression (',' expression)*
+            ;
 
 list_body_thin : NEWLINE+ INDENT (expression NEWLINE+)* DEDENT
                ;
