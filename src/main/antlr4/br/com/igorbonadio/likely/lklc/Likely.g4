@@ -177,29 +177,29 @@ conditionalVariable : jointVariable '|' jointVariable
 returnExpression : 'return' expression
             ;
 
-objectMessage : obj ('.' ID list?)+
+objectMessage : object ('.' ID list?)+
               ;
 
-obj : literal
-    | ID
-    | sequence
-    | probability
-    | '(' expression ')'
-    ;
+object : literal
+       | ID
+       | sequence
+       | probability
+       | '(' expression ')'
+       ;
 
 constructorCall : functionCall ':' block
                  ;
 
-block : fat_expr
-      | thin_expr
+block : fatExpr
+      | thinExpr
       ;
 
-thin_expr : NEWLINE+ INDENT (expression NEWLINE*)* DEDENT
-          ;
-
-fat_expr : expression
-         | '{' (expression ';')* expression? '}'
+thinExpr : NEWLINE+ INDENT (expression NEWLINE*)* DEDENT
          ;
+
+fatExpr : expression
+        | '{' (expression ';')* expression? '}'
+        ;
 
 complexExpression : if_expr
           | for_expr

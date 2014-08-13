@@ -208,20 +208,20 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
 
   public Expression.Builder visitBlock(LikelyParser.BlockContext ctx) {
     return visitIfNotNull(
-      ctx.fat_expr(),
-      ctx.thin_expr());
+      ctx.fatExpr(),
+      ctx.thinExpr());
   }
 
-  public Expression.Builder visitFat_expr(LikelyParser.Fat_exprContext ctx) {
+  public Expression.Builder visitFatExpr(LikelyParser.FatExprContext ctx) {
     return addExpressionToBlock1(ctx.expression());
   }
 
-  public Expression.Builder visitThin_expr(LikelyParser.Thin_exprContext ctx) {
+  public Expression.Builder visitThinExpr(LikelyParser.ThinExprContext ctx) {
     return addExpressionToBlock1(ctx.expression());
   }
 
   public Expression.Builder visitObjectMessage(LikelyParser.ObjectMessageContext ctx) {
-    Expression.Builder obj = visit(ctx.obj());
+    Expression.Builder obj = visit(ctx.object());
     int nMsg = ctx.ID().size();
     for (int i = 0; i < nMsg; i++) {
       Expression.Builder objectMessage = Expression.newBuilder()
@@ -239,7 +239,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return obj;
   }
 
-  public Expression.Builder visitObj(LikelyParser.ObjContext ctx) {
+  public Expression.Builder visitObject(LikelyParser.ObjectContext ctx) {
     if (ctx.ID() != null)
       return createID(ctx.ID());
     return visitIfNotNull(
