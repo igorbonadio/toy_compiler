@@ -267,7 +267,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitList(LikelyParser.ListContext ctx) {
-    return visitIfNotNull(ctx.list_body());
+    return visitIfNotNull(ctx.listBody());
   }
 
   public Expression.Builder visitFunc(LikelyParser.FuncContext ctx) {
@@ -297,11 +297,11 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitSequence(LikelyParser.SequenceContext ctx) {
-    return visitIfNotNull(ctx.list_body())
+    return visitIfNotNull(ctx.listBody())
       .setType(Expression.Type.SEQUENCE);
   }
 
-  public Expression.Builder visitList_body(LikelyParser.List_bodyContext ctx) {
+  public Expression.Builder visitListBody(LikelyParser.ListBodyContext ctx) {
     return visitIfNotNull(
       ctx.list_body_fat(),
       ctx.list_body_thin());

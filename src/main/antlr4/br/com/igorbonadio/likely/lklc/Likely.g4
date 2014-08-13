@@ -104,7 +104,7 @@ bool : 'true'
 attribution : (ID | objectMessage) '=' expression
             ;
 
-sequence : '[' list_body? ']'
+sequence : '[' listBody? ']'
          ;
 
 op : '+'
@@ -128,10 +128,10 @@ func : ID
      | objectMessage
      ;
 
-list : '(' list_body? ')'
+list : '(' listBody? ')'
      ;
 
-list_body : list_body_fat
+listBody : list_body_fat
           | list_body_thin
           ;
 
