@@ -248,19 +248,14 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return obj;
   }
 
-  // TODO
   public Expression.Builder visitObj(LikelyParser.ObjContext ctx) {
-    Expression.Builder expr = visitIfNotNull(
+    if (ctx.ID() != null)
+      return createID(ctx.ID());
+    return visitIfNotNull(
       ctx.literal(),
       ctx.seq(),
       ctx.prob(),
       ctx.expr());
-    if (ctx.ID() != null) {
-      expr = Expression.newBuilder()
-        .setType(Expression.Type.ID)
-        .setString(ctx.ID().getText());
-    }
-    return expr;
   }
 
   public Expression.Builder visitReturn_expr(LikelyParser.Return_exprContext ctx) {
