@@ -69,17 +69,17 @@ header : importPackage*
 importPackage : 'import' (ID | '.')? STRING (NEWLINE | ';' | EOF)
               ;
 
-statement : expr (NEWLINE? | ';' | EOF)
+statement : expression (NEWLINE? | ';' | EOF)
           ;
 
-expr : ID
+expression : ID
      | literal
      | attribution
      | sequence
-     | expr ARROW expr
-     | expr op expr
-     | NOT expr
-     | OPEN_PAREN expr CLOSE_PAREN
+     | expression ARROW expression
+     | expression op expression
+     | NOT expression
+     | OPEN_PAREN expression CLOSE_PAREN
      | func_call
      | dist
      | return_expr
@@ -101,7 +101,7 @@ bool : 'true'
      | 'false'
      ;
 
-attribution : (ID | obj_msg) '=' expr
+attribution : (ID | obj_msg) '=' expression
             ;
 
 sequence : '[' list_body? ']'
@@ -135,10 +135,10 @@ list_body : list_body_fat
           | list_body_thin
           ;
 
-list_body_fat : expr (',' expr)*
+list_body_fat : expression (',' expression)*
               ;
 
-list_body_thin : NEWLINE+ INDENT (expr NEWLINE+)* DEDENT
+list_body_thin : NEWLINE+ INDENT (expression NEWLINE+)* DEDENT
                ;
 
 dist : 'Prob' '(' dist_body? ')'
@@ -154,7 +154,7 @@ dist_body_fat : prob (',' prob)*
 dist_body_thin : NEWLINE+ INDENT (prob NEWLINE+)* DEDENT
                ;
 
-prob : prob_vars '=' expr
+prob : prob_vars '=' expression
      ;
 
 prob_vars : joint_vars
@@ -174,7 +174,7 @@ var_list : sample (',' sample)*
 cond_vars : joint_vars '|' joint_vars
           ;
 
-return_expr : 'return' expr
+return_expr : 'return' expression
             ;
 
 obj_msg : obj ('.' ID list?)+
@@ -184,7 +184,7 @@ obj : literal
     | ID
     | sequence
     | prob
-    | '(' expr ')'
+    | '(' expression ')'
     ;
 
 constructor_call : func_call ':' block
@@ -194,11 +194,11 @@ block : fat_expr
       | thin_expr
       ;
 
-thin_expr : NEWLINE+ INDENT (expr NEWLINE*)* DEDENT
+thin_expr : NEWLINE+ INDENT (expression NEWLINE*)* DEDENT
           ;
 
-fat_expr : expr
-         | '{' (expr ';')* expr? '}'
+fat_expr : expression
+         | '{' (expression ';')* expression? '}'
          ;
 
 comp_expr : if_expr
@@ -207,13 +207,13 @@ comp_expr : if_expr
           | func_def
           ;
 
-if_expr : 'if' '(' expr ')' ':' block 'else' ':' block
+if_expr : 'if' '(' expression ')' ':' block 'else' ':' block
         ;
 
-for_expr : 'for' '(' ID '<-' expr ':' expr ')' ':' block
+for_expr : 'for' '(' ID '<-' expression ':' expression ')' ':' block
          ;
 
-while_expr : 'while' '(' expr ')' ':' block
+while_expr : 'while' '(' expression ')' ':' block
            ;
 
 func_def : 'function' '(' func_params? ')' ':' block
