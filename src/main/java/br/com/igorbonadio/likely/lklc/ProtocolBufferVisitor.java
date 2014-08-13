@@ -269,14 +269,12 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       .setRhs(visit(ctx.expr()));
   }
 
-  // TODO
   public Expression.Builder visitFunc_call(LikelyParser.Func_callContext ctx) {
     Expression.Builder func = visit(ctx.func());
-    int nCall = ctx.list().size();
-    for (int i = 0; i < nCall; i++) {
-      Expression.Builder args = visit(ctx.list(i));
-      args.setType(Expression.Type.FUNCTION_CALL)
-          .setLhs(func);
+    for (int i = 0; i < ctx.list().size(); i++) {
+      Expression.Builder args = visit(ctx.list(i))
+        .setType(Expression.Type.FUNCTION_CALL)
+        .setLhs(func);
       func = args;
     }
     return func;
