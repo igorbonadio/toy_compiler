@@ -172,6 +172,24 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.functionDefinition());
   }
 
+  public Expression.Builder visitFunctionDefinition(LikelyParser.FunctionDefinitionContext ctx) {
+    java.util.List<String> params = visitIfNotNull(ctx.functionParameters()).getStrings1List();
+    Expression.Builder expr = visit(ctx.block())
+      .setType(Expression.Type.FUNCTION_DEFINITION);
+    for (int i = 0; i < params.size(); i++) {
+      expr.addStrings1(params.get(i));
+    }
+    return expr;
+  }
+
+  public Expression.Builder visitFunctionParameters(LikelyParser.FunctionParametersContext ctx) {
+    Expression.Builder expr = Expression.newBuilder();
+    for (int i = 0; i < ctx.ID().size(); i++) {
+      expr.addStrings1(ctx.ID(i).getText());
+    }
+    return expr;
+  }
+
   public Expression.Builder visitWhileExpression(LikelyParser.WhileExpressionContext ctx) {
     return visit(ctx.block())
       .setType(Expression.Type.WHILE)
