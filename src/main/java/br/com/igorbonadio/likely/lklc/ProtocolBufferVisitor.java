@@ -105,7 +105,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   public Expression.Builder visitProbabilityVariable(LikelyParser.ProbabilityVariableContext ctx) {
     return visitIfNotNull(
       ctx.jointVariable(),
-      ctx.cond_vars());
+      ctx.conditionalVariable());
   }
 
   public Expression.Builder visitJointVariable(LikelyParser.JointVariableContext ctx) {
@@ -146,7 +146,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitCond_vars(LikelyParser.Cond_varsContext ctx) {
+  public Expression.Builder visitConditionalVariable(LikelyParser.ConditionalVariableContext ctx) {
     Expression.Builder expr = visit(ctx.jointVariable(0));
     java.util.List<String> cond = visit(ctx.jointVariable(1)).getStrings1List();
     for (int i = 0; i < cond.size(); i++) {

@@ -158,7 +158,7 @@ probability : probabilityVariable '=' expression
      ;
 
 probabilityVariable : jointVariable
-                    | cond_vars
+                    | conditionalVariable
                     ;
 
 jointVariable : sample
@@ -171,8 +171,8 @@ sample : ID+
 var_list : sample (',' sample)*
          ;
 
-cond_vars : jointVariable '|' jointVariable
-          ;
+conditionalVariable : jointVariable '|' jointVariable
+                    ;
 
 returnExpression : 'return' expression
             ;
