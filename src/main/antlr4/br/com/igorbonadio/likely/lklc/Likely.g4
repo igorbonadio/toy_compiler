@@ -145,21 +145,21 @@ distribution : 'Prob' '(' distBody? ')'
      ;
 
 distBody : fatDistBody
-          | thinDistBody
-          ;
+         | thinDistBody
+         ;
 
 fatDistBody : prob (',' prob)*
-              ;
+            ;
 
 thinDistBody : NEWLINE+ INDENT (prob NEWLINE+)* DEDENT
-               ;
+             ;
 
-prob : prob_vars '=' expression
+prob : probabilityVariable '=' expression
      ;
 
-prob_vars : joint_vars
-          | cond_vars
-          ;
+probabilityVariable : joint_vars
+                    | cond_vars
+                    ;
 
 joint_vars : sample
            | '(' var_list? ')'
