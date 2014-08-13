@@ -204,7 +204,7 @@ fatExpr : expression
 complexExpression : ifExpression
                   | forExpression
                   | whileExpression
-                  | func_def
+                  | functionDefinition
                   ;
 
 ifExpression : 'if' '(' expression ')' ':' block 'else' ':' block
@@ -216,10 +216,10 @@ forExpression : 'for' '(' ID '<-' expression ':' expression ')' ':' block
 whileExpression : 'while' '(' expression ')' ':' block
                 ;
 
-func_def : 'function' '(' func_params? ')' ':' block
-         ;
+functionDefinition : 'function' '(' functionParameters? ')' ':' block
+                   ;
 
-func_params : ID (',' ID)*
+functionParameters : ID (',' ID)*
             ;
 
 

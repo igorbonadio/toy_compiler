@@ -169,7 +169,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.ifExpression(),
       ctx.forExpression(),
       ctx.whileExpression(),
-      ctx.func_def());
+      ctx.functionDefinition());
   }
 
   public Expression.Builder visitWhileExpression(LikelyParser.WhileExpressionContext ctx) {
