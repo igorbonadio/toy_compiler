@@ -49,7 +49,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.sequence(),
       ctx.functionCall(),
       ctx.distribution(),
-      ctx.return_expr(),
+      ctx.returnExpression(),
       ctx.obj_msg(),
       ctx.constructor_call(),
       ctx.comp_expr());
@@ -249,7 +249,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.expression());
   }
 
-  public Expression.Builder visitReturn_expr(LikelyParser.Return_exprContext ctx) {
+  public Expression.Builder visitReturnExpression(LikelyParser.ReturnExpressionContext ctx) {
     return Expression.newBuilder()
       .setType(Expression.Type.RETURN)
       .setRhs(visit(ctx.expression()));

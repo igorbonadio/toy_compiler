@@ -82,7 +82,7 @@ expression : ID
      | OPEN_PAREN expression CLOSE_PAREN
      | functionCall
      | distribution
-     | return_expr
+     | returnExpression
      | obj_msg
      | constructor_call
      | comp_expr
@@ -174,7 +174,7 @@ var_list : sample (',' sample)*
 cond_vars : joint_vars '|' joint_vars
           ;
 
-return_expr : 'return' expression
+returnExpression : 'return' expression
             ;
 
 obj_msg : obj ('.' ID list?)+
