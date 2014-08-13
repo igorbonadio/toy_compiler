@@ -201,20 +201,20 @@ fatExpr : expression
         | '{' (expression ';')* expression? '}'
         ;
 
-complexExpression : if_expr
-          | for_expr
-          | while_expr
-          | func_def
-          ;
+complexExpression : ifExpression
+                  | forExpression
+                  | whileExpression
+                  | func_def
+                  ;
 
-if_expr : 'if' '(' expression ')' ':' block 'else' ':' block
-        ;
+ifExpression : 'if' '(' expression ')' ':' block 'else' ':' block
+             ;
 
-for_expr : 'for' '(' ID '<-' expression ':' expression ')' ':' block
-         ;
+forExpression : 'for' '(' ID '<-' expression ':' expression ')' ':' block
+              ;
 
-while_expr : 'while' '(' expression ')' ':' block
-           ;
+whileExpression : 'while' '(' expression ')' ':' block
+                ;
 
 func_def : 'function' '(' func_params? ')' ':' block
          ;

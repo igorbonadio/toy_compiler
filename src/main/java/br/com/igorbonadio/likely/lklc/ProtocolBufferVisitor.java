@@ -166,19 +166,19 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
 
   public Expression.Builder visitComplexExpression(LikelyParser.ComplexExpressionContext ctx) {
     return visitIfNotNull(
-      ctx.if_expr(),
-      ctx.for_expr(),
-      ctx.while_expr(),
+      ctx.ifExpression(),
+      ctx.forExpression(),
+      ctx.whileExpression(),
       ctx.func_def());
   }
 
-  public Expression.Builder visitWhile_expr(LikelyParser.While_exprContext ctx) {
+  public Expression.Builder visitWhileExpression(LikelyParser.WhileExpressionContext ctx) {
     return visit(ctx.block())
       .setType(Expression.Type.WHILE)
       .setRhs(visit(ctx.expression()));
   }
 
-  public Expression.Builder visitFor_expr(LikelyParser.For_exprContext ctx) {
+  public Expression.Builder visitForExpression(LikelyParser.ForExpressionContext ctx) {
     return visit(ctx.block())
       .setType(Expression.Type.FOR)
       .setString(ctx.ID().getText())
@@ -186,7 +186,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       .setRhs(visit(ctx.expression(1)));
   }
 
-  public Expression.Builder visitIf_expr(LikelyParser.If_exprContext ctx) {
+  public Expression.Builder visitIfExpression(LikelyParser.IfExpressionContext ctx) {
     Expression.Builder expr = Expression.newBuilder()
       .setType(Expression.Type.IF)
       .setRhs(visit(ctx.expression()));
