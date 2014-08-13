@@ -286,14 +286,10 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return visitIfNotNull(ctx.list_body());
   }
 
-  // TODO
   public Expression.Builder visitFunc(LikelyParser.FuncContext ctx) {
     Expression.Builder expr = visitIfNotNull(ctx.obj_msg());
-    if (ctx.ID() != null) {
-      expr = Expression.newBuilder();
-      expr.setType(Expression.Type.ID)
-          .setString(ctx.ID().getText());
-    }
+    if (ctx.ID() != null)
+      expr = createID(ctx.ID());
     return expr;
   }
 
