@@ -89,14 +89,14 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
   }
 
   public Expression.Builder visitFatDistBody(LikelyParser.FatDistBodyContext ctx) {
-    return addProbabilitiesToBlock1(ctx.prob());
+    return addProbabilitiesToBlock1(ctx.probability());
   }
 
   public Expression.Builder visitThinDistBody(LikelyParser.ThinDistBodyContext ctx) {
-    return addProbabilitiesToBlock1(ctx.prob());
+    return addProbabilitiesToBlock1(ctx.probability());
   }
 
-  public Expression.Builder visitProb(LikelyParser.ProbContext ctx) {
+  public Expression.Builder visitProbability(LikelyParser.ProbabilityContext ctx) {
     return visit(ctx.probabilityVariable())
       .setType(Expression.Type.PROBABILITY)
       .setRhs(visit(ctx.expression()));
@@ -245,7 +245,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return visitIfNotNull(
       ctx.literal(),
       ctx.sequence(),
-      ctx.prob(),
+      ctx.probability(),
       ctx.expression());
   }
 

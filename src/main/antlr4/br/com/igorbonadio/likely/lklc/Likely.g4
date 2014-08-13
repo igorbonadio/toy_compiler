@@ -148,13 +148,13 @@ distBody : fatDistBody
          | thinDistBody
          ;
 
-fatDistBody : prob (',' prob)*
+fatDistBody : probability (',' probability)*
             ;
 
-thinDistBody : NEWLINE+ INDENT (prob NEWLINE+)* DEDENT
+thinDistBody : NEWLINE+ INDENT (probability NEWLINE+)* DEDENT
              ;
 
-prob : probabilityVariable '=' expression
+probability : probabilityVariable '=' expression
      ;
 
 probabilityVariable : joint_vars
@@ -183,7 +183,7 @@ objectMessage : obj ('.' ID list?)+
 obj : literal
     | ID
     | sequence
-    | prob
+    | probability
     | '(' expression ')'
     ;
 
