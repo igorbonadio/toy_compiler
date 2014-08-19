@@ -1,4 +1,4 @@
-package br.com.igorbonadio.likely.lklc;
+package br.com.igorbonadio.toy_compiler.compiler;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.com.igorbonadio.likely.lklast.LikelyAst.*;
+import br.com.igorbonadio.toy_compiler.ast.ToyCompilerAst.*;
 
 public class FunctionDefinitionTest extends TestCase {
 
@@ -20,7 +20,7 @@ public class FunctionDefinitionTest extends TestCase {
   }
 
   public void testFunctionDefinitionWithoutParameters() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("function(): 1"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("function(): 1"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -40,7 +40,7 @@ public class FunctionDefinitionTest extends TestCase {
   }
 
   public void testFunctionDefinitionWithParameters() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("function(x, y): 1"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("function(x, y): 1"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();

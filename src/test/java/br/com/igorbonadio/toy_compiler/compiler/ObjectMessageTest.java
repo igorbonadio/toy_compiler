@@ -1,4 +1,4 @@
-package br.com.igorbonadio.likely.lklc;
+package br.com.igorbonadio.toy_compiler.compiler;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.com.igorbonadio.likely.lklast.LikelyAst.*;
+import br.com.igorbonadio.toy_compiler.ast.ToyCompilerAst.*;
 
 public class ObjectMessageTest extends TestCase {
 
@@ -20,7 +20,7 @@ public class ObjectMessageTest extends TestCase {
   }
 
   public void testObjectMessage() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("x.y"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("x.y"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -41,7 +41,7 @@ public class ObjectMessageTest extends TestCase {
   }
 
   public void testObject2Message() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("x.y.z"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("x.y.z"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -66,7 +66,7 @@ public class ObjectMessageTest extends TestCase {
   }
 
   public void testObject2MessageAndACall() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("x.y().z"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("x.y().z"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();

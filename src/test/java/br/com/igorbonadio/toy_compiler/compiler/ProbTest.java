@@ -1,4 +1,4 @@
-package br.com.igorbonadio.likely.lklc;
+package br.com.igorbonadio.toy_compiler.compiler;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.com.igorbonadio.likely.lklast.LikelyAst.*;
+import br.com.igorbonadio.toy_compiler.ast.ToyCompilerAst.*;
 
 public class ProbTest extends TestCase {
 
@@ -20,7 +20,7 @@ public class ProbTest extends TestCase {
   }
 
   public void testProb() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("Prob(x = 0.5)"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("Prob(x = 0.5)"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -44,7 +44,7 @@ public class ProbTest extends TestCase {
   }
 
   public void testJointProb() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("Prob((x,y) = 0.5)"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("Prob((x,y) = 0.5)"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -69,7 +69,7 @@ public class ProbTest extends TestCase {
   }
 
   public void testConditionalProb() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("Prob(x | y = 0.5)"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("Prob(x | y = 0.5)"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -94,7 +94,7 @@ public class ProbTest extends TestCase {
   }
 
   public void testVLMCProb() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("Prob(x | y y y = 0.5)"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("Prob(x | y y y = 0.5)"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -119,7 +119,7 @@ public class ProbTest extends TestCase {
   }
 
   public void testJointVLMCProb() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("Prob((x, z) | (y y y, w w w) = 0.5)"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("Prob((x, z) | (y y y, w w w) = 0.5)"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -146,7 +146,7 @@ public class ProbTest extends TestCase {
   }
 
   public void testConditionalJointProb() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("Prob((x,y) | (z,w) = 0.5)"))));
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("Prob((x,y) | (z,w) = 0.5)"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();

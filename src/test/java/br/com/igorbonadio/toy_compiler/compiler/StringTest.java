@@ -1,4 +1,4 @@
-package br.com.igorbonadio.likely.lklc;
+package br.com.igorbonadio.toy_compiler.compiler;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -7,20 +7,20 @@ import junit.framework.TestSuite;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.com.igorbonadio.likely.lklast.LikelyAst.*;
+import br.com.igorbonadio.toy_compiler.ast.ToyCompilerAst.*;
 
-public class IDTest extends TestCase {
+public class StringTest extends TestCase {
 
-  public IDTest(String testName) {
+  public StringTest(String testName) {
     super(testName);
   }
 
   public static Test suite() {
-    return new TestSuite(IDTest.class);
+    return new TestSuite(StringTest.class);
   }
 
-  public void testID() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("x"))));
+  public void testString() {
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("\"hello\""))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -30,14 +30,14 @@ public class IDTest extends TestCase {
     Program expectedProgram = Program.newBuilder()
       .addStatements(
         Expression.newBuilder()
-          .setType(Expression.Type.ID)
-          .setString("x")).build();
+          .setType(Expression.Type.STRING)
+          .setString("hello")).build();
 
     assertEquals(program.toString(), expectedProgram.toString());
   }
 
-  public void test2IDs() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("x;y;"))));
+  public void test2Strings1() {
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("\"hello\"\n\"pequena\""))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -47,12 +47,12 @@ public class IDTest extends TestCase {
     Program expectedProgram = Program.newBuilder()
       .addStatements(
         Expression.newBuilder()
-          .setType(Expression.Type.ID)
-          .setString("x"))
+          .setType(Expression.Type.STRING)
+          .setString("hello"))
       .addStatements(
         Expression.newBuilder()
-          .setType(Expression.Type.ID)
-          .setString("y")).build();
+          .setType(Expression.Type.STRING)
+          .setString("pequena")).build();
 
     assertEquals(program.toString(), expectedProgram.toString());
   }

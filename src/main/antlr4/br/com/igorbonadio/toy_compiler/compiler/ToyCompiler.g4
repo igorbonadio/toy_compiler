@@ -1,4 +1,4 @@
-grammar Likely;
+grammar ToyCompiler;
 
 tokens { INDENT, DEDENT }
 
@@ -19,11 +19,11 @@ tokens { INDENT, DEDENT }
     if (_input.LA(1) == EOF && !this.indents.isEmpty()) {
 
       // First emit an extra line break that serves as the end of the statement.
-      this.emit(new CommonToken(LikelyParser.NEWLINE, "\n"));
+      this.emit(new CommonToken(ToyCompilerParser.NEWLINE, "\n"));
 
       // Now emit as much DEDENT tokens as needed.
       while (!indents.isEmpty()) {
-        this.emit(new CommonToken(LikelyParser.DEDENT, "DEDENT"));
+        this.emit(new CommonToken(ToyCompilerParser.DEDENT, "DEDENT"));
         indents.pop();
       }
     }
@@ -288,12 +288,12 @@ NEWLINE : ('\r'? '\n' | '\r') SPACES?
             }
             else if (indent > previous) {
               indents.push(indent);
-              emit(new CommonToken(LikelyParser.INDENT, "INDENT"));
+              emit(new CommonToken(ToyCompilerParser.INDENT, "INDENT"));
             }
             else {
               // Possibly emit more than 1 DEDENT token.
               while(!indents.isEmpty() && indents.peek() > indent) {
-                emit(new CommonToken(LikelyParser.DEDENT, "DEDENT"));
+                emit(new CommonToken(ToyCompilerParser.DEDENT, "DEDENT"));
                 indents.pop();
               }
             }

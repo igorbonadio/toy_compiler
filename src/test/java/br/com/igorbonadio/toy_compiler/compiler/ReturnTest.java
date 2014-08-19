@@ -1,4 +1,4 @@
-package br.com.igorbonadio.likely.lklc;
+package br.com.igorbonadio.toy_compiler.compiler;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -7,20 +7,20 @@ import junit.framework.TestSuite;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.com.igorbonadio.likely.lklast.LikelyAst.*;
+import br.com.igorbonadio.toy_compiler.ast.ToyCompilerAst.*;
 
-public class AttributionTest extends TestCase {
+public class ReturnTest extends TestCase {
 
-  public AttributionTest(String testName) {
+  public ReturnTest(String testName) {
     super(testName);
   }
 
   public static Test suite() {
-    return new TestSuite(AttributionTest.class);
+    return new TestSuite(ReturnTest.class);
   }
 
-  public void testAttribution() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("x = 1"))));
+  public void testReturn() {
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("return 1"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -30,11 +30,7 @@ public class AttributionTest extends TestCase {
     Program expectedProgram = Program.newBuilder()
       .addStatements(
         Expression.newBuilder()
-          .setType(Expression.Type.ATTRIBUTION)
-          .setLhs(
-            Expression.newBuilder()
-              .setType(Expression.Type.ID)
-              .setString("x"))
+          .setType(Expression.Type.RETURN)
           .setRhs(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)

@@ -1,14 +1,14 @@
-package br.com.igorbonadio.likely.lklc;
+package br.com.igorbonadio.toy_compiler.compiler;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.com.igorbonadio.likely.lklast.LikelyAst.*;
+import br.com.igorbonadio.toy_compiler.ast.ToyCompilerAst.*;
 
-public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder> {
+public class ProtocolBufferVisitor extends ToyCompilerBaseVisitor<Expression.Builder> {
   private Program.Builder program;
 
-  public Expression.Builder visitFile_input(LikelyParser.File_inputContext ctx) {
+  public Expression.Builder visitFile_input(ToyCompilerParser.File_inputContext ctx) {
     program = Program.newBuilder();
     visit(ctx.header());
     for (int i = 0; i < ctx.statement().size(); i++) {
@@ -17,14 +17,14 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return null;
   }
 
-  public Expression.Builder visitHeader(LikelyParser.HeaderContext ctx) {
+  public Expression.Builder visitHeader(ToyCompilerParser.HeaderContext ctx) {
     for (int i = 0; i < ctx.importPackage().size(); i++) {
       visit(ctx.importPackage(i));
     }
     return null;
   }
 
-  public Expression.Builder visitImportPackage(LikelyParser.ImportPackageContext ctx) {
+  public Expression.Builder visitImportPackage(ToyCompilerParser.ImportPackageContext ctx) {
     ImportPackage.Builder impts = ImportPackage.newBuilder();
     String path = removeQuotes(ctx.STRING().getText());
     if (ctx.ID() != null) {
@@ -38,11 +38,11 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return null;
   }
 
-  public Expression.Builder visitStatement(LikelyParser.StatementContext ctx) {
+  public Expression.Builder visitStatement(ToyCompilerParser.StatementContext ctx) {
     return visit(ctx.expression());
   }
 
-  public Expression.Builder visitExpression(LikelyParser.ExpressionContext ctx) {
+  public Expression.Builder visitExpression(ToyCompilerParser.ExpressionContext ctx) {
     Expression.Builder expr = visitIfNotNull(
       ctx.literal(),
       ctx.attribution(),
@@ -77,38 +77,38 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitDistribution(LikelyParser.DistributionContext ctx) {
+  public Expression.Builder visitDistribution(ToyCompilerParser.DistributionContext ctx) {
     return visitIfNotNull(ctx.distBody())
       .setType(Expression.Type.FUNCTION_CALL);
   }
 
-  public Expression.Builder visitDistBody(LikelyParser.DistBodyContext ctx) {
+  public Expression.Builder visitDistBody(ToyCompilerParser.DistBodyContext ctx) {
     return visitIfNotNull(
       ctx.fatDistBody(),
       ctx.thinDistBody());
   }
 
-  public Expression.Builder visitFatDistBody(LikelyParser.FatDistBodyContext ctx) {
+  public Expression.Builder visitFatDistBody(ToyCompilerParser.FatDistBodyContext ctx) {
     return addProbabilitiesToBlock1(ctx.probability());
   }
 
-  public Expression.Builder visitThinDistBody(LikelyParser.ThinDistBodyContext ctx) {
+  public Expression.Builder visitThinDistBody(ToyCompilerParser.ThinDistBodyContext ctx) {
     return addProbabilitiesToBlock1(ctx.probability());
   }
 
-  public Expression.Builder visitProbability(LikelyParser.ProbabilityContext ctx) {
+  public Expression.Builder visitProbability(ToyCompilerParser.ProbabilityContext ctx) {
     return visit(ctx.probabilityVariable())
       .setType(Expression.Type.PROBABILITY)
       .setRhs(visit(ctx.expression()));
   }
 
-  public Expression.Builder visitProbabilityVariable(LikelyParser.ProbabilityVariableContext ctx) {
+  public Expression.Builder visitProbabilityVariable(ToyCompilerParser.ProbabilityVariableContext ctx) {
     return visitIfNotNull(
       ctx.jointVariable(),
       ctx.conditionalVariable());
   }
 
-  public Expression.Builder visitJointVariable(LikelyParser.JointVariableContext ctx) {
+  public Expression.Builder visitJointVariable(ToyCompilerParser.JointVariableContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     if (ctx.sample() != null) {
       java.util.List<String> s = visit(ctx.sample()).getStrings1List();
@@ -123,7 +123,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitVar_list(LikelyParser.Var_listContext ctx) {
+  public Expression.Builder visitVar_list(ToyCompilerParser.Var_listContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     int nVar = ctx.sample().size();
     for (int i = 0; i < nVar; i++) {
@@ -137,7 +137,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitSample(LikelyParser.SampleContext ctx) {
+  public Expression.Builder visitSample(ToyCompilerParser.SampleContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     int nSample = ctx.ID().size();
     for (int i = 0; i < nSample; i++) {
@@ -146,7 +146,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitConditionalVariable(LikelyParser.ConditionalVariableContext ctx) {
+  public Expression.Builder visitConditionalVariable(ToyCompilerParser.ConditionalVariableContext ctx) {
     Expression.Builder expr = visit(ctx.jointVariable(0));
     java.util.List<String> cond = visit(ctx.jointVariable(1)).getStrings1List();
     for (int i = 0; i < cond.size(); i++) {
@@ -155,7 +155,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitConstructorCall(LikelyParser.ConstructorCallContext ctx) {
+  public Expression.Builder visitConstructorCall(ToyCompilerParser.ConstructorCallContext ctx) {
     Expression.Builder expr = visit(ctx.functionCall());
     java.util.List<Expression> block = visit(ctx.block()).getBlock1List();
     for (int i = 0; i < block.size(); i++) {
@@ -164,7 +164,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitComplexExpression(LikelyParser.ComplexExpressionContext ctx) {
+  public Expression.Builder visitComplexExpression(ToyCompilerParser.ComplexExpressionContext ctx) {
     return visitIfNotNull(
       ctx.ifExpression(),
       ctx.forExpression(),
@@ -172,7 +172,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.functionDefinition());
   }
 
-  public Expression.Builder visitFunctionDefinition(LikelyParser.FunctionDefinitionContext ctx) {
+  public Expression.Builder visitFunctionDefinition(ToyCompilerParser.FunctionDefinitionContext ctx) {
     java.util.List<String> params = visitIfNotNull(ctx.functionParameters()).getStrings1List();
     Expression.Builder expr = visit(ctx.block())
       .setType(Expression.Type.FUNCTION_DEFINITION);
@@ -182,7 +182,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitFunctionParameters(LikelyParser.FunctionParametersContext ctx) {
+  public Expression.Builder visitFunctionParameters(ToyCompilerParser.FunctionParametersContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     for (int i = 0; i < ctx.ID().size(); i++) {
       expr.addStrings1(ctx.ID(i).getText());
@@ -190,13 +190,13 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitWhileExpression(LikelyParser.WhileExpressionContext ctx) {
+  public Expression.Builder visitWhileExpression(ToyCompilerParser.WhileExpressionContext ctx) {
     return visit(ctx.block())
       .setType(Expression.Type.WHILE)
       .setRhs(visit(ctx.expression()));
   }
 
-  public Expression.Builder visitForExpression(LikelyParser.ForExpressionContext ctx) {
+  public Expression.Builder visitForExpression(ToyCompilerParser.ForExpressionContext ctx) {
     return visit(ctx.block())
       .setType(Expression.Type.FOR)
       .setString(ctx.ID().getText())
@@ -204,7 +204,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       .setRhs(visit(ctx.expression(1)));
   }
 
-  public Expression.Builder visitIfExpression(LikelyParser.IfExpressionContext ctx) {
+  public Expression.Builder visitIfExpression(ToyCompilerParser.IfExpressionContext ctx) {
     Expression.Builder expr = Expression.newBuilder()
       .setType(Expression.Type.IF)
       .setRhs(visit(ctx.expression()));
@@ -224,21 +224,21 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitBlock(LikelyParser.BlockContext ctx) {
+  public Expression.Builder visitBlock(ToyCompilerParser.BlockContext ctx) {
     return visitIfNotNull(
       ctx.fatExpr(),
       ctx.thinExpr());
   }
 
-  public Expression.Builder visitFatExpr(LikelyParser.FatExprContext ctx) {
+  public Expression.Builder visitFatExpr(ToyCompilerParser.FatExprContext ctx) {
     return addExpressionToBlock1(ctx.expression());
   }
 
-  public Expression.Builder visitThinExpr(LikelyParser.ThinExprContext ctx) {
+  public Expression.Builder visitThinExpr(ToyCompilerParser.ThinExprContext ctx) {
     return addExpressionToBlock1(ctx.expression());
   }
 
-  public Expression.Builder visitObjectMessage(LikelyParser.ObjectMessageContext ctx) {
+  public Expression.Builder visitObjectMessage(ToyCompilerParser.ObjectMessageContext ctx) {
     Expression.Builder obj = visit(ctx.object());
     int nMsg = ctx.ID().size();
     for (int i = 0; i < nMsg; i++) {
@@ -257,7 +257,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return obj;
   }
 
-  public Expression.Builder visitObject(LikelyParser.ObjectContext ctx) {
+  public Expression.Builder visitObject(ToyCompilerParser.ObjectContext ctx) {
     if (ctx.ID() != null)
       return createID(ctx.ID());
     return visitIfNotNull(
@@ -267,13 +267,13 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       ctx.expression());
   }
 
-  public Expression.Builder visitReturnExpression(LikelyParser.ReturnExpressionContext ctx) {
+  public Expression.Builder visitReturnExpression(ToyCompilerParser.ReturnExpressionContext ctx) {
     return Expression.newBuilder()
       .setType(Expression.Type.RETURN)
       .setRhs(visit(ctx.expression()));
   }
 
-  public Expression.Builder visitFunctionCall(LikelyParser.FunctionCallContext ctx) {
+  public Expression.Builder visitFunctionCall(ToyCompilerParser.FunctionCallContext ctx) {
     Expression.Builder func = visit(ctx.func());
     for (int i = 0; i < ctx.list().size(); i++) {
       Expression.Builder args = visit(ctx.list(i))
@@ -284,18 +284,18 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return func;
   }
 
-  public Expression.Builder visitList(LikelyParser.ListContext ctx) {
+  public Expression.Builder visitList(ToyCompilerParser.ListContext ctx) {
     return visitIfNotNull(ctx.listBody());
   }
 
-  public Expression.Builder visitFunc(LikelyParser.FuncContext ctx) {
+  public Expression.Builder visitFunc(ToyCompilerParser.FuncContext ctx) {
     Expression.Builder expr = visitIfNotNull(ctx.objectMessage());
     if (ctx.ID() != null)
       expr = createID(ctx.ID());
     return expr;
   }
 
-  public Expression.Builder visitOp(LikelyParser.OpContext ctx) {
+  public Expression.Builder visitOp(ToyCompilerParser.OpContext ctx) {
     Expression.Builder expr = Expression.newBuilder();
     switch (ctx.getText()) {
       case "+":   expr.setType(Expression.Type.ADDITION); break;
@@ -314,26 +314,26 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  public Expression.Builder visitSequence(LikelyParser.SequenceContext ctx) {
+  public Expression.Builder visitSequence(ToyCompilerParser.SequenceContext ctx) {
     return visitIfNotNull(ctx.listBody())
       .setType(Expression.Type.SEQUENCE);
   }
 
-  public Expression.Builder visitListBody(LikelyParser.ListBodyContext ctx) {
+  public Expression.Builder visitListBody(ToyCompilerParser.ListBodyContext ctx) {
     return visitIfNotNull(
       ctx.fatListBody(),
       ctx.thinListBody());
   }
 
-  public Expression.Builder visitFatListBody(LikelyParser.FatListBodyContext ctx) {
+  public Expression.Builder visitFatListBody(ToyCompilerParser.FatListBodyContext ctx) {
     return addExpressionToBlock1(ctx.expression());
   }
 
-  public Expression.Builder visitThinListBody(LikelyParser.ThinListBodyContext ctx) {
+  public Expression.Builder visitThinListBody(ToyCompilerParser.ThinListBodyContext ctx) {
     return addExpressionToBlock1(ctx.expression());
   }
 
-  public Expression.Builder visitAttribution(LikelyParser.AttributionContext ctx) {
+  public Expression.Builder visitAttribution(ToyCompilerParser.AttributionContext ctx) {
     Expression.Builder container = visitIfNotNull(ctx.objectMessage());
     if (ctx.ID() != null)
       container = createID(ctx.ID());
@@ -343,7 +343,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
       .setRhs(visit(ctx.expression()));
   }
 
-  public Expression.Builder visitLiteral(LikelyParser.LiteralContext ctx) {
+  public Expression.Builder visitLiteral(ToyCompilerParser.LiteralContext ctx) {
     if (ctx.STRING() != null)
       return createString(ctx.STRING());
     else if (ctx.bool() != null)
@@ -351,7 +351,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return visitIfNotNull(ctx.number());
   }
 
-  public Expression.Builder visitNumber(LikelyParser.NumberContext ctx) {
+  public Expression.Builder visitNumber(ToyCompilerParser.NumberContext ctx) {
     if (ctx.INTEGER() != null)
       return createInteger(ctx.INTEGER());
     return createFloat(ctx.FLOAT());
@@ -377,7 +377,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return str.substring(1, str.length()-1);
   }
 
-  private Expression.Builder createBoolean(LikelyParser.BoolContext bool) {
+  private Expression.Builder createBoolean(ToyCompilerParser.BoolContext bool) {
     return Expression.newBuilder()
       .setType(Expression.Type.BOOLEAN)
       .setBoolean(bool.getText().equals("true"));
@@ -403,7 +403,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return Expression.newBuilder();
   }
 
-  private Expression.Builder addProbabilitiesToBlock1(java.util.List<LikelyParser.ProbabilityContext> elements) {
+  private Expression.Builder addProbabilitiesToBlock1(java.util.List<ToyCompilerParser.ProbabilityContext> elements) {
     Expression.Builder expr = Expression.newBuilder();
     for (int i = 0; i < elements.size(); i++) {
       expr.addBlock1(visit(elements.get(i)));
@@ -411,7 +411,7 @@ public class ProtocolBufferVisitor extends LikelyBaseVisitor<Expression.Builder>
     return expr;
   }
 
-  private Expression.Builder addExpressionToBlock1(java.util.List<LikelyParser.ExpressionContext> elements) {
+  private Expression.Builder addExpressionToBlock1(java.util.List<ToyCompilerParser.ExpressionContext> elements) {
     Expression.Builder expr = Expression.newBuilder();
     for (int i = 0; i < elements.size(); i++) {
       expr.addBlock1(visit(elements.get(i)));

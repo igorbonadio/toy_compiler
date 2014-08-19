@@ -1,4 +1,4 @@
-package br.com.igorbonadio.likely.lklc;
+package br.com.igorbonadio.toy_compiler.compiler;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -7,20 +7,20 @@ import junit.framework.TestSuite;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.com.igorbonadio.likely.lklast.LikelyAst.*;
+import br.com.igorbonadio.toy_compiler.ast.ToyCompilerAst.*;
 
-public class ReturnTest extends TestCase {
+public class ConstructorCallTest extends TestCase {
 
-  public ReturnTest(String testName) {
+  public ConstructorCallTest(String testName) {
     super(testName);
   }
 
   public static Test suite() {
-    return new TestSuite(ReturnTest.class);
+    return new TestSuite(ConstructorCallTest.class);
   }
 
-  public void testReturn() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("return 1"))));
+  public void testConstructorCall() {
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("f(): 1"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -30,8 +30,12 @@ public class ReturnTest extends TestCase {
     Program expectedProgram = Program.newBuilder()
       .addStatements(
         Expression.newBuilder()
-          .setType(Expression.Type.RETURN)
-          .setRhs(
+          .setType(Expression.Type.FUNCTION_CALL)
+          .setLhs(
+            Expression.newBuilder()
+              .setType(Expression.Type.ID)
+              .setString("f"))
+          .addBlock2(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
               .setInteger(1))).build();

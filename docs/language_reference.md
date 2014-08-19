@@ -35,7 +35,7 @@ false
 
 ## Arithmetic Expressions
 
-Likely's arithmetic expressions are very similar to languages like C, C++, Java, Python and Ruby. The only difference is that there isn't operator precedence. So, use parentheses!
+Arithmetic expressions are very similar to languages like C, C++, Java, Python and Ruby. The only difference is that there isn't operator precedence. So, use parentheses!
 
 ```python
 1 + 2       # => 3
@@ -67,7 +67,7 @@ not true       # => false
 
 ## Variable, Symbols & Attributions
 
-You don't need to declare variables in Likely. All you need to do is attribute some value to them.
+You don't need to declare variables. All you need to do is attribute some value to them.
 
 ```python
 x = 123
@@ -181,7 +181,9 @@ while (true):
 
 ## Functions
 
-Functions are one of the most important things in Likely. You can define functions:
+Functions are one of the most important things.
+
+You can define functions:
 
 ```python
 sum = function(a, b): a + b
@@ -222,7 +224,7 @@ sum = function(a, b): return a + b
 
 ## Objects
 
-Everything in Likely is an object. Everything.
+Everything is an object. Everything.
 
 You can send mensages to an object:
 
@@ -282,7 +284,7 @@ rubi.bark()  # => "lalala"
 
 ## Probabilities
 
-Likely is a language to define probabilistic models. So it includes some syntax to help you write awesome code.
+This language is a language to define probabilistic models. So it includes some syntax to help you write awesome code.
 
 * Discrete Joint Probability Distribution
 

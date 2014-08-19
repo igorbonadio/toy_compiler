@@ -1,4 +1,4 @@
-package br.com.igorbonadio.likely.lklc;
+package br.com.igorbonadio.toy_compiler.compiler;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -7,20 +7,20 @@ import junit.framework.TestSuite;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.com.igorbonadio.likely.lklast.LikelyAst.*;
+import br.com.igorbonadio.toy_compiler.ast.ToyCompilerAst.*;
 
-public class WhileTest extends TestCase {
+public class AttributionTest extends TestCase {
 
-  public WhileTest(String testName) {
+  public AttributionTest(String testName) {
     super(testName);
   }
 
   public static Test suite() {
-    return new TestSuite(WhileTest.class);
+    return new TestSuite(AttributionTest.class);
   }
 
-  public void testWhile() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("while (1): 2"))));
+  public void testAttribution() {
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("x = 1"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -30,15 +30,15 @@ public class WhileTest extends TestCase {
     Program expectedProgram = Program.newBuilder()
       .addStatements(
         Expression.newBuilder()
-          .setType(Expression.Type.WHILE)
+          .setType(Expression.Type.ATTRIBUTION)
+          .setLhs(
+            Expression.newBuilder()
+              .setType(Expression.Type.ID)
+              .setString("x"))
           .setRhs(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
-              .setInteger(1))
-          .addBlock1(
-            Expression.newBuilder()
-              .setType(Expression.Type.INTEGER)
-              .setInteger(2))).build();
+              .setInteger(1))).build();
 
     assertEquals(program.toString(), expectedProgram.toString());
   }

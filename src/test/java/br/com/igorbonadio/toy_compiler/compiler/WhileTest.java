@@ -1,4 +1,4 @@
-package br.com.igorbonadio.likely.lklc;
+package br.com.igorbonadio.toy_compiler.compiler;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -7,20 +7,20 @@ import junit.framework.TestSuite;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.com.igorbonadio.likely.lklast.LikelyAst.*;
+import br.com.igorbonadio.toy_compiler.ast.ToyCompilerAst.*;
 
-public class ConstructorCallTest extends TestCase {
+public class WhileTest extends TestCase {
 
-  public ConstructorCallTest(String testName) {
+  public WhileTest(String testName) {
     super(testName);
   }
 
   public static Test suite() {
-    return new TestSuite(ConstructorCallTest.class);
+    return new TestSuite(WhileTest.class);
   }
 
-  public void testConstructorCall() {
-    LikelyParser parser = new LikelyParser(new CommonTokenStream(new LikelyLexer(new ANTLRInputStream("f(): 1"))));
+  public void testWhile() {
+    ToyCompileParser parser = new ToyCompileParser(new CommonTokenStream(new ToyCompileLexer(new ANTLRInputStream("while (1): 2"))));
     ParseTree tree = parser.file_input();
 
     ProtocolBufferVisitor visitor = new ProtocolBufferVisitor();
@@ -30,15 +30,15 @@ public class ConstructorCallTest extends TestCase {
     Program expectedProgram = Program.newBuilder()
       .addStatements(
         Expression.newBuilder()
-          .setType(Expression.Type.FUNCTION_CALL)
-          .setLhs(
-            Expression.newBuilder()
-              .setType(Expression.Type.ID)
-              .setString("f"))
-          .addBlock2(
+          .setType(Expression.Type.WHILE)
+          .setRhs(
             Expression.newBuilder()
               .setType(Expression.Type.INTEGER)
-              .setInteger(1))).build();
+              .setInteger(1))
+          .addBlock1(
+            Expression.newBuilder()
+              .setType(Expression.Type.INTEGER)
+              .setInteger(2))).build();
 
     assertEquals(program.toString(), expectedProgram.toString());
   }
